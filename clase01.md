@@ -76,6 +76,72 @@ Con React Native se pueden hacer aplicaciones móbiles. Todas las aplicaciones m
 
 ## Ejercicio práctico
 
--> Partimos desde JavaSCript Vanilla para pasarlo a React.
+-> Partimos desde JavaScript Vanilla para pasarlo a React.
+
+
+```CSS
+button {
+ background: #09f;
+ color: #fff;
+ border: 0;
+ padding: 4px 8px;
+ font-size: 18px;
+ cursor: pointer;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: system-ui;
+}
+```
+
+```HTML
+<button data-id="123">Me gusta</button>
+```
+
+```JavaScript
+// Vanilla JavaScript
+
+// recuperamos el boton
+const button = document.querySelector("button")
+
+// al hacer click en el boton, tenemos que ejecutar una funcion
+button.addEventListener("click", function () {
+  //recuperar la id del atributo del HTML
+  const id = button.getAttribute("data-id")
+  
+  // llamar a un servicio para actualizar si me gusta
+  // toggleLike(id)
+  if(button.classList.contains("liked")) {
+    button.classList.remove("liked")
+    button.innetText="Me gusta"
+  } else {
+    button.classList.add("liked")
+    button.innerText="Quitar me gusta"
+  }
+})
+```
+
+-> Pero si en vez de un solo boton, tnego más de uno, ya en vez de un if-else necesito un switch. Y si quiero reutilizar este código ya se complica, no es nada escalable.
+
+Esto es todo **código imperativo**, voy haciendo paso a paso todo.
+
+-> En cambio React es **código declarativo**
+
+Para utilizar React necesitamos:
+
+```HTML
+<div id="app"></div>
+```
+
+```JavaScript
+import React from "https://esm.sh/react-dom@18.2.0/client"
+
+const appDomElement = document.getElementById("app")
+
+const root = ReactDOM.createRoot(appDomElement)
+root.render("Hola React")
+```
 
 ---
