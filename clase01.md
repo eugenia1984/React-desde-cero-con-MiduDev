@@ -197,7 +197,7 @@ const buttonJSX = <button data-id="123"> </button>
 
 ---
 
-## :star: ¿Cçomo crear proyectos ?
+## :star: ¿Cómo crear proyectos ?
 
 - Con **create-react-app**
 
@@ -222,6 +222,25 @@ JavaScript + SWC
 ``` init```
 
 
+### La estructura del proyecto inicial
 
+```
+>node_modules
+>public
+>src
+ >assets
+ App.css
+ App.jsx
+ index.css
+ main.jsx
+ .gitignore
+ index.html
+ package-lock.json
+ package.json
+ vite.config.js
+
+```
+
+**main.js** es el puerto de entrada de toda la aplicacion
 
 ---
