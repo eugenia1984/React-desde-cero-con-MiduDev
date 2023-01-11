@@ -2,11 +2,41 @@
 
 ---
 
-Curso de React desde Cero con MiduDev, sigueindolo todos los Miércoles en su canal de Twich.
+Curso de React desde Cero con MiduDev(Miguel Angel Duran), sigueindolo todos los Miércoles en su canal de Twich.
+
+:computer: -> [Repositorio de GitHub](https://github.com/midudev/aprendiendo-react)
 
 ---
 
 ## Temas a ver
+
+- **React 18**: requerimientos
+
+- ¿Qué es React? ¿Por qué React?
+
+- Introducción a JSX
+
+- Componentes, props, estados, eventos, hooks(con ejemplos prácticos, para ver cuándo utilizarlos y saber para qué sirven)
+
+- Estructuras de carpetas
+
+- Desarrollar un pequeño **React-router** desde el nivel más básico y avanzando.
+
+- Context, estado global(con context API y con dependencias como Redux ToolXit)
+
+- Server Side Rendering sin frameworks, desde cero.
+
+- ¿Cómo utilizar **TS** con React? ¿Cómo migrar código a TS?
+
+- ¿Cómo Dockerizar la aplicación de React?
+
+- Testing: End to End
+
+- Mejoras de rendimiento: lazy loading, encontrar errores para agilizar.
+
+- **React Query**
+
+- Crear los propios **custom hooks**
 
 ---
 
