@@ -52,6 +52,12 @@ Curso de React desde Cero con MiduDev(Miguel Angel Duran), sigueindolo todos los
 
 ---
 
+## Clases:
+
+- [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md)
+
+---
+
 ## Por favor: 🎁
 
 - Comparte este proyecto con otros 📢
