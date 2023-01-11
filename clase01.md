@@ -245,7 +245,7 @@ JavaScript + SWC
 
 ---
 
-## Hacemos la primer práctica con React
+## :star2: Hacemos la primer práctica con React
 
 Hacemos una **card** de twitter, encerrada en un `<article>`, con una `<img>` y un `<div>` con el nombre y un `<aside>` con el botón de seguir.
 
@@ -253,7 +253,9 @@ Le agregamos estilos...
 
 ... para agregar **estilos en linea** hay que agregar el **style** como prop y pasarle un **objeto** por lo que usamos {}, y como usamos JavaScript dentro otras {}, la difenrecia es que usamos camelCase para los atributos, entonces background-color pasa a ser backgroundColor. Y se separa con **,** en vez de con punto y coma.
 
-```<article style={{ display: "flex", alignItems: "center"}} > </<article> ```
+```JSX
+<article style={{ display: "flex", alignItems: "center"}} > </<article> 
+```
 
 ... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx***. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
 
@@ -270,15 +272,47 @@ Le agregamos estilos...
 -> Pasamos de tener todo en App.js, a separarlo en el **primer componente**.
 
 En vez de utilizar :
-```
+```JSX
 <React.Fragment>
 </React.Fragment>
 ```
 
 Utilizamos:
-```
+```JSX
 <>
 </>
 ```
 
+-> Cuando no se pasa una prop, y se trata de acceder a ella, se tiene un **undefined**(un **falsy**) por eso en vez de psar:
+```JSX
+<TwitterFollowCard isFollowing={true} />
+<TwitterFollowCard isFollowing={false} />
+<TwitterFollowCard isFollowing />
+```
+
+De este modo **por defecto** es **true**(asi no tengo undefined):
+```JSX
+<TwitterFollowCard isFollowing />
+<TwitterFollowCard isFollowing={false} />
+<TwitterFollowCard isFollowing />
+```
+
+-> Como **props** se pueden pasar **variables**, **funciones**(para que el hijo cambie de estado, haga fetching de datos, etc) y **elementos**(por ejemplo **objects** o elementos JSX-XML y JS-)
+
+Hay que recordar que en JavaScriot las funciones son **de primera clase** (se pueden pasar como parámetros)
+
+
+-> :book: ¿ Cuál es la diferencia entre **componente** y **elemento**?
+
+Un componente es una factoria de elementos. Es una **función** que al ejecutarla devuelve un **elemento**
+
+Los **componentes** crean **elementos** y **react** renderiza el **elemento**.
+
+-> :book: Cuando se pasan **props** deben ser **inmutables**, porque siempre debe haber **una única fuente de verdad** 
+
+-> :book:  Lo que envuelve tiene dentro **children**, se puede usar también como **prop**, en children se puede renderizar un texto, una imagen, otro componente, un String, etc. Solo hay **un children**, que es **el elemento que envuelve a los demas**(hay uno solo con cuantos elementos adentros necesites).
+
+-> :book: Para pasar todas las *props** se puede usar el **rest operator** con las **...***, pero es mala práctica a veces se envía información que no es necesaria, el componente se vuelve a re renderizar sin necesidad y es más complejo entender qué información se recibe en el componente. Es mejor ser declarativo, y nombrar las props.
+
+-> :book: **state** con **useState** podemos guardar un valor inicial del estado.
 ---
