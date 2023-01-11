@@ -1,4 +1,4 @@
-# :star: Clase 1 de React desde cero con Midu Dev
+# :book: React desde cero con Midu Dev *  Clase 1
 
 ---
 
@@ -153,9 +153,12 @@ import ReactDOM  from "https://esm.sh/react-dom@18.2.0/client"
 const appDomElement = document.getElementById("app")
 
 const root = ReactDOM.createRoot(appDomElement)
-const button = React.createElement("button", {"data-id": 123}, "Button 1")
-const button2 = React.createElement("button", {"data-id": 456}, "Button 2")
-const button3 = React.createElement("button", {"data-id": 789}, "Button 3")
+
+const h = React.createElement
+
+const button = h("button", {"data-id": 123}, "Button 1")
+const button2 = h("button", {"data-id": 456}, "Button 2")
+const button3 = h("button", {"data-id": 789}, "Button 3")
 
 //const div = React.createElement("div", bull, [button1, button2, button3])
 / usando fragments
@@ -172,5 +175,53 @@ root.render(div)
 3. Que envuelve al elemento
 
 -> Solo puedo renderizar un elemento, si puedo tneer un elemento que envuelva a elementos hijos, peor no puedo renderizar elementos hermanos.
+
+---
+
+## :star: JSX
+
+Extensión de ECMAScript basada en XML, nos facilita desarrollar en REact sin utilizar Vanilla JavaScript.
+
+```JSX
+import React from "https://esm.sh/react-dom@18.2.0/client"
+import ReactDOM  from "https://esm.sh/react-dom@18.2.0/client"
+
+const buttonJSX = <button data-id="123"> </button>
+```
+
+- **Babel** traspila el código de JSX a JavaScript para que lo puedan entender todos los navegadores, inclusive los antiguos.
+
+- JSX no es HTML, es JavaScript.
+
+- Se puede agregar **expresiones** poniendo entre **{}**
+
+---
+
+## :star: ¿Cçomo crear proyectos ?
+
+- Con **create-react-app**
+
+- Con **vite**:
+
+```npm init -y```
+
+```mkdir projects```
+
+```npm create vite@latest```
+
+```
+00-hola-mundo
+React
+JavaScript + SWC
+```
+
+```cd projects```
+
+```cd 00-hola-mundo```
+
+``` init```
+
+
+
 
 ---
