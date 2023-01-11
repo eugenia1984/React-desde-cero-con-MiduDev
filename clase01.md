@@ -315,4 +315,9 @@ Los **componentes** crean **elementos** y **react** renderiza el **elemento**.
 -> :book: Para pasar todas las *props** se puede usar el **rest operator** con las **...***, pero es mala práctica a veces se envía información que no es necesaria, el componente se vuelve a re renderizar sin necesidad y es más complejo entender qué información se recibe en el componente. Es mejor ser declarativo, y nombrar las props.
 
 -> :book: **state** con **useState** podemos guardar un valor inicial del estado.
+
+---
+
+## :star2: Para practicar se arma el juego del Ta-Te-Ti (tres en raya)
+
 ---
