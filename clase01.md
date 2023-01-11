@@ -244,3 +244,41 @@ JavaScript + SWC
 **main.js** es el puerto de entrada de toda la aplicacion
 
 ---
+
+## Hacemos la primer práctica con React
+
+Hacemos una **card** de twitter, encerrada en un `<article>`, con una `<img>` y un `<div>` con el nombre y un `<aside>` con el botón de seguir.
+
+Le agregamos estilos...
+
+... para agregar **estilos en linea** hay que agregar el **style** como prop y pasarle un **objeto** por lo que usamos {}, y como usamos JavaScript dentro otras {}, la difenrecia es que usamos camelCase para los atributos, entonces background-color pasa a ser backgroundColor. Y se separa con **,** en vez de con punto y coma.
+
+```<article style={{ display: "flex", alignItems: "center"}} > </<article> ```
+
+... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx***. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
+
+... utilizar **CSS modules**
+
+... Tailwind
+
+...styled-components
+
+-> Todas son tecnologías **Agnósticas** a React. No hay una mejor que otra, se utiliza bastante Tailwind. Pero también hay componentes ya armados como **Chakra UI** o **Material UI**.
+
+---
+
+-> Pasamos de tener todo en App.js, a separarlo en el **primer componente**.
+
+En vez de utilizar :
+```
+<React.Fragment>
+</React.Fragment>
+```
+
+Utilizamos:
+```
+<>
+</>
+```
+
+---
