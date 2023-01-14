@@ -14,23 +14,31 @@ Curso de React desde Cero con MiduDev(Miguel Angel Duran), sigueindolo todos los
 
 - ¿Qué es React? ¿Por qué React?
 
-- Introducción a JSX
+- Introducción a **JSX**
 
-- Componentes, props, estados, eventos, hooks(con ejemplos prácticos, para ver cuándo utilizarlos y saber para qué sirven)
+- **Components**(Componentes)
+
+- **props**
+
+- **State**(estados)
+
+- Eventos
+
+- **Hooks**(con ejemplos prácticos, para ver cuándo utilizarlos y saber para qué sirven)
 
 - Estructuras de carpetas
 
 - Desarrollar un pequeño **React-router** desde el nivel más básico y avanzando.
 
-- Context, estado global(con context API y con dependencias como Redux ToolXit)
+- **Context**, estado global(con context API y con dependencias como Redux Toolkit)
 
-- Server Side Rendering sin frameworks, desde cero.
+- **Server Side Rendering**, sin frameworks, desde cero.
 
-- ¿Cómo utilizar **TS** con React? ¿Cómo migrar código a TS?
+- ¿Cómo utilizar **TypeScript** con React? ¿Cómo migrar código a TS?
 
 - ¿Cómo Dockerizar la aplicación de React?
 
-- Testing: End to End
+- **Testing**: End to End
 
 - Mejoras de rendimiento: lazy loading, encontrar errores para agilizar.
 
