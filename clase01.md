@@ -8,49 +8,54 @@
 
 ---
 
-## :star: ¿Qué conocimientos hay que tener?
+## :star: ¿Qué conocimientos hay que tener previos para el curso?
 
 - **HTML5**, el lenguaje de marcado de la web.
 
 - **CSS3**, para estilar los componentes.
 
-- **JavaScript** que es el lenguaje de programación qu utiliza **React**, por ejemplo: ternarios, arrow function, default values, template literals, métodos de array, promeses, asincronía, spread operator, modulos, etc.
+- **JavaScript** que es el lenguaje de programación qu utiliza **React**, por ejemplo: ternarios, arrow function, default values en los parámetros, desestructuración,  template literals(para interpolar sting con variables), métodos de array, promeses(promesas), asincronía en JavaScript, spread operator, optional changing, ECMA script modules(sistema de módulos de JavaScript), etc.
 
 ---
 
 ## :star: ¿Qué se debe tener ya instalado?
 
-- **Nodejs**, el entorno de ejecución de JavaScript, pudiendo utilizarlo desde la terminal, sin tener que abrir el navegador, y también **npm** / **yarn** / **pnpm** para instalar dependencias.
+- **Nodejs**, el entorno de ejecución de JavaScript, pudiendo utilizarlo desde la terminal, sin tener que abrir el navegador, y también **npm** / **yarn** / **pnpm** para instalar dependencias. Tener como mínimo la **Versión 16** de Node. Se puede instalar un **Administrador de versiones de Node**, para poder cambiar entre diferentes versiones de Node, como por ejemplo **NWM** ó **FNM**(Fast and Simple Nodejs Version Manager).
 
-- Navegador web: **Chrome** / **Brave** (deben ser bsados en Chromium) para poder utilizar las **herramientas de desarrollo**.
+- Navegador web: **Chrome** / **Brave** / *+Opera** / **Edge**(deben ser basados en Google Chrome -Chromium) para poder utilizar las **herramientas de desarrollo**.
 
-- Un editor de código, como el **Visual Studio Code**.
+- Un editor de código, como el **Visual Studio Code**(en el curso se va a utilizar VSC con sus **extensiones**), Sublime, Vim, NeoNano, etc.
 
 ---
 
 ## :star: ¿Qué es Reactjs?
 
-- Es una **biblioteca** de **JavaScript**, para crear **UI**(interfaces de usuario), independientemente de a donde: es para web, aplicaciones móbiles, etc(hay varios paquetes, como **react-dom** para web por ejemplo).
+- Es una **biblioteca** de **JavaScript**, para construir **UI**(interfaces de usuario), independientemente de donde sea: es para web, aplicaciones móbiles, aplicaciones de terminal, etc. React es **agnóstico de la plataforma**, (hay varios paquetes, como **react-dom** que es específico del navegador web.
 
-- Es **declarativo** y está basado en **componentes**.
+- Es **declarativo** y está basado en **componentes**. Anteriormente no era tan sencillo reutilizar código, hoy en día también otras librerías, como VUE, se basan en componentes. Se basa en el **Atomik design**
 
-- Es una **biblioteca** que es **universal**, se puede ejecutar tanto en el **cliente** como en el **servidor**, por lo que se puede reutilizar el mismo código y no tener el Back End con otro lenguaje en otro seridor.
+- Es una **biblioteca** que es **universal**, se puede ejecutar tanto en el **cliente** como en el **servidor**, por lo que se puede reutilizar el mismo código y no tener el Back End con otro lenguaje en otro servidor y utilizar una biblioteca que "parchee" el HTML. Ahora se escribe una sola vez la aplicación.
 
 ---
 
-## :star: Despejar dudas
+## :star: Páginas webs para despejar dudas
 
 - [**https://reactjs.org/**](https://reactjs.org/)
 
-- Para consultas -> [**https://beta.reactjs.org/**](https://beta.reactjs.org/)
+- Para consultas -> [**https://beta.reactjs.org/**](https://beta.reactjs.org/) esta versión beta es más completa, tiene ejemplos decódigos.
 
-- Para ver preguntas y respuestas a dudas frecuentes: [**https://www.reactjs.wiki/**](https://www.reactjs.wiki/)
+- Para ver preguntas y respuestas a dudas frecuentes: [**https://www.reactjs.wiki/**](https://www.reactjs.wiki/), desde consultas de principiante, pasando a intermedio, hasta avanzado, son más de 100 consultas. Está el repositorio de GitHub, la página web y el libro.
 
 ---
 
 ## :star: Un poco de historia
 
-- Nace en el 2011, para intentar simplificar las Interfaces de Usuario, lo crearon en **Meta**, el desarrollador trabajo con formularios en Facebook y quería evitar ataques de Cross Side Scripting. En 2012 es utilizado en Instagram. Y desde 2013 es **open source**.
+- Nace en el **2011**, para intentar simplificar las Interfaces de Usuario, lo crearon en **Meta**(Facebook, Twitter, Whatsapp). El desarrollador venía del Back End y de sistemas distribuidos (venía de Amazon) y trabajando con formularios en Facebook quería evitar ataques por XSS (de Cross Side Scripting). 
+
+En **2012** es utilizado en **Instagram**. 
+
+Y desde 2013 es **open source**, hasta el día de hoy inclusive.
+
 
 ---
 
@@ -62,19 +67,23 @@ Con React Native se pueden hacer aplicaciones móbiles. Todas las aplicaciones m
 
 ## :star: ¿Por qué aprender React ?
 
-1. Meta lo utiliza en producción, por lo que va a ser siempre amntenido.
+1. Es una de las bibliotecas más demandado en el mundo occidental. En general hay más opciones de React que de Angular, Vue, Svelt u otros Frameworks. **Tiene mucha salida laboral**. Se usa **NEXTjs** o **Gatsby** que son Frameworks de React. Lo usan las start ups.
 
-2. Hay una gran comunidad de desarrolladores.
+2. Lo que se aprende en React, luego se puede pasar a **React Native** para hacer aplicaicones móbiles. Hay React Native para Windows y MacOS.
 
-3. Aprender React te va a ayudar con el resto de los frameworks, ya que comparten muchos conceptos.
+3. Meta lo utiliza en producción, en todos sus productos, por lo que va a ser **siempre mantenimiento**.
 
-4. Futuro prometedor. Siempre va ascendiendo en su uso, se ve en las tendencias de npm.
+4. Hay una **gran comunidad** de desarrolladores, un **gran ecosistema**,
 
-5. tiene su API estable. Los cambios son fáciles de asimilarlos, son incrementales y fáciles de migrar.
+5. Aprender React **te va a ayudar con el resto de los frameworks**, ya que comparten muchos conceptos (componentes, estados, reactividad, handle clicks).
+
+6. **Futuro prometedor**. Siempre va ascendiendo en su uso, se ve en las tendencias de npm.
+
+7. Tiene su **API estable**. Los cambios son fáciles de asimilarlos, son incrementales y fáciles de migrar.
 
 ---
 
-## Ejercicio práctico
+## :star2: Ejercicio práctico
 
 -> Partimos desde JavaScript Vanilla para pasarlo a React.
 
