@@ -64,6 +64,12 @@ Curso de React desde Cero con MiduDev(Miguel Angel Duran), sigueindolo todos los
 
 - [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ?  ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ Hacemos la primer práctica con React
 
+- **Clase 2**
+
+- **Clase 3**
+
+- **Clase 4**
+
 ---
 
 ## Por favor: 🎁
