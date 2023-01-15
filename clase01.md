@@ -4,7 +4,7 @@
 
 ## React 
 
-- Influyó incluso en el desarrollo mobil, es una de las **bibliotecas** con mayor influencia, y hace años está estanle.
+- Influyó incluso en el desarrollo mobil, es una de las **bibliotecas** con mayor influencia, y hace años está estable.
 
 ---
 

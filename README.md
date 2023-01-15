@@ -2,49 +2,61 @@
 
 ---
 
-Curso de React desde Cero con MiduDev(Miguel Angel Duran), sigueindolo todos los Miércoles en su canal de Twich.
+Curso de **React desde Cero** con *MiduDev**(Miguel Angel Duran), siguiendolo todos los Miércoles en su canal de Twich.
 
-:computer: -> [Repositorio de GitHub](https://github.com/midudev/aprendiendo-react)
+:computer: -> [Repositorio en GitHub de MiduDev](https://github.com/midudev/aprendiendo-react)
 
 ---
 
-## Temas a ver
+## Clases prácticas
 
-- **React 18**: requerimientos
+En las que vamos a ir haciendo varios proyectos.
+ ¿Cuáles son ?
+
+- Clase 1 : componente de Twitter
+
+---
+
+## :book: Temas a ver
+
+**React 18**: 
+
+- Requerimientos ¿qué se debe tener instalado?
 
 - ¿Qué es React? ¿Por qué React?
 
-- Introducción a **JSX**
+- Introducción a **JSX**, la sintaxis que ayuda a trbajar con React.
 
-- **Components**(Componentes)
+- **Components**(Componentes).
 
-- **props**
+- **props**.
 
-- **State**(estados)
+- **State**(estados).
 
-- Eventos
+- **Eventos**.
 
-- **Hooks**(con ejemplos prácticos, para ver cuándo utilizarlos y saber para qué sirven)
+- **Hooks**, con ejemplos prácticos, para ver cuándo utilizarlos y saber para qué sirven.
 
-- Estructuras de carpetas
+- Estructuras de carpetas, para organizar con buenas prácticas los proyectos.
 
-- Desarrollar un pequeño **React-router** desde el nivel más básico y avanzando.
+- Desarrollar un pequeño **enrutado** desde el nivel más básico, para poder navegar entre páginas, creando nuestro pequeño react-router. Y se irá aumentando en complejidad.
 
-- **Context**, estado global(con context API y con dependencias como Redux Toolkit)
+- **Context**, estado global (con context API de React y con dependencias como Redux Toolkit ).
 
-- **Server Side Rendering**, sin frameworks, desde cero.
+- **Server Side Rendering**(renderizar REact desde el servidor), sin frameworks, desde cero.
 
-- ¿Cómo utilizar **TypeScript** con React? ¿Cómo migrar código a TS?
+- ¿Cómo utilizar **TypeScript** con React? ¿Cómo migrar código a TS? Instalamos TypeScript. ¿Qué tener en cuenta? Buenas prácticas.
 
-- ¿Cómo Dockerizar la aplicación de React?
+- ¿Cómo **Dockerizar** la aplicación de React? ¿Cómo podemos conseguir ejecutar la aplicación de React en cualquier servidor?
 
-- **Testing**: End to End
+- **Testing**: con **React Testing Library**, **Testing End to End** con **PlayWright**. Un pequeño ejercicio con **TDD**.
 
-- Mejoras de rendimiento: lazy loading, encontrar errores para agilizar.
+- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**?  Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaicones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con REact?
 
-- **React Query**
+- **React Query** ¿Cómo utilizar esta dependencia para eliminar un montón de código que se utilizó en proyectos anerires?
 
-- Crear los propios **custom hooks**
+- Crear los propios **custom hooks**.
+
 
 ---
 
