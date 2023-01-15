@@ -14,9 +14,9 @@ button.addEventListener("click", function () {
 
   if (button.classList.contains("liked")) {
     button.classList.remove("liked");
-    button.innerHTML = "Me gusta";
+    button.innerHTML = "No me gusta";
   } else {
     button.classList.add("liked");
-    button.innerText = "No me gusta";
+    button.innerText = "Me gusta";
   }
 });

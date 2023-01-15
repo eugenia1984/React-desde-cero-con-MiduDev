@@ -152,7 +152,13 @@ button.addEventListener("click", function () {
 
 Esto es todo **código imperativo**, voy haciendo paso a paso todo.
 
+-> Le hice una mini modificación asi ademas de cambiar el texto, cambian los colores de fondo y del texto.
 
+Me queda así:
+
+![image](https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png)
+
+![image](https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png)
 
 Para utilizar React necesitamos:
 
