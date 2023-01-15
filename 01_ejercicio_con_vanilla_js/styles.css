@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: system-ui;
 }
 
 main {
@@ -13,7 +14,17 @@ button {
   background: #09f;
   color:#fff;
   border: 0;
-  padding: 4px 8px;
+  padding: 6px 12px;
   font-size: 18px;
   cursor: pointer;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.liked {
+  color: #09f;
+  background:#fff;
 }

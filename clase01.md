@@ -1,8 +1,8 @@
-# :book: React desde cero con Midu Dev *  Clase 1
+# :book: React desde cero con Midu Dev \* Clase 1
 
 ---
 
-## React 
+## React
 
 - Influyó incluso en el desarrollo mobil, es una de las **bibliotecas** con mayor influencia, y hace años está estable.
 
@@ -14,7 +14,7 @@
 
 - **CSS3**, para estilar los componentes.
 
-- **JavaScript** que es el lenguaje de programación qu utiliza **React**, por ejemplo: ternarios, arrow function, default values en los parámetros, desestructuración,  template literals(para interpolar sting con variables), métodos de array, promeses(promesas), asincronía en JavaScript, spread operator, optional changing, ECMA script modules(sistema de módulos de JavaScript), etc.
+- **JavaScript** que es el lenguaje de programación qu utiliza **React**, por ejemplo: ternarios, arrow function, default values en los parámetros, desestructuración, template literals(para interpolar sting con variables), métodos de array, promeses(promesas), asincronía en JavaScript, spread operator, optional changing, ECMA script modules(sistema de módulos de JavaScript), etc.
 
 ---
 
@@ -22,7 +22,7 @@
 
 - **Nodejs**, el entorno de ejecución de JavaScript, pudiendo utilizarlo desde la terminal, sin tener que abrir el navegador, y también **npm** / **yarn** / **pnpm** para instalar dependencias. Tener como mínimo la **Versión 16** de Node. Se puede instalar un **Administrador de versiones de Node**, para poder cambiar entre diferentes versiones de Node, como por ejemplo **NWM** ó **FNM**(Fast and Simple Nodejs Version Manager).
 
-- Navegador web: **Chrome** / **Brave** / *+Opera** / **Edge**(deben ser basados en Google Chrome -Chromium) para poder utilizar las **herramientas de desarrollo**.
+- Navegador web: **Chrome** / **Brave** / \*+Opera** / **Edge**(deben ser basados en Google Chrome -Chromium) para poder utilizar las **herramientas de desarrollo\*\*.
 
 - Un editor de código, como el **Visual Studio Code**(en el curso se va a utilizar VSC con sus **extensiones**), Sublime, Vim, NeoNano, etc.
 
@@ -50,12 +50,11 @@
 
 ## :star: Un poco de historia
 
-- Nace en el **2011**, para intentar simplificar las Interfaces de Usuario, lo crearon en **Meta**(Facebook, Twitter, Whatsapp). El desarrollador venía del Back End y de sistemas distribuidos (venía de Amazon) y trabajando con formularios en Facebook quería evitar ataques por XSS (de Cross Side Scripting). 
+- Nace en el **2011**, para intentar simplificar las Interfaces de Usuario, lo crearon en **Meta**(Facebook, Twitter, Whatsapp). El desarrollador venía del Back End y de sistemas distribuidos (venía de Amazon) y trabajando con formularios en Facebook quería evitar ataques por XSS (de Cross Side Scripting).
 
-En **2012** es utilizado en **Instagram**. 
+En **2012** es utilizado en **Instagram**.
 
 Y desde 2013 es **open source**, hasta el día de hoy inclusive.
-
 
 ---
 
@@ -87,6 +86,9 @@ Con React Native se pueden hacer aplicaciones móbiles. Todas las aplicaciones m
 
 -> Partimos desde JavaScript Vanilla para pasarlo a React.
 
+:computer: -> [Aca se puede ver el código: **01_ejercicio_con_vanilla_js**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js)
+
+Partiendo desde un **botón** de **Me gusta**, con javaScript vanilla le vamos a dar interactividad, para que al hacer **click** cambie el texto.
 
 ```CSS
 button {
@@ -109,6 +111,8 @@ body {
 <button data-id="123">Me gusta</button>
 ```
 
+El boton tiene un **Ddta-id**, que es la forma de recuperar qué es lo que gusta.
+
 ```JavaScript
 // Vanilla JavaScript
 
@@ -119,7 +123,7 @@ const button = document.querySelector("button")
 button.addEventListener("click", function () {
   //recuperar la id del atributo del HTML
   const id = button.getAttribute("data-id")
-  
+
   // llamar a un servicio para actualizar si me gusta
   // toggleLike(id)
   if(button.classList.contains("liked")) {
@@ -132,11 +136,23 @@ button.addEventListener("click", function () {
 })
 ```
 
--> Pero si en vez de un solo boton, tnego más de uno, ya en vez de un if-else necesito un switch. Y si quiero reutilizar este código ya se complica, no es nada escalable.
+-> Es **código imperativo**, le digo **cómo** hay que hacerlo. Hago el **paso a paso** de todo.
+
+-Selecciona el boton
+
+-Escucha el evento **click**
+
+-Al hacer click **recuperar el id del atributo**
+
+-Luego **llamar al servicio** para actualizar si me gusta
+
+-Ver si contiene **liked**, entonces sacar la clase **liked** y modificar el texto dle botón. Si no tiene **liked** agregar la clase y modificar el texto.
+
+-> Pero si en vez de un solo boton, tengo más de uno, ya en vez de un if-else necesito un switch. Y si quiero reutilizar este código ya se complica, no es nada escalable.
 
 Esto es todo **código imperativo**, voy haciendo paso a paso todo.
 
--> En cambio React es **código declarativo**
+
 
 Para utilizar React necesitamos:
 
@@ -212,11 +228,11 @@ const buttonJSX = <button data-id="123"> </button>
 
 - Con **vite**:
 
-```npm init -y```
+`npm init -y`
 
-```mkdir projects```
+`mkdir projects`
 
-```npm create vite@latest```
+`npm create vite@latest`
 
 ```
 00-hola-mundo
@@ -224,12 +240,11 @@ React
 JavaScript + SWC
 ```
 
-```cd projects```
+`cd projects`
 
-```cd 00-hola-mundo```
+`cd 00-hola-mundo`
 
-``` init```
-
+` init`
 
 ### La estructura del proyecto inicial
 
@@ -263,10 +278,10 @@ Le agregamos estilos...
 ... para agregar **estilos en linea** hay que agregar el **style** como prop y pasarle un **objeto** por lo que usamos {}, y como usamos JavaScript dentro otras {}, la difenrecia es que usamos camelCase para los atributos, entonces background-color pasa a ser backgroundColor. Y se separa con **,** en vez de con punto y coma.
 
 ```JSX
-<article style={{ display: "flex", alignItems: "center"}} > </<article> 
+<article style={{ display: "flex", alignItems: "center"}} > </<article>
 ```
 
-... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx***. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
+... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx\***. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
 
 ... utilizar **CSS modules**
 
@@ -281,18 +296,21 @@ Le agregamos estilos...
 -> Pasamos de tener todo en App.js, a separarlo en el **primer componente**.
 
 En vez de utilizar :
+
 ```JSX
 <React.Fragment>
 </React.Fragment>
 ```
 
 Utilizamos:
+
 ```JSX
 <>
 </>
 ```
 
 -> Cuando no se pasa una prop, y se trata de acceder a ella, se tiene un **undefined**(un **falsy**) por eso en vez de psar:
+
 ```JSX
 <TwitterFollowCard isFollowing={true} />
 <TwitterFollowCard isFollowing={false} />
@@ -300,6 +318,7 @@ Utilizamos:
 ```
 
 De este modo **por defecto** es **true**(asi no tengo undefined):
+
 ```JSX
 <TwitterFollowCard isFollowing />
 <TwitterFollowCard isFollowing={false} />
@@ -310,18 +329,17 @@ De este modo **por defecto** es **true**(asi no tengo undefined):
 
 Hay que recordar que en JavaScriot las funciones son **de primera clase** (se pueden pasar como parámetros)
 
-
 -> :book: ¿ Cuál es la diferencia entre **componente** y **elemento**?
 
 Un componente es una factoria de elementos. Es una **función** que al ejecutarla devuelve un **elemento**
 
 Los **componentes** crean **elementos** y **react** renderiza el **elemento**.
 
--> :book: Cuando se pasan **props** deben ser **inmutables**, porque siempre debe haber **una única fuente de verdad** 
+-> :book: Cuando se pasan **props** deben ser **inmutables**, porque siempre debe haber **una única fuente de verdad**
 
--> :book:  Lo que envuelve tiene dentro **children**, se puede usar también como **prop**, en children se puede renderizar un texto, una imagen, otro componente, un String, etc. Solo hay **un children**, que es **el elemento que envuelve a los demas**(hay uno solo con cuantos elementos adentros necesites).
+-> :book: Lo que envuelve tiene dentro **children**, se puede usar también como **prop**, en children se puede renderizar un texto, una imagen, otro componente, un String, etc. Solo hay **un children**, que es **el elemento que envuelve a los demas**(hay uno solo con cuantos elementos adentros necesites).
 
--> :book: Para pasar todas las *props** se puede usar el **rest operator** con las **...***, pero es mala práctica a veces se envía información que no es necesaria, el componente se vuelve a re renderizar sin necesidad y es más complejo entender qué información se recibe en el componente. Es mejor ser declarativo, y nombrar las props.
+-> :book: Para pasar todas las \*props** se puede usar el **rest operator** con las **...\*\*\*, pero es mala práctica a veces se envía información que no es necesaria, el componente se vuelve a re renderizar sin necesidad y es más complejo entender qué información se recibe en el componente. Es mejor ser declarativo, y nombrar las props.
 
 -> :book: **state** con **useState** podemos guardar un valor inicial del estado.
 

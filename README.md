@@ -2,7 +2,7 @@
 
 ---
 
-Curso de **React desde Cero** con *MiduDev**(Miguel Angel Duran), siguiendolo todos los Miércoles en su canal de Twich.
+Curso de **React desde Cero** con \*MiduDev\*\*(Miguel Angel Duran), siguiendolo todos los Miércoles en su canal de Twich.
 
 :computer: -> [Repositorio en GitHub de MiduDev](https://github.com/midudev/aprendiendo-react)
 
@@ -11,7 +11,9 @@ Curso de **React desde Cero** con *MiduDev**(Miguel Angel Duran), siguiendolo to
 ## Clases prácticas
 
 En las que vamos a ir haciendo varios proyectos.
- ¿Cuáles son ?
+¿Cuáles son ?
+
+- Clase 1: [Ejercicio de botón "Me gusta" con JavaSCript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js)
 
 - Clase 1 : componente de Twitter
 
@@ -19,7 +21,7 @@ En las que vamos a ir haciendo varios proyectos.
 
 ## :book: Temas a ver
 
-**React 18**: 
+**React 18**:
 
 - Requerimientos ¿qué se debe tener instalado?
 
@@ -51,12 +53,11 @@ En las que vamos a ir haciendo varios proyectos.
 
 - **Testing**: con **React Testing Library**, **Testing End to End** con **PlayWright**. Un pequeño ejercicio con **TDD**.
 
-- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**?  Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaicones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con REact?
+- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**? Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaicones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con REact?
 
 - **React Query** ¿Cómo utilizar esta dependencia para eliminar un montón de código que se utilizó en proyectos anerires?
 
 - Crear los propios **custom hooks**.
-
 
 ---
 
@@ -74,7 +75,7 @@ En las que vamos a ir haciendo varios proyectos.
 
 ## Clases:
 
-- [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ?  ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ Hacemos la primer práctica con React
+- [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ Hacemos la primer práctica con React
 
 - **Clase 2**
 
