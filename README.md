@@ -13,7 +13,12 @@ Curso de **React desde Cero** con \*MiduDev\*\*(Miguel Angel Duran), siguiendolo
 En las que vamos a ir haciendo varios proyectos.
 ¿Cuáles son ?
 
-- Clase 1: [Ejercicio de botón "Me gusta" con JavaSCript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js)
+- Clase 1: [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
+
+![image](https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png)
+
+![image](https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png)
+
 
 - Clase 1 : componente de Twitter
 
