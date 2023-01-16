@@ -374,13 +374,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ## :star2: Hacemos la primer práctica con React
 
--> Desde la base que nos arma Vite vamos a ir modificando , sacando lo que no necesitamos.
+-> Desde la base que nos arma Vite vamos a ir modificando , sacando lo que no necesitamos. Nos quedamos solo con **main.jsx**.
+
+-> Vamos a crear **el primer componente**, una función que crea el elemento **button**.
+
+
 
 Hacemos una **card** de twitter, encerrada en un `<article>`, con una `<img>` y un `<div>` con el nombre y un `<aside>` con el botón de seguir.
 
 Le agregamos estilos...
 
-... para agregar **estilos en linea** hay que agregar el **style** como prop y pasarle un **objeto** por lo que usamos {}, y como usamos JavaScript dentro otras {}, la difenrecia es que usamos camelCase para los atributos, entonces background-color pasa a ser backgroundColor. Y se separa con **,** en vez de con punto y coma.
+... para agregar **estilos en linea** hay que agregar el **style** como prop y pasarle un **objeto** por lo que usamos {}, y como usamos JavaScript dentro otras {}, la diferencia es que usamos camelCase para los atributos, entonces background-color pasa a ser backgroundColor. Y se separa con **,** en vez de con punto y coma.
 
 ```JSX
 <article style={{ display: "flex", alignItems: "center"}} > </<article>

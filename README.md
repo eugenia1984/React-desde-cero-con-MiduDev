@@ -2,7 +2,7 @@
 
 ---
 
-Curso de **React desde Cero** con \*MiduDev\*\*(Miguel Angel Duran), siguiendolo todos los Miércoles en su canal de Twich.
+Curso de **React desde Cero** con **MiduDev** (Miguel Angel Duran), todos los Miércoles en su canal de Twich, a partir del Miércoles 11 de Enero de 2023.
 
 :computer: -> [Repositorio en GitHub de MiduDev](https://github.com/midudev/aprendiendo-react)
 
@@ -18,7 +18,6 @@ En las que vamos a ir haciendo varios proyectos.
 ![image](https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png)
 
 ![image](https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png)
-
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
@@ -79,6 +78,8 @@ En las que vamos a ir haciendo varios proyectos.
 - <img src="https://img.icons8.com/officel/30/null/react.png"/> **React**
 
 - **Vite**
+
+- [**Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
 
 ---
 
