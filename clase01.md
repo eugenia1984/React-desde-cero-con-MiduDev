@@ -323,25 +323,58 @@ const buttonJSX = <button data-id="123"> </button>
 ```
 >node_modules
 >public
->src
- >assets
- App.css
- App.jsx
- index.css
- main.jsx
- .gitignore
- index.html
- package-lock.json
- package.json
- vite.config.js
-
+> src
+  > assets
+        react.svg
+  App.css
+  App.jsx
+  index.css
+  main.jsx
+.gitignore
+index.html
+package-lock.json
+package.json
+vite.config.js
 ```
 
-**main.js** es el puerto de entrada de toda la aplicacion
+-> **.gitignore** ignora los archivos que no queremos que se suban al repositorio de GitHub
+
+
+-> **index.html** es el HTMl que va a renderizar la aplicación. Lo más importante es `<div id="root"></div>` y el ` <script type="module" src="/src/main.jsx"></script>` que carga el **main.js**
+
+-> **main.js** es el puerto de entrada de toda la aplicación. Es super importante. ¿Y qué hay dentro?
+
+-Se importa: **react**, **ReactDOM**(/client), **App** (el componente padre de todos) y el archivo **index.CSS** para que se apliquen los estilos.
+
+-Se crea el Root y el elemento donde se renderiza la aplicación  con el **id="root"**.
+
+-Se usa el **modo estricto**
+
+-Se renderiza el componente `<App />`
+
+```JavaScript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+```
+
+
+-> **package.json** con las dependencias y las dependencias de desarrollo.
+
+-> **vite.config.js** la configuración que hizo Vite para poder compilar todo el proyecto.
 
 ---
 
 ## :star2: Hacemos la primer práctica con React
+
+-> Desde la base que nos arma Vite vamos a ir modificando , sacando lo que no necesitamos.
 
 Hacemos una **card** de twitter, encerrada en un `<article>`, con una `<img>` y un `<div>` con el nombre y un `<aside>` con el botón de seguir.
 

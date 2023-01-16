@@ -20,7 +20,7 @@ En las que vamos a ir haciendo varios proyectos.
 ![image](https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png)
 
 
--> DEntro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
+-> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
 - Clase 1 : [**componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/00-hola-mundo)
 
