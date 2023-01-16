@@ -275,23 +275,48 @@ const buttonJSX = <button data-id="123"> </button>
 
 - Con **vite**:
 
-`npm init -y`
+`npm init -y` -> para crear un proyecto en node
 
-`mkdir projects`
+`mkdir projects` -> para crear la carpeta **projects** donde voy a tener los proyectos
 
-`npm create vite@latest`
+`npm create vite@latest` -> para crearlo con [**vite**
+](https://vitejs.dev/guide/)
+
+-> Me va a pedir que complete alguna información:
+
+1. El nombre del proyecto que quremos tener:
 
 ```
-00-hola-mundo
-React
-JavaScript + SWC
+> 00-hola-mundo
 ```
 
-`cd projects`
+2. Elegimos entre: Vanilla / Vue / React / preact / Lit / Svelte / others
+```
+> React
+```
 
-`cd 00-hola-mundo`
+3. Elegimos entre: JavaScript /TypeScript / JavaScript + SWC / TypeScript + SWC
+```
+> JavaScript + SWC
+```
 
-` init`
+**SWC** es un transpilador, como **Babl**, pero ás rápido porque está hecho con Rust.
+
+4. Entramos al primer proyecto : `cd 00-hola-mundo`
+
+5. Instalamos las dependencias : ` npm install`
+
+6. Inicializamos el proyecto : `npm run dev`
+
+7. Y ya lo podemos ver:
+```
+  VITE v4.0.4  ready in 496 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+```
+
 
 ### La estructura del proyecto inicial
 
