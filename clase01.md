@@ -395,7 +395,29 @@ Le agregamos estilos...
 <article style={{ display: "flex", alignItems: "center"}} > </<article>
 ```
 
-... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx\***. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
+```JSX
+export function App() {
+  return (
+    <article style={{display: "flex", alignItems: "center", color: "#fff"}}>
+      <header>
+        <img src="https://unavatar.io/midudev" alt="El avatar de midudev" />
+        <div>
+          <strong>Miguel Ángel Durán</strong>
+          <span>@midudev</span>
+        </div>
+      </header>
+      <aside>
+        <button>Seguir</button>
+      </aside>
+    </article>
+  )
+}
+```
+
+En **React Native** es la forma nativa de agregar los estilos.
+
+
+... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx**. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
 
 ... utilizar **CSS modules**
 

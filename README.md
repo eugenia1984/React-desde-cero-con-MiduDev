@@ -80,7 +80,11 @@ En las que vamos a ir haciendo varios proyectos.
 
 - **Vite**
 
+#### Recursos:
+
 - [**Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
+
+- [**unavatar.io**](https://unavatar.io/)
 
 ---
 
