@@ -1,0 +1,20 @@
+{
+  "name": "react_con_midudev",
+  "version": "1.0.0",
+  "description": "Practicas de React del curso REact desde Cero de MiduDev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenia1984/React-desde-cero-con-MiduDev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugenia1984/React-desde-cero-con-MiduDev/issues"
+  },
+  "homepage": "https://github.com/eugenia1984/React-desde-cero-con-MiduDev#readme"
+}
