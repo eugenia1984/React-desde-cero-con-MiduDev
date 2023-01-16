@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { users }  from "./data.js";
+import { users } from "./data.js";
 import { TwitterFollowCard } from "./components/card/TwitterFollowCard";
 import "./App.css";
 
@@ -17,7 +17,7 @@ export function App() {
           {name}
         </TwitterFollowCard>
       ))}
-      <button onClick={() => setState(state + 1)}>count</button>
+      <button onClick={() => setState(state + 1)}>count: {state}</button>
     </section>
   );
 }

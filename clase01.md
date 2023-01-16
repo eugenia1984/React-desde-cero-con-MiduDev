@@ -421,11 +421,18 @@ En **React Native** es la forma nativa de agregar los estilos.
 
 ... utilizar **CSS modules**
 
-... Tailwind
+... [**Tailwind**](https://tailwindcss.com/), [**Bootstrap**](https://getbootstrap.com/)
 
-...styled-components
+... [**styled-components**](https://styled-components.com/)
 
--> Todas son tecnologías **Agnósticas** a React. No hay una mejor que otra, se utiliza bastante Tailwind. Pero también hay componentes ya armados como **Chakra UI** o **Material UI**.
+-> Todas son tecnologías **agnósticas** a React. No hay una mejor que otra, se utiliza bastante [**Tailwind**](https://tailwindcss.com/). Pero también hay componentes ya armados de React, como por ejemplo:
+
+- [**Chakra UI**](https://chakra-ui.com/)
+
+- [**Material UI**](https://mui.com/) 
+
+- [**React Bootstrap**](https://react-bootstrap.github.io/).
+
 
 ---
 
@@ -445,7 +452,7 @@ Utilizamos:
 </>
 ```
 
--> Cuando no se pasa una prop, y se trata de acceder a ella, se tiene un **undefined**(un **falsy**) por eso en vez de psar:
+-> Cuando no se pasa una prop, y se trata de acceder a ella, se tiene un **undefined**(un **falsy**) por eso en vez de pasar:
 
 ```JSX
 <TwitterFollowCard isFollowing={true} />
@@ -461,9 +468,16 @@ De este modo **por defecto** es **true**(asi no tengo undefined):
 <TwitterFollowCard isFollowing />
 ```
 
--> Como **props** se pueden pasar **variables**, **funciones**(para que el hijo cambie de estado, haga fetching de datos, etc) y **elementos**(por ejemplo **objects** o elementos JSX-XML y JS-)
+---
+
+
+-> :book: **Props**
+
+Como **props** se pueden pasar **variables**, **funciones**(para que el hijo cambie de estado, haga fetching de datos, etc) y **elementos**(por ejemplo **objects** o elementos JSX-XML y JS-)
 
 Hay que recordar que en JavaScriot las funciones son **de primera clase** (se pueden pasar como parámetros)
+
+---
 
 -> :book: ¿ Cuál es la diferencia entre **componente** y **elemento**?
 
@@ -471,16 +485,19 @@ Un componente es una factoria de elementos. Es una **función** que al ejecutarl
 
 Los **componentes** crean **elementos** y **react** renderiza el **elemento**.
 
+---
+
 -> :book: Cuando se pasan **props** deben ser **inmutables**, porque siempre debe haber **una única fuente de verdad**
 
 -> :book: Lo que envuelve tiene dentro **children**, se puede usar también como **prop**, en children se puede renderizar un texto, una imagen, otro componente, un String, etc. Solo hay **un children**, que es **el elemento que envuelve a los demas**(hay uno solo con cuantos elementos adentros necesites).
 
--> :book: Para pasar todas las \*props** se puede usar el **rest operator** con las **...\*\*\*, pero es mala práctica a veces se envía información que no es necesaria, el componente se vuelve a re renderizar sin necesidad y es más complejo entender qué información se recibe en el componente. Es mejor ser declarativo, y nombrar las props.
+---
+
+-> :book: Para pasar todas las **props** se puede usar el **rest operator** con las `...`, pero es mala práctica a veces se envía información que no es necesaria, el componente se vuelve a re renderizar sin necesidad y es más complejo entender qué información se recibe en el componente. Es mejor ser declarativo, y nombrar las props.
+
+---
 
 -> :book: **state** con **useState** podemos guardar un valor inicial del estado.
 
 ---
 
-## :star2: Para practicar se arma el juego del Ta-Te-Ti (tres en raya)
-
----
