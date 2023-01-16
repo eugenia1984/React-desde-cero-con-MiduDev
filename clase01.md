@@ -146,11 +146,7 @@ button.addEventListener("click", function () {
 
 -Luego **llamar al servicio** para actualizar si me gusta
 
--Ver si contiene **liked**, entonces sacar la clase **liked** y modificar el texto dle botón. Si no tiene **liked** agregar la clase y modificar el texto.
-
--> Pero si en vez de un solo boton, tengo más de uno, ya en vez de un if-else necesito un switch. Y si quiero reutilizar este código ya se complica, no es nada escalable.
-
-Esto es todo **código imperativo**, voy haciendo paso a paso todo.
+-Ver si contiene **liked**, entonces sacar la clase **liked** y modificar el texto del botón. Si no tiene **liked** agregar la clase y modificar el texto.
 
 -> Le hice una mini modificación asi ademas de cambiar el texto, cambian los colores de fondo y del texto.
 
@@ -159,6 +155,51 @@ Me queda así:
 ![image](https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png)
 
 ![image](https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png)
+
+-> Pero si en vez de un solo boton, tengo más de uno, ya en vez de un if-else necesito un switch. Y si quiero reutilizar este código ya se complica, no es nada escalable.
+
+
+```HTML
+<main>
+    <button data-id="123"></button>
+    <button data-id="123"></button>
+    <button data-id="123"></button>
+  </main>
+```
+
+```JavaScript
+// Vanilla JavaScript
+const d = document;
+
+// Recuperamos el boton
+const button = d.querySelectorAll("button");
+
+button.forEach(button => {
+  // al hacer click en el boton ejecutar una funcion
+  button.addEventListener("click", function () {
+    // recuperar la id del atributo de HTML
+    const id = button.getAttribute("data-id");
+
+    // llamar a un servicio para actualizar si me gusta
+    // togleLike(id)
+
+    if (button.classList.contains("liked")) {
+      button.classList.remove("liked");
+      button.innerHTML = "No me gusta";
+    } else {
+      button.classList.add("liked");
+      button.innerText = "Me gusta";
+    }
+  });
+})
+```
+
+Esto es todo **código imperativo**, voy haciendo paso a paso todo.
+
+El **código imperativo NO escala bien**, por cada cambio hay que ir haciendo mucha modificación de código.
+
+
+-> Vamos a pasar lo mismo, pero en React con JavaScript, todavía no usamos JSX.
 
 Para utilizar React necesitamos:
 
@@ -187,13 +228,13 @@ const root = ReactDOM.createRoot(appDomElement)
 
 const h = React.createElement
 
-const button = h("button", {"data-id": 123}, "Button 1")
+const button1 = h("button", {"data-id": 123}, "Button 1")
 const button2 = h("button", {"data-id": 456}, "Button 2")
 const button3 = h("button", {"data-id": 789}, "Button 3")
 
 //const div = React.createElement("div", bull, [button1, button2, button3])
-/ usando fragments
-const div = React.createElement(React.Fragment, bull, [button1, button2, button3])
+// usando fragments
+const div = h(React.Fragment, null, [button1, button2, button3])
 root.render(div)
 ```
 
