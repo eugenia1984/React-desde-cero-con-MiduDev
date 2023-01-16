@@ -378,6 +378,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 -> Vamos a crear **el primer componente**, una función que crea el elemento **button**.
 
+(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/00-hola-mundo)
 
 
 Hacemos una **card** de twitter, encerrada en un `<article>`, con una `<img>` y un `<div>` con el nombre y un `<aside>` con el botón de seguir.
