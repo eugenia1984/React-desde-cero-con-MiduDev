@@ -21,10 +21,6 @@ En las que vamos a ir haciendo varios proyectos.
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
-- Clase 1 : [**Botones Me gusta / No me gusta**]((https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/00-hola-mundo)
-
-![image](https://user-images.githubusercontent.com/72580574/212747244-fcf0e91b-25fd-45aa-8004-d64521eece3c.png)
-
 
 - Clase 1 : **componente de Twitter**
 

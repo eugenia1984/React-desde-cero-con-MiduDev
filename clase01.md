@@ -380,7 +380,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ![image](https://user-images.githubusercontent.com/72580574/212747648-7244fcc7-475e-4ab6-a616-6848a6c6c65a.png)
 
--> Sirvio ocmo primer acercamiento, ahora loq ue vamos a hacer es una parte de la UI de Twitter:
+-> Sirvio como primer acercamiento, ahora lo que vamos a hacer es una parte de la UI de Twitter, la parte de **A quien seguir**:
 
 ![image](https://user-images.githubusercontent.com/72580574/212748549-e3c9506c-6098-4e02-8338-a61e6821c7c3.png)
 
