@@ -568,3 +568,10 @@ Hay otra forma de **re renderizar el componente** y es ...
 ... **cuando un componente padre se vuelve a re renderizar y propaga los cambios hacia abajo**, es decir hacia sus componentes ¨hijos¨.
 
 ---
+
+### Así queda visualmente:
+
+![image](https://user-images.githubusercontent.com/72580574/212924080-4ac613ff-60d9-4452-9481-6ce58f8937a9.png)
+
+---
+
