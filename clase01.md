@@ -565,7 +565,41 @@ Hay otra forma de **re renderizar el componente** y es ...
 
 ... **actualizando el estado interno**, cada vez que se actualiza el estado interno de un componente, React re renderiza el componente, para reflejar los cambios.
 
-... **cuando un componente padre se vuelve a re renderizar y propaga los cambios hacia abajo**, es decir hacia sus componentes ¨hijos¨.
+... **cuando un componente padre se vuelve a re renderizar y propaga los cambios hacia abajo**, es decir hacia sus componentes ¨hijos¨, independientmente de si sus props han cambiado o no.
+
+Tener en cuenta que **el estado solo se inicializa una sola vez**, entonces el estado dentro del componente hijo solo se inicializa una vez, por más que luego tengamos cambios en el componente padre.
+
+---
+
+### Renderizado de listas
+
+Solemos tener un **array de elementos** al hacer un **fetch** a una API y debemos renderizar dichos elementos.
+
+Un ejemplo en código:
+
+```JSX
+{users.map(({ userName, name, isFollowing }) => (
+  <TwitterFollowCard
+    key={userName}
+    userName={userName}
+    initialIsFollowing={isFollowing}
+  >
+    {name}
+  </TwitterFollowCard>
+))}
+```
+
+-> Utilizamos **.map()**, para no hacer cambios en el array original, asi vamos a ir recorreindo elemento por elemento y vamos a renderizar acorde a lo que tengamos ene l **return**.
+
+Siempre recordar que cada **elemento a renderizar** debe tener su **key**(el identificador único para dicho elemento).
+
+Al renderizar un array y React utiliza el DOM virtual, debo identificar cada elemento con algo único como la **key**, asi cada children es identificable, los puede comparar para ver si hay cambios y re renderizar.
+
+Un error común es utilizar **index**, solo lo podés utilizar si tenes en claro que ese elemento va a tener el mismo índice, ya que si el índice luego lo utiliza otro elemento, ahi hay inconveneintes, se ve información anterior, información que no cuadra.
+
+-> Lo mejor es utilizar como **key** algo único, como un **id** de una base de datos, un **userName**, lo importante es que sea único y que no se repita.
+
+Utilizar un **Math.random** también es mala ractica, porque cada vez que se renderiza va a estar cambiandose.
 
 ---
 
