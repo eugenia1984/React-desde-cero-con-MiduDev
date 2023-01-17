@@ -24,6 +24,9 @@ En las que vamos a ir haciendo varios proyectos.
 
 - Clase 1 : **componente de Twitter**
 
+![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
+
+
 ---
 
 ## :book: Temas a ver
