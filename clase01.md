@@ -158,7 +158,6 @@ Me queda así:
 
 -> Pero si en vez de un solo boton, tengo más de uno, ya en vez de un if-else necesito un switch. Y si quiero reutilizar este código ya se complica, no es nada escalable.
 
-
 ```HTML
 <main>
     <button data-id="123"></button>
@@ -197,7 +196,6 @@ button.forEach(button => {
 Esto es todo **código imperativo**, voy haciendo paso a paso todo.
 
 El **código imperativo NO escala bien**, por cada cambio hay que ir haciendo mucha modificación de código.
-
 
 -> Vamos a pasar lo mismo, pero en React con JavaScript, todavía no usamos JSX.
 
@@ -291,11 +289,13 @@ const buttonJSX = <button data-id="123"> </button>
 ```
 
 2. Elegimos entre: Vanilla / Vue / React / preact / Lit / Svelte / others
+
 ```
 > React
 ```
 
 3. Elegimos entre: JavaScript /TypeScript / JavaScript + SWC / TypeScript + SWC
+
 ```
 > JavaScript + SWC
 ```
@@ -309,6 +309,7 @@ const buttonJSX = <button data-id="123"> </button>
 6. Inicializamos el proyecto : `npm run dev`
 
 7. Y ya lo podemos ver:
+
 ```
   VITE v4.0.4  ready in 496 ms
 
@@ -316,7 +317,6 @@ const buttonJSX = <button data-id="123"> </button>
   ➜  Network: use --host to expose
   ➜  press h to show help
 ```
-
 
 ### La estructura del proyecto inicial
 
@@ -339,14 +339,13 @@ vite.config.js
 
 -> **.gitignore** ignora los archivos que no queremos que se suban al repositorio de GitHub
 
-
 -> **index.html** es el HTMl que va a renderizar la aplicación. Lo más importante es `<div id="root"></div>` y el ` <script type="module" src="/src/main.jsx"></script>` que carga el **main.js**
 
 -> **main.js** es el puerto de entrada de toda la aplicación. Es super importante. ¿Y qué hay dentro?
 
 -Se importa: **react**, **ReactDOM**(/client), **App** (el componente padre de todos) y el archivo **index.CSS** para que se apliquen los estilos.
 
--Se crea el Root y el elemento donde se renderiza la aplicación  con el **id="root"**.
+-Se crea el Root y el elemento donde se renderiza la aplicación con el **id="root"**.
 
 -Se usa el **modo estricto**
 
@@ -365,7 +364,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ```
 
-
 -> **package.json** con las dependencias y las dependencias de desarrollo.
 
 -> **vite.config.js** la configuración que hizo Vite para poder compilar todo el proyecto.
@@ -383,7 +381,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 -> Sirvio como primer acercamiento, ahora lo que vamos a hacer es una parte de la UI de Twitter, la parte de **A quien seguir**:
 
 ![image](https://user-images.githubusercontent.com/72580574/212748549-e3c9506c-6098-4e02-8338-a61e6821c7c3.png)
-
 
 Hacemos una **card** de twitter, encerrada en un `<article>`, con una `<img>` y un `<div>` con el nombre y un `<aside>` con el botón de seguir.
 
@@ -416,7 +413,6 @@ export function App() {
 
 En **React Native** es la forma nativa de agregar los estilos.
 
-
 ... le podemos dar los estilos en CSS normal, guardandolos en un archivo **.css** y solo hay que **importarlo** en el archivo **.jsx**. Como el JSX se pasa a JavaScript, como class es palabra reservada de JavaScript utilizamos **className**
 
 ... utilizar **CSS modules**
@@ -429,10 +425,9 @@ En **React Native** es la forma nativa de agregar los estilos.
 
 - [**Chakra UI**](https://chakra-ui.com/)
 
-- [**Material UI**](https://mui.com/) 
+- [**Material UI**](https://mui.com/)
 
 - [**React Bootstrap**](https://react-bootstrap.github.io/).
-
 
 ---
 
@@ -470,7 +465,6 @@ De este modo **por defecto** es **true**(asi no tengo undefined):
 
 ---
 
-
 -> :book: **Props**
 
 Como **props** se pueden pasar **variables**, **funciones**(para que el hijo cambie de estado, haga fetching de datos, etc) y **elementos**(por ejemplo **objects** o elementos JSX-XML y JS-)
@@ -485,9 +479,13 @@ Un componente es una factoria de elementos. Es una **función** que al ejecutarl
 
 Los **componentes** crean **elementos** y **react** renderiza el **elemento**.
 
+COMPONENTE => funcion que devuelve elemento
+
+ELEMENTO => es renderizado por React
+
 ---
 
--> :book: Cuando se pasan **props** deben ser **inmutables**, porque siempre debe haber **una única fuente de verdad**
+-> :book: Cuando se pasan **props** deben ser **inmutables**, porque siempre debe haber **una única fuente de verdad**. Hay que utilizarlas tal cual llegan por parámetro, no se pueden modificarlas. Lo que si se puede hacer es igualas era prop a una nueva constante o array y trabajar sobre esa nueva constante o array.
 
 -> :book: Lo que envuelve tiene dentro **children**, se puede usar también como **prop**, en children se puede renderizar un texto, una imagen, otro componente, un String, etc. Solo hay **un children**, que es **el elemento que envuelve a los demas**(hay uno solo con cuantos elementos adentros necesites).
 
@@ -501,3 +499,72 @@ Los **componentes** crean **elementos** y **react** renderiza el **elemento**.
 
 ---
 
+-> :book: **Renderizado condicional** con un **ternario**:
+Para que se muestre un texto u otro acorde a si está siguiendo o no:
+
+```JSX
+const text = isFollowing ? "Siguiendo" : "Seguir";
+```
+
+También varian los coloreS:
+
+```JSX
+const buttonClassName = isFollowing
+  ? "tw-followCard-button is-following"
+  : "tw-followCard-button";
+```
+
+Esto es una de las claves del **dinamismo** de React.
+
+---
+
+-> :book: El **State** en React:
+
+```JSX
+ const [isFollowing, setIsFollowing] = useState
+```
+
+Utilizando el **hook** de **useState** para poder determinanar el **initialValue** de **isFollowing** y teniendo el setter (**setIsFollowing** para poder actualizar el estado).
+
+**isFollowing** es la constante que nos va a estar indicando si se está siguiendo o no al usuario.
+
+Se utiliza la **desestructuracion** ya que sino tendríamos:
+
+```JSX
+const state = useState(false) // el estado inicial
+const isFollowing = state[0] // la variable que me indica el valor del estado
+cont setIsFollowing = state[1] // el setter que actualiza el estado
+```
+
+¿Cómo vamos a estar actualizando el estado?
+
+Pasando de false a true y de true pasando a false con:
+
+```JSX
+const handleClick = () => {
+  setIsFollowing(!isFollowing);
+};
+```
+
+#### El estado está separado en cada elemento, es un ESTADO INTERNO, está a nivel de cada uno de los elementos que crea el componente, no está compartido entre elementos.
+
+---
+
+-> :book: **React es declarativo**, indico que quiero que se haga, no los paso a paso para hacerlo. Se que quiero pero no como se hace. Se utiliza **programación funcional**.
+
+
+---
+
+-> :book: **Cada vez que CAMBIAMOS EL ESTADO, React lo detecta y refleja el estado en la UI**, esto es posible gracia al **virtual DOM**, en vez de volver a renderizar tood el DOM, solo vuelve a renderizar lo que cambio, este DOM virtual es una copia en memoria del DOM. 
+
+Esto con JavaScript vanilla es muy complicado, dificil, se haría con código declarativo y se utilizarían muchos recursos.
+
+¿Qué hace React ? "Toma una foto· de qué se renderiza. Lo crea como un árbol de elemento y compara con lo que se va a renderizar, encuentra las diferencias y solo actualiza las diferencias, asi hace el menor cambio posible.
+
+Hay otra forma de **re renderizar el componente** y es ...
+
+... **actualizando el estado interno**, cada vez que se actualiza el estado interno de un componente, React re renderiza el componente, para reflejar los cambios.
+
+... **cuando un componente padre se vuelve a re renderizar y propaga los cambios hacia abajo**, es decir hacia sus componentes ¨hijos¨.
+
+---

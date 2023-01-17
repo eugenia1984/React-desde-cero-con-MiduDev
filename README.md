@@ -90,7 +90,7 @@ En las que vamos a ir haciendo varios proyectos.
 
 ## Clases:
 
-- [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ Hacemos la primer práctica con React
+- [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ Hacemos la primer práctica con React, donde creamos parte de la interfaz de Twitter donde vemos los usuarios y se siguen o dejan de seguir, temas que se ver: props, desestructuración, hook useState, renderizado condicional(con ternario), imperativo vs declarativo, programación funcional, virtual DOM.
 
 - **Clase 2**
 
