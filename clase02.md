@@ -21,3 +21,7 @@ Va a ser un **Tablero**(**board**) con **9** posiciones, las cuales van a tener 
 -> Se pasa la función (sin los parentesis), no la ejecución de la función(si va con los parentesis se manda la ejecucion de la funcion y se ejecutara al momento). Si se pasa la ejecucion de la función, ya al renderizar la UI se va a ejecutar 9 veces, por cada square, y en realidad solo quiero que se **ejecute al hacer click, no cuando se renderiza**, por eso va sin los (), por eso **se pasa como parámetro**.
 
 ---
+
+-> :book: **La actualización de los estados en rEact son ASÍNCRONAS**, puede ocurrir rápido o demorarse, pero no bloquea el código que viene después (justamente porque no es síncrono).
+
+---
