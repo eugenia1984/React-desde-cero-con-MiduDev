@@ -44,4 +44,49 @@ useEffect(codoToExecute, listOfDependencies)
 
 Para entender el concepto del *hook** **useEffect**
 
+-> **return** del useEffect, para limpiar, es el **clean up method**. Dentro del return hay que cerrar si hay llamado a API. Cada vez que vuelve a ejecutar el useEffect va a hacer el clen up y también cuando se desmonta.
+
+---
+
+## :star: React Developer Tools
+
+- Aclara si usas el **modo desarrollo** o si usas **modo producción**.
+
+- **Components** para poder ver los **state** y las **props**, podemos hacer cambios y lo vemos cuando se re renderice.
+
+- **Profiler** es interesante para temas de rendimiento.
+
+---
+
+## :star: Para deployar
+
+- Vercel
+
+- Netlify
+
+
+---
+
+## :star: Tareas
+
+-> Del tres en raya
+
+- Pasar del "3 en raya" a "conecta 4"
+
+- Mejorar estados
+
+- Ver de poder usar el useEffect
+
+- Guardar la información en una API
+
+-> Del mouse follower
+
+- Se puede convertir en un juego...
+
+... ver cuantas veces toca algo
+
+... ver si toca el boton que cambie el sitio
+
+... que de forma random se dibuje un punto en la pantalla, que este unos minutos, y si el mouse esta adentro que sume puntos.
+
 ---
