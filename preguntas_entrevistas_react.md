@@ -1,8 +1,8 @@
 # Preguntas de entrevista para React
 
-<div id="indice">
- <p><strong>De cero a experto</strong>. Con respuestas detalladas en Español</p>
-</div>
+
+<strong>De cero a experto</strong>. Con respuestas detalladas en Español
+
 
 ---
 
@@ -10,17 +10,17 @@
 
 ### Principiante
 
-1. <a href="#1">¿Qué es React?</a>
+1. ¿Qué es React?
 
-2. <a href="#2">¿Cuáles son las características principales de React?</a>
+2. ¿Cuáles son las características principales de React?
 
-3. <a href="#3">¿Qué significa exactamente que sea declarativo?</a>
+3. ¿Qué significa exactamente que sea declarativo?
 
-4. <a href="#4">¿Qué es un componente?</a>
+4. ¿Qué es un componente?
 
-5. <a href="#5">¿Qué es JSX?</a>
+5. ¿Qué es JSX?
 
-6. <a href="#6">¿Cómo se transforma el JSX?</a>
+6. ¿Cómo se transforma el JSX?
 
 7. ¿Cuál es la diferencia entre componente y elemento en React?
 
@@ -255,9 +255,7 @@ Too many re-renders. React limits the number of renders to prevent an infinite l
 
 ## :star: Principiante
 
-<div id="1>
-     
-<h2>1 - ¿Qué es React?</h2>
+1. **¿Qué es React?**
          
 React es una biblioteca de JavaScript de código abierto para construir interfaces de usuario. Está basada en la componetización de la UI: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
 
@@ -266,50 +264,55 @@ Esto hace que React sea una herramienta muy útil para construir interfaces comp
 Fue creada en 2011 por Jordan Walke, un ingeniero de software que trabajaba en Facebook y que quería simplificar la forma de crear interfaces de usuario complejas.
 
 Es una biblioteca muy popular y es usada por muchas empresas como Facebook, Netflix, Airbnb, Twitter, Instagram, etc.
-</div>
-<a href="#indice">⬆ Volver a índice</a>
+
                  
-                 
-         ¿Cuáles son las características principales de React?
+2. **¿Cuáles son las características principales de React?**
+
 Las características principales de React son:
 
-Componentes: React está basado en la componetización de la UI. La interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
+- **Componentes**: React está basado en la componetización de la UI. La interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
 
-Virtual DOM: React usa un DOM virtual para renderizar los componentes. El DOM virtual es una representación en memoria del DOM real. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz. En lugar de modificar el DOM real, React modifica el DOM virtual y, a continuación, compara el DOM virtual con el DOM real. De esta forma, React sabe qué cambios se deben aplicar al DOM real.
+- **Virtual DOM**: React usa un DOM virtual para renderizar los componentes. El DOM virtual es una representación en memoria del DOM real. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz. En lugar de modificar el DOM real, React modifica el DOM virtual y, a continuación, compara el DOM virtual con el DOM real. De esta forma, React sabe qué cambios se deben aplicar al DOM real.
 
-Declarativo: React es declarativo, lo que significa que no se especifica cómo se debe realizar una tarea, sino qué se debe realizar. Esto hace que el código sea más fácil de entender y de mantener.
+- **Declarativo**: React es declarativo, lo que significa que no se especifica cómo se debe realizar una tarea, sino qué se debe realizar. Esto hace que el código sea más fácil de entender y de mantener.
 
-Unidireccional: React es unidireccional, lo que significa que los datos fluyen en una sola dirección. Los datos fluyen de los componentes padres a los componentes hijos.
+- **Unidireccional**: React es unidireccional, lo que significa que los datos fluyen en una sola dirección. Los datos fluyen de los componentes padres a los componentes hijos.
 
-Universal: React se puede ejecutar tanto en el cliente como en el servidor. Además, puedes usar React Native para crear aplicaciones nativas para Android e iOS.
+- **Universal**: React se puede ejecutar tanto en el cliente como en el servidor. Además, puedes usar React Native para crear aplicaciones nativas para Android e iOS.
 
-⬆ Volver a índice
 
-¿Qué significa exactamente que sea declarativo?
+
+3. **¿Qué significa exactamente que sea declarativo?**
+
 No le decimos cómo debe renderizar la interfaz a base de instrucciones. Le decimos qué debe renderizar y React se encarga de renderizarlo.
 
 Un ejemplo entre declarativo e imperativo:
 
+```JavaScript
 // Declarativo
 const element = <h1>Hello, world</h1>
+```
 
+```JSX
 // Imperativo
 const element = document.createElement('h1')
 element.innerHTML = 'Hello, world'
-⬆ Volver a índice
+```
 
-¿Qué es un componente?
+4. **¿Qué es un componente?**
+
 Un componente es una pieza de código que renderiza una parte de la interfaz. Los componentes pueden ser parametrizados, reutilizados y pueden contener su propio estado.
 
 En React los componentes se crean usando funciones o clases.
 
-⬆ Volver a índice
 
-¿Qué es JSX?
+5. **¿Qué es JSX?**
+
 React usa JSX para declarar qué debe renderizar. JSX es una extensión de JavaScript que permite escribir un código más cercano visualmente a HTML, que mejora la legibilidad del código y hace que sea más fácil de entender.
 
 Sin JSX, deberíamos usar React.createElement para crear los elementos de la interfaz manualmente de esta forma:
 
+```JSX
 import { createElement } from 'react'
 
 function Hello () { // un componente es una función! 👀
@@ -319,27 +322,34 @@ function Hello () { // un componente es una función! 👀
     'Hola Mundo 👋🌍!' // contenido del elemento
   )
 }
+```
+
 Esto es muy tedioso y poco legible. Por eso, React usa JSX para declarar qué debe renderizar. Por eso usamos JSX de esta forma:
 
+```JSX
 function Hello () {
   return <h1>Hola Mundo 👋🌍!</h1>
 }
+```
+
 Ambos códigos son equivalentes.
 
-⬆ Volver a índice
 
-¿Cómo se transforma el JSX?
+6. **¿Cómo se transforma el JSX?**
+
 El JSX se transforma en código JavaScript compatible en el navegador usando un transpilador o compilador. El más famoso es a día de hoy Babel, que utiliza una serie de plugins para ser compatible con la transformación, pero existen otros como SWC.
 
 Puedes ver cómo se transforma el JSX en el playground de código de Babel.
 
 Hay casos especiales en los que un transpilador no es necesario. Por ejemplo, Deno tiene soporte nativo para la sintaxis JSX y no es necesario transformar el código para hacerlo compatible.
 
-⬆ Volver a índice
 
-¿Cuál es la diferencia entre componente y elemento en React?
+
+7. **¿Cuál es la diferencia entre componente y elemento en React?**
+
 Un componente es una función o clase que recibe props y devuelve un elemento. Un elemento es un objeto que representa un nodo del DOM o una instancia de un componente de React.
 
+```JSX
 // Elemento que representa un nodo del DOM
 {
   type: 'button',
@@ -362,16 +372,22 @@ Un componente es una función o clase que recibe props y devuelve un elemento. U
     children: 'OK!'
   }
 }
-⬆ Volver a índice
+```
 
-¿Cómo crear un componente en React?
+
+8. **¿Cómo crear un componente en React?**
+
 Los componentes en React son funciones o clases que devuelven un elemento de React. Hoy en día lo más recomendado es usar funciones:
 
+```JSX
 function HelloWorld() {
   return <h1>Hello World!</h1>
 }
+```
+
 Pero también puedes usar una clase para crear un componente React:
 
+```JSX
 import { Component } from 'react'
 
 class HelloWorld extends Component {
@@ -379,33 +395,44 @@ class HelloWorld extends Component {
     return <h1>Hello World!</h1>
   }
 }
+```
+
 Lo importante es que el nombre de la función o clase empiece con una letra mayúscula. Esto es necesario para que React pueda distinguir entre componentes y elementos HTML.
 
-⬆ Volver a índice
 
-¿Qué son las props en React?
+
+9. **¿Qué son las props en React?**
+
 Las props son las propiedades de un componente. Son datos que se pasan de un componente a otro. Por ejemplo, si tienes un componente Button que muestra un botón, puedes pasarle una prop text para que el botón muestre ese texto:
 
+```JSX
 function Button(props) {
   return <button>{props.text}</button>
 }
+```
+
 Podríamos entender que el componente Button es un botón genérico, y que la prop text es el texto que se muestra en el botón. Así estamos creando un componente reutilizable.
 
 Debe considerarse además que al usar cualquier expresión JavaScript dentro de JSX debe envolverlos con {}, en este caso el objeto props, de otra forma JSX lo considerará como texto plano.
 
 Para usarlo, indicamos el nombre del componente y le pasamos las props que queremos:
 
+```JSX
 <Button text="Haz clic aquí" />
 <Button text="Seguir a @midudev" />
+```
+
 Las props son una forma de parametrizar nuestros componentes igual que hacemos con las funciones. Podemos pasarle cualquier tipo de dato a un componente, incluso otros componentes.
 
-⬆ Volver a índice
 
-¿Qué es y para qué sirve la prop children en React?
+
+10. **¿Qué es y para qué sirve la prop children en React?**
+
 La prop children es una prop especial que se pasa a los componentes. Es un objeto que contiene los elementos que envuelve un componente.
 
 Por ejemplo, si tenemos un componente Card que muestra una tarjeta con un título y un contenido, podemos usar la prop children para mostrar el contenido:
 
+```JSX
 function Card(props) {
   return (
     <div className="card">
@@ -414,31 +441,39 @@ function Card(props) {
     </div>
   )
 }
+```
+
 Y luego podemos usarlo de la siguiente forma:
 
+```JSX
 <Card title="Título de la tarjeta">
   <p>Contenido de la tarjeta</p>
 </Card>
-En este caso, la prop children contiene el elemento <p>Contenido de la tarjeta</p>.
+```
+
+En este caso, la prop children contiene el elemento ```<p>Contenido de la tarjeta</p>```.
 
 Conocer y saber usar la prop children es muy importante para crear componentes reutilizables en React.
 
-⬆ Volver a índice
 
- ¿Qué diferencia hay entre props y state?
+
+11. **¿Qué diferencia hay entre props y state?**
+
 Las props son un objeto que se pasan como argumentos de un componente padre a un componente hijo. Son inmutables y no se pueden modificar desde el componente hijo.
 
 El state es un valor que se define dentro de un componente. Su valor es inmutable (no se puede modificar directamente) pero se puede establecer un valor nuevo del estado para que React vuelva a renderizar el componente.
 
 Así que mientras tanto props como state afectan al renderizado del componente, su gestión es diferente.
 
-⬆ Volver a índice
 
-¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?
+
+12. **¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?**
+
 Sí, se puede inicializar el estado con el valor de una prop. Pero hay que tener en cuenta que, si la prop cambia, el estado no se actualizará automáticamente. Esto es porque el estado se inicializa una vez, cuando el componente se monta por primera vez.
 
 Por ejemplo, con componentes funcionales:
 
+```JSX
 const Counter = () => {
   const [count, setCount] = useState(0)
 
@@ -455,15 +490,19 @@ const Count = ({ count }) => {
 
   return <p>{number}</p>
 }
+```
+
 En este caso, el componente Count inicializa su estado con el valor de la prop count. Pero si cambia el valor de la prop count, el estado no se actualizará automáticamente. Por lo que al hacer click, siempre veremos el número 0 en pantalla.
 
 Código de ejemplo
+
 En este ejemplo, lo mejor sería simplemente usar la prop count en el componente Count y así siempre se volvería a renderizar.
 
 Es una buena práctica evitar al máximo los estados de nuestros componentes y, siempre que se pueda, simplemente calcular el valor a mostrar a partir de las props.
 
 En el caso que necesites inicializar un estado con una prop, es una buena práctica es añadir el prefijo de initial a la prop para indicar que es el valor inicial del estado y que luego no lo usaremos más:
 
+```JSX
 const Input = ({ initialValue }) => {
   const [value, setValue] = useState(initialValue)
 
@@ -474,36 +513,47 @@ const Input = ({ initialValue }) => {
     />
   )
 }
+```
+
 Es un error muy común pensar que la prop actualizará el estado, así que tenlo en cuenta.
 
-⬆ Volver a índice
 
-¿Qué es el renderizado condicional en React?
+
+13. **¿Qué es el renderizado condicional en React?**
+
 El renderizado condicional es la forma de mostrar un componente u otro dependiendo de una condición.
 
 Para hacer renderizado condicional en React usamos el operador ternario:
 
+```JSX
 function Button({ text }) {
   return text
     ? <button>{text}</button>
     : null
 }
+```
+
 En este caso, si la prop text existe, se renderiza el botón. Si no existe, no se renderiza nada.
 
 Es común encontrar implementaciones del renderizado condicional con el operador &&, del tipo:
 
+```JSX
 function List({ listArray }) {
   return listArray?.length && listArray.map(item=>item)
 }
+```
+
 Parece que tiene sentido... si el length es positivo (mayor a cero) pintamos el map. !Pues no! ❌ Cuidado, si tiene length de cero ya que se pintará en el navegador un 0.
 
 Es preferible utilizar el operador ternario. Kent C. Dodds tiene un artículo interesante hablando del tema. Use ternaries rather than && in JSX
 
-⬆ Volver a índice
 
-¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
+
+14. **¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?**
+
 Para aplicar clases CSS a un componente en React usamos la prop className:
 
+```JSX
 function Button({ text }) {
   return (
     <button className="button">
@@ -511,13 +561,17 @@ function Button({ text }) {
     </button>
   )
 }
+```
+
 La razón por la que se llama className es porque class es una palabra reservada en JavaScript. Por eso, en JSX, tenemos que usar className para aplicar clases CSS.
 
-⬆ Volver a índice
 
-¿Cómo puedes aplicar estilos en línea a un componente en React?
+
+15. **¿Cómo puedes aplicar estilos en línea a un componente en React?**
+
 Para aplicar estilos CSS en línea a un componente en React usamos la prop style. La diferencia de cómo lo haríamos con HTML, es que en React los estilos se pasan como un objeto y no como una cadena de texto (esto puede verse más claro con los dobles corchetes, los primeros para indicar que es una expresión JavaScript, y los segundos para crear el objeto):
 
+```JSX
 function Button({ text }) {
   return (
     <button style={{ color: 'red', borderRadius: '2px' }}>
@@ -525,13 +579,17 @@ function Button({ text }) {
     </button>
   )
 }
+```
+
 Fíjate que, además, los nombres de las propiedades CSS están en camelCase.
 
-⬆ Volver a índice
 
-¿Cómo puedo aplicar estilos de forma condicional a un componente en React?
+
+16. **¿Cómo puedo aplicar estilos de forma condicional a un componente en React?**
+
 Puedes aplicar estilos de forma condicional a un componente en React usando la prop style y un operador ternario:
 
+```JSX
 function Button({ text, primary }) {
   return (
     <button style={{ color: primary ? 'red' : 'blue' }}>
@@ -539,10 +597,13 @@ function Button({ text, primary }) {
     </button>
   )
 }
+```
+
 En el caso anterior, si la prop primary es true, el botón tendrá el color rojo. Si no, tendrá el color azul.
 
 También puedes seguir la misma mecánica usando clases. En este caso, usamos el operador ternario para decidir si añadir o no la clase:
 
+```JSX
 function Button({ text, primary }) {
   return (
     <button className={primary ? 'button-primary' : ''}>
@@ -550,8 +611,11 @@ function Button({ text, primary }) {
     </button>
   )
 }
+```
+
 También podemos usar bibliotecas como classnames:
 
+```JSX
 import classnames from 'classnames'
 
 function Button({ text, primary }) {
@@ -561,15 +625,19 @@ function Button({ text, primary }) {
     </button>
   )
 }
+```
+
 En este caso, si la prop primary es true, se añadirá la clase primary al botón. Si no, no se añadirá. En cambio la clase button siempre se añadirá.
 
-⬆ Volver a índice
 
-¿Qué es el renderizado de listas en React?
+
+17. **¿Qué es el renderizado de listas en React?**
+
 El renderizado de listas es la forma de iterar un array de elementos y renderizar elementos de React para cada uno de ellos.
 
 Para hacer renderizado de listas en React usamos el método map de los arrays:
 
+```JSX
 function List({ items }) {
   return (
     <ul>
@@ -579,15 +647,19 @@ function List({ items }) {
     </ul>
   )
 }
-En este caso, se renderiza una lista de elementos usando el componente List. El componente List recibe una prop items que es un array de objetos del tipo [{id:1, name: "John", id:1, name: "Doe"}]. El componente List renderiza un elemento li por cada elemento del array.
+```
+
+En este caso, se renderiza una lista de elementos usando el componente List. El componente List recibe una prop items que es un array de objetos del tipo ``` [{id:1, name: "John", id:1, name: "Doe"}]```. El componente List renderiza un elemento li por cada elemento del array.
 
 El elemento li tiene una prop key que es un identificador único para cada elemento. Esto es necesario para que React pueda identificar cada elemento de la lista y actualizarlo de forma eficiente. Más adelante hay una explicación más detallada sobre esto.
 
-⬆ Volver a índice
 
-¿Cómo puedes escribir comentarios en React?
+
+18. **¿Cómo puedes escribir comentarios en React?**
+
 Si vas a escribir un comentario fuera del renderizado de un componente, puedes usar la sintaxis de comentarios de JavaScript sin problemas:
 
+```JSX
 function Button({ text }) {
   // Esto es un comentario
   /* Esto es un comentario
@@ -599,8 +671,11 @@ function Button({ text }) {
     </button>
   )
 }
+```
+
 Si vas a escribir un comentario dentro del renderizado de un componente, debes envolver el comentario en llaves y usar siempre la sintaxis de comentarios de bloque:
 
+```JSX
 function Button({ text }) {
   return (
     <button>
@@ -609,11 +684,14 @@ function Button({ text }) {
     </button>
   )
 }
-⬆ Volver a índice
+```
 
-¿Cómo añadir un evento a un componente en React?
+
+19. **¿Cómo añadir un evento a un componente en React?**
+
 Para añadir un evento a un componente en React usamos la sintaxis on y el nombre del evento nativo del navegador en camelCase:
 
+```JSX
 function Button({ text, onClick }) {
   return (
     <button onClick={onClick}>
@@ -621,13 +699,18 @@ function Button({ text, onClick }) {
     </button>
   )
 }
+```
+
 En este caso, el componente Button recibe una prop onClick que es una función. Cuando el usuario hace clic en el botón, se ejecuta la función onClick.
 
-⬆ Volver a índice
 
-¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?
+
+20. **¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?**
+
 Para pasar un parámetro a una función que maneja un evento en React podemos usar una función anónima:
 
+
+```JSX
 function Button({ id, text, onClick }) {
   return (
     <button onClick={() => onClick(id)}>
@@ -635,10 +718,13 @@ function Button({ id, text, onClick }) {
     </button>
   )
 }
+```
+
 Cuando el usuario hace clic en el botón, se ejecuta la función onClick pasándole como parámetro el valor de la prop id.
 
 También puedes crear una función que ejecuta la función onClick pasándole el valor de la prop id:
 
+```JSX
 function Button({ id, text, onClick }) {
   const handleClick = (event) => { // handleClick recibe el evento original
     onClick(id)
@@ -650,9 +736,11 @@ function Button({ id, text, onClick }) {
     </button>
   )
 }
-⬆ Volver a índice
+```
 
-¿Qué es el estado en React?
+
+21. **¿Qué es el estado en React?**
+
 El estado es un objeto que contiene datos que pueden cambiar en el tiempo. En React, el estado se usa para controlar los cambios en la interfaz.
 
 Para que entiendas el concepto, piensa en el interruptor de una habitación. Estos interruptores suelen tener dos estados: encendido y apagado. Cuando accionamos el interruptor y lo ponemos en on entonces la luz se enciende y cuando lo ponemos en off la luz se apaga.
@@ -665,6 +753,7 @@ Por ejemplo, si tienes un componente Counter que muestra un contador, puedes usa
 
 Para crear un estado en React usamos el hook useState:
 
+```JSX
 import { useState } from 'react'
 
 function Counter() {
@@ -677,14 +766,19 @@ function Counter() {
     </div>
   )
 }
+```
+
 Al usar el hook useState este devolverá un array de dos posiciones:
 
-El valor del estado.
-La función para cambiar el estado.
+- El valor del estado.
+
+- La función para cambiar el estado.
+
 Suele usarse desestructuración para facilitar la lectura y ahorrarnos algunas líneas de código. Por otro lado, al pasarle un dato como parámetro al useState le estamos indicando su estado inicial.
 
 Con un componente de clase, la creación del estado sería así:
 
+```JSX
 import { Component } from 'react'
 
 class Counter extends Component {
@@ -704,9 +798,11 @@ class Counter extends Component {
     )
   }
 }
-⬆ Volver a índice
+```
 
-¿Qué son los hooks?
+
+22. **¿Qué son los hooks?**
+
 Los Hooks son una API de React que nos permite tener estado, y otras características de React, en los componentes creados con una function.
 
 Esto, antes, no era posible y nos obligaba a crear un componente con class para poder acceder a todas las posibilidades de la librería.
