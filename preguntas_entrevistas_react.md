@@ -1,7 +1,7 @@
 # Preguntas de entrevista para React
 
-<div id"indice">
-De cero a experto. Con respuestas detalladas en Español
+<div id="indice">
+ <p>De cero a experto. Con respuestas detalladas en Español</p>
 </div>
 
 ---
