@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>React desde cerot</title>
-</head>
-<body>
- # Preguntas de entrevista para React
+# Preguntas de entrevista para React
 
 <div id="indice">
- <p>De cero a experto. Con respuestas detalladas en Español</p>
+ <p><strong>De cero a experto</strong>. Con respuestas detalladas en Español</p>
 </div>
 
 ---
