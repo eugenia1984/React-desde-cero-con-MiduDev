@@ -2022,10 +2022,12 @@ Este patrón es usado por grandes bibliotecas como react-router, formik o react-
 
 
 ### 51 - ¿Por qué no podemos usar un if en el renderizado de un componente?
+
 En React, no podemos usar un if en el renderizado de un componente porque no es una expresión válida de JavaScript, es una declaración. Las expresiones son aquellas que devuelven un valor y las declaraciones no devuelven ningún valor.
 
 En JSX solo podemos usar expresiones, por eso usamos ternarias, que sí son expresiones.
 
+```JSX
 // ❌ Esto no funciona
 function Button({ text }) {
   return (
@@ -2034,6 +2036,9 @@ function Button({ text }) {
     </button>
   )
 }
+```
+
+```JSX
 // ✅ Esto funciona
 function Button({ text }) {
   return (
@@ -2042,48 +2047,65 @@ function Button({ text }) {
     </button>
   )
 }
+```
+
 De la misma forma, tampoco podemos usar for, while o switch dentro del renderizado de un componente.
 
-⬆ Volver a índice
 
-¿Por qué debemos utilizar una función para actualizar el estado de React?
+
+### 52 - ¿Por qué debemos utilizar una función para actualizar el estado de React?
+
 A la hora de actualizar el estado de React, debemos utilizar la función que nos facilita el hook useState para actualizar el estado.
 
+```JSX
 const [count, setCount] = useState(0)
 
 setCount(count + 1)
-¿Por qué es esto necesario? En primer lugar, el estado en React debe ser inmutable. Es decir, no podemos modificar el estado directamente, sino que debemos siempre crear un nuevo valor para el nuevo estado.
+```
+
+#### ¿Por qué es esto necesario? 
+
+En primer lugar, el estado en React debe ser inmutable. Es decir, no podemos modificar el estado directamente, sino que debemos siempre crear un nuevo valor para el nuevo estado.
 
 Esto nos permite que la integridad de la UI respecto a los datos que renderiza siempre es correcta.
 
 Por otro lado, llamar a una función le permite a React saber que el estado ha cambiado y que debe re-renderizar el componente si es necesario. Además esto lo hace de forma asíncrona, por lo que podemos llamar a setCount tantas veces como queramos y React se encargará de actualizar el estado cuando lo considere oportuno.
 
-⬆ Volver a índice
 
-¿Qué es el ciclo de vida de un componente en React?
+
+### 53 - ¿Qué es el ciclo de vida de un componente en React?
+
 En los componentes de clase, el ciclo de vida de un componente se divide en tres fases:
 
-Montaje: cuando el componente se añade al DOM.
-Actualización: cuando el componente se actualiza.
-Desmontaje: cuando el componente se elimina del DOM.
+- **Montaje**: cuando el componente se añade al DOM.
+
+-**Actualización**: cuando el componente se actualiza.
+
+-**Desmontaje**: cuando el componente se elimina del DOM.
+
 Dentro de este ciclo de vida, existe un conjunto de métodos que se ejecutan en el componente.
 
 Estos métodos se definen en la clase y se ejecutan en el orden que se muestran a continuación:
 
+```
 constructor
 render
 componentDidMount
 componentDidUpdate
 componentWillUnmount
+```
+
 En cada uno de estos métodos podemos ejecutar código que nos permita controlar el comportamiento de nuestro componente.
 
-⬆ Volver a índice
 
-¿Por qué puede ser mala práctica usar el index como key en un listado de React?
+
+### 54 - ¿Por qué puede ser mala práctica usar el index como key en un listado de React?
+
 Cuando renderizamos una lista de elementos, React necesita saber qué elementos han cambiado, han sido añadidos o eliminados.
 
 Para ello, React necesita una key única para cada elemento de la lista. Si no le pasamos una key, React usa el índice del elemento como key.
 
+```JSX
 const List = () => {
   const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3'])
 
@@ -2095,12 +2117,15 @@ const List = () => {
     </ul>
   )
 }
+```
+
 En este caso, React usa el índice del elemento como key. Esto puede ser un problema si la lista se reordena o se eliminan elementos del array, ya que el índice de los elementos cambia.
 
 En este caso, React no sabe qué elementos han cambiado y puede que se produzcan errores.
 
 Un ejemplo donde se ve el problema:
 
+```JSX
 const List = () => {
   const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3'])
 
@@ -2121,11 +2146,15 @@ const List = () => {
     </ul>
   )
 }
-⬆ Volver a índice
+```
 
-¿Para qué sirve el hook useMemo?
+
+
+### 55 - ¿Para qué sirve el hook useMemo?
+
 El hook useMemo es un hook que nos permite memorizar el resultado de una función. Esto quiere decir que si la función que le pasamos como parámetro no ha cambiado, no se ejecuta de nuevo y se devuelve el resultado que ya se había calculado.
 
+```JSX
 import { useMemo } from 'react'
 
 function Counter({ count }) {
@@ -2138,22 +2167,27 @@ function Counter({ count }) {
     </div>
   )
 }
+```
+
 En este caso, el componente Counter recibe una prop count que es un número. El componente calcula el doble de ese número y lo muestra en pantalla.
 
 El hook useMemo recibe dos parámetros: una función y un array de dependencias. La función se ejecuta cuando el componente se renderiza por primera vez y cuando alguna de las dependencias cambia, en este ejemplo la prop count.
 
 La ventaja es que si la prop count no cambia, se evita el cálculo del doble y se devuelve el valor que ya se había calculado previamente.
 
-⬆ Volver a índice
 
-¿Es buena idea usar siempre useMemo para optimizar nuestros componentes?
+
+### 56 - ¿Es buena idea usar siempre useMemo para optimizar nuestros componentes?
+
 No. useMemo es una herramienta que nos permite optimizar nuestros componentes, pero no es una herramienta mágica que nos va a hacer que nuestros componentes sean más rápidos. A veces el cálculo de un valor es tan rápido que no merece la pena memorizarlo. Incluso, en algunos casos, puede ser más lento memorizarlo que calcularlo de nuevo.
 
-⬆ Volver a índice
 
-¿Para qué sirve el hook useCallback?
+
+### 57 - ¿Para qué sirve el hook useCallback?
+
 El hook useCallback es un hook que nos permite memorizar una función. Esto quiere decir que si la función que le pasamos como parámetro no ha cambiado, no se ejecuta de nuevo y se devuelve la función que ya se había calculado.
 
+```JSX
 import { useCallback } from 'react'
 
 function Counter({ count, onIncrement }) {
@@ -2168,39 +2202,48 @@ function Counter({ count, onIncrement }) {
     </div>
   )
 }
+```
+
 En este caso, el componente Counter recibe una prop count que es un número y una prop onIncrement que es una función que se ejecuta cuando se pulsa el botón.
 
 El hook useCallback recibe dos parámetros: una función y un array de dependencias. La función se ejecuta cuando el componente se renderiza por primera vez y cuando alguna de las dependencias cambia, en este ejemplo la prop count o la prop onIncrement.
 
 La ventaja es que si la prop count o la prop onIncrement no cambian, se evita la creación de una nueva función y se devuelve la función que ya se había calculado previamente.
 
-⬆ Volver a índice
 
-¿Es buena idea usar siempre useCallback para optimizar nuestros componentes?
+
+### 58 - ¿Es buena idea usar siempre useCallback para optimizar nuestros componentes?
+
 No. useCallback es una herramienta que nos permite optimizar nuestros componentes, pero no es una herramienta mágica que nos va a hacer que nuestros componentes sean más rápidos. A veces la creación de una función es tan rápida que no merece la pena memorizarla. Incluso, en algunos casos, puede ser más lento memorizarla que crearla de nuevo.
 
-⬆ Volver a índice
 
-¿Cuál es la diferencia entre useCallback y useMemo?
+
+### 59 - ¿Cuál es la diferencia entre useCallback y useMemo?
+
 La diferencia entre useCallback y useMemo es que useCallback memoriza una función y useMemo memoriza el resultado de una función.
 
 En cualquier caso, en realidad, useCallback es una versión especializada de useMemo. De hecho se puede simular la funcionalidad de useCallback con useMemo:
 
+```JSX
 const memoizedCallback = useMemo(() => {
   return () => {
     doSomething(a, b)
   }
 }, [a, b])
-⬆ Volver a índice
+```
 
-¿Qué son las refs en React?
+
+### 60 - ¿Qué son las refs en React?
+
 Las refs nos permiten crear una referencia a un elemento del DOM o a un valor que se mantendrá entre renderizados. Se pueden declarar por medio del comando createRef o con el hook useRef.
 
-⬆ Volver a índice
 
-¿Cómo funciona el hook useRef?
+
+### 61 - ¿Cómo funciona el hook useRef?
+
 En el siguiente ejemplo vamos a guardar la referencia en el DOM a un elemento <input> y vamos a cambiar el foco a ese elemento cuando hacemos clic en el botón.
 
+```JSX
 import { useRef } from 'react'
 
 function TextInputWithFocusButton() {
@@ -2218,41 +2261,56 @@ function TextInputWithFocusButton() {
     </>
   )
 }
+```
+
 Creamos una referencia inputEl con useRef y la pasamos al elemento <input> como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento <input> del DOM.
 
 Para acceder al elemento del DOM, usamos la propiedad current de la referencia.
 
-⬆ Volver a índice
 
-¿Qué hace el hook useLayoutEffect?
+
+### 62 - ¿Qué hace el hook useLayoutEffect?
+
 useLayoutEffect funciona igual que el hook useEffect, con la excepción de que este se dispara sincrónicamente después de leer todas las mutaciones del DOM.
 
 Llama useLayoutEffect en el nivel superior del componente.
 
+```JSX
 import { useLayoutEffect } from 'react';
 
 useLayoutEffect(() => {
   return () => {
   }
 }, []);
+```
+
 useLayoutEffect recibe dos argumentos:
 
-Una función callback que define el efecto.
-Una lista de dependencias.
+- Una función callback que define el efecto.
+
+- Una lista de dependencias.
+
 Aunque el useEffect es el hook de renderizado más usado, si se necesita que los efectos del DOM muten cambiando la apariencia entre el efecto y el renderizado, entonces es conveniente que uses el useLayoutEffect.
 
-Orden de ejecución del useLayoutEffect
+### 63 - Orden de ejecución del useLayoutEffect
+
 El orden de ejecución del useLayoutEffect, ya que se ejecuta de forma síncrona, al momento en que React termina de ejecutar todas las mutaciones, pero antes de renderizarlo en pantalla, es el siguiente:
 
 El componente se actualiza por algún cambio de estado, props o el padre se re-renderiza
-React renderiza el componente
-Tu efecto es ejecutado
-La pantalla se actualiza “visualmente”
-⬆ Volver a índice
 
-¿Qué son los componentes stateless?
+React renderiza el componente
+
+Tu efecto es ejecutado
+
+La pantalla se actualiza “visualmente”
+
+
+
+### 64 - ¿Qué son los componentes stateless?
+
 Los componentes stateless son componentes que no tienen estado. Estos componentes se crean con una function y no tienen acceso al estado de la aplicación. La ventaja que tienen estos componentes es que hace que sea más fácil crear componentes puros (que siempre renderizan lo mismo para unas mismas props).
 
+```JSX
 // Este es un ejemplo de componente stateless
 function Button({ text }) {
   return (
@@ -2261,11 +2319,13 @@ function Button({ text }) {
     </button>
   )
 }
-⬆ Volver a índice
+```
 
-¿Cómo puedes prevenir el comportamiento por defecto de un evento en React?
+### 65 - ¿Cómo puedes prevenir el comportamiento por defecto de un evento en React?
+
 Para prevenir el comportamiento por defecto de un evento en React, debemos usar el método preventDefault:
 
+```JSX
 function Form({ onSubmit }) {
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -2277,11 +2337,14 @@ function Form({ onSubmit }) {
     <button type="submit">Enviar</button>
   </form>
 }
-⬆ Volver a índice
+```
 
-¿Qué es el StrictMode en React?
+
+### 66 - ¿Qué es el StrictMode en React?
+
 El StrictMode es un componente que nos permite activar algunas comprobaciones de desarrollo en React. Por ejemplo, detecta componentes que se renderizan de forma innecesaria o funcionalidades obsoletas que se están usando.
 
+```JSX
 import { StrictMode } from 'react'
 
 function App() {
@@ -2291,64 +2354,86 @@ function App() {
     </StrictMode>
   )
 }
-⬆ Volver a índice
+```
 
-¿Por qué es recomendable exportar los componentes de React de forma nombrada?
+
+### 67 - ¿Por qué es recomendable exportar los componentes de React de forma nombrada?
+
 Los componentes de React se pueden exportar de dos formas:
 
 Exportación por defecto
+
 Exportación nombrada
+
 Para exportar un componente por defecto, usamos la palabra reservada default:
 
+```JSX
 // button.jsx
 export default function Button() {
   return <button>Click</button>
 }
+```
 
+```JSX
 // App.jsx
 import Button from './button.jsx'
 
 function App() {
   return <Button />
 }
+```
+
 La gran desventaja que tiene la exportación por defecto es que a la hora de importarlo puedes usar el nombre que quieras. Y esto trae problemas, ya que puedes no usar siempre el mismo en el proyecto o usar un nombre que no sea correcto con lo que importas.
 
+```JSX
 // button.jsx
 export default function Button() {
   return <button>Click</button>
 }
+```
 
+```JSX
 // App.jsx
 import MyButton from './button.jsx'
 
 function App() {
   return <MyButton />
 }
+```
 
+```JSX
 // Otro.jsx
 import Button from './button.jsx'
 
 function Otro() {
   return <Button />
 }
+```
+
 Los exports nombrados nos obligan a usar el mismo nombre en todos los archivos y, por tanto, nos aseguramos de que siempre estamos usando el nombre correcto.
 
+```JSX
 // button.jsx
 export function Button() {
   return <button>Click</button>
 }
+```
 
+```JSX
 // App.jsx
 import { Button } from './button.jsx'
 
 function App() {
   return <Button />
 }
-⬆ Volver a índice
+```
 
-¿Cómo puedes exportar múltiples componentes de un mismo archivo?
+
+### 68 - ¿Cómo puedes exportar múltiples componentes de un mismo archivo?
+
 Para exportar múltiples componentes de un mismo archivo, podemos usar la exportación nombrada:
 
+```JSX
 // button.jsx
 export function Button({children}) {
   return <button>{children}</button>
@@ -2357,11 +2442,14 @@ export function Button({children}) {
 export function ButtonSecondary({children}) {
   return <button class="btn-secondary">{children}</button>
 }
-⬆ Volver a índice
+```
 
-¿Cómo puedo importar de forma dinámica un componente en React?
+
+### 69  - ¿Cómo puedo importar de forma dinámica un componente en React?
+
 Para importar de forma dinámica un componente en React debemos usar la función import(), el método lazy() de React y el componente Suspense.
 
+```JSX
 // App.jsx
 import { lazy, Suspense } from 'react'
 
@@ -2374,11 +2462,15 @@ export default function App() {
     </Suspense>
   )
 }
+```
 
+```JSX
 // button.jsx
 export default function Button() {
   return <button>Botón cargado dinámicamente</button>
 }
+```
+
 Vamos a ver en detalle cada uno de los elementos que hemos usado:
 
 La función import() es parte del estándar de ECMAScript y nos permite importar de forma dinámica un módulo. Esta función devuelve una promesa que se resuelve con el módulo importado.
@@ -2387,14 +2479,15 @@ El método lazy() de React nos permite crear un componente que se renderiza de f
 
 El componente Suspense nos permite mostrar un mensaje mientras se está cargando el componente. Este componente recibe una prop fallback que es el mensaje que se muestra mientras se está cargando el componente.
 
-Código de ejemplo
-⬆ Volver a índice
 
-¿Cuando y por qué es recomendable importar componentes de forma dinámica?
+
+### 70 - ¿Cuando y por qué es recomendable importar componentes de forma dinámica?
+
 En React, nuestras aplicaciones están creadas a partir de componentes. Estos componentes se pueden importar de forma estática o dinámica.
 
 La importación de componentes de forma estática es la forma más común de importar componentes en React. En este caso, los componentes se importan en la parte superior del fichero y se renderizan en el código. El problema es que, si siempre lo hacemos así, es bastante probable que estemos cargando componentes que no se van a usar desde el principio.
 
+```JSX
 import { useState } from 'react'
 // importamos de forma estática el componente de la Modal
 import { SuperBigModal } from './super-big-modal.jsx'
@@ -2410,10 +2503,13 @@ export default function App () {
     </div>
   )
 }
+```
+
 Este componente SuperBigModal se importa de forma estática, por lo que se carga desde el principio. Pero, ¿qué pasa si el usuario no da click en el botón para mostrar la modal? En este caso, está cargando el componente pese a que no lo está usando.
 
 Si queremos ofrecer la mejor experiencia a nuestros usuarios, debemos intentar que la aplicación cargue lo más rápido posible. Por eso, es recomendable importar de forma dinámica los componentes que no se van a usar desde el principio.
 
+```JSX
 import { useState } from 'react'
 // importamos de forma dinámica el componente de la Modal
 const SuperBigModal = lazy(() => import('./super-big-modal.jsx'))
@@ -2431,23 +2527,29 @@ export default function App () {
     </div>
   )
 }
+```
+
 De esta forma, la parte de código que importa el componente SuperBigModal se carga de forma dinámica, es decir, cuando el usuario da click en el botón para mostrar la modal.
 
 Dependiendo del empaquetador de aplicaciones web que uses y su configuración, es posible que el resultado de la carga sea diferente (algunos creará un archivo a parte del bundle principal, otros podrían hacer un streaming del HTML...) pero la intención del código es la misma.
 
 Así que siempre debemos intentar cargar los componentes de forma dinámica cuando no se vayan a usar desde el principio, sobretodo cuando están detrás de la interacción de un usuario. Lo mismo podría ocurrir con rutas completas de nuestra aplicación. ¿Por qué cargar la página de About si el usuario está visitando la página principal?
 
-⬆ Volver a índice
 
-¿Sólo se pueden cargar componentes de forma dinámica si se exportan por defecto?
+
+### 71 - ¿Sólo se pueden cargar componentes de forma dinámica si se exportan por defecto?
+
 No, no es necesario que los componentes se exporten por defecto para poder cargarlos de forma dinámica. Podemos exportarlos de forma nombrada y cargarlos de forma dinámica... pero no es lo más recomendable ya que el código necesario es mucho más lioso.
 
+```JSX
 // button.jsx
 // exportamos el componente Button de forma nombrada
 export function Button() {
   return <button>Botón cargado dinámicamente</button>
 }
+```
 
+```JSX
 // app.jsx
 import { lazy, Suspense } from 'react'
 
@@ -2467,17 +2569,24 @@ export default function App () {
     </div>
   )
 }
+```
+
 Otra opción es tener un fichero intermedio que exporte el componente de forma por defecto y que sea el que importemos de forma dinámica.
 
+```JSX
 // button-component.jsx
 // exportamos el componente Button de forma nombrada
 export function Button() {
   return <button>Botón cargado dinámicamente</button>
 }
+```
 
+```JSX
 // button.jsx
 export { Button as default } from './button-component.jsx'
+```
 
+```JSX
 // app.jsx
 import { lazy, Suspense } from 'react'
 
@@ -2492,36 +2601,49 @@ export default function App () {
     </div>
   )
 }
-⬆ Volver a índice
+```
 
-¿Qué es el contexto en React? ¿Cómo puedo crearlo y consumirlo?
+
+
+### 72 - ¿Qué es el contexto en React? ¿Cómo puedo crearlo y consumirlo?
+
 El contexto es una forma de pasar datos a través de la jerarquía de componentes sin tener que pasar props manualmente en cada nivel.
 
 Para crear un contexto en React usamos el hook createContext:
 
+```JSX
 import { createContext } from 'react'
 
 const ThemeContext = createContext()
+```
+
 Para usar el contexto, debemos envolver el árbol de componentes con el componente Provider:
 
+```JSX
 <ThemeContext.Provider value="dark">
   <App />
 </ThemeContext.Provider>
+```
+
 Para consumir el contexto, debemos usar el hook useContext:
 
+```JSX
 import { useContext } from 'react'
 
 function Button() {
   const theme = useContext(ThemeContext)
   return <button className={theme}>Haz clic aquí</button>
 }
-⬆ Volver a índice
+```
 
-¿Qué es el SyntheticEvent en React?
+
+### 73 - ¿Qué es el SyntheticEvent en React?
+
 El SyntheticEvent es una abstracción del evento nativo del navegador. Esto le permite a React tener un comportamiento consistente en todos los navegadores.
 
 Dentro del SyntheticEvent puede encontrarse una referencia al evento nativo en su atributo nativeEvent
 
+```JSX
 function App() {
   function handleClick(event) {
     console.log(event)
@@ -2529,11 +2651,16 @@ function App() {
 
   return <button onClick={handleClick}>Haz clic aquí</button>
 }
-⬆ Volver a índice
+```
 
-¿Qué es flushSync en React?
+
+
+### 74 - ¿Qué es flushSync en React?
+
 flushSync(callback) Obliga a React a ejecutar de manera síncrona todas las actualizaciones de los state dentro del callback proporcionado. Así se asegura que el DOM se actualiza inmediatamente.
 
+
+```JSX
 import { flushSync } from "react-dom"
 
 function App() {
@@ -2556,13 +2683,18 @@ function App() {
 
   return <button onClick={handleClick}>Haz clic aquí</button>
 }
+```
+
 NOTA: flushSync puede afectar significativamente el rendimiento. Úsalo con moderación.
 
-⬆ Volver a índice
 
-¿Qué son los Error Boundaries en React?
+
+### 75 - ¿Qué son los Error Boundaries en React?
+
 Los Error Boundaries son componentes que nos permiten manejar los errores que se producen en el árbol de componentes. Para crear un Error Boundary, debemos crear un componente que implemente el método componentDidCatch:
 
+
+```JSx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
@@ -2585,24 +2717,32 @@ class ErrorBoundary extends React.Component {
     return this.props.children
   }
 }
+```
+
 De esta forma podemos capturar los errores que se producen en el árbol de componentes y mostrar un mensaje de error personalizado mientras evitamos que nuestra aplicación se rompa completamente.
 
 Ahora podemos envolver el árbol de componentes con el componente ErrorBoundary:
 
+```JSX
 <ErrorBoundary>
   <App />
 </ErrorBoundary>
+```
+
 Podemos crear un Error Boundary en cualquier nivel del árbol de componentes, de esta forma podemos tener un control más granular de los errores.
 
+```JSX
 <ErrorBoundary>
   <App />
   <ErrorBoundary>
     <SpecificComponent />
   </ErrorBoundary>
 </ErrorBoundary>
+```
+
 Por ahora no existe una forma nativa de crear un Error Boundary en una función de React. Para crear un Error Boundary en una función, puedes usar la librería react-error-boundary.
 
-⬆ Volver a índice
+
 
 ¿Qué son las Forward Refs?
 El reenvío de referencia o Forward Refs es una técnica que nos permite acceder a una referencia de un componente hijo desde un componente padre.
