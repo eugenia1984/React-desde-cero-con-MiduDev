@@ -3,11 +3,9 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,6 +19,9 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 * {
@@ -37,7 +38,7 @@ body {
 
 .board h1 {
   color: #eee;
-  margin-bottom: 16px;
+  margin: 24px 12px;
 }
 
 .board button {
@@ -120,12 +121,19 @@ body {
 }
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 2px solid #eee;
   border-radius: 5px;
   display: grid;
   place-items: center;
   cursor: pointer;
   font-size: 48px;
+}
+
+@media screen and (min-width: 426px) {
+  .square {
+    width: 92px;
+    height: 92px;
+  }
 }
