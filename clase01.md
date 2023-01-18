@@ -1,4 +1,4 @@
-# :book: React desde cero con Midu Dev \* Clase 1
+# :book: React desde cero con Midu Dev * Clase 1
 
 ---
 
