@@ -42,7 +42,7 @@ useEffect(codoToExecute, listOfDependencies)
 ## :star:  Tercer proyecto : Mouse follower
 
 
-Para entender el concepto del *hook** **useEffect**
+Para entender el concepto del *hook* **useEffect**
 
 -> **return** del useEffect, para limpiar, es el **clean up method**. Dentro del return hay que cerrar si hay llamado a API. Cada vez que vuelve a ejecutar el useEffect va a hacer el clen up y también cuando se desmonta.
 
