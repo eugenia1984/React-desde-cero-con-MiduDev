@@ -12,131 +12,244 @@
 
 1. <a href="#1">¿Qué es React?</a>
 
-¿Cuáles son las características principales de React?
-¿Qué significa exactamente que sea declarativo?
-¿Qué es un componente?
-¿Qué es JSX?
-¿Cómo se transforma el JSX?
-¿Cuál es la diferencia entre componente y elemento en React?
-¿Cómo crear un componente en React?
-¿Qué son las props en React?
-¿Qué es y para qué sirve la prop children en React?
- ¿Qué diferencia hay entre props y state?
-¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?
-¿Qué es el renderizado condicional en React?
-¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
-¿Cómo puedes aplicar estilos en línea a un componente en React?
-¿Cómo puedo aplicar estilos de forma condicional a un componente en React?
-¿Qué es el renderizado de listas en React?
-¿Cómo puedes escribir comentarios en React?
-¿Cómo añadir un evento a un componente en React?
-¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?
-¿Qué es el estado en React?
-¿Qué son los hooks?
-¿Qué hace el hook useState?
-¿Qué significa la expresión "subir el estado"?
-¿Qué hace el hook useEffect?
-Explica casos de uso del hook useEffect
-Cómo suscribirse a un evento en useEffect
-¿Qué hace el hook useId?
-¿Cómo podemos ejecutar código cuando el componente se monta?
-¿Qué son los Fragments en React?
-¿Por qué es recomendable usar Fragment en vez de un div?
-¿Qué es el Compound Components Pattern?
-¿Cómo puedes inicializar un proyecto de React desde cero?
-¿Qué es React DOM?
-¿Qué JavaScript necesito para aprender React?
-JavaScript que necesitas para aprender React
-EcmaScript Modules o ESModules
-Operador condicional (ternario)
-Funciones flecha o Arrow Functions
-Parámetros predeterminados (default values)
-Template Literals
-Propiedades abreviadas
-La desestructuración
-Métodos de Array
-Sintaxis Spread
-Operador Rest
-Encadenamiento opcional (Optional Chaining)
+2. <a href="#2">¿Cuáles son las características principales de React?</a>
+
+3. <a href="#3">¿Qué significa exactamente que sea declarativo?</a>
+
+4. <a href="#4">¿Qué es un componente?</a>
+
+5. <a href="#5">¿Qué es JSX?</a>
+
+6. <a href="#6">¿Cómo se transforma el JSX?</a>
+
+7. ¿Cuál es la diferencia entre componente y elemento en React?
+
+8. ¿Cómo crear un componente en React?
+
+9. ¿Qué son las props en React?
+
+10. ¿Qué es y para qué sirve la prop children en React?
+ 
+11. ¿Qué diferencia hay entre props y state?
+
+12. ¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?
+
+13. ¿Qué es el renderizado condicional en React?
+
+14. ¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
+
+15. ¿Cómo puedes aplicar estilos en línea a un componente en React?
+
+16. ¿Cómo puedo aplicar estilos de forma condicional a un componente en React?
+
+17. ¿Qué es el renderizado de listas en React?
+
+18. ¿Cómo puedes escribir comentarios en React?
+
+19. ¿Cómo añadir un evento a un componente en React?
+
+20. ¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?
+
+21. ¿Qué es el estado en React?
+
+22. ¿Qué son los hooks?
+
+23. ¿Qué hace el hook useState?
+
+24. ¿Qué significa la expresión "subir el estado"?
+
+25. ¿Qué hace el hook useEffect?
+
+26. Explica casos de uso del hook useEffect
+
+27. Cómo suscribirse a un evento en useEffect
+
+28. ¿Qué hace el hook useId?
+
+29. ¿Cómo podemos ejecutar código cuando el componente se monta?
+
+30. ¿Qué son los Fragments en React?
+
+31. ¿Por qué es recomendable usar Fragment en vez de un div?
+
+32. ¿Qué es el Compound Components Pattern?
+
+33. ¿Cómo puedes inicializar un proyecto de React desde cero?
+
+34. ¿Qué es React DOM?
+
+35. ¿Qué JavaScript necesito para aprender React?
+
+
+36. JavaScript que necesitas para aprender React
+
+37. EcmaScript Modules o ESModules
+
+38. Operador condicional (ternario)
+
+39. Funciones flecha o Arrow Functions
+
+40. Parámetros predeterminados (default values)
+
+41. Template Literals
+
+42. Propiedades abreviadas
+
+43. La desestructuración
+
+44. Métodos de Array
+
+45. Sintaxis Spread
+
+46. Operador Rest
+
+47. Encadenamiento opcional (Optional Chaining)
 
 ### Intermedio
 
-¿Cómo crear un hook personalizado (custom hook)?
-¿Cuántos useEffect puede tener un componente?
-¿Cómo podemos ejecutar código cuando el componente se desmonta del árbol?
-Cómo puedes cancelar una petición a una API en useEffect correctamente
-¿Cuáles son las reglas de los hooks en React?
-¿Qué diferencia hay entre useEffect y useLayoutEffect?
-¿Qué son mejores los componentes de clase o los componentes funcionales?
-¿Cómo mantener los componentes puros y qué ventajas tiene?
-¿Qué es la hidratación (hydration) en React?
-¿Qué es el Server Side Rendering y qué ventajas tiene?
-¿Cómo puedes crear un Server Side Rendering con React desde cero?
-¿Puedes poner un ejemplo de efectos colaterales en React?
-¿Qué diferencia hay entre componentes controlados y no controlados? ¿Qué ventajas y desventajas tienen?
-¿Qué son los High Order Components (HOC)?
-¿Qué son las render props?
-¿Por qué no podemos usar un if en el renderizado de un componente?
-¿Por qué debemos utilizar una función para actualizar el estado de React?
-¿Qué es el ciclo de vida de un componente en React?
-¿Por qué puede ser mala práctica usar el index como key en un listado de React?
-¿Para qué sirve el hook useMemo?
-¿Es buena idea usar siempre useMemo para optimizar nuestros componentes?
-¿Para qué sirve el hook useCallback?
-¿Es buena idea usar siempre useCallback para optimizar nuestros componentes?
-¿Cuál es la diferencia entre useCallback y useMemo?
-¿Qué son las refs en React?
-¿Cómo funciona el hook useRef?
-¿Qué hace el hook useLayoutEffect?
-Orden de ejecución del useLayoutEffect
-¿Qué son los componentes stateless?
-¿Cómo puedes prevenir el comportamiento por defecto de un evento en React?
-¿Qué es el StrictMode en React?
-¿Por qué es recomendable exportar los componentes de React de forma nombrada?
-¿Cómo puedes exportar múltiples componentes de un mismo archivo?
-¿Cómo puedo importar de forma dinámica un componente en React?
-¿Cuando y por qué es recomendable importar componentes de forma dinámica?
-¿Sólo se pueden cargar componentes de forma dinámica si se exportan por defecto?
-¿Qué es el contexto en React? ¿Cómo puedo crearlo y consumirlo?
-¿Qué es el SyntheticEvent en React?
-¿Qué es flushSync en React?
-¿Qué son los Error Boundaries en React?
-¿Qué son las Forward Refs?
-¿Cómo puedo validar el tipo de mis props?
-¿Cómo puedo validar las propiedades de un objeto con PropTypes?
-¿Cómo puedo validar las propiedades de un array con PropTypes?
-¿Cómo puedo inyectar HTML directamente en un componente de React?
-¿Por qué puede ser mala idea pasar siempre todas las props de un objeto a un componente?
+48. ¿Cómo crear un hook personalizado (custom hook)?
+
+49. ¿Cuántos useEffect puede tener un componente?
+
+50. ¿Cómo podemos ejecutar código cuando el componente se desmonta del árbol?
+
+51. Cómo puedes cancelar una petición a una API en useEffect correctamente
+
+52. ¿Cuáles son las reglas de los hooks en React?
+
+53. ¿Qué diferencia hay entre useEffect y useLayoutEffect?
+
+54. ¿Qué son mejores los componentes de clase o los componentes funcionales?
+
+55. ¿Cómo mantener los componentes puros y qué ventajas tiene?
+
+56. ¿Qué es la hidratación (hydration) en React?
+
+57. ¿Qué es el Server Side Rendering y qué ventajas tiene?
+
+58. ¿Cómo puedes crear un Server Side Rendering con React desde cero?
+
+59. ¿Puedes poner un ejemplo de efectos colaterales en React?
+
+60. ¿Qué diferencia hay entre componentes controlados y no controlados? ¿Qué ventajas y desventajas tienen?
+
+61. ¿Qué son los High Order Components (HOC)?
+
+62. ¿Qué son las render props?
+
+63. ¿Por qué no podemos usar un if en el renderizado de un componente?
+
+64. ¿Por qué debemos utilizar una función para actualizar el estado de React?
+
+65. ¿Qué es el ciclo de vida de un componente en React?
+
+66. ¿Por qué puede ser mala práctica usar el index como key en un listado de React?
+
+67. ¿Para qué sirve el hook useMemo?
+
+68. ¿Es buena idea usar siempre useMemo para optimizar nuestros componentes?
+
+69. ¿Para qué sirve el hook useCallback?
+
+70. ¿Es buena idea usar siempre useCallback para optimizar nuestros componentes?
+
+71. ¿Cuál es la diferencia entre useCallback y useMemo?
+
+72. ¿Qué son las refs en React?
+
+73. ¿Cómo funciona el hook useRef?
+
+74. ¿Qué hace el hook useLayoutEffect?
+
+75. Orden de ejecución del useLayoutEffect
+
+76. ¿Qué son los componentes stateless?
+
+77. ¿Cómo puedes prevenir el comportamiento por defecto de un evento en React?
+
+78. ¿Qué es el StrictMode en React?
+
+79. ¿Por qué es recomendable exportar los componentes de React de forma nombrada?
+
+80. ¿Cómo puedes exportar múltiples componentes de un mismo archivo?
+
+81. ¿Cómo puedo importar de forma dinámica un componente en React?
+
+82. ¿Cuando y por qué es recomendable importar componentes de forma dinámica?
+
+83. ¿Sólo se pueden cargar componentes de forma dinámica si se exportan por defecto?
+
+84. ¿Qué es el contexto en React? ¿Cómo puedo crearlo y consumirlo?
+
+85. ¿Qué es el SyntheticEvent en React?
+
+86. ¿Qué es flushSync en React?
+
+87. ¿Qué son los Error Boundaries en React?
+
+88. ¿Qué son las Forward Refs?
+
+89. ¿Cómo puedo validar el tipo de mis props?
+
+90. ¿Cómo puedo validar las propiedades de un objeto con PropTypes?
+
+91. ¿Cómo puedo validar las propiedades de un array con PropTypes?
+
+92. ¿Cómo puedo inyectar HTML directamente en un componente de React?
+
+93. ¿Por qué puede ser mala idea pasar siempre todas las props de un objeto a un componente?
 
 ### Experto
 
-¿Es React una biblioteca o un framework? ¿Por qué?
-¿Para qué sirve el hook useImperativeHandle?
-¿Para qué sirve el método cloneElement de React?
-¿Qué son los portales en React?
-¿Por qué StrictMode renderiza dos veces la aplicación?
-¿Qué problemas crees que pueden aparecer en una aplicación al querer visualizar listas de miles/millones de datos?
-¿Cómo puedes abortar una petición fetch con useEffect en React?
-¿Qué solución/es implementarías para evitar problemas de rendimiento al trabajar con listas de miles/millones de datos?
-Pagination
-Virtualization
-¿Qué es el hook useDebugValue?
-¿Qué es el Profiler en React?
-¿Cómo puedes acceder al evento nativo del navegador en React?
-¿Cómo puedes registrar un evento en la fase de captura en React?
-¿Cómo puedes mejorar el rendimiento del Server Side Rendering en React para evitar que bloquee el hilo principal?
-¿Qué diferencia hay entre renderToStaticNodeStream() y renderToPipeableStream()?
-¿Para qué sirve el hook useDeferredValue?
-¿Para qué sirve el método renderToReadableStream()?
-¿Cómo puedo hacer testing de un componente?
-¿Cómo puedo hacer testing de un hook?
-¿Qué es Flux?
-Errores Típicos en React
-¿Qué quiere decir: Warning: Each child in a list should have a unique key prop?
-React Hook useXXX is called conditionally. React Hooks must be called in the exact same order in every component render
+94. ¿Es React una biblioteca o un framework? ¿Por qué?
+
+95. ¿Para qué sirve el hook useImperativeHandle?
+
+96. ¿Para qué sirve el método cloneElement de React?
+
+97. ¿Qué son los portales en React?
+
+98. ¿Por qué StrictMode renderiza dos veces la aplicación?
+
+99. ¿Qué problemas crees que pueden aparecer en una aplicación al querer visualizar listas de miles/millones de datos?
+
+100. ¿Cómo puedes abortar una petición fetch con useEffect en React?
+
+101. ¿Qué solución/es implementarías para evitar problemas de rendimiento al trabajar con listas de miles/millones de datos?
+
+102. Pagination
+
+103. Virtualization
+
+104. ¿Qué es el hook useDebugValue?
+
+105. ¿Qué es el Profiler en React?
+
+106. ¿Cómo puedes acceder al evento nativo del navegador en React?
+
+107. ¿Cómo puedes registrar un evento en la fase de captura en React?
+
+108. ¿Cómo puedes mejorar el rendimiento del Server Side Rendering en React para evitar que bloquee el hilo principal?
+
+109. ¿Qué diferencia hay entre renderToStaticNodeStream() y renderToPipeableStream()?
+
+110. ¿Para qué sirve el hook useDeferredValue?
+
+111. ¿Para qué sirve el método renderToReadableStream()?
+
+112. ¿Cómo puedo hacer testing de un componente?
+
+113. ¿Cómo puedo hacer testing de un hook?
+
+114. ¿Qué es Flux?
+
+115. Errores Típicos en React
+
+116. ¿Qué quiere decir: Warning: Each child in a list should have a unique key prop? React Hook useXXX is called conditionally. React Hooks must be called in the exact same order in every component render
 Can’t perform a React state update on an unmounted component
 Too many re-renders. React limits the number of renders to prevent an infinite loop
-¿Qué diferencia existe entre Shadow DOM y Virtual DOM?
+
+117. ¿Qué diferencia existe entre Shadow DOM y Virtual DOM?
 
 ---
 
@@ -144,7 +257,7 @@ Too many re-renders. React limits the number of renders to prevent an infinite l
 
 <div id="1>
      
-<h2>¿Qué es React?</h2>
+<h2>1 - ¿Qué es React?</h2>
          
 React es una biblioteca de JavaScript de código abierto para construir interfaces de usuario. Está basada en la componetización de la UI: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
 
@@ -153,13 +266,10 @@ Esto hace que React sea una herramienta muy útil para construir interfaces comp
 Fue creada en 2011 por Jordan Walke, un ingeniero de software que trabajaba en Facebook y que quería simplificar la forma de crear interfaces de usuario complejas.
 
 Es una biblioteca muy popular y es usada por muchas empresas como Facebook, Netflix, Airbnb, Twitter, Instagram, etc.
-
-
-         
-<a href="#indice">⬆ Volver a índice</a>
-
 </div>
-
+<a href="#indice">⬆ Volver a índice</a>
+                 
+                 
          ¿Cuáles son las características principales de React?
 Las características principales de React son:
 
