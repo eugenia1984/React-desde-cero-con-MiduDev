@@ -255,7 +255,7 @@ Too many re-renders. React limits the number of renders to prevent an infinite l
 
 ## :star: Principiante
 
-1. **¿Qué es React?**
+### 1 - ¿Qué es React?
          
 React es una biblioteca de JavaScript de código abierto para construir interfaces de usuario. Está basada en la componetización de la UI: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
 
@@ -266,7 +266,7 @@ Fue creada en 2011 por Jordan Walke, un ingeniero de software que trabajaba en F
 Es una biblioteca muy popular y es usada por muchas empresas como Facebook, Netflix, Airbnb, Twitter, Instagram, etc.
 
                  
-2. **¿Cuáles son las características principales de React?**
+### 2 - ¿Cuáles son las características principales de React?
 
 Las características principales de React son:
 
@@ -282,7 +282,7 @@ Las características principales de React son:
 
 
 
-3. **¿Qué significa exactamente que sea declarativo?**
+### 3 - ¿Qué significa exactamente que sea declarativo?
 
 No le decimos cómo debe renderizar la interfaz a base de instrucciones. Le decimos qué debe renderizar y React se encarga de renderizarlo.
 
@@ -299,14 +299,14 @@ const element = document.createElement('h1')
 element.innerHTML = 'Hello, world'
 ```
 
-4. **¿Qué es un componente?**
+### 4 - ¿Qué es un componente?
 
 Un componente es una pieza de código que renderiza una parte de la interfaz. Los componentes pueden ser parametrizados, reutilizados y pueden contener su propio estado.
 
 En React los componentes se crean usando funciones o clases.
 
 
-5. **¿Qué es JSX?**
+### 5 - ¿Qué es JSX?
 
 React usa JSX para declarar qué debe renderizar. JSX es una extensión de JavaScript que permite escribir un código más cercano visualmente a HTML, que mejora la legibilidad del código y hace que sea más fácil de entender.
 
@@ -335,7 +335,7 @@ function Hello () {
 Ambos códigos son equivalentes.
 
 
-6. **¿Cómo se transforma el JSX?**
+### 6 - ¿Cómo se transforma el JSX?
 
 El JSX se transforma en código JavaScript compatible en el navegador usando un transpilador o compilador. El más famoso es a día de hoy Babel, que utiliza una serie de plugins para ser compatible con la transformación, pero existen otros como SWC.
 
@@ -345,7 +345,7 @@ Hay casos especiales en los que un transpilador no es necesario. Por ejemplo, De
 
 
 
-7. **¿Cuál es la diferencia entre componente y elemento en React?**
+### 7 - ¿Cuál es la diferencia entre componente y elemento en React?
 
 Un componente es una función o clase que recibe props y devuelve un elemento. Un elemento es un objeto que representa un nodo del DOM o una instancia de un componente de React.
 
@@ -375,7 +375,7 @@ Un componente es una función o clase que recibe props y devuelve un elemento. U
 ```
 
 
-8. **¿Cómo crear un componente en React?**
+### 8 - ¿Cómo crear un componente en React?
 
 Los componentes en React son funciones o clases que devuelven un elemento de React. Hoy en día lo más recomendado es usar funciones:
 
@@ -401,7 +401,7 @@ Lo importante es que el nombre de la función o clase empiece con una letra may�
 
 
 
-9. **¿Qué son las props en React?**
+### 9 - ¿Qué son las props en React?
 
 Las props son las propiedades de un componente. Son datos que se pasan de un componente a otro. Por ejemplo, si tienes un componente Button que muestra un botón, puedes pasarle una prop text para que el botón muestre ese texto:
 
@@ -426,7 +426,7 @@ Las props son una forma de parametrizar nuestros componentes igual que hacemos c
 
 
 
-10. **¿Qué es y para qué sirve la prop children en React?**
+### 10 - ¿Qué es y para qué sirve la prop children en React?
 
 La prop children es una prop especial que se pasa a los componentes. Es un objeto que contiene los elementos que envuelve un componente.
 
@@ -457,7 +457,7 @@ Conocer y saber usar la prop children es muy importante para crear componentes r
 
 
 
-11. **¿Qué diferencia hay entre props y state?**
+### 11 - ¿Qué diferencia hay entre props y state?
 
 Las props son un objeto que se pasan como argumentos de un componente padre a un componente hijo. Son inmutables y no se pueden modificar desde el componente hijo.
 
@@ -467,7 +467,7 @@ Así que mientras tanto props como state afectan al renderizado del componente, 
 
 
 
-12. **¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?**
+### 12 - ¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?
 
 Sí, se puede inicializar el estado con el valor de una prop. Pero hay que tener en cuenta que, si la prop cambia, el estado no se actualizará automáticamente. Esto es porque el estado se inicializa una vez, cuando el componente se monta por primera vez.
 
@@ -519,7 +519,7 @@ Es un error muy común pensar que la prop actualizará el estado, así que tenlo
 
 
 
-13. **¿Qué es el renderizado condicional en React?**
+### 13 - ¿Qué es el renderizado condicional en React?
 
 El renderizado condicional es la forma de mostrar un componente u otro dependiendo de una condición.
 
@@ -549,7 +549,7 @@ Es preferible utilizar el operador ternario. Kent C. Dodds tiene un artículo in
 
 
 
-14. **¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?**
+### 14 - ¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
 
 Para aplicar clases CSS a un componente en React usamos la prop className:
 
@@ -567,7 +567,7 @@ La razón por la que se llama className es porque class es una palabra reservada
 
 
 
-15. **¿Cómo puedes aplicar estilos en línea a un componente en React?**
+### 15 - ¿Cómo puedes aplicar estilos en línea a un componente en React?
 
 Para aplicar estilos CSS en línea a un componente en React usamos la prop style. La diferencia de cómo lo haríamos con HTML, es que en React los estilos se pasan como un objeto y no como una cadena de texto (esto puede verse más claro con los dobles corchetes, los primeros para indicar que es una expresión JavaScript, y los segundos para crear el objeto):
 
@@ -585,7 +585,7 @@ Fíjate que, además, los nombres de las propiedades CSS están en camelCase.
 
 
 
-16. **¿Cómo puedo aplicar estilos de forma condicional a un componente en React?**
+### 16 - ¿Cómo puedo aplicar estilos de forma condicional a un componente en React?
 
 Puedes aplicar estilos de forma condicional a un componente en React usando la prop style y un operador ternario:
 
@@ -631,7 +631,7 @@ En este caso, si la prop primary es true, se añadirá la clase primary al botó
 
 
 
-17. **¿Qué es el renderizado de listas en React?**
+### 17 - ¿Qué es el renderizado de listas en React?
 
 El renderizado de listas es la forma de iterar un array de elementos y renderizar elementos de React para cada uno de ellos.
 
@@ -655,7 +655,7 @@ El elemento li tiene una prop key que es un identificador único para cada eleme
 
 
 
-18. **¿Cómo puedes escribir comentarios en React?**
+### 18 - ¿Cómo puedes escribir comentarios en React?
 
 Si vas a escribir un comentario fuera del renderizado de un componente, puedes usar la sintaxis de comentarios de JavaScript sin problemas:
 
@@ -687,7 +687,7 @@ function Button({ text }) {
 ```
 
 
-19. **¿Cómo añadir un evento a un componente en React?**
+### 19 - ¿Cómo añadir un evento a un componente en React?
 
 Para añadir un evento a un componente en React usamos la sintaxis on y el nombre del evento nativo del navegador en camelCase:
 
@@ -705,7 +705,7 @@ En este caso, el componente Button recibe una prop onClick que es una función. 
 
 
 
-20. **¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?**
+### 20 - ¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?
 
 Para pasar un parámetro a una función que maneja un evento en React podemos usar una función anónima:
 
@@ -739,7 +739,7 @@ function Button({ id, text, onClick }) {
 ```
 
 
-21. **¿Qué es el estado en React?**
+### 21 - ¿Qué es el estado en React?
 
 El estado es un objeto que contiene datos que pueden cambiar en el tiempo. En React, el estado se usa para controlar los cambios en la interfaz.
 
@@ -801,7 +801,7 @@ class Counter extends Component {
 ```
 
 
-22. **¿Qué son los hooks?**
+### 22 - ¿Qué son los hooks?
 
 Los Hooks son una API de React que nos permite tener estado, y otras características de React, en los componentes creados con una function.
 
@@ -809,9 +809,10 @@ Esto, antes, no era posible y nos obligaba a crear un componente con class para 
 
 Hooks es gancho y, precisamente, lo que hacen, es que te permiten enganchar tus componentes funcionales a todas las características que ofrece React.
 
-⬆ Volver a índice
 
-¿Qué hace el hook useState?
+
+### 23 - ¿Qué hace el hook useState?
+
 El hook useState es utilizado para crear variables de estado, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza
 
 Recibe un parámetro:
@@ -821,9 +822,12 @@ Devuelve un array con dos variables:
 
 En primer lugar tenemos la variable que contiene el valor
 La siguiente variable es una función set, requiere el nuevo valor del estado, y este modifica el valor de la variable que anteriormente mencionamos
+
 Cabe destacar que la función proporciona cómo parámetro el valor actual del propio estado. Ex: setIsOpen(isOpen => !isOpen)
+
 En este ejemplo mostramos como el valor de count se inicializa en 0, y también se renderiza cada vez que el valor es modificado con la función setCount en el evento onClick del button:
 
+```JSX
 import { useState } from 'react'
 
 function Counter() {
@@ -836,15 +840,18 @@ function Counter() {
     </>
   )
 }
-⬆ Volver a índice
+```
 
-¿Qué significa la expresión "subir el estado"?
+
+### 24 - ¿Qué significa la expresión "subir el estado"?
+
 Cuando varios componentes necesitan compartir los mismos datos de un estado, entonces se recomienda elevar ese estado compartido hasta su ancestro común más cercano.
 
 Dicho de otra forma. Si dos componentes hijos comparten los mismos datos de su padre, entonces mueve el estado al padre en lugar de mantener un estado local en sus hijos.
 
 Para entenderlo, lo mejor es que lo veamos con un ejemplo. Imagina que tenemos una lista de regalos deseados y queremos poder añadir regalos y mostrar el total de regalos que hay en la lista.
 
+```JSX
 import { useState } from 'react'
 
 export default function App () {
@@ -888,10 +895,13 @@ function TotalGifts () {
     </>
   )
 }
+```
+
 ¿Qué pasa si queremos que el total de regalos se actualice cada vez que añadimos un regalo? Como podemos ver, no es posible porque el estado de totalGifts está en el componente TotalGifts y no en el componente GiftList. Y como no podemos acceder al estado de GiftList desde TotalGifts, no podemos actualizar el estado de totalGifts cuando añadimos un regalo.
 
 Tenemos que subir el estado de gifts al componente padre App y le pasaremos el número de regalos como prop al componente TotalGifts.
 
+```JSX
 import { useState } from 'react'
 
 export default function App () {
@@ -933,20 +943,26 @@ function TotalGifts ({ totalGifts }) {
     </>
   )
 }
+```
+
 Con esto, lo que hemos hecho es elevar el estado. Lo hemos movido desde el componente GiftList al componente App. Ahora pasamos como prop los regalos al componente GiftList y una forma de actualizar el estado, y también hemos pasado como prop al componente TotalGifts el número de regalos.
 
-Código de ejemplo
-⬆ Volver a índice
 
-¿Qué hace el hook useEffect?
+
+
+### 25 - ¿Qué hace el hook useEffect?
+
 El hook useEffect se usa para ejecutar código cuando se renderiza el componente o cuando cambian las dependencias del efecto.
 
 Recibe dos parámetros:
 
-La función que se ejecutará al cambiar las dependencias o al renderizar el componente.
-Un array de dependencias. Si cambia el valor de alguna dependencia, ejecutará la función.
+- La función que se ejecutará al cambiar las dependencias o al renderizar el componente.
+
+- Un array de dependencias. Si cambia el valor de alguna dependencia, ejecutará la función.
+
 En este ejemplo mostramos un mensaje en consola cuando carga el componente y cada vez que cambia el valor de count:
 
+```JSX
 import { useEffect, useState } from 'react'
 
 function Counter() {
@@ -963,21 +979,30 @@ function Counter() {
     </>
   )
 }
-⬆ Volver a índice
+```
 
-Explica casos de uso del hook useEffect
+
+### 26 - Explica casos de uso del hook useEffect
+
 Podemos usar el hook useEffect de diferentes formas, tales como:
 
 Ejecutar código cuando se renderiza el componente, cuando cambian las dependencias del efecto o cuando se desmonta el componente.
-Por eso puede ser útil para hacer llamadas a APIs, ya que sea nada más montar el componente o cuando cambian las dependencias.
-Realizar tracking de eventos, como Google Analytics, para saber qué páginas visitan los usuarios.
-Podemos validar un formulario para que cada vez que cambie el estado, podamos actualizar la UI y mostrar dónde están los errores.
-Podemos suscribirnos a eventos del navegador, como por ejemplo el evento resize para saber cuando el usuario cambia el tamaño de la ventana.
-⬆ Volver a índice
 
-Cómo suscribirse a un evento en useEffect
+Por eso puede ser útil para hacer llamadas a APIs, ya que sea nada más montar el componente o cuando cambian las dependencias.
+
+Realizar tracking de eventos, como Google Analytics, para saber qué páginas visitan los usuarios.
+
+Podemos validar un formulario para que cada vez que cambie el estado, podamos actualizar la UI y mostrar dónde están los errores.
+
+Podemos suscribirnos a eventos del navegador, como por ejemplo el evento resize para saber cuando el usuario cambia el tamaño de la ventana.
+
+
+
+### 27 - Cómo suscribirse a un evento en useEffect
+
 Dentro de useEffect nos podemos suscribir a eventos del navegador, como el evento resize para saber cuando el usuario cambia el tamaño de la ventana. Es importante que nos desuscribamos cuando el componente se desmonte para evitar fugas de memoria. Para ello, tenemos que devolver una función dentro del useEffect que se ejecutará cuando el componente se desmonte.
 
+```JSX
 import { useEffect } from 'react'
 
 function Window() {
@@ -997,27 +1022,35 @@ function Window() {
     <p>Abre la consola y redimensiona la ventana</p>
   )
 }
-⬆ Volver a índice
+```
 
-¿Qué hace el hook useId?
+### 28 - ¿Qué hace el hook useId?
+
 useId es un hook para generar identificadores únicos que se pueden pasar a los atributos de las etiquetas HTML y es especialmente útil para accesibilidad.
 
 Llama useId en el nivel superior del componente para generar una ID única:
 
+```JSX
 import { useId } from 'react'
 function PasswordField() {
   const passwordHintId = useId()
   // ...
+  ```
+  
 A continuación, pasa el ID generado a diferentes atributos:
 
+```JSX
 <>
   <input type="password" aria-describedby={passwordHintId} />
   <p id={passwordHintId}>
 </>
+```
+
 La etiqueta aria-describedby te permite especificar que dos etiquetas están relacionadas entre sí, puede generar una identificación única con useId donde incluso si PasswordField aparece varias veces en la pantalla, las identificaciones generadas no chocarán.
 
 El ejemplo completo sería así:
 
+```JSX
 import { useId } from 'react'
 
 function PasswordField() {
@@ -1038,7 +1071,9 @@ function PasswordField() {
     </>
   )
 }
+```
 
+```JSX
 export default function App() {
   return (
     <>
@@ -1049,13 +1084,17 @@ export default function App() {
     </>
   )
 }
+```
+
 Como ves en App estamos usando el componente dos veces. Si pusieramos una id a mano, por ejemplo password, entonces la ID no sería única y quedaría duplicada. Por eso es importante que generes la ID automáticamente con useId.
 
-⬆ Volver a índice
 
-¿Cómo podemos ejecutar código cuando el componente se monta?
+
+### 29 - ¿Cómo podemos ejecutar código cuando el componente se monta?
+
 Podemos ejecutar código cuando el componente se monta usando el hook useEffect sin pasarle ninguna dependencia. En este caso, la función que se pasa como primer parámetro se ejecutará cuando el componente se monte.
 
+```JSX
 import { useEffect } from 'react'
 
 function Component() {
@@ -1067,13 +1106,16 @@ function Component() {
     <p>Abre la consola y re-dimensiona la ventana</p>
   )
 }
-⬆ Volver a índice
+```
 
-¿Qué son los Fragments en React?
+
+### 30 - ¿Qué son los Fragments en React?
+
 Los Fragments son una forma de agrupar elementos sin añadir un elemento extra al DOM, ya que React no permite devolver varios elementos en un componente, solo un elemento raíz.
 
 Para crear un Fragment en React usamos el componente Fragment:
 
+```JSX
 import { Fragment } from 'react'
 
 function App() {
@@ -1094,24 +1136,31 @@ function App() {
     </>
   )
 }
-⬆ Volver a índice
+```
 
-¿Por qué es recomendable usar Fragment en vez de un div?
+
+### 31 - ¿Por qué es recomendable usar Fragment en vez de un div?
+
 Las razones por las que es recomendable usar Fragment en vez de un div a la hora de envolver varios elementos son:
 
 Los div añaden un elemento extra al DOM, mientras que los Fragments no. Esto hace que el número de elementos HTML y la profundidad del DOM sea menor.
-Los elementos envueltos con Fragment son afectados directamente por las propiedades flex o grid de CSS de su elemento padre. Si usas un div es posible que tengas problemas con el alineamiento de los elementos.
-Los Fragments son más rápidos que los div ya que no tienen que ser renderizados.
-Los div aplican CSS por defecto (hace que lo que envuelve el div se comporte como un bloque al aplicar un display: block) mientras que los Fragment no aplican ningún estilo por defecto.
-⬆ Volver a índice
 
-¿Qué es el Compound Components Pattern?
+Los elementos envueltos con Fragment son afectados directamente por las propiedades flex o grid de CSS de su elemento padre. Si usas un div es posible que tengas problemas con el alineamiento de los elementos.
+
+Los Fragments son más rápidos que los div ya que no tienen que ser renderizados.
+
+Los div aplican CSS por defecto (hace que lo que envuelve el div se comporte como un bloque al aplicar un display: block) mientras que los Fragment no aplican ningún estilo por defecto.
+
+
+### 32 - ¿Qué es el Compound Components Pattern?
+
 Es un patrón de diseño de componentes que se basa en crear un componente padre con un solo objetivo, proporcionarle a sus hijos las propiedades necesarias para que se rendericen sin problemas.
 
 Permite una estructura declarativa a la hora de construir nuevos componentes, además ayuda a la lectura del código por su simplicidad y limpieza.
 
 Un ejemplo de este diseño sería una lista que renderiza los elementos hijos:
 
+```JSX
 <List>
   <ListItem>Cat</ListItem>
   <ListItem>Dog</ListItem>
@@ -1132,61 +1181,73 @@ const ListItem = ({ children, ...props }) => {
 };
 
 export { List, ListItem };
+```
+
 Este es un ejemplo sencillo, pero los componentes pueden ser tan complejos como quieras y tanto el padre como los hijos pueden tener sus propios estados.
 
-Enlaces de interés:
 
-Lleva tu React al siguiente nivel con Compound Pattern by dezkareid en el blog de Platzi
 
-Compound Components by Jenna Smith en inglés
+### 33 - ¿Cómo puedes inicializar un proyecto de React desde cero?
 
-Compound Components Lesson by Kent C. Dodds en inglés
-
-⬆ Volver a índice
-
-¿Cómo puedes inicializar un proyecto de React desde cero?
 Existen diversas formas de inicializar un proyecto de React desde cero. Entre las más populares están:
 
+
 Vite
+```
 npm create vite@latest my-app -- --template react
+```
+
 Create React App
+```
 npx create-react-app my-app
+```
+
 La opción más popular y recomendada hoy en día es Vite. Fuente npm trends.
 
 Usando un Framework, entre las más populares están:
 
 Nextjs
+```
 npx create-next-app@latest my-app
+```
+
 Gatsby
+```
 npm init gatsby
-La opción más popular y recomendada hoy en día es Nextjs. Fuente npm trends
+```
+
+La opción más popular y recomendada hoy en día es Nextjs. 
 
 Cada uno de ellos es un empaquetador de aplicaciones web. Se encargan de resolver las dependencias de tu proyecto, levantar un entorno de desarrollo que se refresca automáticamente con cada cambio y de empaquetar tu aplicación para producción con todos los archivos estáticos necesarios y mucho más.
 
-⬆ Volver a índice
 
-¿Qué es React DOM?
+
+### 34 - ¿Qué es React DOM?
+
 React DOM es la librería que se encarga de renderizar los componentes de React para el navegador. Hay que tener en cuenta que React es una biblioteca que se puede usar en diferentes entornos (dispositivos móviles, apps de escritorio, terminal...).
 
 Mientras que la biblioteca de React, a secas, es el motor de creación de componentes, hooks, sistema de props y estado... React DOM es la librería que se encarga de renderizar los componentes de React específicamente en el navegador.
 
 React Native, por ejemplo, haría lo mismo, pero para dispositivos móviles.
 
-⬆ Volver a índice
 
-¿Qué JavaScript necesito para aprender React?
-JavaScript que necesitas para aprender React
+
+### 35 - ¿Qué JavaScript necesito para aprender React?
+
+#### JavaScript que necesitas para aprender React
 Para aprender y dominar React necesitas saber JavaScript. A diferencia de otros frameworks y bibliotecas, como Angular y Vue, que se basan en su propio DSL (Domain-Specific Language), React usa una extensión de la sintaxis de JavaScript llamada JSX. Más adelante lo veremos en detalle pero, al final, no deja de ser azúcar sintáctico para escribir menos JavaScript.
 
 En React todo es JavaScript. Para bien y para mal. Este libro da por sentados unos conocimientos previos del lenguaje de programación pero antes de empezar vamos a hacer un pequeño repaso por algunas de las características más importantes que necesitarás conocer.
 
 Si ya dominas JavaScript puedes saltarte este capítulo y continuar con el libro, pero recuerda que siempre podrás revisar este capítulo como referencia.
 
-EcmaScript Modules o ESModules
+#### EcmaScript Modules o ESModules
+
 Los EcmaScript Modules es la forma nativa que tiene JavaScript para importar y exportar variables, funciones y clases entre diferentes ficheros. Hoy en día, especialmente si trabajamos con un empaquetador de aplicaciones como Webpack, vamos a estar trabajando constantemente con esta sintaxis.
 
 Por un lado podemos crear módulos exportándolos por defecto:
 
+```JavaScript
 // sayHi.js
 // exportamos por defecto el módulo sayHi
 export default sayHi (message) {
@@ -1199,8 +1260,11 @@ import sayHi from './sayHi.js'
 
 // al ser el módulo exportado por defecto podríamos usar otro nombre
 import miduHi from './sayHi.js'
+```
+
 También podemos hacer exportaciones nombradas de módulos, de forma que un módulo tiene un nombre asignado y para importarlo necesitamos usar exactamente el nombre usado al exportarlo:
 
+```JavaScript
 // sayHi.js
 // podemos usar exportaciones nombradas para mejorar esto
 export const sayHi = (message) => console.log(message)
@@ -1211,10 +1275,13 @@ export const anotherHi = msg => alert(msg)
 // index.js
 // ahora para importar estos módulos en otro archivo podríamos hacerlo así
 import {sayHi, anotherHi} from './sayHi.js'
+```
+
 Los imports que hemos visto hasta aquí se conocen como imports estáticos. Esto significa que ese módulo será cargado en el momento de la carga del archivo que lo importa.
 
 También existen los imports dinámicos, de forma que podamos importar módulos que se carguen en el momento de la ejecución del programa o cuando nosotros decidamos (por ejemplo, como respuesta a un click).
 
+```JavaScript
 document.querySelector('button').addEventListener('click', () => {
   // los imports dinámicos devuelven una Promesa
   import('./sayHi.js').then(module => {
@@ -1222,34 +1289,43 @@ document.querySelector('button').addEventListener('click', () => {
     module.default('Hola')
   })
 })
+```
 Los imports dinámicos son útiles también cuando trabajamos con empaquetadores como Webpack o Vite, ya que esto creará unos chunks (fragmentos) que se cargarán fuera del bundle general. ¿El objetivo? Mejorar el rendimiento de la aplicación.
 
 Existen más sintaxis para trabajar con módulos, pero con saber las que hemos visto ya sería suficiente para seguir el libro.
 
-¿Por qué es importante
+¿Por qué es importante?
 
 Para empezar React te ofrece diferentes partes de su biblioteca a través de módulos que podrás importar. Además nuestros componentes los tendremos separados en ficheros y, cada uno de ellos, se podrá importar utilizando ESModules.
 
 Además, por temas de optimización de rendimiento, podremos importar de forma dinámica componentes y así mejorar la experiencia de nuestros usuarios al necesitar cargar menos información para poder utilizar la página.
 
-Operador condicional (ternario)
+#### Operador condicional (ternario)
+
 Las ternarias son una forma de realizar condiciones sin la necesidad de usar la sintaxis con if. Se podría decir que es una forma de atajo para evitar escribir tanto código.
 
+```JavaScript
 if (number % 2 === 0) {
   console.log('Es par')
 } else {
   console.log('Es impar')
 }
+```
 
+```JavaScript
 // usando ternaria
 number % 2 === 0 ? console.log('Es par') : console.log('Es impar')
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 En las interfaces gráficas es muy normal que, dependiendo del estado de la aplicación o los datos que nos lleguen, vamos a querer renderizar una cosa u otra en pantalla. Para realizar esto, en lugar de utilizar if se usan las ternarias ya que queda mucho más legible dentro del JSX.
 
-Funciones flecha o Arrow Functions
+#### Funciones flecha o Arrow Functions
+
 Las funciones flecha o arrow function fueron añadidas a JavaScript en el estándar ECMAScript 6 (o ES2015). En principio parece que simplemente se trata de una sintaxis alternativa más simple a la hora de crear expresiones de funciones:
 
+```JavaScript
 const nombreDeLaFuncion = function (param1, param2) {
   // instrucciones de la función
 }
@@ -1257,8 +1333,11 @@ const nombreDeLaFuncion = function (param1, param2) {
 const nombreDeLaFuncion = (param1, param2) => { // con arrow function
   // instrucciones de la función
 }
+```
+
 Pero además del cambio de sintaxis existen otras características de las funciones flechas que se usan constantemente en React.
 
+```JavaScript
 // return implícito al escribir una sola línea
 const getName = () => 'midudev'
 
@@ -1269,17 +1348,21 @@ const duplicateNumber = num => num * 2
 const numbers = [2, 4, 6]
 const newNumbers = numbers.map(n => n / 2)
 console.log(newNumbers) // [1, 2, 3]
+```
+
 También tiene algunos cambios respecto al valor de this pero, aunque es aconsejable dominarlo, no es realmente necesario para poder seguir con garantías el libro.
 
-¿Por qué es importante
+¿Por qué es importante?
 
 Aunque hace unos años con React se trabajaba principalmente con clases, desde la irrupción de los hooks en la versión 16.8 ya no se usan mucho. Esto hace que se usen mucho más funciones.
 
 Las funciones flecha, además, puedes verlas fácilmente conviviendo dentro de tus componentes. Por ejemplo, a la hora de renderizar una lista de elementos ejecutarás el método .map del array y, como callback, seguramente usarás una función flecha anónima.
 
-Parámetros predeterminados (default values)
+#### Parámetros predeterminados (default values)
+
 En JavaScript puedes proporcionar valores por defecto a los parámetros de una función en caso que no se le pase ningún argumento.
 
+```JavaScript
 // al parámetro b le damos un valor por defecto de 1
 function multiply(a, b = 1) {
   return a * b;
@@ -1294,7 +1377,9 @@ console.log(multiply(5)) // 5
 // las funciones flecha también pueden usarlos
 const sayHi = (msg = 'Hola React!') => console.log(msg)
 sayHi() // 'Hola React!'
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 En React existen dos conceptos muy importantes: componentes y hooks. No vamos a entrar en detalle ahora en ellos pero lo importante es que ambos son construidos con funciones.
 
@@ -1302,9 +1387,11 @@ Poder añadir valores por defecto a los parámetros de esas funciones en el caso
 
 Los componentes, por ejemplo, pueden no recibir parámetros y, pese a ello, seguramente vas a querer que tengan algún comportamiento por defecto. Lo podrás conseguir de esta forma.
 
-Template Literals
+#### Template Literals
+
 Los template literals o plantillas de cadenas llevan las cadenas de texto al siguiente nivel permitiendo expresiones incrustadas en ellas.
 
+```JavaScript
 const inicio = 'Hola'
 const final = 'React'
 
@@ -1313,17 +1400,21 @@ const mensaje = inicio + " " + final
 
 // con los template literals podemos evaluar expresiones
 const mensaje = `${inicio} ${final}`
+```
+
 Como ves, para poder usar los template literals, necesitas usar el símbolo ```
 
 Además, nos permiten utilizar cadenas de texto de más de una línea.
 
-¿Por qué es importante
+¿Por qué es importante?
 
 En React esto se puede utilizar para diferentes cosas. No sólo es normal crear cadenas de texto para mostrar en la interfaz... también puede ser útil para crear clases para tus elementos HTML de forma dinámica. Verás que los template literales están en todas partes.
 
-Propiedades abreviadas
+#### Propiedades abreviadas
+
 Desde ECMAScript 2015 se puede iniciar un objeto utilizado nombre de propiedades abreviadas. Esto es que si quieres utilizar como valor una variable que tiene el mismo nombre que la key, entonces puedes indicar la inicialización una vez:
 
+```JavaScript
 const name = 'Miguel'
 const age = 36
 const book = 'React'
@@ -1333,13 +1424,17 @@ const persona = { name: name, age: age, book: book }
 
 // ahora podemos hacer esto, sin repetir
 const persona = { name, age, book }
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 En React se trata muchas veces con objetos y siempre vamos a querer escribir el menor número de líneas posible para mantener nuestro código fácil de mantener y entender.
 
-La desestructuración
+#### La desestructuración
+
 La sintaxis de desestructuración es una expresión de JavaScript que permite extraer valores de Arrays o propiedades de objetos en distintas variables.
 
+```JavaScript
 // antes
 const array = [1, 2, 3]
 const primerNumero = array[0]
@@ -1363,15 +1458,19 @@ console.log(persona.books) // -> 2
 // también funciona en funciones
 const getName = ({name}) => `El nombre es ${name}`
 getName(persona)
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 En React hay mucho código básico que da por sentado que conoces y dominas esta sintaxis. Piensa que los objetos y los arreglos son tipos de datos que son perfectos para guardar datos a representar en una interfaz. Así que poder tratarlos fácilmente te va a hacer la vida mucho más fácil.
 
-Métodos de Array
+#### Métodos de Array
+
 Saber manipular arreglos en JavaScript es básico para considerar que se domina. Cada método realiza una operación en concreto y devuelve diferentes tipos de datos. Todos los métodos que veremos reciben un callback (función) que se ejecutará para cada uno de los elementos del array.
 
 Vamos a revisar algunos de los métodos más usados:
 
+```JavaScript
 // tenemos este array con diferentes elementos
 const networks = [
   {
@@ -1420,13 +1519,17 @@ networks.find(singleNetwork => singleNetwork.id === 'youtube')
 // con .some podemos revisar si algún elemento del array cumple una condición
 networks.some(singleNetwork => singleNetwork.id === 'tiktok') // false
 networks.some(singleNetwork => singleNetwork.id === 'instagram') // true
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 En React es muy normal almacenar los datos que tenemos que representar en la UI como array. Esto hace que muchas veces necesitemos tratarlos, filtrarlos o extraer información de ellos. Es primordial entender, conocer y dominar al menos estos métodos, ya que son los más usados.
 
-Sintaxis Spread
+#### Sintaxis Spread
+
 La sintaxis de spread nos permite expandir un iterable o un objeto en otro lugar dónde se espere esa información. Para poder utilizarlo, necesitamos utilizar los tres puntos suspensivos ... justo antes.
 
+```JavaScript
 const networks = ['Twitter', 'Twitch', 'Instagram']
 const newNetwork = 'Tik Tok'
 // creamos un nuevo array expandiendo el array networks y
@@ -1435,8 +1538,11 @@ const newNetwork = 'Tik Tok'
 const allNetworks = [...networks, newNetwork]
 console.log(allNetworks)
 // -> [ 'Twitter', 'Twitch', 'Instagram', 'Tik Tok' ]
+```
+
 Esto mismo lo podemos conseguir con un objeto, de forma que podemos expandir todas sus propiedades en otro objeto de forma muy sencilla.
 
+```JavaScript
 const midu = { name: 'Miguel', twitter: '@midudev' }
 const miduWithNewInfo = {
   ...midu,
@@ -1450,8 +1556,11 @@ console.log(miduWithNewInfo)
 //   youtube: 'https://youtube.com/midudev',
 //   books: [ 'Aprende React' ]
 // }
+```
+
 Es importante notar que esto hace una copia, sí, pero superficial. Si tuviéramos objetos anidados dentro del objeto entonces deberíamos tener en cuenta que podríamos mutar la referencia. Veamos un ejemplo.
 
+```JavaScript
 const midu = {
   name: 'Miguel',
   twitter: '@midudev',
@@ -1482,20 +1591,27 @@ console.log(midu)
 //   twitter: '@midudev',
 //   experience: { years: 19, focus: 'javascript' }
 // }
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 En React es muy normal tener que añadir nuevos elementos a un array o crear nuevos objetos sin necesidad de mutarlos. El operador Rest nos puede ayudar a conseguir esto. Si no conoces bien el concepto de valor y referencia en JavaScript, sería conveniente que lo repases.
 
-Operador Rest
+#### Operador Rest
+
 La sintaxis ... hace tiempo que funciona en JavaScript en los parámetros de una función. A esta técnica se le llamaba parámetros rest y nos permitía tener un número indefinido de argumentos en una función y poder acceder a ellos después como un array.
 
+```JavaScript
 function suma(...allArguments) {
   return allArguments.reduce((previous, current) => {
     return previous + current
   })
 }
+```
+
 Ahora el operador rest también se puede utilizar para agrupar el resto de propiedades un objeto o iterable. Esto puede ser útil para extraer un elemento en concreto del objeto o el iterable y crear una copia superficial del resto en una nueva variable.
 
+```JavaScript
 const midu = {
   name: 'Miguel',
   twitter: '@midudev',
@@ -1515,20 +1631,27 @@ console.log(restOfMidu)
 //     focus: 'javascript'
 //   }
 // }
+```
+
 También podría funcionar con arrays:
 
+```JavaScript
 const [firstNumber, ...restOfNumbers] = [1, 2, 3]
 console.log(firstNumber) // -> 1
 console.log(restOfNumbers) // -> [2, 3]
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 Es una forma interesante de eliminar (de forma figurada) una propiedad de un objeto y creando una copia superficial del resto de propiedades. A veces puede ser interesante para extraer la información que queremos de unos parámetros y dejar el resto en un objeto que pasaremos hacia otro nivel.
 
-Encadenamiento opcional (Optional Chaining)
+#### Encadenamiento opcional (Optional Chaining)
+
 El operador de encadenamiento opcional ?. te permite leer con seguridad el valor de una propiedad que está anidada dentro de diferentes niveles de un objeto.
 
 De esta forma, en lugar de revisar si las propiedades existen para poder acceder a ellas, lo que hacemos es usar el encadenamiento opcional.
 
+```JavaScript
 const author = {
   name: 'Miguel',
   libro: {
@@ -1548,16 +1671,20 @@ const author = {
 
 // con optional chaining
 author?.libro?.name
-¿Por qué es importante
+```
+
+¿Por qué es importante?
 
 Un objeto es una estructura de datos que es perfecta a la hora de representar muchos elementos de la UI. ¿Tienes un artículo? Toda la información de un artículo seguramente la tendrás representada en un objeto.
 
 Conforme tu UI sea más grande y compleja, estos objetos tendrán más información y necesitarás dominar el encadenamiento opcional ?. para poder acceder a su información con garantías.
 
-⬆ Volver a índice
 
-Intermedio
+
+## :star: Intermedio
+
 ¿Cómo crear un hook personalizado (custom hook)?
+
 Un hook personalizado es una función que empieza con la palabra use y que puede utilizar otros hooks. Son ideales para reutilizar lógica en diferentes componentes. Por ejemplo, podemos crear un hook personalizado para extraer la gestión del estado de un contador:
 
 // ./hooks/useCounter.js
