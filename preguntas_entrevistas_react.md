@@ -143,7 +143,8 @@ Too many re-renders. React limits the number of renders to prevent an infinite l
 ## :star: Principiante
 
 <div id="1>
-         <h2>¿Qué es React?</h2>
+     
+<h2>¿Qué es React?</h2>
          
 React es una biblioteca de JavaScript de código abierto para construir interfaces de usuario. Está basada en la componetización de la UI: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
 
