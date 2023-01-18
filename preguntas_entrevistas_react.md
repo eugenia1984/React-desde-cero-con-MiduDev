@@ -1682,10 +1682,11 @@ Conforme tu UI sea más grande y compleja, estos objetos tendrán más informaci
 
 ## :star: Intermedio
 
-¿Cómo crear un hook personalizado (custom hook)?
+### 36 - ¿Cómo crear un hook personalizado (custom hook)?
 
 Un hook personalizado es una función que empieza con la palabra use y que puede utilizar otros hooks. Son ideales para reutilizar lógica en diferentes componentes. Por ejemplo, podemos crear un hook personalizado para extraer la gestión del estado de un contador:
 
+```JSX
 // ./hooks/useCounter.js
 
 export function useCounter() {
@@ -1696,8 +1697,11 @@ export function useCounter() {
 
   return { count, increment, decrement }
 }
+```
+
 Para usarlo en un componente:
 
+```JSX
 import { useCounter } from './hooks/useCounter.js'
 
 function Counter() {
@@ -1711,16 +1715,20 @@ function Counter() {
     </>
   )
 }
-⬆ Volver a índice
+```
 
-¿Cuántos useEffect puede tener un componente?
+
+### 37 - ¿Cuántos useEffect puede tener un componente?
+
 Aunque normalmente los componentes de React solo cuentan con un useEffect lo cierto es que podemos tener tantos useEffect como queramos en un componente. Cada uno de ellos se ejecutará cuando se renderice el componente o cuando cambien las dependencias del efecto.
 
-⬆ Volver a índice
 
-¿Cómo podemos ejecutar código cuando el componente se desmonta del árbol?
+
+### 38 - ¿Cómo podemos ejecutar código cuando el componente se desmonta del árbol?
+
 Podemos ejecutar código cuando el componente se desmonta usando el hook useEffect y dentro devolver una función con el código que queremos ejecutar. En este caso, la función que se pasa como primer parámetro del useEffect se ejecutará cuando el componente se monte, y la función que es retornada se ejecutará cuando se desmonte.
 
+```JSX
 import { useEffect } from 'react'
 
 function Component() {
@@ -1734,13 +1742,17 @@ function Component() {
 
   return <h1>Ejemplo</h1>
 }
+```
+
 Esto es muy útil para limpiar recursos que se hayan creado en el componente, como por ejemplo, eventos del navegador o para cancelar peticiones a APIs.
 
-⬆ Volver a índice
 
-Cómo puedes cancelar una petición a una API en useEffect correctamente
+
+### 39 - Cómo puedes cancelar una petición a una API en useEffect correctamente
+
 Cuando hacemos una petición a una API, podemos cancelarla para evitar que se ejecute cuando el componente se desmonte usando AbortController como hacemos en este ejemplo:
 
+```JSX
 useEffect(() => {
   // Creamos el controlador para abortar la petición
   const controller = new AbortController()
@@ -1761,8 +1773,11 @@ useEffect(() => {
   // Si se desmonta el componente, abortamos la petición
   return () => controller.abort()
 }, [])
+```
+
 Esto también funciona con axios:
 
+```JSX
 useEffect(() => {
   // Creamos el controlador para abortar la petición
   const controller = new AbortController()
@@ -1783,27 +1798,31 @@ useEffect(() => {
   // Si se desmonta el componente, abortamos la petición
   return () => controller.abort()
 }, [])
-⬆ Volver a índice
+```
 
-¿Cuáles son las reglas de los hooks en React?
+### 40 - ¿Cuáles son las reglas de los hooks en React?
+
 Los hooks en React tienen dos reglas fundamentales:
 
 Los hooks solo se pueden usar en componentes funcionales o custom hooks.
-Los hooks solo se pueden llamar en el nivel superior de un componente. No se pueden llamar dentro de bucles, condicionales o funciones anidadas.
-⬆ Volver a índice
 
-¿Qué diferencia hay entre useEffect y useLayoutEffect?
+Los hooks solo se pueden llamar en el nivel superior de un componente. No se pueden llamar dentro de bucles, condicionales o funciones anidadas.
+
+
+### 41 - ¿Qué diferencia hay entre useEffect y useLayoutEffect?
+
 Aunque ambos son muy parecidos, tienen una pequeña diferencia en el momento en el que se ejecutan.
 
-useLayoutEffect se ejecuta de forma síncrona inmediatamente después que React haya actualizado completamente el DOM tras el renderizado. Puede ser útil si necesitas recuperar un elemento del DOM y acceder a sus dimensiones o posición en pantalla.
+- **useLayoutEffect** se ejecuta de forma síncrona inmediatamente después que React haya actualizado completamente el DOM tras el renderizado. Puede ser útil si necesitas recuperar un elemento del DOM y acceder a sus dimensiones o posición en pantalla.
 
-useEffect se ejecuta de forma asíncrona tras el renderizado, pero no asegura que el DOM se haya actualizado. Es decir, si necesitas recuperar un elemento del DOM y acceder a sus dimensiones o posición en pantalla, no podrás hacerlo con useEffect porque no tienes la garantía de que el DOM se haya actualizado.
+- **useEffect** se ejecuta de forma asíncrona tras el renderizado, pero no asegura que el DOM se haya actualizado. Es decir, si necesitas recuperar un elemento del DOM y acceder a sus dimensiones o posición en pantalla, no podrás hacerlo con useEffect porque no tienes la garantía de que el DOM se haya actualizado.
 
 Normalmente, el 99% de las veces, vas a querer utilizar useEffect y, además, tiene mejor rendimiento, ya que no bloquea el renderizado.
 
-⬆ Volver a índice
 
-¿Qué son mejores los componentes de clase o los componentes funcionales?
+
+### 42 - ¿Qué son mejores los componentes de clase o los componentes funcionales?
+
 Desde que en React 16.8.0 se incluyeron los hooks, los componentes de funciones pueden hacer casi todo lo que los componentes de clase.
 
 Aunque no hay una respuesta clara a esta pregunta, normalmente los componentes funcionales son más sencillos de leer y escribir y pueden tener un mejor rendimiento en general.
@@ -1812,18 +1831,17 @@ Además, los hooks solo se pueden usar en los componentes funcionales. Esto es i
 
 Por otro lado, los componentes de clase nos permiten usar el ciclo de vida de los componentes, algo que no podemos hacer con los componentes funcionales donde solo podemos usar useEffect.
 
-Referencias:
 
-Tweet de midudev donde muestra que los componentes funcionales se transpilan mejor que los de clases.
-⬆ Volver a índice
 
-¿Cómo mantener los componentes puros y qué ventajas tiene?
+### 43 - ¿Cómo mantener los componentes puros y qué ventajas tiene?
+
 Los componentes puros son aquellos que no tienen estado y que no tienen efectos secundarios. Esto quiere decir que no tienen ningún tipo de lógica que no sea la de renderizar la interfaz.
 
 Son más fáciles de testear y de mantener. Además, son más fáciles de entender porque no tienen lógica compleja.
 
 Para crear un componente puro en React usamos una function:
 
+```JSX
 function Button({ text }) {
   return (
     <button>
@@ -1831,11 +1849,14 @@ function Button({ text }) {
     </button>
   )
 }
+```
+
 En este caso, el componente Button recibe una prop text que es un string. El componente Button renderiza un botón con el texto que recibe en la prop text.
 
-⬆ Volver a índice
 
-¿Qué es la hidratación (hydration) en React?
+
+### 44 - ¿Qué es la hidratación (hydration) en React?
+
 Cuando renderizamos nuestra aplicación en el servidor, React genera un HTML estático. Este HTML estático es simplemente un string que contiene el HTML que se va a mostrar en la página.
 
 Cuando el navegador recibe el HTML estático, lo renderiza en la página. Sin embargo, este HTML estático no tiene interactividad. No tiene eventos, no tiene lógica, no tiene estado, etc. Podríamos decir que no tiene vida.
@@ -1844,20 +1865,23 @@ Para hacer que este HTML estático pueda ser interactivo, React necesita que el 
 
 De esta forma, en el cliente, React reutiliza este HTML estático y se dedica a adjuntar los eventos a los elementos, ejecutar los efectos que tengamos en los componentes y conciliar el estado de los componentes.
 
-⬆ Volver a índice
 
-¿Qué es el Server Side Rendering y qué ventajas tiene?
+
+### 45 - ¿Qué es el Server Side Rendering y qué ventajas tiene?
+
 El Server Side Rendering es una técnica que consiste en renderizar el HTML en el servidor y enviarlo al cliente. Esto nos permite que el usuario vea la interfaz de la aplicación antes de que se cargue el JavaScript.
 
 Esta técnica nos permite mejorar la experiencia de usuario y mejorar el SEO de nuestra aplicación.
 
-⬆ Volver a índice
 
-¿Cómo puedes crear un Server Side Rendering con React desde cero?
+
+### 46 - ¿Cómo puedes crear un Server Side Rendering con React desde cero?
+
 Para crear un Server Side Rendering con React desde cero podemos usar el paquete react-dom/server que nos permite renderizar componentes de React en el servidor.
 
 Veamos un ejemplo de cómo crear un Server Side Rendering con React desde cero con Express:
 
+```JSX
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
@@ -1868,16 +1892,22 @@ app.get('/', (req, res) => {
   const html = renderToString(<h1>Hola mundo</h1>)
   res.send(html)
 })
+```
+
 Esto nos devolverá el HTML de la aplicación al acceder a la ruta /.
 
+```
 <h1 data-reactroot="">Hola mundo</h1>
-⬆ Volver a índice
+```
 
-¿Puedes poner un ejemplo de efectos colaterales en React?
+
+### 47 - ¿Puedes poner un ejemplo de efectos colaterales en React?
+
 Igual que las funciones en JavaScript, los componentes de React también pueden tener side effects (efectos colaterales). Un efecto colateral significa que el componente manipula o lee información que no está dentro de su ámbito.
 
 Aquí puedes ver un ejemplo simple de un componente que tiene un efecto colateral. Un componente que lee y modifica una variable que está fuera del componente. Esto hace que sea imposible saber qué renderizará el componente cada vez que se use, ya que no sabemos el valor que tendrá count:
 
+```JSX
 let count = 0
 
 function Counter() {
@@ -1896,19 +1926,22 @@ export default function Counters() {
       <Counter />
     </>
   )
-⬆ Volver a índice
+  ```
 
-¿Qué diferencia hay entre componentes controlados y no controlados? ¿Qué ventajas y desventajas tienen?
+
+### 48 - ¿Qué diferencia hay entre componentes controlados y no controlados? ¿Qué ventajas y desventajas tienen?
+
 A la hora de trabajar con formularios en React, tenemos dos tipos de componentes: los componentes controlados y los componentes no controlados.
 
-Componentes controlados: son aquellos que tienen un estado que controla el valor del componente. Por lo tanto, el valor del componente se actualiza cuando el estado cambia.
+- **Componentes controlados**: son aquellos que tienen un estado que controla el valor del componente. Por lo tanto, el valor del componente se actualiza cuando el estado cambia.
 
 La ventaja de este tipo de componentes es que son más fáciles de testear porque no dependen de la interfaz. También nos permiten crear validaciones muy fácilmente. La desventaja es que son más complejos de crear y mantener. Además, pueden tener un peor rendimiento, ya que provocan un re-renderizado cada vez que cambia el valor del input.
 
-Componentes no controlados: son aquellos que no tienen un estado que controle el valor del componente. El estado del componente lo controla el navegador de forma interna. Para conocer el valor del componente, tenemos que leer el valor del DOM.
+- **Componentes no controlados**: son aquellos que no tienen un estado que controle el valor del componente. El estado del componente lo controla el navegador de forma interna. Para conocer el valor del componente, tenemos que leer el valor del DOM.
 
 La ventaja de este tipo de componentes es que se crean de forma muy fácil y no tienes que mantener un estado. Además, el rendimiento es mejor, ya que no tiene que re-renderizarse al cambiar el valor del input. Lo malo es que hay que tratar más con el DOM directamente y crear código imperativo.
 
+```JSX
 // Controlado:
 const [value, setValue] = useState('')
 const handleChange = () => setValue(event.target.value)
@@ -1918,11 +1951,13 @@ const handleChange = () => setValue(event.target.value)
 // No controlado:
 <input type="text" defaultValue="foo" ref={inputRef} />
 // Usamos `inputRef.current.value` para leer el valor del input
-⬆ Volver a índice
+```
 
-¿Qué son los High Order Components (HOC)?
+### 49 - ¿Qué son los High Order Components (HOC)?
+
 Los High Order Components son funciones que reciben un componente como parámetro y devuelven un componente.
 
+```JSX
 function withLayout(Component) {
   return function(props) {
     return <main>
@@ -1932,46 +1967,61 @@ function withLayout(Component) {
     </main>
   }
 }
+```
+
 En este caso, la función withLayout recibe un componente como parámetro y devuelve un componente. El componente devuelto renderiza el componente que se le pasa como parámetro dentro de un layout.
 
 Es un patrón que nos permite reutilizar código y así podemos inyectar funcionalidad, estilos o cualquier otra cosa a un componente de forma sencilla.
 
 Con la llegada de los hooks, los HOCs se han vuelto menos populares, pero todavía se usan en algunos casos.
 
-⬆ Volver a índice
 
-¿Qué son las render props?
+
+### 50 - ¿Qué son las render props?
+
 Son un patrón de diseño de React que nos permite reutilizar código entre componentes e inyectar información en el renderizado de los componentes.
 
+```JSX
 <DataProvider render={data => (
   <h1>Hello {data.target}</h1>
 )}/>
+```
+
 En este caso, el componente DataProvider recibe una función render como prop. Ahí le indicamos qué es lo que debe renderizar usando la información que recibe como parámetro.
 
 La implementación del DataProvider con funciones podría ser la siguiente:
 
+```JSX
 function DataProvider({ render }) {
   const data = { target: 'world' }
   return render(data)
 }
+```
+
 También se puede encontrar este patrón usando la prop children en los componentes.
 
+```JSX
 <DataProvider>
   {data => (
     <h1>Hello {data.target}</h1>
   )}
 </DataProvider>
+```
+
 Y la implementación sería similar:
 
+```JSX
 function DataProvider({ children }) {
   const data = { target: 'world' }
   return children(data)
 }
+```
+
 Este patrón es usado por grandes bibliotecas como react-router, formik o react-motion.
 
-⬆ Volver a índice
 
-¿Por qué no podemos usar un if en el renderizado de un componente?
+
+### 51 - ¿Por qué no podemos usar un if en el renderizado de un componente?
 En React, no podemos usar un if en el renderizado de un componente porque no es una expresión válida de JavaScript, es una declaración. Las expresiones son aquellas que devuelven un valor y las declaraciones no devuelven ningún valor.
 
 En JSX solo podemos usar expresiones, por eso usamos ternarias, que sí son expresiones.
