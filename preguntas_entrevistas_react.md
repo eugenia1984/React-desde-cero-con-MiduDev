@@ -1,4 +1,10 @@
-# Preguntas de entrevista para React
+<!DOCTYPE html>
+<html>
+<head>
+<title>React desde cerot</title>
+</head>
+<body>
+ # Preguntas de entrevista para React
 
 <div id="indice">
  <p>De cero a experto. Con respuestas detalladas en Español</p>
@@ -3195,4 +3201,6 @@ About
 Preguntas típicas sobre React para entrevistas de trabajo ⚛️
 
 
+</body>
 
+</html>
