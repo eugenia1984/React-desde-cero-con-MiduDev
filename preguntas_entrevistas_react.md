@@ -2744,9 +2744,11 @@ Por ahora no existe una forma nativa de crear un Error Boundary en una función 
 
 
 
-¿Qué son las Forward Refs?
+### 76 - ¿Qué son las Forward Refs?
+
 El reenvío de referencia o Forward Refs es una técnica que nos permite acceder a una referencia de un componente hijo desde un componente padre.
 
+```JSX
 // Button.jsx
 import { forwardRef } from 'react'
 
@@ -2755,7 +2757,9 @@ export const Button = forwardRef((props, ref) => (
     {props.children}
   </button>
 ));
+```
 
+```JSX
 // Parent.jsx
 import { Button } from './Button'
 import { useRef } from 'react'
@@ -2773,17 +2777,21 @@ const Parent = () => {
     <Button ref={ref}>My button</Button>
   )
 }
+```
+
 En este ejemplo, recuperamos la referencia del botón (elemento HTML <button>) y la recupera el componente padre (Parent), para poder hacer focus en él gracias al uso de forwardRef en el componente hijo (Button).
 
 Para la gran mayoría de componentes esto no es necesario pero puede ser útil para sistemas de diseño o componentes de terceros reutilizables.
 
-⬆ Volver a índice
 
-¿Cómo puedo validar el tipo de mis props?
+
+### 77 -  ¿Cómo puedo validar el tipo de mis props?
+ 
 React proporciona una forma de validar el tipo de las props de un componente en tiempo de ejecución y en modo desarrollo. Esto es útil para asegurarnos de que los componentes se están utilizando correctamente.
 
 El paquete se llama prop-types y se puede instalar con npm install prop-types.
 
+ ```JSX
 import PropTypes from "prop-types"
 
 function App(props) {
@@ -2793,10 +2801,13 @@ function App(props) {
 App.propTypes = {
   title: PropTypes.string.isRequired,
 }
+ ```
+ 
 En este ejemplo, estamos validando que la prop title sea de tipo string y que sea obligatoria.
 
 Existen una colección de PropTypes ya definidas para ayudarte a comprobar los tipos de las props más comunes:
 
+ ```
 PropTypes.number // número
 PropTypes.string // string
 PropTypes.array // array
@@ -2807,15 +2818,20 @@ PropTypes.node // cualquier cosa renderizable en React, como un número, string,
 PropTypes.element // un elemento React
 PropTypes.symbol // un Symbol de JavaScript
 PropTypes.any // cualquier tipo de dato
-A todas estas se le puede añadir la propiedad isRequired para indicar que es obligatoria.
+```
+ 
+ A todas estas se le puede añadir la propiedad isRequired para indicar que es obligatoria.
 
 Otra opción es usar TypeScript, un lenguaje de programación que compila a JavaScript y que ofrece validación de tipos de forma estática. Ten en cuenta que mientras que TypeScript comprueba los tipos en tiempo de compilación, las PropTypes lo hacen en tiempo de ejecución.
 
-⬆ Volver a índice
 
-¿Cómo puedo validar las propiedades de un objeto con PropTypes?
+
+### 78 - ¿Cómo puedo validar las propiedades de un objeto con PropTypes?
+ 
 Para validar las propiedades de un objeto que se pasa como prop, podemos usar la propiedad shape de PropTypes:
 
+ 
+ ```JSX
 import PropTypes from "prop-types"
 
 function App({ title }) {
@@ -2829,11 +2845,16 @@ App.propTypes = {
     color: PropTypes.string.isRequired,
   }),
 }
-⬆ Volver a índice
+ ```
+ 
+ 
 
-¿Cómo puedo validar las propiedades de un array con PropTypes?
+
+### 79 - ¿Cómo puedo validar las propiedades de un array con PropTypes?
+ 
 Para validar las propiedades de un array que se pasa como prop, podemos usar la propiedad arrayOf de PropTypes:
 
+ ```JSX
 import PropTypes from "prop-types"
 
 function App({ items }) {
@@ -2853,47 +2874,66 @@ App.propTypes = {
     })
   ).isRequired,
 }
+ ```
+ 
 En este caso estamos validando que items sea un array y que cada uno de sus elementos sea un objeto con la propiedad text de tipo string. Además, la prop es obligatoria.
 
-⬆ Volver a índice
 
-¿Cómo puedo inyectar HTML directamente en un componente de React?
+
+### 80 - ¿Cómo puedo inyectar HTML directamente en un componente de React?
+ 
 Una de las razones por las que se creó React es para evitar los ataques XSS (Cross-Site Scripting), impidiendo que un usuario pueda inyectar código HTML en la página.
 
 Por ello, React al intentar evaluar un string que contiene HTML lo escapa automáticamente. Por ejemplo, si intentamos renderizar el siguiente string:
 
+ ```JSX
 const html = "<h1>My title</h1>"
 
 function App() {
   return <div>{html}</div>
 }
+ ```
+ 
 Veremos que en lugar de renderizar el HTML, lo escapa:
-
+```
 <div>&lt;h1&gt;My title&lt;/h1&gt;</div>
-Sin embargo, hay ocasiones en las que es necesario inyectar HTML directamente en un componente. Ya sea por traducciones que tenemos, porque viene el HTML desde el servidor y ya viene saneado, o por un componente de terceros.
+```
+ 
+ Sin embargo, hay ocasiones en las que es necesario inyectar HTML directamente en un componente. Ya sea por traducciones que tenemos, porque viene el HTML desde el servidor y ya viene saneado, o por un componente de terceros.
 
 Para ello, podemos usar la propiedad dangerouslySetInnerHTML:
-
+ 
+```JSX
 const html = "<h1>My title</h1>"
 
 function App() {
   return <div dangerouslySetInnerHTML={{ __html: html }} />
 }
+ ```
+ 
 Ahora sí veremos el HTML renderizado:
 
+ ```
 <div><h1>My title</h1></div>
-Como ves, el nombre ya nos indica que es una propiedad peligrosa y que debemos usarla con cuidado. Intenta evitarla siempre que puedas y sólo recurre a ella cuando realmente no tengas otra opción.
+```
+ 
+ Como ves, el nombre ya nos indica que es una propiedad peligrosa y que debemos usarla con cuidado. Intenta evitarla siempre que puedas y sólo recurre a ella cuando realmente no tengas otra opción.
 
-⬆ Volver a índice
 
-¿Por qué puede ser mala idea pasar siempre todas las props de un objeto a un componente?
+
+### 81 - ¿Por qué puede ser mala idea pasar siempre todas las props de un objeto a un componente?
+ 
 Digamos que tenemos un componente App que recibe un objeto props con todas las props que necesita:
 
+ ```JSX
 function App(props) {
   return <h1>{props.title}</h1>
 }
+ ```
+ 
 Y que tenemos otro componente Layout que recibe un objeto props con todas las props que necesita:
 
+ ```JSX
 function Layout(props) {
   return (
     <div>
@@ -2901,13 +2941,17 @@ function Layout(props) {
     </div>
   )
 }
+ ```
+ 
 En este caso, Layout está pasando todas las props que recibe a App. Esto puede ser una mala idea por varias razones:
 
 Si Layout recibe una prop que no necesita, la pasará a App y éste puede que no la use. Esto puede ser confuso para el que lea el código.
-⬆ Volver a índice
 
-Experto
-¿Es React una biblioteca o un framework? ¿Por qué?
+
+## :star: Experto
+ 
+### 82 - ¿Es React una biblioteca o un framework? ¿Por qué?
+ 
 Existe una fina línea hoy en día entre qué es una biblioteca o un framework. Oficialmente, React se autodenomina como biblioteca. Esto es porque para poder crear una aplicación completa, necesitas usar otras bibliotecas.
 
 Por ejemplo, React no ofrece un sistema de enrutado de aplicaciones oficial. Por ello, hay que usar una biblioteca como React Router o usar un framework como Next.js que ya incluye un sistema de enrutado.
@@ -2920,13 +2964,15 @@ Aún así, existe gente que considera a React como un framework. Aunque no hay u
 
 Por ejemplo, Next.js se podría considerar un framework de React porque incluye React, un sistema de enrutado, un sistema de renderizado del lado del servidor, etc.
 
-⬆ Volver a índice
 
-¿Para qué sirve el hook useImperativeHandle?
+
+### 83 - ¿Para qué sirve el hook useImperativeHandle?
+ 
 Nos permite definir qué propiedades y métodos queremos que sean accesibles desde el componente padre.
 
 En el siguiente ejemplo vamos a crear un componente TextInput que tiene un método focus que cambia el foco al elemento <input>.
 
+ ```JSX
 import { useRef, useImperativeHandle } from 'react'
 
 function TextInput(props, ref) {
@@ -2942,17 +2988,21 @@ function TextInput(props, ref) {
     <input ref={inputEl} type="text" />
   )
 }
-Creamos una referencia inputEl con useRef y la pasamos al elemento <input> como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento <input> del DOM.
+ ```
+ 
+Creamos una referencia inputEl con useRef y la pasamos al elemento <input> como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento ```<input> ``` del DOM.
 
 Para acceder al elemento del DOM, usamos la propiedad current de la referencia.
 
 Para que el componente padre pueda acceder al método focus, usamos el hook useImperativeHandle. Este hook recibe dos parámetros: una referencia y una función que devuelve un objeto con las propiedades y métodos que queremos que sean accesibles desde el componente padre.
 
-⬆ Volver a índice
 
-¿Para qué sirve el método cloneElement de React?
+
+### 84 - ¿Para qué sirve el método cloneElement de React?
+ 
 Te permite clonar un elemento React y añadirle o modificar las props que recibe.
 
+ ```JSX
 import { cloneElement } from 'react'
 
 const Hello = ({ name }) => <h1>Hello {name}</h1>
@@ -2968,18 +3018,21 @@ const App = () => {
     </div>
   )
 }
+ ```
+ 
 En este ejemplo, clonamos element que tenía la prop midudev y le pasamos una prop name diferente cada vez. Esto renderizará tres veces el componente Hello con los nombres TMChein, Madeval y Gorusuke. Sin rastro de la prop original.
 
 Puede ser útil para modificar un elemento que ya nos viene de un componente padre y del que no tenemos posibilidad de re-crear con el componente.
 
-Código de ejemplo
-⬆ Volver a índice
 
-¿Qué son los portales en React?
-Los portales nos permiten renderizar un componente en un nodo del DOM que no es hijo del componente que lo renderiza.
+
+### 85 - ¿Qué son los portales en React?
+
+ Los portales nos permiten renderizar un componente en un nodo del DOM que no es hijo del componente que lo renderiza.
 
 Es perfecto para ciertos casos de uso como, por ejemplo, modales:
 
+ ```JSX
 import { createPortal } from 'react-dom'
 
 function Modal() {
@@ -2990,31 +3043,42 @@ function Modal() {
     document.getElementById('modal')
   )
 }
+ ```
+ 
+ 
 createPortal acepta dos parámetros:
 
-El primer parámetro es el componente que queremos renderizar
-El segundo parámetro es el nodo del DOM donde queremos renderizar el componente
-En este caso el modal se renderiza en el nodo #modal del DOM.
+- El primer parámetro es el componente que queremos renderizar
 
-⬆ Volver a índice
+ - El segundo parámetro es el nodo del DOM donde queremos renderizar el componente
 
-¿Por qué StrictMode renderiza dos veces la aplicación?
+ En este caso el modal se renderiza en el nodo #modal del DOM.
+
+
+
+### 86 - ¿Por qué StrictMode renderiza dos veces la aplicación?
+ 
 Cuando el modo StrictMode está activado, React monta los componentes dos veces (el estado y el DOM se preserva). Esto ayuda a encontrar efectos que necesitan una limpieza o expone problemas con race conditions.
 
-⬆ Volver a índice
 
-¿Qué problemas crees que pueden aparecer en una aplicación al querer visualizar listas de miles/millones de datos?
+
+### 87 - ¿Qué problemas crees que pueden aparecer en una aplicación al querer visualizar listas de miles/millones de datos?
+ 
 Tiempo de respuesta del servidor: Hacer peticiones de millones de datos no es, en general, una buena estrategia. Incluso en el mejor de los casos, en el que el servidor solo debe devolver los datos sin tratarlos, hay un coste asociado al parseo y envío de los mismos a través de la red. Llamadas con un tamaño desmesurado pueden incurrir en interfaces lentas, e incluso en timeouts en la respuesta.
+ 
 Problemas de rendimiento: Aunque es cierto que React se basa en un modelo declarativo en el cual no debemos tener una exhaustivo control o gestión de cómo se renderiza, no hay que olvidar que malas decisiones técnicas pueden conllevar aplicaciones totalmente inestables incluso con las mejores tecnologías. No es viable renderizar un DOM con millones de elementos, el navegador no podrá gestionarlo y, tarde o temprano, la aplicación no será usable.
+ 
 Como developers, nuestra misión es encontrar el equilibrio entre rendimiento y experiencia, intentando priorizar siempre cómo el usuario sentirá la aplicación. No hay ningún caso lo suficientemente justificado para renderizar en pantalla miles de datos.
 
 El espacio de visualización es limitado (viewport), al igual que deberían serlo los datos que añadimos al DOM.
 
-⬆ Volver a índice
 
-¿Cómo puedes abortar una petición fetch con useEffect en React?
+
+### 88 - ¿Cómo puedes abortar una petición fetch con useEffect en React?
+ 
 Si quieres evitar que exista una race condition entre una petición asíncrona y que el componente se desmonte, puedes usar la API de AbortController para abortar la petición cuando lo necesites:
 
+ ```JSX
 import { useEffect, useState } from 'react'
 
 function Movies () {
@@ -3051,26 +3115,33 @@ const fetchMovies = ({ signal }) => {
     signal // <--- pasamos el signal
   }).then(response => response.json())
 }
+ ```
+ 
 De esta forma evitamos que se produzca un error por parte de React de intentar actualizar el estado de un componente que ya no existe, además de evitar que se produzcan llamadas innecesarias al servidor.
 
-⬆ Volver a índice
 
-¿Qué solución/es implementarías para evitar problemas de rendimiento al trabajar con listas de miles/millones de datos?
-Pagination
+
+### 89 - ¿Qué solución/es implementarías para evitar problemas de rendimiento al trabajar con listas de miles/millones de datos?
+ 
+### 90 - Pagination
+ 
 En lugar de recibir la lista en una sola llamada a la API (lo cual sería negativo tanto para el rendimiento como para el propio servidor y tiempo de respuesta de la API), podríamos implementar un sistema de paginación en el cual la API recibirá un offset o rango de datos deseados. En el FE nuestra responsabilidad es mostrar unos controles adecuados (interfaz de paginación) y gestionar las llamadas a petición de cambio de página para siempre limitar la cantidad de DOM renderizado evitando así una sobrecarga del DOM y, por lo tanto, problemas de rendimiento.
 
-Virtualization
+### 91 - Virtualization
+ 
 Existe una técnica llamada Virtualización que gestiona cuántos elementos de una lista mantenemos vivos en el DOM. El concepto se basa en solo montar los elementos que estén dentro del viewport más un buffer determinado (para evitar falta de datos al hacer scroll) y, en cambio, desmontar del DOM todos aquellos elementos que estén fuera de la vista del usuario. De este modo podremos obtener lo mejor de los dos mundos, una experiencia integrada y un DOM liviano que evitará posibles errores de rendimiento. Con esta solución también podremos aprovechar que contamos con los datos en memoria para realizar búsquedas/filtrados sin necesidad de más llamadas al servidor.
 
 Puedes consultar esta librería para aplicar Virtualización con React: React Virtualized.
 
 Hay que tener en cuenta que cada caso de uso puede encontrar beneficios y/o perjuicios en ambos métodos, dependiendo de factores como capacidad de respuesta de la API, cantidad de datos, necesidad de filtros complejos, etc. Por ello es importante analizar cada caso con criterio.
 
-⬆ Volver a índice
 
-¿Qué es el hook useDebugValue?
+
+### 92 - ¿Qué es el hook useDebugValue?
+ 
 Nos permite mostrar un valor personalizado en la pestaña de React DevTools que nos permitirá depurar nuestro código.
 
+ ```JSX
 import { useDebugValue } from 'react'
 
 function useCustomHook() {
@@ -3078,15 +3149,19 @@ function useCustomHook() {
   useDebugValue(value)
   return value
 }
+ ```
+ 
 En este ejemplo, el valor personalizado que se muestra en la pestaña de React DevTools es custom value.
 
 Aunque es útil para depurar, no se recomienda usar este hook en producción.
 
-⬆ Volver a índice
 
-¿Qué es el Profiler en React?
+
+### 93 - ¿Qué es el Profiler en React?
+ 
 El Profiler es un componente que nos permite medir el tiempo que tarda en renderizarse un componente y sus hijos.
 
+ ```JSX
 import { Profiler } from 'react'
 
 function App() {
@@ -3098,33 +3173,47 @@ function App() {
     </Profiler>
   )
 }
+ ```
+ 
 El componente Profiler recibe dos parámetros:
 
-id: es un identificador único para el componente
-onRender: es una función que se ejecuta cada vez que el componente se renderiza
-Esta información es muy útil para detectar componentes que toman mucho tiempo en renderizarse y optimizarlos.
+- id: es un identificador único para el componente
 
-⬆ Volver a índice
+ - onRender: es una función que se ejecuta cada vez que el componente se renderiza
 
-¿Cómo puedes acceder al evento nativo del navegador en React?
-React no expone el evento nativo del navegador. En su lugar, React crea un objeto sintético que se basa en el evento nativo del navegador llamado SyntheticEvent. Para acceder al evento nativo del navegador, debemos usar el atributo nativeEvent:
+ Esta información es muy útil para detectar componentes que toman mucho tiempo en renderizarse y optimizarlos.
 
+
+
+### 94 - ¿Cómo puedes acceder al evento nativo del navegador en React?
+
+ React no expone el evento nativo del navegador. En su lugar, React crea un objeto sintético que se basa en el evento nativo del navegador llamado SyntheticEvent. Para acceder al evento nativo del navegador, debemos usar el atributo nativeEvent:
+
+ ```JSX
 function Button({ onClick }) {
   return <button onClick={e => onClick(e.nativeEvent)}>Haz clic aquí</button>
 }
-⬆ Volver a índice
+ ```
 
-¿Cómo puedes registrar un evento en la fase de captura en React?
+
+### 95 - ¿Cómo puedes registrar un evento en la fase de captura en React?
+ 
 En React, los eventos se registran en la fase de burbuja por defecto. Para registrar un evento en la fase de captura, debemos añadir Capture al nombre del evento:
 
+ 
+ ```JSX
 function Button({ onClick }) {
   return <button onClickCapture={onClick}>Haz clic aquí</button>
 }
-⬆ Volver a índice
+ ```
+ 
 
-¿Cómo puedes mejorar el rendimiento del Server Side Rendering en React para evitar que bloquee el hilo principal?
-Aunque puedes usar el método renderToString para renderizar el HTML en el servidor, este método es síncrono y bloquea el hilo principal. Para evitar que bloquee el hilo principal, debemos usar el método renderToPipeableStream:
 
+### 96 - ¿Cómo puedes mejorar el rendimiento del Server Side Rendering en React para evitar que bloquee el hilo principal?
+
+ Aunque puedes usar el método renderToString para renderizar el HTML en el servidor, este método es síncrono y bloquea el hilo principal. Para evitar que bloquee el hilo principal, debemos usar el método renderToPipeableStream:
+
+ ```JSX
 let didError = false
 const stream = renderToPipeableStream(
   <App />,
@@ -3159,18 +3248,23 @@ const stream = renderToPipeableStream(
     },
   }
 )
-⬆ Volver a índice
+ ```
+ 
 
-¿Qué diferencia hay entre renderToStaticNodeStream() y renderToPipeableStream()?
-renderToStaticNodeStream() devuelve un stream de nodos estáticos, esto significa que no añade atributos extras para el DOM que React usa internamente para poder lograr la hidratación del HTML en el cliente. Esto significa que no podrás hacer el HTML interactivo en el cliente, pero puede ser útil para páginas totalmente estáticas.
+
+### 97 - ¿Qué diferencia hay entre renderToStaticNodeStream() y renderToPipeableStream()?
+
+ renderToStaticNodeStream() devuelve un stream de nodos estáticos, esto significa que no añade atributos extras para el DOM que React usa internamente para poder lograr la hidratación del HTML en el cliente. Esto significa que no podrás hacer el HTML interactivo en el cliente, pero puede ser útil para páginas totalmente estáticas.
 
 renderToPipeableStream() devuelve un stream de nodos que contienen atributos del DOM extra para que React pueda hidratar el HTML en el cliente. Esto significa que podrás hacer el HTML interactivo en el cliente pero puede ser más lento que renderToStaticNodeStream().
 
-⬆ Volver a índice
 
-¿Para qué sirve el hook useDeferredValue?
-El hook useDeferredValue nos permite renderizar un valor con una prioridad baja. Esto es útil para renderizar un valor que no es crítico para la interacción del usuario.
 
+### 98  - ¿Para qué sirve el hook useDeferredValue?
+
+ El hook useDeferredValue nos permite renderizar un valor con una prioridad baja. Esto es útil para renderizar un valor que no es crítico para la interacción del usuario.
+
+ ```JSX
 function App() {
   const [text, setText] = useState('¡Hola mundo!')
   const deferredText = useDeferredValue(text, { timeoutMs: 2000 })
@@ -3185,13 +3279,18 @@ function App() {
     </div>
   )
 }
-⬆ Volver a índice
+ ```
+ 
 
-¿Para qué sirve el método renderToReadableStream()?
+
+### 99 - ¿Para qué sirve el método renderToReadableStream()?
+ 
 Este método es similar a renderToNodeStream, pero está pensado para entornos que soporten Web Streams como Deno.
 
 Un ejemplo de uso sería el siguiente:
 
+ 
+ ```JSX
 const controller = new AbortController()
 const { signal } = controller
 
@@ -3228,11 +3327,15 @@ try {
     }
   )
 }
-⬆ Volver a índice
+ ```
+ 
 
-¿Cómo puedo hacer testing de un componente?
-Para hacer testing de un componente, puedes usar la función render de la librería @testing-library/react. Esta función nos permite renderizar un componente y obtener el resultado.
 
+### 100 - ¿Cómo puedo hacer testing de un componente?
+
+ Para hacer testing de un componente, puedes usar la función render de la librería @testing-library/react. Esta función nos permite renderizar un componente y obtener el resultado.
+
+ ```JSX
 import { render } from '@testing-library/react'
 
 function Counter() {
@@ -3253,11 +3356,15 @@ test('Counter', () => {
   fireEvent.click(getByText('Increment'))
   expect(getByText('Count: 1')).toBeInTheDocument()
 })
-⬆ Volver a índice
+ ```
+ 
 
-¿Cómo puedo hacer testing de un hook?
+
+### 101 - ¿Cómo puedo hacer testing de un hook?
+ 
 Para hacer testing de un hook, puedes usar la función renderHook de la librería @testing-library/react-hooks. Esta función nos permite renderizar un hook y obtener el resultado.
 
+ ```JSX
 import { renderHook } from '@testing-library/react-hooks'
 
 function useCounter() {
@@ -3275,38 +3382,37 @@ test('useCounter', () => {
   })
   expect(result.current.count).toBe(1)
 })
-⬆ Volver a índice
+ ```
 
-¿Qué es Flux?
-Flux es un patrón de arquitectura de aplicaciones que se basa en un unidireccional de datos. En este patrón, los datos fluyen en una sola dirección: de las vistas a los stores.
+
+### 102 - ¿Qué es Flux?
+
+ Flux es un patrón de arquitectura de aplicaciones que se basa en un unidireccional de datos. En este patrón, los datos fluyen en una sola dirección: de las vistas a los stores.
 
 No es específico de React y se puede usar con cualquier librería de vistas. En este patrón, los stores son los encargados de almacenar los datos de la aplicación. Los stores emiten eventos cuando los datos cambian. Las vistas se suscriben a estos eventos para actualizar los datos.
 
 Esta arquitectura fue creada por Facebook para manejar la complejidad de sus aplicaciones. Redux se basó en este patrón para crear una biblioteca de gestión de estado global.
 
-⬆ Volver a índice
 
-Errores Típicos en React
-¿Qué quiere decir: Warning: Each child in a list should have a unique key prop?
-Es un error bastante común en React y que puede parecernos un poco extraño si estamos empezando a aprender esta tecnología. Por suerte, es bastante sencillo de solucionar.
+
+### 103 - Errores Típicos en React
+
+ ¿Qué quiere decir: Warning: Each child in a list should have a unique key prop?
+
+ Es un error bastante común en React y que puede parecernos un poco extraño si estamos empezando a aprender esta tecnología. Por suerte, es bastante sencillo de solucionar.
 
 Básicamente, este mensaje aparece en la consola cuando estamos renderizando un listado dentro de nuestro componente, pero no le estamos indicando la propiedad "key". React usa esta propiedad para determinar qué elemento hijo dentro de un listado ha sufrido cambios, por lo que funciona como una especie de identificativo.
 
 De esta manera, React utiliza esta información para identificar las diferencias existentes con respecto al DOM y optimizar la renderización del listado, determinando qué elementos necesitan volverse a calcular. Esto habitualmente pasa cuando agregamos, eliminamos o cambiamos el orden de los items en una lista.
 
-Recomendamos revisar las siguientes secciones:
 
-¿Qué es el renderizado de listas en React?
-
-¿Por qué puede ser mala práctica usar el ´index´ como key en un listado de React?
-
-⬆ Volver a índice
 
 React Hook useXXX is called conditionally. React Hooks must be called in the exact same order in every component render
 Una de las reglas de los hooks de React es que deben llamarse en el mismo orden en cada renderizado. React lo necesita para saber en qué orden se llaman los hooks y así mantener el estado de los mismos internamente. Por ello, los hooks no pueden usarse dentro de una condición if, ni un loop, ni tampoco dentro de una función anónima. Siempre deben estar en el nivel superior de la función.
 
 Por eso el siguiente código es incorrecto:
 
+ ```JSX
 // ❌ código incorrecto por saltar las reglas de los hooks
 function Counter() {
   const [count, setCount] = useState(0)
@@ -3319,8 +3425,11 @@ function Counter() {
 
   return <div>{count} {name}</div>
 }
+ ```
+ 
 También el siguiente código sería incorrecto, aunque no lo parezca, ya que estamos usando el segundo useState de forma condicional (pese a no estar dentro de un if) ya que se ejecutará sólo cuando count sea diferente a 0:
 
+ ```JSX
 // ❌ código incorrecto por saltar las reglas de los hooks
 function Counter() {
   const [count, setCount] = useState(0)
@@ -3333,10 +3442,13 @@ function Counter() {
 
   return <div>{count} {name}</div>
 }
+ ```
+ 
 Ten en cuenta que si ignoras este error, es posible que tus componentes no se comporten de forma correcta y tengas comportamientos no esperados en el funcionamiento de tus componentes.
 
 Para arreglar este error, como hemos comentado antes, debes asegurarte de que los hooks se llaman en el mismo orden en cada renderizado. El último ejemplo quedaría así:
 
+ ```JSX
 function Counter() {
   const [count, setCount] = useState(0)
   // movemos el hook useState antes del if
@@ -3346,14 +3458,17 @@ function Counter() {
 
   return <div>{count} {name}</div>
 }
+ ```
+ 
 Recomendamos revisar las siguientes secciones:
 
 ¿Cuáles son las reglas de los hooks en React?
-⬆ Volver a índice
+
 
 Can’t perform a React state update on an unmounted component
 Este error se produce cuando intentamos actualizar el estado de un componente que ya no está montado. Esto puede ocurrir cuando el componente se desmonta antes de que se complete una petición asíncrona, por ejemplo:
 
+ ```JSX
 function Movies () {
   const [movies, setMovies] = useState([])
 
@@ -3376,10 +3491,13 @@ function Movies () {
     </section>
   )
 }
+ ```
+ 
 Parece un código inofensivo, pero imagina que usamos este componente en una página. Si el usuario navega a otra página antes de que se complete la petición, el componente se desmontará y React lanzará el error, ya que intentará ejecutar el setMovies en un componente (Movies) que ya no está montado.
 
 Para evitar este error, podemos usar una variable booleana con useRef que nos indique si el componente está montado o no. De esta manera, podemos evitar que se ejecute el setMovies si el componente no está montado:
 
+ ```JSX
 function Movies () {
   const [movies, setMovies] = useState([])
   const mounted = useRef(false)
@@ -3398,8 +3516,11 @@ function Movies () {
 
   // ...
 }
+ ```
+ 
 Esto soluciona el problema pero no evita que se haga la petición aunque el componente ya no esté montado. Para cancelar la petición y así ahorrar transferencia de datos, podemos abortar la petición usando la API AbortController:
 
+ ```JSX
 function Movies () {
   const [movies, setMovies] = useState([])
 
@@ -3426,23 +3547,31 @@ function Movies () {
 
   // ...
 }
+```
 
-// Debemos pasarle el parámetro signal al `fetch`
+ 
+ ```JSX
+ // Debemos pasarle el parámetro signal al `fetch`
 // para que enlace la petición con el controlador
 const fetchMovies = ({ signal }) => {
   return fetch('https://api.themoviedb.org/3/movie/popular', {
     signal // <--- pasamos el signal
   }).then(response => response.json())
 }
+ ```
+ 
 Sólo ten en cuenta la compatibilidad de AbortController en los navegadores. En caniuse puedes ver que no está soportado en Internet Explorer y versiones anteriores de Chrome 66, Safari 12.1 y Edge 16.
 
-⬆ Volver a índice
-
+```
 Too many re-renders. React limits the number of renders to prevent an infinite loop
-Este error indica que algo dentro de nuestro componente está generando muchos pintados que pueden desembocar en un loop (bucle) infinito. Algunas de las razones por las que puede aparecer este error son las siguientes:
+```
+ 
+ Este error indica que algo dentro de nuestro componente está generando muchos pintados que pueden desembocar en un loop (bucle) infinito. Algunas de las razones por las que puede aparecer este error son las siguientes:
 
 Llamar a una función que actualiza el estado en el renderizado del componente.
-function Counter() {
+
+ ```JSX
+ function Counter() {
   const [count, setCount] = useState(0)
 
 // ❌ código incorrecto
@@ -3451,10 +3580,13 @@ function Counter() {
 
   return <div>{count}</div>
 }
+ ```
+ 
 Lo que sucede en este ejemplo, es que al renderizarse el componente, se llama a la función setCount para actualizar el estado. Una vez el estado es actualizado, se genera nuevamente un render del componente y se repite todo el proceso infinitas veces.
 
 Una posible solución sería:
 
+ ```JSX
 function Counter() {
   // ✅ código correcto
   // se pasa el valor inicial deseado en el `useState`
@@ -3462,8 +3594,11 @@ function Counter() {
 
   return <div>{count}</div>
 }
+ ```
+ 
 Llamar directamente a una función en un controlador de eventos.
 
+ ```JSX
 function Counter() {
   const [count, setCount] = useState(0)
 
@@ -3474,10 +3609,13 @@ function Counter() {
     <button onClick={setCount(count + 1)}>Incrementar</button>
   </div>
 }
+ ```
+ 
 En este código, se está ejecutando la función setCount que actualiza el estado en cada renderizado del componente, lo que provoca renderizaciones infinitas.
 
 La manera correcta sería la siguiente:
 
+ ```JSX
 function Counter() {
   const [count, setCount] = useState(0)
 
@@ -3489,10 +3627,13 @@ function Counter() {
     <button onClick={() => setCount(count + 1)}>Incrementar</button>
   </div>
 }
+ ```
+ 
 Usar incorrectamente el Hook de useEffect.
 
 Al ver este ejemplo:
 
+ ```JSX
 function Counter() {
   const [count, setCount] = useState(0)
 
@@ -3503,10 +3644,13 @@ function Counter() {
 
   return <div>{count}</div>
 }
+ ```
+ 
 Lo que ocurre, es que al no colocar un array de dependencias en el hook de useEffect, estamos provocando que el código que se encuentre dentro se ejecute en cada renderizado del componente. Al llamar al setCounter y actualizar el estado, obtenemos nuevamente renderizaciones infinitas.
 
 Para solucionarlo, podemos hacer lo siguiente:
 
+ ```JSX
 function Counter() {
   const [count, setCount] = useState(0)
 
@@ -3518,31 +3662,39 @@ function Counter() {
 
   return <div>{count}</div>
 }
+ ```
+ 
 Estas son solo algunas de las posibles causas que podemos encontrar cuando nos topamos con este mensaje de error en el código. Si quieres complementar esta información, te recomendamos revisar las siguientes secciones:
 
 ¿Qué es el estado en React?
+ 
 ¿Qué son los hooks?
+ 
 ¿Qué hace el hook useState?
+ 
 ¿Qué hace el hook useEffect?
+ 
 ¿Cuáles son las reglas de los hooks en React?
-⬆ Volver a índice
+
 
 ¿Qué diferencia existe entre Shadow DOM y Virtual DOM?
 El Shadow DOM es una API del navegador que nos permite crear un árbol de nodos DOM independiente dentro de un elemento del DOM. Esto nos permite crear componentes que no interfieran con el resto de la aplicación. Se usa especialmente con Web Components.
 
 El Virtual DOM es una representación del DOM en memoria. Esta representación se crea cada vez que se produce un cambio en el DOM. Esto nos permite comparar el DOM actual con el DOM anterior y así determinar qué cambios se deben realizar en el DOM real. Lo usa React y otras bibliotecas para hacer el mínimo número de cambios en el DOM real.
 
-⬆ Volver a índice
 
-¿Qué es el Binding?
+
+### ¿Qué es el Binding?
+ 
 En React, el Binding se refiere a la forma en que se relaciona y sincroniza el estado (state) de un componente con su vista (render). El estado de un componente es un objeto que contiene información que puede ser utilizada para determinar cómo se debe mostrar el componente. Existen dos tipos de binding en React: One-Way Binding y Two-Way Binding.
 
-One-Way Binding (Enlace unidireccional):
+- One-Way Binding (Enlace unidireccional):
 
 En React se refiere a la capacidad de un componente para actualizar su estado (state) y su vista (render) de manera automática cuando cambia el estado, pero no permitiendo que la vista actualice el estado. En otras palabras, el one-way binding significa que el flujo de datos es unidireccional, desde el estado hacia la vista, y no al revés.
 
 Por ejemplo:
 
+ ```JSX
 import React, { useState } from 'react';
 
 function OneWayBindingExample() {
@@ -3559,16 +3711,19 @@ function OneWayBindingExample() {
     </div>
   );
 }
-
+ 
 export default OneWayBindingExample;
-En este ejemplo, el componente tiene un estado inicial llamado name con el valor midu. La función setName se utiliza para actualizar el estado name cuando se produce un evento onChange en el input. Sin embargo, la vista (la linea que muestra Hello, {name}) no tiene la capacidad de actualizar el estado name.
+```
+ 
+ En este ejemplo, el componente tiene un estado inicial llamado name con el valor midu. La función setName se utiliza para actualizar el estado name cuando se produce un evento onChange en el input. Sin embargo, la vista (la linea que muestra Hello, {name}) no tiene la capacidad de actualizar el estado name.
 
-Two-Way Binding (Enlace bidireccional):
+- Two-Way Binding (Enlace bidireccional):
 
 Se refiere a la capacidad de un componente para actualizar su estado y su vista de manera automática tanto cuando cambia el estado como cuando se produce un evento en la vista. En otras palabras, el Two-Way Binding significa que el flujo de datos es bidireccional, desde el estado hacia la vista y desde la vista hacia el estado. Para lograr esto se utilizan en conjunto con los eventos, como onChange, para capturar la información de los inputs y actualizar el estado, React no proporciona un mecanismo nativo para two-way binding, pero se puede lograr utilizando librerías como react-forms o formik.
 
 Por ejemplo:
 
+ ```JSX
 import React, { useState } from 'react';
 
 function TwoWayBindingExample() {
@@ -3588,7 +3743,9 @@ function TwoWayBindingExample() {
 }
 
 export default TwoWayBindingExample;
-En este ejemplo, el componente tiene un estado inicial llamado name con el valor midu. La función setName se utiliza para actualizar el estado name cuando se produce un evento onChange en el input, y se puede ver reflejado en el valor del input. Sin embargo, en este caso se está utilizando el atributo value para que el valor del input sea actualizado con el valor del estado, es decir, se está actualizando tanto el estado como el input.
+```
+ 
+ En este ejemplo, el componente tiene un estado inicial llamado name con el valor midu. La función setName se utiliza para actualizar el estado name cuando se produce un evento onChange en el input, y se puede ver reflejado en el valor del input. Sin embargo, en este caso se está utilizando el atributo value para que el valor del input sea actualizado con el valor del estado, es decir, se está actualizando tanto el estado como el input.
 
 Por si no quedó claro:
 
@@ -3598,15 +3755,3 @@ En el caso del One-Way Binding, la cafetera solo puede verter café en una direc
 
 En el caso del Two-Way Binding, la cafetera puede verter y recibir café en ambas direcciones, hacia y desde la taza de café (no sé por qué alguien necesitaría hacer algo así). Esto significa que la cafetera puede llenar y vaciar automáticamente la taza de café con café fresco. De esta manera, tanto el estado del componente como la vista pueden actualizarse automáticamente entre sí.
 
-Sí quieres saber más comparto el siguiente enlace:
-How To Bind Any Component to Data in React: One-Way Binding
-
-⬆ Volver a índice
-
-About
-Preguntas típicas sobre React para entrevistas de trabajo ⚛️
-
-
-</body>
-
-</html>
