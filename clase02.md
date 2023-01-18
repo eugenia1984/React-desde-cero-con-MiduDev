@@ -25,3 +25,23 @@ Va a ser un **Tablero**(**board**) con **9** posiciones, las cuales van a tener 
 -> :book: **La actualización de los estados en rEact son ASÍNCRONAS**, puede ocurrir rápido o demorarse, pero no bloquea el código que viene después (justamente porque no es síncrono).
 
 ---
+
+## :star: Hook useEffect
+
+Un hook que nos permite ejecutar codigo arbitrario cuando se monta el componente y cada vez que cambie la dependencia que le indicamos en el **dependency array**.
+
+```
+useEffect(codoToExecute, listOfDependencies)
+```
+
+-> Siempre se va a ejecutar, como mínimo, una vez (al cargarse el componente)
+
+-> listOfDependencies es opcional, pero... si no esta se va a ejecutar el useEffect cada vez que se renderice el componente, es mejor que tenga al menos [] asi se ejecuta al menos al renderizar por primera vez el componente, y luego si indico un valor se re renderizara si cambia dicho valor.
+
+
+## :star:  Tercer proyecto : Mouse follower
+
+
+Para entender el concepto del *hook** **useEffect**
+
+---
