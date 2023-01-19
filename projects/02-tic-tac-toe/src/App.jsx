@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Title } from "./components/Title"
 
 const TURNS = { // turnos
   X: 'x', 
@@ -75,7 +76,7 @@ function App() {
 
   return (
     <main className='board'>
-      <h1>Tic tac toe</h1>
+      <Title headline="Tic tac toe"/>
       <section className="game">
         {
           board.map((_, index) => {

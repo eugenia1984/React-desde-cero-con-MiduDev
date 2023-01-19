@@ -4,11 +4,20 @@
 
 ## :star: Hacemos el segundo proyecto * Ta- Te- Ti (Tic-Tac-Toe)
 
+-> Volvemos a crear el proyecto con **Vite** (empaquetador como alternativa a Webpack y create-react-app)
+
+```
+> npm create vite@latest
+> cd 02-tic-ta-toe
+> npm install
+> npm run dev
+```
+
 Va a ser un **Tablero**(**board**) con **9** posiciones, las cuales van a tener como valor: **x** ó **o**.
 
 - Necesitamos un **state** para saber **de quien es el turno**
 
-- Cambiar al componente hijo dependndiendo dle estado del componente padre, para ello con **isSelected** voy a modificar el **className** y asi muestro a quien le tocara el turno.
+- Cambiar al componente hijo dependndiendo del estado del componente padre, para ello con **isSelected** voy a modificar el **className** y asi muestro a quien le tocara el turno.
 
 - En el componente `<Square />`tenemos **updateBoard()**, es la función más importante que ...
 

@@ -2,7 +2,6 @@ import React from "react";
 import { users } from "./data.js";
 import { TwitterFollowCard } from "./components/card/TwitterFollowCard";
 import "./App.css";
-import { CounterButton } from "./components/buttons/CounterButon.jsx";
 import Title from "./components/title/Title.jsx";
 
 export function App() {
@@ -20,7 +19,6 @@ export function App() {
           {name}
         </TwitterFollowCard>
       ))}
-      <CounterButton />
     </section>
   );
 }
