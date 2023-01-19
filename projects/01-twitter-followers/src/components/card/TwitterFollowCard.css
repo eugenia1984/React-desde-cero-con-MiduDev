@@ -80,3 +80,7 @@
 .tw-followCard-stopFollow {
   display: none;
 }
+
+aside {
+  min-width: 170px;
+}
