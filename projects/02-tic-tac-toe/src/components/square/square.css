@@ -1,0 +1,22 @@
+.square {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 48px;
+}
+
+@media screen and (min-width: 426px) {
+  .square {
+    width: 92px;
+    height: 92px;
+  }
+}
+
+.square.is-selected {
+  color: #fff;
+  background: #09f;
+}

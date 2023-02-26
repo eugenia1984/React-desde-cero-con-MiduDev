@@ -1,0 +1,9 @@
+.turn {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto;
+  width: fit-content;
+  position: relative;
+  border-radius: 10px;
+  background-color: #8f8787;
+}

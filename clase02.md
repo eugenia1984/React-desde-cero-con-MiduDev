@@ -13,7 +13,7 @@
 > npm run dev
 ```
 
-Va a ser un **Tablero**(**board**) con **9** posiciones, las cuales van a tener como valor: **x** ó **o**.
+- Va a ser un **Tablero**(**board**) con **9** posiciones, las cuales van a tener como valor: **x** ó **o**.
 
 - Necesitamos un **state** para saber **de quien es el turno**
 
@@ -31,7 +31,7 @@ Va a ser un **Tablero**(**board**) con **9** posiciones, las cuales van a tener 
 
 ---
 
--> :book: **La actualización de los estados en rEact son ASÍNCRONAS**, puede ocurrir rápido o demorarse, pero no bloquea el código que viene después (justamente porque no es síncrono).
+-> :book: **La actualización de los estados en React son ASÍNCRONAS**, puede ocurrir rápido o demorarse, pero no bloquea el código que viene después (justamente porque no es síncrono).
 
 ---
 

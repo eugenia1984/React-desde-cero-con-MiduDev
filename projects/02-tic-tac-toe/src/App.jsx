@@ -1,108 +1,43 @@
-import { useState } from "react"
-import { Title } from "./components/Title"
-
-const TURNS = { // turnos
-  X: 'x', 
-  O: 'o' 
-}
-
-const Square = ({ children, isSelected, updateBoard, index }) => {
-  const className = `square ${isSelected ? 'is-selected' : ''}`
-  
-  const handleClick = () => {
-    updateBoard(index)
-  }
-
-  return (
-    <div onClick={handleClick} className={className}>
-      {children}
-    </div>
-  )
-}
-
-const WINNER_COMBOS = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
-]
+import { useState } from "react";
+import { Title } from "./commons/Title";
+import { Square } from "./components/square/Square";
+import { ShowTurn } from "./components/showTurn/ShowTurn";
+import TURNS from "./utils/constants.js";
+import checkWinner from "./utils/checkWinner";
 
 function App() {
-  const [board, setBoard] = useState(
-    Array(9).fill(null)
-  )
-  const [turn, setTurn] = useState(TURNS.X)
-  // null es que no hay ganador, false es que hay un empate
-  const [winner, setWinner] = useState(null)
-
-  const checkWinner = (boardToCheck) => {
-    // revisamos todas las combinaciones ganadoras
-    // para ver si X u O ganó
-    for (const combo of WINNER_COMBOS) {
-      const [a, b, c] = combo
-      if (
-        boardToCheck[a] &&
-        boardToCheck[a] === boardToCheck[b] &&
-        boardToCheck[a] === boardToCheck[c]
-      ) {
-        return boardToCheck[a]
-      }
-    }
-    // si no hay ganador
-    return null
-  }
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [turn, setTurn] = useState(TURNS.X);
+  const [winner, setWinner] = useState(null);
 
   const updateBoard = (index) => {
-    // no actualizamos esta posición
-    // si ya tiene algo
-    if (board[index] || winner) return
-    // actualizar el tablero
-    const newBoard = [...board]
-    newBoard[index] = turn
-    setBoard(newBoard)
-    // cambiar el turno
-    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
-    setTurn(newTurn)
-    // revisar si hay ganador
-    const newWinner = checkWinner(newBoard)
+    if (board[index] || winner) return; // no actualizamos esta posición, si ya tiene algo
+    const newBoard = [...board];
+    newBoard[index] = turn;
+    setBoard(newBoard);
+    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X; // cambiar el turno
+    setTurn(newTurn);
+    const newWinner = checkWinner(newBoard); // revisar si hay ganador
     if (newWinner) {
-      setWinner(newWinner)
+      setWinner(newWinner);
     }
-  }
+  };
 
   return (
-    <main className='board'>
-      <Title headline="Tic tac toe"/>
+    <main className="board">
+      <Title headline="Tic tac toe" />
       <section className="game">
-        {
-          board.map((_, index) => {
-            return (
-              <Square
-                key={index}
-                index={index}
-                updateBoard={updateBoard}
-              >
-                {board[index]}
-              </Square>
-            )
-          })
-        }
+        {board.map((_, index) => {
+          return (
+            <Square key={index} index={index} updateBoard={updateBoard}>
+              {board[index]}
+            </Square>
+          );
+        })}
       </section>
-
-      <section className="turn">
-        <Square isSelected={turn === TURNS.X}>
-          {TURNS.X}
-        </Square>
-        <Square isSelected={turn === TURNS.O}>
-          {TURNS.O}
-        </Square>
-      </section>
+      <ShowTurn turn={turn} />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

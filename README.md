@@ -8,10 +8,11 @@ Curso de **React desde Cero** con **MiduDev** (Miguel Angel Duran), todos los Mi
 
 ---
 
-## Clases prácticas
+## Clases prácticas - PROYECTOS
 
-En las que vamos a ir haciendo varios proyectos.
-¿Cuáles son ?
+En las que vamos a ir haciendo varios **proyectos**.
+
+## ⌨️ ¿Cuáles son los proyectos ?
 
 - Clase 1: [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
 
@@ -21,18 +22,15 @@ En las que vamos a ir haciendo varios proyectos.
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
-
 - Clase 1 : [**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers)
 
 ![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
 
-
-- Clase 2 : 
+- Clase 2 :
 
 [**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe)
 
-[**3er proyecto :  3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
-
+[**3er proyecto : 3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
 
 ---
 
@@ -102,11 +100,17 @@ En las que vamos a ir haciendo varios proyectos.
 
 - [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ [**1er proyecto**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/01-twitter-followers), hacemos la primer práctica con React, donde creamos parte de **la interfaz de Twitter donde vemos los usuarios y se siguen o dejan de seguir**, temas que se ver: props, desestructuración, hook useState (es estado, cómo actualizarlo), renderizado condicional(con ternario), imperativo vs declarativo, programación funcional, virtual DOM, renderización de listas.
 
-- [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: cómo incializar el localStorage, cómo utilizar el localStorage para inicializar un estado, cómo inicializar un estado, como utilizar los eventos onClick  ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
+- [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: crear un proyecto con **vite**, ¿cómo incializar el localStorage?, ¿cómo utilizar el localStorage para inicializar un estado?, ¿cómo inicializar un estado?, ¿cómo utilizar los eventos onClick? ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
 
 - **Clase 3**
 
 - **Clase 4**
+
+- **Clase 5**
+
+- **Clase 6**
+
+- **Clase 7**
 
 ---
 

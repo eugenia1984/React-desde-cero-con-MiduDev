@@ -1,5 +1,6 @@
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -65,26 +66,12 @@ body {
   gap: 10px;
 }
 
-.turn {
-  display: flex;
-  justify-content: center;
-  margin: 15px auto;
-  width: fit-content;
-  position: relative;
-  border-radius: 10px;
-}
-
 .turn .square,
 .winner .square {
   width: 70px;
   height: 70px;
   pointer-events: none;
   border-color: transparent;
-}
-
-.square.is-selected {
-  color: #fff;
-  background: #09f;
 }
 
 .winner {
@@ -118,22 +105,4 @@ body {
   border-radius: 10px;
   display: flex;
   gap: 15px;
-}
-
-.square {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #eee;
-  border-radius: 5px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  font-size: 48px;
-}
-
-@media screen and (min-width: 426px) {
-  .square {
-    width: 92px;
-    height: 92px;
-  }
 }
