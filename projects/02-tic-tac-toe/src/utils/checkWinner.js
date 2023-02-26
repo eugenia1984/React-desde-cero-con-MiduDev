@@ -10,8 +10,7 @@ const WINNER_COMBOS = [
 ];
 
 const checkWinner = (boardToCheck) => {
-  // revisamos todas las combinaciones ganadoras
-  // para ver si X u O ganó
+  // revisamos todas las combinaciones ganadoras para ver si X u O ganó
   for (const combo of WINNER_COMBOS) {
     const [a, b, c] = combo;
     if (

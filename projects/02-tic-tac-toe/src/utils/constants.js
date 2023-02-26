@@ -1,5 +1,4 @@
 const TURNS = {
-  // turnos
   X: "x",
   O: "o",
 };

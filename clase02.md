@@ -1,8 +1,8 @@
-# :book: React desde cero con Midu Dev * Clase 2
+# :book: React desde cero con Midu Dev \* Clase 2
 
 ---
 
-## :star: Hacemos el segundo proyecto * Ta- Te- Ti (Tic-Tac-Toe)
+## :star: Hacemos el segundo proyecto \* Ta- Te- Ti (Tic-Tac-Toe)
 
 -> Volvemos a crear el proyecto con **Vite** (empaquetador como alternativa a Webpack y create-react-app)
 
@@ -39,7 +39,7 @@
 
 Un hook que nos permite ejecutar codigo arbitrario cuando se monta el componente y cada vez que cambie la dependencia que le indicamos en el **dependency array**.
 
-```
+```JSX
 useEffect(codoToExecute, listOfDependencies)
 ```
 
@@ -47,11 +47,25 @@ useEffect(codoToExecute, listOfDependencies)
 
 -> listOfDependencies es opcional, pero... si no esta se va a ejecutar el useEffect cada vez que se renderice el componente, es mejor que tenga al menos [] asi se ejecuta al menos al renderizar por primera vez el componente, y luego si indico un valor se re renderizara si cambia dicho valor.
 
+---
 
-## :star:  Tercer proyecto : Mouse follower
+Los **state** son **inmutales**
 
+Por eso en el **updateBoard** me creo una copia de mi board para trabajarla, asi no la modifico(si modifico el estado actual, sin llamar al set, podría tener discrepancias en el renderizado):
 
-Para entender el concepto del *hook* **useEffect**
+```JSX
+const newBoard = [...board];
+```
+
+---
+
+La **actualización del estado** es **asíncrona**, es no bloqueante, van a ir pasando otras cosas mientras se actualiza. Por eso en **checkWinner** se pasa el **boardToCheck** y no el **board**, para que funcione con el valor del estado actual y no el anterior.
+
+---
+
+## :star: Tercer proyecto : Mouse follower
+
+Para entender el concepto del _hook_ **useEffect**
 
 -> **return** del useEffect, para limpiar, es el **clean up method**. Dentro del return hay que cerrar si hay llamado a API. Cada vez que vuelve a ejecutar el useEffect va a hacer el clen up y también cuando se desmonta.
 
@@ -72,7 +86,6 @@ Para entender el concepto del *hook* **useEffect**
 - Vercel
 
 - Netlify
-
 
 ---
 
