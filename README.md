@@ -30,6 +30,9 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 [**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe)
 
+![image](https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png)
+
+
 [**3er proyecto : 3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
 
 ---
