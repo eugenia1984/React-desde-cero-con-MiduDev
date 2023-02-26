@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/eugenia1984/React-desde-cero-con-MiduDev/issues"
   },
-  "homepage": "https://github.com/eugenia1984/React-desde-cero-con-MiduDev#readme"
+  "homepage": "https://github.com/eugenia1984/React-desde-cero-con-MiduDev#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
 }

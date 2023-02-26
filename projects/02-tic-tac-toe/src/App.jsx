@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
-
 import { Title } from "./commons/Title";
 import { Square } from "./components/square/Square";
 import { ShowTurn } from "./components/showTurn/ShowTurn";
