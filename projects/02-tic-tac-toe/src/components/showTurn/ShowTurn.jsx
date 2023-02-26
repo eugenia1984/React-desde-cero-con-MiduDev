@@ -1,6 +1,6 @@
 import React from "react";
 import { Square } from "../square/Square";
-import TURNS from "../../utils/constants";
+import { TURNS } from "../../constants";
 import "./showTurn.css";
 
 export const ShowTurn = ({ turn }) => {

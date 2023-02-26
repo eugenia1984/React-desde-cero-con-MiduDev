@@ -42,7 +42,7 @@ body {
   margin: 24px 12px;
 }
 
-.board button {
+.board .button-main {
   padding: 8px 12px;
   margin: 25px;
   background: transparent;
@@ -55,7 +55,7 @@ body {
   cursor: pointer;
 }
 
-.board button:hover {
+.board .button-main:hover {
   background: #eee;
   color: #222;
 }

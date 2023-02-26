@@ -63,6 +63,18 @@ La **actualización del estado** es **asíncrona**, es no bloqueante, van a ir p
 
 ---
 
+## Canvas Confetti
+
+- Vamos a trabajar con la librerìa de **confett** para que al terminar y tener un ganador celebremos.
+
+- Para instalar la librería:
+
+``` npm install canvas-confetti -E```
+
+
+---
+
+
 ## :star: Tercer proyecto : Mouse follower
 
 Para entender el concepto del _hook_ **useEffect**
