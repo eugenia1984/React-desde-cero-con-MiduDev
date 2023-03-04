@@ -40,11 +40,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 [**3er proyecto : Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
 
-![image](https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png)
-
-![image](https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png)
-
-![image](https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png)
+<img src="https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png" alt="tic tac toe" width=200><img src="https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png" alt="tic tac toe" width=200 style="margin-left: 20px"><img src="https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png" alt="tic tac toe" width=200 style="margin-left: 20px">
 
 ---
 
@@ -116,7 +112,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: crear un proyecto con **vite**, ¿cómo incializar el localStorage?, ¿cómo utilizar el localStorage para inicializar un estado?, ¿cómo inicializar un estado?, ¿cómo utilizar los eventos onClick? ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
 
-- **Clase 3**
+- [**Clase 3**]((https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors ⭐ Fetching de datos ⭐ Testing ⭐ Manejo de estados
 
 - **Clase 4**
 
