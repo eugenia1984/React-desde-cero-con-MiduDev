@@ -2263,7 +2263,7 @@ function TextInputWithFocusButton() {
 }
 ```
 
-Creamos una referencia inputEl con useRef y la pasamos al elemento <input> como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento <input> del DOM.
+Creamos una referencia inputEl con useRef y la pasamos al elemento `<input>` como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento `<input>` del DOM.
 
 Para acceder al elemento del DOM, usamos la propiedad current de la referencia.
 
@@ -2779,7 +2779,7 @@ const Parent = () => {
 }
 ```
 
-En este ejemplo, recuperamos la referencia del botón (elemento HTML <button>) y la recupera el componente padre (Parent), para poder hacer focus en él gracias al uso de forwardRef en el componente hijo (Button).
+En este ejemplo, recuperamos la referencia del botón (elemento HTML `<button>`) y la recupera el componente padre (Parent), para poder hacer focus en él gracias al uso de forwardRef en el componente hijo (Button).
 
 Para la gran mayoría de componentes esto no es necesario pero puede ser útil para sistemas de diseño o componentes de terceros reutilizables.
 
@@ -2970,7 +2970,7 @@ Por ejemplo, Next.js se podría considerar un framework de React porque incluye 
  
 Nos permite definir qué propiedades y métodos queremos que sean accesibles desde el componente padre.
 
-En el siguiente ejemplo vamos a crear un componente TextInput que tiene un método focus que cambia el foco al elemento <input>.
+En el siguiente ejemplo vamos a crear un componente TextInput que tiene un método focus que cambia el foco al elemento `<input>`.
 
  ```JSX
 import { useRef, useImperativeHandle } from 'react'
@@ -2990,7 +2990,7 @@ function TextInput(props, ref) {
 }
  ```
  
-Creamos una referencia inputEl con useRef y la pasamos al elemento <input> como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento ```<input> ``` del DOM.
+Creamos una referencia inputEl con useRef y la pasamos al elemento `<input>` como prop ref. Cuando el componente se monta, la referencia inputEl apunta al elemento ```<input> ``` del DOM.
 
 Para acceder al elemento del DOM, usamos la propiedad current de la referencia.
 

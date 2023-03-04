@@ -39,8 +39,8 @@ const FollowMouse = () => {
       <div
         style={{
           position: "absolute",
-          backgroundColor: "rgba(245, 227, 10, 0.99)",
-          border: "8px solid rgb(255, 255, 255)",
+          backgroundColor: "rgba(245, 227, 10, 0.89)",
+          border: "2px solid rgb(255, 255, 255)",
           borderRadius: "50%",
           opacity: 0.8,
           pointerEvents: "none",

@@ -14,7 +14,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ## ⌨️ ¿Cuáles son los proyectos ?
 
-- Clase 1: 
+- Clase 1:
 
 [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
 
@@ -24,7 +24,9 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
-- Clase 1 : [**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers)
+- Clase 1 :
+
+[**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers)
 
 ![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
 
@@ -34,17 +36,15 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ![image](https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png)
 
+:computer: -> [Lo podes ver desplegado aca](https://tic-tac-toe-mec.netlify.app/)
 
-[**3er proyecto : 3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
+[**3er proyecto : Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
 
 ![image](https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png)
-
 
 ![image](https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png)
 
 ![image](https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png)
-
-
 
 ---
 

@@ -67,7 +67,6 @@ Permite tener un **estado** en el componnete, y al cambiar permite la re renderi
 
 ## :stars: HOOK USEEFFECT
 
-
 Un hook que nos permite ejecutar codigo arbitrario cuando **se monta el componente** y cada vez que **cambie la dependencia** que le indicamos en el **dependency array**.
 
 ```JSX
@@ -80,7 +79,7 @@ useEffect(codeToExecute, listOfDependencies)
 
 -> En React siempre queremos **ejecutar un efecto**, si hay un juego multipartida al cambiar quien gana, o al recuperar la información del localStorage.
 
-### Características: 
+### Características:
 
 - Se utiliza en el cuerpo del componente
 
@@ -134,11 +133,12 @@ Ejemplo del codigo:
   // [] -> solo se ejecuta una vez cuando se monta el componente
   // [enabled] -> se ejecuta cuando cambia enabled y cuando se monta el componente
   // undefined -> se ejecuta cada vez que se renderiza el componente
-  ```
-  
+```
+
 -> **return** del useEffect, para limpiar, es el **clean up method**. Dentro del return hay que cerrar si hay llamado a API. Cada vez que vuelve a ejecutar el useEffect va a hacer el clen up y también cuando se desmonta.
 
 - Para poder validar que se cerro y se ejecutó bien, desde la consola del navegador podemos hacer:
+
 ```JavaScript
 getEventListeners(window)
 ```
@@ -151,24 +151,22 @@ getEventListeners(window)
 
 ## StandardJS (Linter)
 
-```npm install standard -D``` **-D** como dependencia de desarrollo
+`npm install standard -D` **-D** como dependencia de desarrollo
 
 Lo instalo en el proyecto 02-tic-tac-toe, entonces en el **package.json** en **devDependencies** vemos:
 
- ```"standard": "^17.0.0",```
+`"standard": "^17.0.0",`
 
- Y agregamos a continuación:
+Y agregamos a continuación:
 
- `
- "eslintConfig": {
+` "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
   }
- `
+`
 
- Entonces tenemos:
+Entonces tenemos:
 
- `
-  "devDependencies": {
+`  "devDependencies": {
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react-swc": "^3.0.0",
@@ -178,13 +176,15 @@ Lo instalo en el proyecto 02-tic-tac-toe, entonces en el **package.json** en **d
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
   }
- `
+`
 
 También hay que tener el pluggin **ESLint** en el VSC.
 
 ---
 
 ## :star: React Developer Tools
+
+:computer: -> [Lo podes ver desplegado aca](https://tic-tac-toe-mec.netlify.app/)
 
 - Aclara si usas el **modo desarrollo** o si usas **modo producción**.
 
