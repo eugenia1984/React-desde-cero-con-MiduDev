@@ -1,8 +1,16 @@
+import React, { useState } from "react";
+import FollowMouse from "./components/FollowMouse";
+import BtnToggleFollowMouse from "./components/BtnToggleFollowMouse";
 
-function App () {
+function App() {
+  const [mounted, setMounted] = useState(false);
+  
   return (
-    <h3>Proyecto 3</h3>
-  )
+    <main>
+      {mounted && <FollowMouse />}
+      <BtnToggleFollowMouse mounted={mounted} setMounted={setMounted} />
+    </main>
+  );
 }
 
-export default App
+export default App;

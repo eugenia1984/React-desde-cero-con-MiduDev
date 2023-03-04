@@ -112,7 +112,40 @@ El **console.log("El codigo a ejecutar")** se ejecutará, como mínimo una vez, 
 
 Para entender el concepto del hook **useEffect**
 
+Ejemplo del codigo:
+
+```JSX
+// pointer move
+  useEffect(() => {
+    const handleMove = (event) => {
+      const { clientX, clientY } = event;
+      setPosition({ x: clientX, y: clientY });
+    };
+
+    if (enabled) {
+      window.addEventListener("pointermove", handleMove);
+    }
+
+    // cleanup method: cuando el componente se desmonta y
+    // cuando cambian las dependencias, antes de ejecutar el efecto de nuevo
+    return () => window.removeEventListener("pointermove", handleMove);
+  }, [enabled]);
+
+  // [] -> solo se ejecuta una vez cuando se monta el componente
+  // [enabled] -> se ejecuta cuando cambia enabled y cuando se monta el componente
+  // undefined -> se ejecuta cada vez que se renderiza el componente
+  ```
+  
 -> **return** del useEffect, para limpiar, es el **clean up method**. Dentro del return hay que cerrar si hay llamado a API. Cada vez que vuelve a ejecutar el useEffect va a hacer el clen up y también cuando se desmonta.
+
+- Para poder validar que se cerro y se ejecutó bien, desde la consola del navegador podemos hacer:
+```JavaScript
+getEventListeners(window)
+```
+
+**window** es el objeto que le paso, en este caso es para ver el elemento window, de este modo se ve que se suscribe a ese evento, si se deja de suscribir con el return, etc.
+
+-> Este truco solo funciona en Chronium
 
 ---
 
