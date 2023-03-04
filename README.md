@@ -14,7 +14,9 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ## ⌨️ ¿Cuáles son los proyectos ?
 
-- Clase 1: [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
+- Clase 1: 
+
+[Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
 
 ![image](https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png)
 
@@ -34,6 +36,15 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 
 [**3er proyecto : 3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower)
+
+![image](https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png)
+
+
+![image](https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png)
+
+![image](https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png)
+
+
 
 ---
 
