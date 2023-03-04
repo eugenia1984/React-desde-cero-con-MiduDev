@@ -112,15 +112,15 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: crear un proyecto con **vite**, ¿cómo incializar el localStorage?, ¿cómo utilizar el localStorage para inicializar un estado?, ¿cómo inicializar un estado?, ¿cómo utilizar los eventos onClick? ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
 
-- [**Clase 3**]((https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors ⭐ Fetching de datos ⭐ Testing ⭐ Manejo de estados
+- [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors ⭐ Fetching de datos ⭐ Testing ⭐ Manejo de estados
 
-- **Clase 4**
+- **Clase 4**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback
 
-- **Clase 5**
+- **Clase 5**, viendo : ⭐ **React Hooks**: useContext, useReducer, useId
 
-- **Clase 6**
+- **Clase 6**, viendo: ⭐ **React Router** + Lazy **Loading**
 
-- **Clase 7**
+- **Clase 7**, viendo: ⭐ React + **TypeScript** (Día 01): props y state
 
 ---
 
