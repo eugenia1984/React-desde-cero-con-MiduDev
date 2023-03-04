@@ -200,6 +200,8 @@ También hay que tener el pluggin **ESLint** en el VSC.
 
 - Netlify
 
+`npm run build` para que se cree la carpeta **dist** y esa la subi a Netlify.
+
 ---
 
 ## :star: Tareas
