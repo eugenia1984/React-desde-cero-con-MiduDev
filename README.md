@@ -51,7 +51,9 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
+
 ## :book: Temas a ver
+
 
 **React 18**:
 
@@ -93,7 +95,9 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
+
 ## Tecnologías 🛠️
+
 
 - <img src="https://img.icons8.com/fluency/30/null/html-5.png"/> **HTML5**
 
@@ -103,7 +107,10 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - <img src="https://img.icons8.com/officel/30/null/react.png"/> **React**
 
-- **Vite**
+- [**Vite**](https://vitejs.dev/)
+
+- [**playwright**](https://playwright.dev/)
+
 
 #### Recursos:
 
@@ -111,9 +118,12 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - [**unavatar.io**](https://unavatar.io/)
 
+
 ---
 
+
 ## Clases:
+
 
 - [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ [**1er proyecto**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/01-twitter-followers), hacemos la primer práctica con React, donde creamos parte de **la interfaz de Twitter donde vemos los usuarios y se siguen o dejan de seguir**, temas que se ver: props, desestructuración, hook useState (es estado, cómo actualizarlo), renderizado condicional(con ternario), imperativo vs declarativo, programación funcional, virtual DOM, renderización de listas.
 
@@ -129,7 +139,9 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - **Clase 7**, viendo: ⭐ React + **TypeScript** (Día 01): props y state
 
+
 ---
+
 
 ## Por favor: 🎁
 
@@ -137,10 +149,13 @@ En las que vamos a ir haciendo varios **proyectos**.
 - Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
 - Muchas gracias 🤓.
 
+
 ---
+
 
 ## Notas
 
 Agradezco su interés en este proyecto ⌨️ con ❤️ de [María Eugenia Costa](https://github.com/eugenia1984) 😊 y sígueme en [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
+
 
 ---
