@@ -46,7 +46,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
  [**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) <- aca podes ver el codigo
  
- <img src="https://user-images.githubusercontent.com/72580574/227806308-ad274f9e-2d6a-4556-84f9-a5ac4ca7f96f.png" alt="cat app" width=200>
+ <img src="https://user-images.githubusercontent.com/72580574/227806308-ad274f9e-2d6a-4556-84f9-a5ac4ca7f96f.png" alt="cat app" width=300>
 
 
 ---
