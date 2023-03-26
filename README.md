@@ -129,7 +129,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: crear un proyecto con **vite**, ¿cómo incializar el localStorage?, ¿cómo utilizar el localStorage para inicializar un estado?, ¿cómo inicializar un estado?, ¿cómo utilizar los eventos onClick? ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
 
-- [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star:  [**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica)
+- [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star:  [**4to proyecto: Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) durante la Prueba técnica con Promesas, fetching y testing E2E
 
 - **Clase 4**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback
 
