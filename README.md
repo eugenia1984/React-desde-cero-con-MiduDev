@@ -42,6 +42,10 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 <img src="https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png" alt="tic tac toe" width=200><img src="https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png" alt="tic tac toe" width=200 style="margin-left: 20px"><img src="https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png" alt="tic tac toe" width=200 style="margin-left: 20px">
 
+ Prueba técnica con Promesas, fetching y testing E2E
+ 
+![image](https://user-images.githubusercontent.com/72580574/227806308-ad274f9e-2d6a-4556-84f9-a5ac4ca7f96f.png)
+
 ---
 
 ## :book: Temas a ver
