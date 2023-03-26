@@ -309,7 +309,6 @@ export const getRandomFact = async () => {
 
 - Lo que NO debemos hacer es enviar **estados**, el **setFact** deberá setearse en App.jsx.
 
-
 ---
 
 ## :star: CUSTOM HOOK
@@ -334,16 +333,146 @@ Para reutilizar lógica de nuestros componentes en otros componentes.
 
 -> Lo guardo dentro de una nueva carpeta llamada **hooks** en el archivo **useCatImage.js**(no son JSX, porque son una función, no van a retornar un componente). Y creo otro custom hook(**useCatFact**)
 
+-> Si vamos a nuestro componente lo vemos más despejado, sin useEffect, siempre preguntarse **¿Puedo separar el useEffect a un custom hook?**
+
 #### ¿Por que pasamos el fact como objeto?
 
 Queremos que las funciones esten preparadas para ser extensivas, entonces si a futuro si además de pasar el fact le paso nuevos parámetros, lo puedo agregar en el objeto.
 
 ---
 
-## ⭐ Testing
+## Preguntas típicas
+
+Si tuvieramos un poco más de tiempo ¿a quué te dedicarías?
+
+Haría más features:
+
+- handle de errores
+
+- testing
+
+---
+
+## ⭐ Testing (PlayWright)
+
+Midu usa **PlayWright**, que es una especia de Cypress.
+
+Lo instalamos por consola:
+
+```
+npm init playwright@latest
+```
+
+```
+Need to install the following packages:
+  create-playwright@latest
+Ok to proceed? (y)
+```
+
+Para inicializar el proyecto nos hace consultas:
+
+```
+- Do you want to use TypeScript or JavaScript?  JavaScript
+- Where do you put your end-to-end tests? test
+- Add a GitHub Actions workflows? (y/N) false
+- Install Palywright browsers (Y/n) true
+```
+
+-> Y se me comienza a instalar
+
+Si se instaló bien:
+
+```
+✔ Success! Created a Playwright Test project at C:\Users\juan\Desktop\react_con_midudev\projects\04-react-prueba-tecnica
+
+Inside that directory, you can run several commands:
+
+  npx playwright test
+    Runs the end-to-end tests.
+
+  npx playwright test --ui
+    Starts the interactive UI mode.
+
+  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  npx playwright test example
+    Runs the tests in a specific file.
+
+  npx playwright test --debug
+    Runs the tests in debug mode.
+
+  npx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    npx playwright test
+
+And check out the following files:
+  - .\tests\example.spec.js - Example end-to-end test
+  - .\tests-examples\demo-todo-app.spec.js - Demo Todo App end-to-end tests
+  - .\playwright.config.js - Playwright Test configuration
+
+Visit https://playwright.dev/docs/intro for more information. ✨
+
+Happy hacking! 🎭
+```
+
+-> Al menos hacer un solo test, el más importante, el **end to end**, para asegurarme que al menos **tenemos un texto** y **sale una imagen**.
+
+
+```JavaScript
+// @ts-check
+const { test, expect } = require("@playwright/test");
+
+const CAT_PREFIX_IMAGE_URL = "https://cataas.com";
+const LOCAL_HOST_URL = "http://127.0.0.1:5173/";
+
+test("app shows random fact and image", async ({ page }) => {
+  await page.goto(LOCAL_HOST_URL);
+
+  const text = await page.getByRole("paragraph");
+  const image = await page.getByRole("img");
+
+  const textContent = await text.textContent();
+  const imageSrc = await image.getAttribute("src");
+
+  await expect(textContent?.length).toBeGreaterThan(0);
+  await expect(imageSrc?.startsWith(CAT_PREFIX_IMAGE_URL)).toBeTruthy();
+});
+```
+
+Por consola: ```npx playwright test ```
+
+-> Da error, en **playwrightconfig tengo que cambiar la extension a **cjs**
+
+Y cambiamos en **Example.spec.js**::
+
+```JavaScript
+const { test, expect } = require("@playwright/test");
+```
+
+Para el **import**:
+
+```JavaScript
+import { test, expect } from "@playwright/test";
+```
+
+-> Me dio OK:
+
+```
+Running 1 test using 1 worker
+
+  ✓  1 tests\example.spec.js:7:1 › app shows random fact and image (3.3s)
+
+  1 passed (5.2s)
+```
 
 ---
 
 ## ⭐ Manejo de estados
+
+Usamos **useState** y **useEffect**, junto a los **customHooks**
 
 ---

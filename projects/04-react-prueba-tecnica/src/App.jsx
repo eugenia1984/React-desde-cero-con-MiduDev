@@ -2,6 +2,7 @@ import React from "react";
 import { useCatImage } from "./hooks/useCatImage.js";
 import { useCatFact } from "./hooks/useCatFact.js";
 import "./App.css";
+import { Otro } from "./components/Otro.jsx";
 
 export function App() {
   const { fact, refreshFact } = useCatFact();
@@ -25,6 +26,8 @@ export function App() {
           className="imgCat"
         />
       )}
+      {/* Para utilizar otro componente con el custom hook */}
+      {/* <Otro /> */}
     </main>
   );
 }
