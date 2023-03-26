@@ -307,7 +307,7 @@ export const getRandomFact = async () => {
 };
 ```
 
-- Lo que NO debemos hacer es enviar **estados**, el**setFact** deberá setearse en App.jsx.
+- Lo que NO debemos hacer es enviar **estados**, el **setFact** deberá setearse en App.jsx.
 
 
 ---
@@ -316,9 +316,33 @@ export const getRandomFact = async () => {
 
 Podemos crear nuestro propio hook, dentro va a tener los hooks de React.
 
+Para reutilizar lógica de nuestros componentes en otros componentes.
+
+-> Vamos a extraer toda la lógica de la imagen.
+
+- Debe ser una función que comience con **use**, asi React sabe que es un custom hook.
+
+- No puede estar dentro de un IF
+
+- No puede estar dentro de un WHILE
+
+- Siempre debe ser lalmado dentro del cuerpo del componente
+
+- Dentro puede tener los hooks de React como : useState, useEffect, etc.
+
+- No se le puede dar el nombre de que diga que hace, ya que lo de adentro puede cambiar, son como una **caja negra**.
+
+-> Lo guardo dentro de una nueva carpeta llamada **hooks** en el archivo **useCatImage.js**(no son JSX, porque son una función, no van a retornar un componente). Y creo otro custom hook(**useCatFact**)
+
+#### ¿Por que pasamos el fact como objeto?
+
+Queremos que las funciones esten preparadas para ser extensivas, entonces si a futuro si además de pasar el fact le paso nuevos parámetros, lo puedo agregar en el objeto.
+
 ---
 
 ## ⭐ Testing
+
+---
 
 ## ⭐ Manejo de estados
 
