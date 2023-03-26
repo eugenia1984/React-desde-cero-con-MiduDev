@@ -193,6 +193,131 @@ const firstWord = fact.split(' ', 3)[0].join('')
 
 ## ⭐ Fetching de datos
 
+Dentro del **useEffect**:
+
+```JSX
+// FETCH PARA EL TEXTO
+fetch(CAT_ENDPOINT_RANDOM_FACT)
+  .then((res) => res.json())
+  .then((data) => {
+    const { fact } = data;
+    setFact(fact);
+    // Si nos piden las 3 primeras palabras
+    // const threeFirstWord = fact.split(' ').slice(0,3).join(' ');
+    // una forma mas corta
+    const threeFirstWord = fact.split(" ", 3).join(" ");
+    // FETCH PARA LA IMAGEN
+    fetch(
+      `https://cataas.com/cat/says/${threeFirstWord}?size=50&color=red&json=true`
+    )
+      .then((res) => res.json())
+      .then((response) => {
+        const { url } = response;
+        setImageUrl(url)
+      });
+  });
+```
+
+Para demostrar que sabemos utiliar bien el **useEffect** es mejor tener **2 useEffect**
+
+- Es buena práctica que **cada useEffect tenga UNA SOLA RESPONSABILIDAD**.
+
+```JSX
+  useEffect(() => {
+    fetch(CAT_ENDPOINT_RANDOM_FACT)
+      .then((res) => res.json())
+      .then((data) => {
+        const { fact } = data;
+        setFact(fact);
+        setLoadingTxt(false);
+      });
+  }, []);
+
+  // Efecto para recuperar la imagen cada vez que tenemos uan cita nueva
+  useEffect(() => {
+    if (!fact) return;
+
+    // Si piden la primer palabra: const firstWord = fact.split(" ")[0];
+    // Si nos piden las 3 primeras palabras: const threeFirstWord = fact.split(' ').slice(0,3).join(' '). Otra forma mas corta
+    const threeFirstWord = fact.split(" ", 3).join(" ");
+    fetch(
+      `https://cataas.com/cat/says/${threeFirstWord}?size=50&color=red&json=true`
+    )
+      .then((res) => res.json())
+      .then((response) => {
+        const { url } = response;
+        setLoadingImg(false);
+        setImageUrl(url);
+      });
+  }, [fact]);
+```
+
+- Es buena práctica el **manejo de errores**, por lo que me voy a crear estados para los mismos.
+
+```JSX
+ const [factError, setFactError] = useState("");
+
+ useEffect(() => {
+    fetch(CAT_ENDPOINT_RANDOM_FACT)
+      .then((res) => {
+        // Handle error if !res.ok
+        if (!res.ok) {
+          setFactError("No se ha podido recuperar la cita");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        const { fact } = data;
+        setFact(fact);
+        setLoadingTxt(false);
+      });
+  }, []);
+
+```
+
+---
+
+## En las prueba técnicas siempre piden agregar un botón
+
+Entonces vamos a agregar un botón.
+
+Y de paso vamos a separar la lógica de traer los datos en una nueva carpeta **Services** en el archivo **facts.js**:
+
+```JavaScript
+const CAT_ENDPOINT_RANDOM_FACT = "https://catfact.ninja/fact";
+
+// Con RES - THEN
+/*
+export const getRandomFact = () => {
+  return fetch(CAT_ENDPOINT_RANDOM_FACT) // -> Promise
+  .then((res) => res.json()) // -> Promise
+  .then((data) => { // -> resuelvo la promesa
+    const { fact } = data;
+    return fact;
+  });
+};
+*/
+
+// Con ASYNC - AWAIT
+export const getRandomFact = async () => {
+  const res = await fetch(CAT_ENDPOINT_RANDOM_FACT)
+  const data = await res.json() // Handle error if !res.ok
+  const { fact } = data;
+  return fact;
+};
+```
+
+- Lo que NO debemos hacer es enviar **estados**, el**setFact** deberá setearse en App.jsx.
+
+
+---
+
+## :star: CUSTOM HOOK
+
+Podemos crear nuestro propio hook, dentro va a tener los hooks de React.
+
+---
+
 ## ⭐ Testing
 
 ## ⭐ Manejo de estados

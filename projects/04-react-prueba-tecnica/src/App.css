@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.imgCat {
+  width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .imgCat {
+    width: 500px;
+  }
+}
+
+/* Btn new fact */
+.btnNewFact {
+  padding: 6px 12px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 1px;
+}
+
+.btnNewFact:hover {
+  background-color: yellow;
+} 
