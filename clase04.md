@@ -110,6 +110,9 @@ Uso este mock y me lo importo en App. Se que tengo resultados cuando tengo el Se
 3. Lista de películas encontradas y muestra el título, año y poster.
 
 -> Utilizo mi mock y hago un map del Search si el array tieen al menos un elemento y renderizo los datos.
+
+- Hasta el momento ya tenemos la interfaz, ahora nos falta darle la funcionalidad para poder hacer la búsqueda.
+
 ---
 
 ### ⭐ React Hooks: useRef, useMemo, useCallback
