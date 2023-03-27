@@ -52,7 +52,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - Clase 4
 
-5to proyecto: Prueba tecnica para Juniors - aplicación para buscar películas, viendo: React Hooks (useRef, useMemo, useCallback), cómo manejar formularios (manera controlada y no controlada) y hacer debounce.
+[**5to proyecto: Prueba tecnica para Juniors - aplicación para buscar películas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas), viendo: React Hooks (useRef, useMemo, useCallback), cómo manejar formularios (manera controlada y no controlada) y hacer debounce.
 
 ---
 
