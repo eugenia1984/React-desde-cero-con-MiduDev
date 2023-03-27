@@ -44,21 +44,19 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - Clase 3:
 
- [**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) <- aca podes ver el codigo
- 
+[**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) <- aca podes ver el codigo
+
+-Temas: useState - useEffect - fetching de datos - promesas
+
  <img src="https://user-images.githubusercontent.com/72580574/227806308-ad274f9e-2d6a-4556-84f9-a5ac4ca7f96f.png" alt="cat app" width=300>
 
- - Clase 4
+- Clase 4
 
- 5to proyecto: Prueba tecnica para Juniors - aplicación para buscar películas, viendo: React Hooks (useRef, useMemo, useCallback), c+omo manejar formularios (manera controlada y no controlada) y hacer debounce.
-
-
+5to proyecto: Prueba tecnica para Juniors - aplicación para buscar películas, viendo: React Hooks (useRef, useMemo, useCallback), cómo manejar formularios (manera controlada y no controlada) y hacer debounce.
 
 ---
 
-
 ## :book: Temas a ver
-
 
 **React 18**:
 
@@ -92,7 +90,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - **Testing**: con **React Testing Library**, **Testing End to End** con **PlayWright**. Un pequeño ejercicio con **TDD**.
 
-- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**? Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaicones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con REact?
+- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**? Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaciones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con REact?
 
 - **React Query** ¿Cómo utilizar esta dependencia para eliminar un montón de código que se utilizó en proyectos anerires?
 
@@ -100,9 +98,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
-
 ## Tecnologías 🛠️
-
 
 - <img src="https://img.icons8.com/fluency/30/null/html-5.png"/> **HTML5**
 
@@ -116,27 +112,27 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - [**playwright**](https://playwright.dev/)
 
-
 #### Recursos:
 
 - [**Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
 
 - [**unavatar.io**](https://unavatar.io/)
 
+- [**Water.css**](https://watercss.kognise.dev/), framework class less.
+
+- JSON Formatter: extensión de Chrome, para ver más claros los JSON.
 
 ---
 
-
 ## Clases:
-
 
 - [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ [**1er proyecto**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/01-twitter-followers), hacemos la primer práctica con React, donde creamos parte de **la interfaz de Twitter donde vemos los usuarios y se siguen o dejan de seguir**, temas que se ver: props, desestructuración, hook useState (es estado, cómo actualizarlo), renderizado condicional(con ternario), imperativo vs declarativo, programación funcional, virtual DOM, renderización de listas.
 
 - [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: crear un proyecto con **vite**, ¿cómo incializar el localStorage?, ¿cómo utilizar el localStorage para inicializar un estado?, ¿cómo inicializar un estado?, ¿cómo utilizar los eventos onClick? ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
 
-- [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star:  [**4to proyecto: Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) durante la Prueba técnica con Promesas, fetching y testing E2E
+- [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star: [**4to proyecto: Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) durante la Prueba técnica con Promesas, fetching y testing E2E
 
-- [**Clase 4**]((https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md)),  hacemos una **prueba tecnica para Juniors - aplicación para buscar películas**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce.
+- [**Clase 4**](<(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md)>), hacemos una **prueba tecnica para Juniors - aplicación para buscar películas**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce.
 
 - **Clase 5**, viendo : ⭐ **React Hooks**: useContext, useReducer, useId
 
@@ -144,9 +140,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - **Clase 7**, viendo: ⭐ React + **TypeScript** (Día 01): props y state
 
-
 ---
-
 
 ## Por favor: 🎁
 
@@ -154,13 +148,10 @@ En las que vamos a ir haciendo varios **proyectos**.
 - Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
 - Muchas gracias 🤓.
 
-
 ---
-
 
 ## Notas
 
 Agradezco su interés en este proyecto ⌨️ con ❤️ de [María Eugenia Costa](https://github.com/eugenia1984) 😊 y sígueme en [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
-
 
 ---
