@@ -8,13 +8,13 @@ Curso de **React desde Cero** con **MiduDev** (Miguel Angel Duran), todos los Mi
 
 ---
 
-## Clases prácticas - PROYECTOS
+## :computer: CLASES PRÁCTICAS - PROYECTOS
 
-En las que vamos a ir haciendo varios **proyectos**.
+En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 ## ⌨️ ¿Cuáles son los proyectos ?
 
-- Clase 1:
+- **Clase 1**:
 
 [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
 
@@ -24,13 +24,12 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
-- Clase 1 :
 
 [**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers) <- aca podes ver el codigo
 
 ![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
 
-- Clase 2 :
+- **Clase 2**:
 
 [**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe) <- aca podes ver el codigo
 
@@ -42,7 +41,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 <img src="https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png" alt="tic tac toe" width=200><img src="https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png" alt="tic tac toe" width=200 style="margin-left: 20px"><img src="https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png" alt="tic tac toe" width=200 style="margin-left: 20px">
 
-- Clase 3:
+- **Clase 3**:
 
 [**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) <- aca podes ver el codigo
 
@@ -50,7 +49,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
  <img src="https://user-images.githubusercontent.com/72580574/227806308-ad274f9e-2d6a-4556-84f9-a5ac4ca7f96f.png" alt="cat app" width=300>
 
-- Clase 4
+- **Clase 4**:
 
 [**5to proyecto: Prueba tecnica para Juniors - aplicación para buscar películas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas) <- aca podes ver el codigo
 
@@ -59,7 +58,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
-## :book: Temas a ver
+## :book: TEMAS:
 
 **React 18**:
 
@@ -101,7 +100,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
-## Tecnologías 🛠️
+## 🛠️ TECNOLOGÍAS 🛠️
 
 - <img src="https://img.icons8.com/fluency/30/null/html-5.png"/> **HTML5**
 
@@ -127,7 +126,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
-## Clases:
+## :tv: CLASES:
 
 - [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ [**1er proyecto**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/01-twitter-followers), hacemos la primer práctica con React, donde creamos parte de **la interfaz de Twitter donde vemos los usuarios y se siguen o dejan de seguir**, temas que se ver: props, desestructuración, hook useState (es estado, cómo actualizarlo), renderizado condicional(con ternario), imperativo vs declarativo, programación funcional, virtual DOM, renderización de listas.
 
@@ -145,7 +144,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
-## Por favor: 🎁
+## 🎁 POR FAVOR: 
 
 - Comparte este proyecto con otros 📢
 - Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
@@ -153,7 +152,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 ---
 
-## Notas
+## NOTAS:
 
 Agradezco su interés en este proyecto ⌨️ con ❤️ de [María Eugenia Costa](https://github.com/eugenia1984) 😊 y sígueme en [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
 
