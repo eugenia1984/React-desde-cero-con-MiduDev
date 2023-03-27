@@ -99,13 +99,11 @@ En **App.jsx** dejo el return con un titulo "Prueba Técnica"
 
 -> Si tenemos le JSON FORMATTER CHROME EXTENSION se va a ver más claro el JSON
 
-
 -> **Nunca usar console.log en el fetch para ver como es el objeto** siempre primero **Ver la documentacion**, hacer una busqueda, y crear un MOCK de la respuesta, con el archivo **with-results.json**.
 
 Y también pensar en el caso de que **no tenga resultados**, me hago una busqueda con un nombre de algo que no sea una pelicula, lo pego y agrego en **mock** con nombre **no-results.json**.
 
 Uso este mock y me lo importo en App. Se que tengo resultados cuando tengo el Search con el array.
-
 
 3. Lista de películas encontradas y muestra el título, año y poster.
 
@@ -122,6 +120,140 @@ Uso este mock y me lo importo en App. Se que tengo resultados cuando tengo el Se
 ---
 
 ### ⭐ React Hooks: useRef, useMemo, useCallback
+
+### useRef
+
+-> explicacion mala -> Te permite crear una referencia a un elemento del DOM
+
+-> explicación completa -> **useRef** es un **hook** que te permite crear una **referencia, mutable** que **persiste** durante todo el **ciclo de vida** de tu componente(su valor no es reiniciado). Es muy útil para **guardar cualquier valor** que puedas **mutar** (como un identificador, un elemento del DOM, un contador) y **cada vez que cambia no vuelve a renderizar el componente**.
+
+-> cada vez que cambia no vuelve a renderizar el componente -> es lo que lo hace diferente al **useState**, porque en el useState cada vez que cambia el estado se vuelve a renderizar el componente.
+
+-> También es útil para **guardar referencia de un evento del DOM**, porque obtiene una vez el elemento, y siempre que lo queramos utilizar lo podemos hacer.
+
+- Vamos a utilizarlo para guardar una referencia del DOM.
+
+1. Lo importo: 
+```JSX
+import { useRef } from "react";
+```
+
+2. Lo declaro: 
+```JSX 
+const inputRef = useRef();
+```
+
+3. Lo relaciono con mi input: 
+```JSX
+<input ref={inputRef} placeholder="Avengers, Star Wars, The Matrix..." />
+```
+
+4. En el boton de busqueda primero agrego un **onClick** con el  **handleSubmit**, pero luego para mejorarlo, al ser un formulario ya el boton tiene **type=submit**, asi que borro en onClick. Y agrego: `<form className="form" onSubmit={handleSubmit}>`:
+```JSX
+const handleSubmit = () => {
+  const value = inputRef.current.value;
+
+}
+```
+
+**current** es nativo de React, accedo al valor por medio de current, ya que al ser un **objeto** puede mutar el valor. 
+
+Paso a paso sería:
+
+```JSX
+const handleSubmit = () => {
+  const inputElement = inputRef.current;
+  const value = inputElement.value;
+}
+```
+
+- Otro modo de obtener el valor es, sin usar el useRef, agrego un **name** al input:
+```JSX
+<input
+  name="query"
+  placeholder="Avengers, Star Wars, The Matrix..."
+/>
+```
+
+Y:
+```JSX
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const fields = new window.FormData(event.target);
+  const query = fields.get("query");
+  console.log(query);
+};
+```
+
+
+-> Es usando **JavaScript** vanilla, sin depender de React:
+
+```JSX
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const query = Object.fromEntries(new window.FormData(event.target));
+  
+  if(query === '') {
+    setError("No se ingreso ninguna pelicula")
+  }
+};
+```
+
+De este modo en **fields** se me crea un objeto con key el input name y en el value el valor, y asi tenga muchos input, se me van a guardar todos.
+
+Y además puedo hacer validaciones, por ejemplo si viene vacio seteo un error.
+
+- Estamos **gestionando el formulario de forma descontrolada**(no controlada), lo hacemos a través del DOM. Ya sea leer la información a través dle evento o con el useRef.
+
+- También se puede utilizar **de forma controlada**, React va a tener un **Estado** con el **control** del formulario, para determinar que se valida, cuando, etc.
+
+-> Me creo el estado:
+```JSX
+const [query, setQuery ] = useState('');
+```
+
+-> El *setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego **value={query}**, en el input.
+
+```JSX
+const handleChange = (event) => {
+  setQuery(event.target.value)
+}
+```
+
+Como ahora el valor lo manejo en el estado, en el handleChange ya no necesito `const query = Object.fromEntries(new window.FormData(event.target));`
+
+-> Esta es la **forma controlada**, la desventaja es que hace todo mucho mas lento porque cada vez que se actualiza el input, hay un render. La ventaja es que **simplifica la validación de formularios**.
+
+-> Vamos a validarlo ocn un **useEffect**:
+
+-Creo un estado para el error: `const [error, setError] = useState(null);`
+
+-Creo el useEffect:
+```JSX
+useEffect(() => {
+  if(query ==='') {
+    setError("No se puede buscar una pelícua vacía")
+    return;
+  }
+
+  if(query.match(/^⧹d+$/)) {
+    setError("No se puede buscar una película con un número")
+    return
+  }
+
+  if(query.length < 3 ) {
+    setError("La búsqueda debe tener al menos 3 caracteres")
+    return
+  }
+
+}, [query])
+```
+
+-Si hay error lo muestro.
+
+### useMemo
+
+### useCallback
 
 ---
 
