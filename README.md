@@ -134,7 +134,7 @@ En las que vamos a ir haciendo varios **proyectos**.
 
 - [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star: [**4to proyecto: Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) durante la Prueba técnica con Promesas, fetching y testing E2E
 
-- [**Clase 4**](<(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md)>), hacemos una **prueba tecnica para Juniors - aplicación para buscar películas**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce.
+- [**Clase 4**](<(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md)), hacemos una **prueba tecnica para Juniors - aplicación para buscar películas**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce.
 
 - **Clase 5**, viendo : ⭐ **React Hooks**: useContext, useReducer, useId
 
