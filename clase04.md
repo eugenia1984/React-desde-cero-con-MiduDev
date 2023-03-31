@@ -28,6 +28,9 @@ Con **useState** y **useEffect** vas a hacer el 80% del cósigo, peor ese 20% re
 
 - Evita que se haga la búsqueda coninuamente al escribir (debounce).
 
+
+-> **useRef** es una referencia que persiste a un valor que puede cambiar.
+
 ---
 
 ## :computer:  Creamos el repositorio con Vite
