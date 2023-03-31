@@ -119,6 +119,12 @@ Uso este mock y me lo importo en App. Se que tengo resultados cuando tengo el Se
 
 ---
 
+-> Forma **CONTROLADA** de form es **manejandolo con React** a través de algún estado. Pero a veces conviene utilizar el controlado
+
+-> Forma **NO CONTROLADA** de un form, es manejandolo sin React. Midu recomienda este modo, es más fácil, más óptimo, da menos problemas
+
+---
+
 ### ⭐ React Hooks: useRef, useMemo, useCallback
 
 ### :book: useRef
