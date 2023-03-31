@@ -14,25 +14,26 @@ function App() {
   };
 
   const handleChange = (event) => {
-    setQuery(event.target.value);
-  };
+    const newQuery = event.target.value;
+    setQuery(newQuery);
 
-  useEffect(() => {
-    if (query === "") {
-      setError("No se puede buscar una pelícua vacía");
+    if (newQuery === "") {
+      setError("No se puede buscar una película vacía");
       return;
     }
 
-    if (query.match(/^⧹d+$/)) {
+    if (newQuery.match(/^⧹d+$/)) {
       setError("No se puede buscar una película con un número");
       return;
     }
 
-    if (query.length < 3) {
+    if (newQuery.length < 3) {
       setError("La búsqueda debe tener al menos 3 caracteres");
       return;
     }
-  }, [query]);
+
+    setError(null);
+  };
 
   return (
     <div className="page">
@@ -40,6 +41,10 @@ function App() {
         <h1>Movie Search</h1>
         <form className="form" onSubmit={handleSubmit}>
           <input
+            style={{
+              border: "1px solid transparent",
+              borderColor: error ? "red" : "transparent",
+            }}
             onChange={handleChange}
             value={query}
             name="query"
