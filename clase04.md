@@ -30,7 +30,7 @@ Con **useState** y **useEffect** vas a hacer el 80% del cósigo, peor ese 20% re
 
 ---
 
-## Creamos el repositorio con Vite
+## :computer:  Creamos el repositorio con Vite
 
 **Vite** es un empaquetador de aplicaciones web, como alternativa a WebPack y a Create-React-App.
 
@@ -69,7 +69,7 @@ En **App.jsx** dejo el return con un titulo "Prueba Técnica"
 
 ---
 
-## Empezamos el proyeto
+## :computer: Empezamos el proyecto
 
 1. Necesita mostrar un input para buscar la película y un botón para buscar.
 
@@ -121,7 +121,7 @@ Uso este mock y me lo importo en App. Se que tengo resultados cuando tengo el Se
 
 ### ⭐ React Hooks: useRef, useMemo, useCallback
 
-### useRef
+### :book: useRef
 
 -> explicacion mala -> Te permite crear una referencia a un elemento del DOM
 
@@ -251,9 +251,9 @@ useEffect(() => {
 
 -Si hay error lo muestro.
 
-### useMemo
+### :book: useMemo
 
-### useCallback
+### :book: useCallback
 
 ---
 
