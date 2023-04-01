@@ -3,6 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  text-align: center;
 }
 
 form {
@@ -14,6 +20,7 @@ form {
 main {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .error {

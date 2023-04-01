@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import { useMovies } from "./hooks/useMovies.js";
 import { useSearch } from "./hooks/useSearch.js";
-import HasMovies from "./components/HasMovies";
+import Movies from "./components/Movies.jsx";
 import "./App.css";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
         {error && <p className="error">{error}</p>}
       </header>
       <main>
-        <HasMovies movies={movies} />
+        <Movies movies={movies} />
       </main>
     </div>
   );

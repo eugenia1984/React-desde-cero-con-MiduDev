@@ -260,7 +260,69 @@ useEffect(() => {
 }, [query])
 ```
 
--Si hay error lo muestro.
+-> Si hay error lo muestro.
+
+-> Si hay un **useEffect** en el componente debe ser un **customHook** y debe tener dentro un hook minimo como el useEffect, y también el **useState**.
+
+---
+
+-> Hasta ahora **el formulario funcione**, nos falta hacer el **fetching de datos**.
+
+---
+
+## Grid responsive
+
+```CSS
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+```
+
+La clase **main** debe tener un **width** del **100%**:
+
+```CSS
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+```
+
+En el contenedor: *display:grid*, que ocupe todo el ancho(*100%*) y utilizar el **grid-template-column** para decirle que debe **repetirse**, utilizando el **auto-fit** ó **auto-fill**
+
+```CSS
+.movies {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+```
+
+Alineo el texto al centro y doy un borde redondead a la imagen, para cada pelicula:
+
+```CSS
+.movie {
+  text-align: center;
+}
+
+.movie img {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+```
+
+---
 
 ### :book: useMemo
 
