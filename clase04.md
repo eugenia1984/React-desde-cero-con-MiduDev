@@ -228,7 +228,7 @@ Y además puedo hacer validaciones, por ejemplo si viene vacio seteo un error.
 const [query, setQuery ] = useState('');
 ```
 
--> El \*setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego **value={query}\*\*, en el input.
+-> El **setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego **value={query}\*\*, en el input.
 
 ```JSX
 const handleChange = (event) => {
@@ -330,7 +330,7 @@ Alineo el texto al centro y doy un borde redondead a la imagen, para cada pelicu
 
 ---
 
-## Fetching de peliculas
+## :tv: Fetching de peliculas
 
 En el **custom hook** _useMovies_ creamos el estado **responseMovies** que va a inicializarse como un array vacio (aca voy a guardar mi lista de peliculas a renderizar).
 
@@ -349,6 +349,27 @@ Y ahora lo usamos en **App**:
 ```
 
 Ahora en **getMovies** cambio *setResponseMovies(withResults);* por el **fetch** de datos.
+
+siempre tengo que confiar en las **herramientas de desarrollo**:
+
+![image](https://user-images.githubusercontent.com/72580574/229307584-b9635e6a-67d2-4a60-a14d-10b73e328af5.png)
+
+
+Puedo corroborar los **parametros** de mi **query**:
+
+![image](https://user-images.githubusercontent.com/72580574/229307609-c32d5d87-458b-4cc4-a2cb-dac41fcd338e.png)
+
+
+Y que de devuelve mi fetching:
+
+![image](https://user-images.githubusercontent.com/72580574/229307641-fa115705-807e-443c-9011-5b9e9abfee99.png)
+
+
+En **response** lo veo todo en un solo renglon:
+
+![image](https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png)
+
+
 
 ---
 
