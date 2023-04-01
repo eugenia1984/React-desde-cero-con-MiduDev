@@ -357,18 +357,18 @@ siempre tengo que confiar en las **herramientas de desarrollo**:
 
 Puedo corroborar los **parametros** de mi **query**:
 
-![image](https://user-images.githubusercontent.com/72580574/229307609-c32d5d87-458b-4cc4-a2cb-dac41fcd338e.png)
 
+<img src="https://user-images.githubusercontent.com/72580574/229307609-c32d5d87-458b-4cc4-a2cb-dac41fcd338e.png" alt="parametros del query" width="630">
 
 Y que de devuelve mi fetching:
 
 
-<img src="https://user-images.githubusercontent.com/72580574/229307641-fa115705-807e-443c-9011-5b9e9abfee99.png" alt="response del fecth" width="550">
+<img src="https://user-images.githubusercontent.com/72580574/229307641-fa115705-807e-443c-9011-5b9e9abfee99.png" alt="response del fecth" width="630">
 
 En **response** lo veo todo en un solo renglón:
 
 
-<img src="https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png" alt="response del fecth" width="550">
+<img src="https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png" alt="response del fecth" width="630">
 
 
 
