@@ -11,15 +11,15 @@ const Header = () => {
 
   const debouncedGetMovies = useCallback(
     debounce((search) => {
-      console.log("search", search);
+      console.log("search => ", search);
       getMovies({ search });
-    }, 300),
+    }, 500),
     [getMovies]
   );
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getMovies();
+    getMovies({ search });
   };
 
   const handleSort = () => {

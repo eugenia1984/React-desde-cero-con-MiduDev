@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "workspaces": [
+    "projects/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eugenia1984/React-desde-cero-con-MiduDev.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["FrontEnd", "React"],
+  "author": "Maria Eugenia Costa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eugenia1984/React-desde-cero-con-MiduDev/issues"

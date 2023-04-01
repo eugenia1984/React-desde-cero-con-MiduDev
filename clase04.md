@@ -418,6 +418,8 @@ Se usa para las **funciones**
 
 ### ⭐ ¿Cómo manejar formularios (manera controlada y no controlada)?
 
+-> Se maneja de manera controlada guardando con un estado de React
+
 ---
 
 ### ⭐ Hacer debounce
@@ -437,6 +439,8 @@ const fn1 = debounce(() => console.log("Hi"), 500)
 Si le pasamos un tercer parametro a **True**, se ejecuta una vez, luego espera los 500 y luego vuelve a ejecutarse.
 
 Nosotros queremos hacer un debounce del **getMovies**, solo hacer la busqueda cuando sea necesaria.
+
+Nos aseguramos que el debounce siempre sea el mismo, por eso usamos **useCallback**.
 
 ```JSX
 const debouncedGetMovies = useCallback(
