@@ -387,9 +387,37 @@ Y me traigo la logica del mapeo de datos del customHook.
 
 ---
 
+- Evitar que la misma búsqueda se haga dos veces
+
+Para eso usamos el **useRef** para tener el estado anterior y asi no hacer dos veces la misma busqueda.
+
+-> Dentro de **useMovies**: `const previousSearch = useRef(search)` y lo primero que hago dentro de **getMovie**: `if(search === previousSearch.current) return`. Y dentro del **try** antes de hacer la búsqueda: `previousSearch.current = search`.
+
+---
+
 ### :book: useMemo
 
+Memorizar un valor, para no tener que volver a calcularlo, dependiendo de un **array dependency**
+
+Lo usamos para no volver a order la lista si no cambio, le pasamos un **callback** y solo se vuelve a calcular cuando cambia **sort**(el check) o **movies**(las peliculas).
+
+```JSX
+const sortedMovies = useMemo(() => {
+    return sort
+      ? [...movies].sort((a, b) => a.title.localeCompare(b.title))
+      : movies;
+  }, [sort, movies]);
+```
+
+Se usa para un **valor**
+
+---
+
 ### :book: useCallback
+
+Es lo mismo que el useMemo, solo que se usa en funciones, le pasamos al funcion que queremos memorizar.
+
+Se usa para las **funciones**
 
 ---
 
