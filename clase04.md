@@ -276,7 +276,7 @@ useEffect(() => {
 
 ---
 
-## Grid responsive
+## :star:  Grid responsive
 
 ```CSS
 .page {
@@ -367,7 +367,8 @@ Y que de devuelve mi fetching:
 
 En **response** lo veo todo en un solo renglon:
 
-![image](https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png)
+
+<img src="https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png" alt="response del fecth" width="250">
 
 
 
