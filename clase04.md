@@ -28,14 +28,13 @@ Con **useState** y **useEffect** vas a hacer el 80% del cósigo, peor ese 20% re
 
 - Evita que se haga la búsqueda coninuamente al escribir (debounce).
 
-
 -> **useRef** es una referencia que persiste a un valor que puede cambiar.
 
 ![image](https://user-images.githubusercontent.com/72580574/229224362-1db86bd7-7a16-4e87-bce8-8a7c9007b075.png)
 
 ---
 
-## :computer:  Creamos el repositorio con Vite
+## :computer: Creamos el repositorio con Vite
 
 **Vite** es un empaquetador de aplicaciones web, como alternativa a WebPack y a Create-React-App.
 
@@ -144,22 +143,26 @@ Uso este mock y me lo importo en App. Se que tengo resultados cuando tengo el Se
 
 - Vamos a utilizarlo para guardar una referencia del DOM.
 
-1. Lo importo: 
+1. Lo importo:
+
 ```JSX
 import { useRef } from "react";
 ```
 
-2. Lo declaro: 
-```JSX 
+2. Lo declaro:
+
+```JSX
 const inputRef = useRef();
 ```
 
-3. Lo relaciono con mi input: 
+3. Lo relaciono con mi input:
+
 ```JSX
 <input ref={inputRef} placeholder="Avengers, Star Wars, The Matrix..." />
 ```
 
-4. En el boton de busqueda primero agrego un **onClick** con el  **handleSubmit**, pero luego para mejorarlo, al ser un formulario ya el boton tiene **type=submit**, asi que borro en onClick. Y agrego: `<form className="form" onSubmit={handleSubmit}>`:
+4. En el boton de busqueda primero agrego un **onClick** con el **handleSubmit**, pero luego para mejorarlo, al ser un formulario ya el boton tiene **type=submit**, asi que borro en onClick. Y agrego: `<form className="form" onSubmit={handleSubmit}>`:
+
 ```JSX
 const handleSubmit = () => {
   const value = inputRef.current.value;
@@ -167,7 +170,7 @@ const handleSubmit = () => {
 }
 ```
 
-**current** es nativo de React, accedo al valor por medio de current, ya que al ser un **objeto** puede mutar el valor. 
+**current** es nativo de React, accedo al valor por medio de current, ya que al ser un **objeto** puede mutar el valor.
 
 Paso a paso sería:
 
@@ -179,6 +182,7 @@ const handleSubmit = () => {
 ```
 
 - Otro modo de obtener el valor es, sin usar el useRef, agrego un **name** al input:
+
 ```JSX
 <input
   name="query"
@@ -187,6 +191,7 @@ const handleSubmit = () => {
 ```
 
 Y:
+
 ```JSX
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -196,14 +201,13 @@ const handleSubmit = (event) => {
 };
 ```
 
-
 -> Es usando **JavaScript** vanilla, sin depender de React:
 
 ```JSX
 const handleSubmit = (event) => {
   event.preventDefault();
   const query = Object.fromEntries(new window.FormData(event.target));
-  
+
   if(query === '') {
     setError("No se ingreso ninguna pelicula")
   }
@@ -219,11 +223,12 @@ Y además puedo hacer validaciones, por ejemplo si viene vacio seteo un error.
 - También se puede utilizar **de forma controlada**, React va a tener un **Estado** con el **control** del formulario, para determinar que se valida, cuando, etc.
 
 -> Me creo el estado:
+
 ```JSX
 const [query, setQuery ] = useState('');
 ```
 
--> El *setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego **value={query}**, en el input.
+-> El \*setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego **value={query}\*\*, en el input.
 
 ```JSX
 const handleChange = (event) => {
@@ -240,6 +245,7 @@ Como ahora el valor lo manejo en el estado, en el handleChange ya no necesito `c
 -Creo un estado para el error: `const [error, setError] = useState(null);`
 
 -Creo el useEffect:
+
 ```JSX
 useEffect(() => {
   if(query ==='') {
@@ -293,7 +299,7 @@ main {
 }
 ```
 
-En el contenedor: *display:grid*, que ocupe todo el ancho(*100%*) y utilizar el **grid-template-column** para decirle que debe **repetirse**, utilizando el **auto-fit** ó **auto-fill**
+En el contenedor: _display:grid_, que ocupe todo el ancho(_100%_) y utilizar el **grid-template-column** para decirle que debe **repetirse**, utilizando el **auto-fit** ó **auto-fill**
 
 ```CSS
 .movies {
@@ -321,6 +327,28 @@ Alineo el texto al centro y doy un borde redondead a la imagen, para cada pelicu
   -o-border-radius: 8px;
 }
 ```
+
+---
+
+## Fetching de peliculas
+
+En el **custom hook** _useMovies_ creamos el estado **responseMovies** que va a inicializarse como un array vacio (aca voy a guardar mi lista de peliculas a renderizar).
+
+Y me creo la función **getMovies** para hacer el fetch. Dentro con el considcionald e **si tenemos search** entonces _setResponseMovies(withResults)_ y si no tenemos search entonces _setResponseMovies(withoutResults)_. El **Search** lo va a recibir como parametro.
+
+Y ahora lo usamos en **App**:
+
+```JSX
+ const { search, setSearch, error } = useSearch();
+  const { movies, getMovies } = useMovies({ search });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    getMovies();
+  };
+```
+
+Ahora en **getMovies** cambio *setResponseMovies(withResults);* por el **fetch** de datos.
 
 ---
 

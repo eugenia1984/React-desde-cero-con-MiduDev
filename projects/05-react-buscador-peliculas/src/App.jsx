@@ -5,11 +5,12 @@ import Movies from "./components/Movies.jsx";
 import "./App.css";
 
 function App() {
-  const { movies } = useMovies();
   const { search, setSearch, error } = useSearch();
+  const { movies, getMovies } = useMovies({ search });
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    getMovies();
   };
 
   const handleChange = (event) => {
