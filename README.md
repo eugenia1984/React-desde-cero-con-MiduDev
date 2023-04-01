@@ -124,6 +124,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - JSON Formatter: extensión de Chrome, para ver más claros los JSON.
 
+- [just-debouce-it](https://www.npmjs.com/package/just-debounce-it?activeTab=readme) para hacer un debounce.
+
 ---
 
 ## :tv: CLASES:

@@ -228,7 +228,7 @@ Y además puedo hacer validaciones, por ejemplo si viene vacio seteo un error.
 const [query, setQuery ] = useState('');
 ```
 
--> El **setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego **value={query}\*\*, en el input.
+-> El **setQuery** cambia cada vez que cambia el **input**, por lo que agrego un **onClick={handleChange}** y agrego \*\*value={query}\*\*, en el input.
 
 ```JSX
 const handleChange = (event) => {
@@ -276,7 +276,7 @@ useEffect(() => {
 
 ---
 
-## :star:  Grid responsive
+## :star: Grid responsive
 
 ```CSS
 .page {
@@ -348,7 +348,7 @@ Y ahora lo usamos en **App**:
   };
 ```
 
-Ahora en **getMovies** cambio *setResponseMovies(withResults);* por el **fetch** de datos.
+Ahora en **getMovies** cambio _setResponseMovies(withResults);_ por el **fetch** de datos.
 
 siempre tengo que confiar en las **herramientas de desarrollo**:
 
@@ -356,9 +356,7 @@ siempre tengo que confiar en las **herramientas de desarrollo**:
 
 - En **general** la **URL** que solicitamos.
 
-
 Puedo corroborar los **parametros** de mi **query**:
-
 
 <img src="https://user-images.githubusercontent.com/72580574/229307609-c32d5d87-458b-4cc4-a2cb-dac41fcd338e.png" alt="parametros del query" width="630">
 
@@ -368,9 +366,7 @@ Y que de devuelve mi fetching:
 
 En **response** lo veo todo en un solo renglón, pero por ejemplo si pse mal la APPI key, aca voy a ver la respuesta y me va a avisar lo dle API key.
 
-
 <img src="https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png" alt="response del fecth" width="630">
-
 
 - Tal vez en la prueba técnica no te da tiempo, pero todo el **fetching de datos** es mejor tenerlo en un **service**, me creo la carpeta y el arcivo **movies.js** con la funcion **searchMovies**
 
@@ -383,7 +379,6 @@ Y hacemos unas validaciones:
 Y me traigo la logica del mapeo de datos del customHook.
 
 -> Mejoro mi custom hook **useMovies** con un **try-catch-finally** y agrego los estados de **loading** y **error** para usarlos en mi App.
-
 
 ---
 
@@ -426,5 +421,37 @@ Se usa para las **funciones**
 ---
 
 ### ⭐ Hacer debounce
+
+Para evitar que la busqueda se haga continuamente al escribir.
+
+Usamos la libreria **just-debouce-it**, que ejecuta un SetTimeOut interno para esperar un poco y no estar constantemente haciendo el llamado.
+
+Acorde a la documentacion:
+
+```JSX
+import debounce from "just-debounce-it"
+
+const fn1 = debounce(() => console.log("Hi"), 500)
+```
+
+Si le pasamos un tercer parametro a **True**, se ejecuta una vez, luego espera los 500 y luego vuelve a ejecutarse.
+
+Nosotros queremos hacer un debounce del **getMovies**, solo hacer la busqueda cuando sea necesaria.
+
+```JSX
+const debouncedGetMovies = useCallback(
+  debounce((search) => {
+    console.log("search", search);
+    getMovies({ search });
+  }, 300),
+  [getMovies]
+);
+
+const handleChange = (event) => {
+  const newSearch = event.target.value;
+  setSearch(newSearch);
+  debouncedGetMovies(newSearch);
+};
+```
 
 ---
