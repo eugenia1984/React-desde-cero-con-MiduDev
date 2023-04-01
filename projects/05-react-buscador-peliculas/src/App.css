@@ -7,20 +7,10 @@
   max-width: 800px;
 }
 
-h1 {
-  text-align: center;
-}
-
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .error {

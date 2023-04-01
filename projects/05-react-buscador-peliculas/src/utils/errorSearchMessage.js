@@ -1,5 +1,5 @@
 export const errorSearchMessage = {
-  noNull: "No se puede buscar una película vacía",
-  noNumber: "No se puede buscar una película con un número",
-  minLenght: "La búsqueda debe tener al menos 3 caracteres"
+  noNull: "Can't search empty movie",
+  noNumber: "Can't search for a movie with a number",
+  minLenght: "Search must have at least 3 characters"
 }

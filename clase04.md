@@ -354,6 +354,8 @@ siempre tengo que confiar en las **herramientas de desarrollo**:
 
 ![image](https://user-images.githubusercontent.com/72580574/229307584-b9635e6a-67d2-4a60-a14d-10b73e328af5.png)
 
+- En **general** la **URL** que solicitamos.
+
 
 Puedo corroborar los **parametros** de mi **query**:
 
@@ -362,14 +364,25 @@ Puedo corroborar los **parametros** de mi **query**:
 
 Y que de devuelve mi fetching:
 
-
 <img src="https://user-images.githubusercontent.com/72580574/229307641-fa115705-807e-443c-9011-5b9e9abfee99.png" alt="response del fecth" width="630">
 
-En **response** lo veo todo en un solo renglón:
+En **response** lo veo todo en un solo renglón, pero por ejemplo si pse mal la APPI key, aca voy a ver la respuesta y me va a avisar lo dle API key.
 
 
 <img src="https://user-images.githubusercontent.com/72580574/229307660-2af173a0-c9bf-44fa-a4c8-4ad97710bfa1.png" alt="response del fecth" width="630">
 
+
+- Tal vez en la prueba técnica no te da tiempo, pero todo el **fetching de datos** es mejor tenerlo en un **service**, me creo la carpeta y el arcivo **movies.js** con la funcion **searchMovies**
+
+Algo super importante **NO LE PASAMOS EL ESTADO** lo que hacemos es **DEVOLVER EL FETCHING DE DATOS**.
+
+Y hacemos unas validaciones:
+
+`if(search === '') return null` -> ni siquiera hacemos el fetching de datos
+
+Y me traigo la logica del mapeo de datos del customHook.
+
+-> Mejoro mi custom hook **useMovies** con un **try-catch-finally** y agrego los estados de **loading** y **error** para usarlos en mi App.
 
 
 ---
