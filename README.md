@@ -24,7 +24,6 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
-
 [**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers) <- aca podes ver el codigo
 
 ![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
@@ -51,10 +50,17 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 4**:
 
-[**5to proyecto: Prueba tecnica para Juniors - aplicación para buscar películas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas) <- aca podes ver el codigo
-
+[**5to proyecto: Prueba tecnica para Juniors con formularios - aplicación para buscar películas utilizando una API**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas) <- aca podes ver el codigo
 
 -Temas: React Hooks (useRef, useMemo, useCallback), cómo manejar formularios (manera controlada y no controlada) y hacer debounce.
+
+- **Clase 5**:
+
+**6to proyecto: Creación de un ecommerce con carrito de compras**
+
+**7mo proyecto: Creación de un React Router desde cero**
+
+**8vo proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
 ---
 
@@ -136,17 +142,17 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star: [**4to proyecto: Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) durante la Prueba técnica con Promesas, fetching y testing E2E
 
-- [**Clase 4**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md), hacemos una **prueba tecnica para Juniors - aplicación para buscar películas**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce. :star: [**5to proyecto - Buscados de peliculas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas)
+- [**Clase 4**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md), hacemos una **prueba tecnica para Juniors, con formularios - aplicación para buscar películas utilizando una API**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce. :star: [**5to proyecto - Buscados de peliculas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas)
 
-- **Clase 5**, viendo : ⭐ **React Hooks**: useContext, useReducer, useId
+- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md), viendo : ⭐ **React Hooks**: useContext, useReducer, useId :star: Creación de un ecommerce con carrito de compras
 
-- **Clase 6**, viendo: ⭐ **React Router** + Lazy **Loading**
+- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md), viendo: ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
 
 - **Clase 7**, viendo: ⭐ React + **TypeScript** (Día 01): props y state
 
 ---
 
-## 🎁 POR FAVOR: 
+## 🎁 POR FAVOR:
 
 - Comparte este proyecto con otros 📢
 - Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
