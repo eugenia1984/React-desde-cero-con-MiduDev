@@ -420,6 +420,8 @@ Se usa para las **funciones**
 
 -> Se maneja de manera controlada guardando con un estado de React
 
+-> Para manejar de manera no controlada, no se hace con state, sino con el DOM, con los atributos en las etiquetas de HTML como: **required**, **pattern**, **min**, **max**, etc.
+
 ---
 
 ### ⭐ Hacer debounce
