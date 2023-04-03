@@ -30,7 +30,6 @@
 
 Hacer uso del useContext para evitar pasar props innecesarias
 
-
 2. Shopping Cart
 
 - Haz que se puedan añadir los productos a un carrito.
@@ -72,11 +71,13 @@ Y tengo la función **filterProducts** que nos permite filtrar los productos, se
 
 -> **HAY QUE SABER FILTRAR**
 
+Ya tengo los filtos funcionando, para poder probarloa mano, en: ` minPrice: 0,` cambio el 0 por 1000 y veo como ya no se renderizan los productos que salen menos a 1.000. Y si en `category: "all",` cambio `all` por `laptops` voy a ver solo las laptops.
 
-Ya tengo los filtos funcionando, para poder probarloa  mano, en: ` minPrice: 0,` cambio el 0 por 1000 y veo como ya no se renderizan los productos que salen menos a 1.000. Y si en `category: "all",` cambio `all` por `laptops` voy a ver solo las laptops.
+Funcionalmente no tengo en ningún lado de la app para aplicar el filtro, peor al menos ya muestro que funciona. Ahora si creaos el componente `<Header />` para poder aplicar los filtros, que están dentro del compoennte `<Filters />`.
+
+Como para le precio utilizo un rango tengo que mostrar de donde hasta donde va el rango, para loq ue utilizo otr estado con `minPrice`.
 
 Hacer uso del useContext para evitar pasar props innecesarias
-
 
 ### Shopping Cart
 
@@ -89,7 +90,6 @@ Hacer uso del useContext para evitar pasar props innecesarias
 - Sincroniza los cambios del carrito con la lista de productos.
 
 - Guarda en un localStorage el carrtio para que se recupere al recargar la página.
-
 
 ---
 
