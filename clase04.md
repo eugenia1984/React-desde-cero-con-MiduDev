@@ -461,3 +461,16 @@ const handleChange = (event) => {
 ```
 
 ---
+
+## ¿Este previousSearch funcionaría y evitaría que vuelva a hacer la misma búsqueda?
+
+![image](https://user-images.githubusercontent.com/72580574/229575799-6cdf1fc7-1164-49b0-a44e-1abaa4b4d872.png)
+
+
+- Si funciona, evita volver a buscar una misma search, pero **esta mal**
+
+- ¿Por qué es mala práctica? Funciona porque solo usamos el **custom hook una sola vez**. Esto pasa porque los **modulos** en JavaScript son **instancias únicas**(**Singletons**) y por lo tanto la variable se comparte a donde se importe el **custom hook**. Es decir que si ese mismo custom hook lo usamos más de una vez se está utilizando la misma variable, el msimo valor para todas las veces que use ese hook en todos los archivos. -> Salvo que sepamos que solo lo usamos una sola vez en toda la aplicación lo usamos así. Pero el custom hook se arma para poder utilizarlo más de una vez, por eso es mala práctica.
+
+- En cambio el **useRef** es interno del hook, siempre va a estar de forma interna, independientemente de la cantidad de veces en que use el custom hook.
+
+---
