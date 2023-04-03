@@ -54,6 +54,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/229593516-e93306b1-7dde-4357-84c6-a71f8f427409.png" alt="app to search movies" width=300 style="margin-left: 20px">
 
+:tv: -> Para ver el deploy [https://movie-s-search.netlify.app/](https://movie-s-search.netlify.app/)
+
 -Temas: React Hooks (useRef, useMemo, useCallback), cómo manejar formularios (manera controlada y no controlada) y hacer debounce.
 
 - **Clase 5**:
