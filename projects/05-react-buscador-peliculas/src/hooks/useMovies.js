@@ -1,36 +1,38 @@
-import { useState, useRef, useMemo, useCallback } from "react";
-import { searchMovies } from "../services/movies";
+import { useRef, useState, useMemo, useCallback } from 'react'
+import { searchMovies } from '../services/movies.js'
 
-export function useMovies({ search, sort }) {
-  
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [errorSearchMovies, setErrorSearchMovies] = useState(null);
-  const previousSearch = useRef(search);
+export function useMovies ({ search, sort }) {
+  const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
+  // el error no se usa pero puedes implementarlo
+  // si quieres:
+  const [, setError] = useState(null)
+  const previousSearch = useRef(search)
 
   const getMovies = useCallback(async ({ search }) => {
-    console.log("search en getMovies", search);
-    if (search === previousSearch.current) return;
+    if (search === previousSearch.current) return
+    // search es ''
 
     try {
-      setLoading(true);
-      setError(null);
-      previousSearch.current = search;
-      const newMovies = await searchMovies({ search });
-      console.log("newMovies", newMovies);
-      setMovies(newMovies);
+      setLoading(true)
+      setError(null)
+      previousSearch.current = search
+      const newMovies = await searchMovies({ search })
+      setMovies(newMovies)
     } catch (e) {
-      setErrorSearchMovies(e.message);
+      setError(e.message)
     } finally {
-      setLoading(false);
+      // tanto en el try como en el catch
+      setLoading(false)
     }
-  }, []);
+  }, [])
 
   const sortedMovies = useMemo(() => {
     return sort
       ? [...movies].sort((a, b) => a.title.localeCompare(b.title))
-      : movies;
-  }, [sort, movies]);
+      : movies
+  }, [sort, movies])
 
-  return { movies: sortedMovies, getMovies, loading, errorSearchMovies };
+  return { movies: sortedMovies, getMovies, loading }
 }
+
