@@ -16,7 +16,7 @@
 
 ---
 
-## 6to proyecto: Creación de un ecommerce con carrito de compras
+## :star: 6to proyecto: Creación de un ecommerce con carrito de compras
 
 ### Enunciado
 
