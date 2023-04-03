@@ -23,3 +23,16 @@
 - Evita que se haga la búsqueda coninuamente al escribir (debounce).
 
 ---
+
+
+### Así quedó:
+
+<img src="https://user-images.githubusercontent.com/72580574/229595960-835527a1-131b-4b98-abe5-bad02a1312d0.png" alt="app to search movies" width=400 />
+
+---
+
+### Deploy 
+
+:tv: -> Para verla en vivo [https://movie-s-search.netlify.app/](https://movie-s-search.netlify.app/)
+
+---
