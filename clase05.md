@@ -77,6 +77,14 @@ Funcionalmente no tengo en ningún lado de la app para aplicar el filtro, peor a
 
 Como para le precio utilizo un rango tengo que mostrar de donde hasta donde va el rango, para loq ue utilizo otr estado con `minPrice`.
 
+
+### Prop Drilling
+
+Como un **taladro**, haces un agujero, pasas hacia abajo las props para que funcione algo.
+
+![image](https://user-images.githubusercontent.com/72580574/229617132-b99ebe6d-d74b-464b-8f8f-aa9bd7b3837a.png)
+
+
 Hacer uso del useContext para evitar pasar props innecesarias
 
 ### Shopping Cart
