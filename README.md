@@ -60,7 +60,10 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 5**:
 
-**6to proyecto: Creación de un ecommerce con carrito de compras**
+[**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
+
+-Temas: useContext, useReducer, useId
+
 
 **7mo proyecto: Creación de un React Router desde cero**
 
@@ -148,7 +151,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 4**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md), hacemos una **prueba tecnica para Juniors, con formularios - aplicación para buscar películas utilizando una API**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce. :star: [**5to proyecto - Buscados de peliculas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas)
 
-- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md), viendo : ⭐ **React Hooks**: useContext, useReducer, useId :star: Creación de un ecommerce con carrito de compras
+- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md), viendo : ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
 - [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md), viendo: ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
 
