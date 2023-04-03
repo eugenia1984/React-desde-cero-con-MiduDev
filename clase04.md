@@ -32,6 +32,8 @@ Con **useState** y **useEffect** vas a hacer el 80% del cósigo, peor ese 20% re
 
 ![image](https://user-images.githubusercontent.com/72580574/229224362-1db86bd7-7a16-4e87-bce8-8a7c9007b075.png)
 
+:tv: -> Para verla en vivo [https://movie-s-search.netlify.app/](https://movie-s-search.netlify.app/)
+
 ---
 
 ## :computer: Creamos el repositorio con Vite
