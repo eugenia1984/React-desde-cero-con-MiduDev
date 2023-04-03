@@ -86,7 +86,7 @@ Como un **taladro**, haces un agujero, pasas hacia abajo las props para que func
 
 EL **filtrado** lo tenemos en `<App/>`, pero se lo pasamos coo **prop** a `<Header changeFilters={setFilters} />` y dentro de `<Header />` se lo pasamos como prop a: `<Filters onChange={changeFilters} />`
 
-Hacer uso del useContext para evitar pasar props innecesarias
+-> Hacer uso del **useContext** para evitar pasar props innecesarias
 
 ### Shopping Cart
 
@@ -108,8 +108,14 @@ Hacer uso del useContext para evitar pasar props innecesarias
 
 ## :book: useReducer
 
+Para manejar el estado de una forma diferente.
+
 ---
 
 ## :book: useId
+
+Es un hook lanzado en React versión 18, una identificación única en toda la aplicación. 
+
+Genera un **identificador único**, que **siempre** va a ser el **mismo**.                                                                                                                  
 
 ---

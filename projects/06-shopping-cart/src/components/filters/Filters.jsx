@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 import "./Filters.css";
 
 const Filters = ({ onChange }) => {
@@ -15,12 +15,15 @@ const Filters = ({ onChange }) => {
   };
 
   const handleChangeCategory = (event) => {
+    // Esto huele mal
+    // estamos pasando la funcionde actualizar estado
+    // nativa de React a un componente hijo
     onChange((prevState) => ({
       ...prevState,
       category: event.target.value,
     }));
   };
-  
+
   return (
     <section className="filters">
       <div>
@@ -29,14 +32,14 @@ const Filters = ({ onChange }) => {
           type="range"
           id="price"
           min="0"
-          max="1000"
+          max="1400"
           onChange={handleChangeMinPrice}
         ></input>
         <span>${minPrice}</span>
       </div>
       <div>
         <label htmlFor="category">Category :</label>
-        <select id="category">
+        <select id="category" onChange={handleChangeCategory}>
           <option value="all">All</option>
           <option value="laptops">Laptops</option>
           <option value="smartphones">Smart Phones</option>
