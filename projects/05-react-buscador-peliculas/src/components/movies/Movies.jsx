@@ -1,23 +1,14 @@
-function ListOfMovies({ movies }) {
-  return (
-    <ul className="movies">
-      {movies.map((movie) => (
-        <li className="movie" key={movie.id}>
-          <h3>{movie.title}</h3>
-          <p>{movie.year}</p>
-          <img src={movie.image} alt={movie.title} />
-        </li>
-      ))}
-    </ul>
-  );
-}
+import React from "react";
+import NoMoviesResults from "../atoms/nomoviesresults/NoMoviesResults";
+import ListOfMovies from "../molecules/listofmovies/ListOfMovies";
 
-function NoMoviesResults() {
-  return <p>No se encontraron películas para esta búsqueda</p>;
-}
 
 export function Movies({ movies }) {
   const hasMovies = movies?.length > 0;
 
-  return hasMovies ? <ListOfMovies movies={movies} /> : <NoMoviesResults />;
+  return hasMovies ? (
+    <ListOfMovies movies={movies} />
+  ) : (
+    <NoMoviesResults noMoviesResultsMessage="No movies were found for this search." />
+  );
 }

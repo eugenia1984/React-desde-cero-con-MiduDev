@@ -1,10 +1,9 @@
 import "./App.css";
 import { useMovies } from "./hooks/useMovies.js";
-
 import { useState, useEffect, useRef, useCallback } from "react";
 import debounce from "just-debounce-it";
 import { Movies } from "./components/movies/Movies";
-import Title from "./components/movies/atoms/title/Title";
+import Title from "./components/atoms/title/Title";
 
 function useSearch() {
   const [search, updateSearch] = useState("");
@@ -88,7 +87,7 @@ function App() {
         {error && <p style={{ color: "red" }}>{error}</p>}
       </header>
 
-      <main>{loading ? <p>Cargando...</p> : <Movies movies={movies} />}</main>
+      <main>{loading ? <p>Loading...</p> : <Movies movies={movies} />}</main>
     </div>
   );
 }
