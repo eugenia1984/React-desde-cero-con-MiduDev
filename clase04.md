@@ -34,10 +34,9 @@ Con **useState** y **useEffect** vas a hacer el 80% del cósigo, peor ese 20% re
 
 ### Así quedó:
 
-<img src="https://user-images.githubusercontent.com/72580574/229595960-835527a1-131b-4b98-abe5-bad02a1312d0.png" width=200 />
+<img src="https://user-images.githubusercontent.com/72580574/229595960-835527a1-131b-4b98-abe5-bad02a1312d0.png" alt="app to search movies" width=400 />
 
-![image](https://user-images.githubusercontent.com/72580574/229595960-835527a1-131b-4b98-abe5-bad02a1312d0.png)
-
+### Deploy 
 
 :tv: -> Para verla en vivo [https://movie-s-search.netlify.app/](https://movie-s-search.netlify.app/)
 
