@@ -84,6 +84,7 @@ Como un **taladro**, haces un agujero, pasas hacia abajo las props para que func
 
 ![image](https://user-images.githubusercontent.com/72580574/229617132-b99ebe6d-d74b-464b-8f8f-aa9bd7b3837a.png)
 
+EL **filtrado** lo tenemos en `<App/>`, pero se lo pasamos coo **prop** a `<Header changeFilters={setFilters} />` y dentro de `<Header />` se lo pasamos como prop a: `<Filters onChange={changeFilters} />`
 
 Hacer uso del useContext para evitar pasar props innecesarias
 
