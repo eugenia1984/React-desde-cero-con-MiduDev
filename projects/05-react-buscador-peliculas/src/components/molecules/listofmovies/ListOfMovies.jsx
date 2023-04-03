@@ -1,14 +1,12 @@
 import React from "react";
+import "./ListOfMovies.css";
+import Movie from "../../atoms/movie/Movie";
 
 const ListOfMovies = ({ movies }) => {
   return (
     <ul className="movies">
       {movies.map((movie, index) => (
-        <li className="movie" key={movie.id}>
-          <h3>{movie.title}</h3>
-          <p>{movie.year}</p>
-          <img src={movie.image} alt={movie.title} />
-        </li>
+        <Movie key={index} movie={movie} />
       ))}
     </ul>
   );

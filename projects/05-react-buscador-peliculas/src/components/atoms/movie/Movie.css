@@ -1,0 +1,17 @@
+.movie {
+  text-align: center;
+}
+
+.movie h3 {
+  min-height: 50px;
+}
+
+.movie h3,
+.movie p {
+  margin: 0;
+}
+
+.movie img {
+  border-radius: 8px;
+  margin-top: 16px;
+}
