@@ -145,7 +145,7 @@ Son tres pasos:
 
 -> **PASO 1**: Para **crear el contexto**...
 
-... Creo una carpeta **context** y dentro el contexto: **filters.js**
+... Creo una carpeta **context** y dentro el contexto: **filters.jsx**
 
 ... importo: `import { createContext } from "react";` 
 
@@ -170,7 +170,18 @@ export function FiltersProvider({children}) {
 
 Luego va a ser un estado general para toda mi aplicación, peor ahora empezamos con un objeto que tiene mi valor inicial para category u minPrice.
 
--> **PASO 3**: **consumir** el context
+
+Vuelvo al punto de entrada: **main.js** y envuelvo **App** con el **FiltersProviders**:
+
+```JSX
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <FiltersProvider>
+    <App />
+  </FiltersProvider>
+);
+```
+
+-> **PASO 3**: **consumir** el context. Vamos a tener que envolver toda la aplicación ais se puede usar desde todos lados.
 
 ![image](https://user-images.githubusercontent.com/72580574/229934299-2aa8d399-fb34-45cb-ba3f-1e0aadfac659.png)
 
