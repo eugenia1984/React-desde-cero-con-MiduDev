@@ -137,6 +137,10 @@ Lo mismo con la categoria.
 
 -> Mantiene el orden de llamada dentro del componente.
 
+![image](https://user-images.githubusercontent.com/72580574/229823311-faf54be0-6648-4062-a602-749d44d5eb26.png)
+
+
+
 -> No se puede usar como index para una key en algo que se esta iterando. Porque estas todo el tiempo creando un nuevo id, y se puede entender que te estas refiriendo la mismo elemento. En el map siempre hay que usar **un identificador unico para ese elemento**.
 
 
