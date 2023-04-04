@@ -24,25 +24,25 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
-[**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers) <- aca podes ver el codigo
+[**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers) <- acá podes ver el codigo
 
 ![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
 
 - **Clase 2**:
 
-[**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe) <- aca podes ver el codigo
+[**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe) <- acá podes ver el codigo
 
 ![image](https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png)
 
 :computer: -> [Lo podes ver desplegado aca](https://tic-tac-toe-mec.netlify.app/)
 
-[**3er proyecto : Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower) <- aca podes ver el codigo
+[**3er proyecto : Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower) <- acá podes ver el codigo
 
 <img src="https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png" alt="tic tac toe" width=200><img src="https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png" alt="tic tac toe" width=200 style="margin-left: 20px"><img src="https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png" alt="tic tac toe" width=200 style="margin-left: 20px">
 
 - **Clase 3**:
 
-[**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) <- aca podes ver el codigo
+[**4to proyecto: Prueba técnica con Promesas, fetching y testing E2E - Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) <- acá podes ver el codigo
 
 -Temas: useState - useEffect - fetching de datos - promesas
 
@@ -50,7 +50,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 4**:
 
-[**5to proyecto: Prueba tecnica para Juniors con formularios - aplicación para buscar películas utilizando una API**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas) <- aca podes ver el codigo
+[**5to proyecto: Prueba técnica para Juniors con formularios - aplicación para buscar películas utilizando una API**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas) <- acá podes ver el codigo
 
 <img src="https://user-images.githubusercontent.com/72580574/229593516-e93306b1-7dde-4357-84c6-a71f8f427409.png" alt="app to search movies" width=450 style="margin-left: 20px">
 
@@ -60,7 +60,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 5**:
 
-[**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart) <- ca podes ver el codigo
+[**6to proyecto: Prueba técnica para Juniors - Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart) <- acá podes ver el codigo
 
 <img src="https://user-images.githubusercontent.com/72580574/229947015-6f41ab4f-5f73-4852-aea0-baee7712797d.png" alt="app ecommerce" width=450 style="margin-left: 20px">
 
