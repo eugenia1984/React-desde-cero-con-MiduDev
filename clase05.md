@@ -130,8 +130,17 @@ Como tenemos ahora la App es responsable de ir orquestando y psando los filtros 
 
 
 
-![image](https://user-images.githubusercontent.com/72580574/229831346-3d0c1df7-db57-41a0-a18f-c81cd5f385e2.png)
+![image](https://user-images.githubusercontent.com/72580574/229920712-d331a873-04d7-469a-bb28-a875577d4bed.png)
 
+Envolvemos la app en **FiltersContextProvider**:
+
+Son tres pasos:
+
+1. Crear el contexto
+
+2. Proveer el Context, decirle que parte de nuestra aplicación puede acceder a este contexto
+
+3. Consumir el contexto
 
 ---
 
