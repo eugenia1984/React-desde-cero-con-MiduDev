@@ -106,10 +106,6 @@ EL **filtrado** lo tenemos en `<App/>`, pero se lo pasamos coo **prop** a `<Head
 Te permite tener **un nuevo contexto** en React.
 
 
----
-
-## :book: useReducer
-
 Para manejar el estado de una forma diferente.
 
 ```JSX
@@ -132,6 +128,14 @@ Como tenemos ahora la App es responsable de ir orquestando y psando los filtros 
 
 **Desacoplamos la lógica de los filtros en una aprte separada** y **cualquiera que lo necesite lo leer de ahi**.
 
+
+
+![image](https://user-images.githubusercontent.com/72580574/229831346-3d0c1df7-db57-41a0-a18f-c81cd5f385e2.png)
+
+
+---
+
+## :book: useReducer
 
 ---
 
