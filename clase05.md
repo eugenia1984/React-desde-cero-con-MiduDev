@@ -168,7 +168,11 @@ export function FiltersProvider({children}) {
 }
 ```
 
-Luego va a ser un estado generl para toda mi aplicación, peor ahora empezamos con un objeto que tiene mi valor inicial para category u minPrice.
+Luego va a ser un estado general para toda mi aplicación, peor ahora empezamos con un objeto que tiene mi valor inicial para category u minPrice.
+
+-> **PASO 3**: **consumir** el context
+
+![image](https://user-images.githubusercontent.com/72580574/229934299-2aa8d399-fb34-45cb-ba3f-1e0aadfac659.png)
 
 
 ---
