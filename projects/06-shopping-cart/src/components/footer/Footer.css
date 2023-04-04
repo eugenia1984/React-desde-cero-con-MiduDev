@@ -1,0 +1,15 @@
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 24px;
+  border-radius: 32px;
+  opacity: 0.95;
+  backdrop-filter: blur(8px);
+}
+
+.footer h4,
+.footer h5 {
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

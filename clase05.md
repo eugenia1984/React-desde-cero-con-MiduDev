@@ -103,11 +103,35 @@ EL **filtrado** lo tenemos en `<App/>`, pero se lo pasamos coo **prop** a `<Head
 
 ## :book: useContext
 
+Te permite tener **un nuevo contexto** en React.
+
+
 ---
 
 ## :book: useReducer
 
 Para manejar el estado de una forma diferente.
+
+```JSX
+function App() {
+  const [products] = useState(initialProducts);
+  const { filters, filterProducts, setFilters} = useFilters()
+  const filteredProducts = filterProducts(products);
+
+  return (
+    <>
+      <Header changeFilters={setFilters} />
+      <Products products={filteredProducts} />
+      <Footer filters={filters}/>
+    </>
+  );
+}
+```
+
+Como tenemos ahora la App es responsable de ir orquestando y psando los filtros a los componentes. Vamos a evitar el **drop drilling** creando un **contexto**, es **State** va a estar el el **FiltersContext** y cada componente va a leer de ahi lo que necesite, sin tneer que esperar que la App le vaya pasando por props todo. 
+
+**Desacoplamos la lógica de los filtros en una aprte separada** y **cualquiera que lo necesite lo leer de ahi**.
+
 
 ---
 
