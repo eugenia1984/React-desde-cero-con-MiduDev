@@ -1,4 +1,4 @@
-# :star: Prueba tecnica : 
+# :star: Prueba técnica  para Juniors: 
 
 1. Ecommerce
 
@@ -24,3 +24,8 @@ Hacer uso del useContext para evitar pasar props innecesarias
 
 ---
 
+## Así quedo
+
+<img src="https://user-images.githubusercontent.com/72580574/229947015-6f41ab4f-5f73-4852-aea0-baee7712797d.png" width=450 alt="app ecommerce" >
+
+---
