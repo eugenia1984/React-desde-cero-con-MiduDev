@@ -1,8 +1,11 @@
 import React from "react";
 import { IS_DEVELOPMENT } from "../../config";
 import "./Footer.css";
+import { useFilters } from "../../hooks/useFilters";
 
-const Footer = ({ filters }) => {
+const Footer = () => {
+  const {filters} = useFilters()
+
   return (
     <footer className="footer">
       <p>Filters: {IS_DEVELOPMENT && JSON.stringify(filters, null, 2)}</p>

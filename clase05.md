@@ -181,9 +181,59 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 ```
 
--> **PASO 3**: **consumir** el context. Vamos a tener que envolver toda la aplicación ais se puede usar desde todos lados.
+-> **PASO 3**: **consumir** el context. Vamos a tener que envolver toda la aplicación asi se puede usar desde todos lados.
 
 ![image](https://user-images.githubusercontent.com/72580574/229934299-2aa8d399-fb34-45cb-ba3f-1e0aadfac659.png)
+
+
+Vamos a evitar el prorp drilling:
+App.js
+```JSX
+function App() {
+  const [products] = useState(initialProducts);
+  const { filters, filterProducts, setFilters} = useFilters()
+  
+  const filteredProducts = filterProducts(products);
+
+  return (
+    <>
+      <Header changeFilters={setFilters} />
+      <Products products={filteredProducts} />
+      <Footer filters={filters}/>
+    </>
+  );
+}
+```
+
+Saco tanto de la desestructuración de `useFilters()`(a **setFilters**) como del compoennte `<Header>`(a **changeFilters**), también lo saco desde HEader que se lo pasaba al compoente hijo `Filter` y en este uso: `const { setFilters } = useFilters();` para setear los filtros usando del context el **Estado de los filtros**.
+
+
+Igual todavía tnemos que arreglar esto (**que mucha gente lo hace mal**):
+
+```JSX
+const handleChangeMinPrice = (event) => {
+  // Aqui algo huele mal
+  // DOS FUENTES DE LA VERDAD
+  setMinPrice(event.target.value);
+  setFilters((prevState) => ({
+    ...prevState,
+    minPrice: event.target.value,
+  }));
+};
+```
+
+`setMinPrice(event.target.value);` es un estado local, que se repite con el estado global del context.
+
+Dejo de usar `const [minPrice, setMinPrice] = useState(0);` y uso `const {filters, setFilters } = useFilters();`, en **handleChangeMinPrice** solo uso el **setFilters** , en el input del valor minimo: `value={filters.minPrice}` y en el `<span>` que muestra el valor: `<span>${filters.minPrice}</span>`
+
+-> **la fuente de la verdad siempre es una sola**
+
+
+A los componentes hijos no debemos pasarle las cosas que ahora tenemos en el context.
+
+-> Puede haber **contextos estáticos** como e caso de crear un contexto para el **theme**(los colores de mi app), para **inyectar configuración**, **tokens**, **traducciones**. No es sólo para hacer **Estados globales**.
+
+-> **EL CONTEXTO ES UNA FORMA DE INYECCIÓN DE DEPENDENCIAS**. Use contaxt como estado global está pensado para **contextos pequeños** que **cambien con poca frecuencia**, por ejemplo para ver **si el usuario esta con sesión iniciada o no**(cambia muy pocas veces, no esta todo el tiempo logueandose y desloguendose, y además al estar loguedo si cambian muchas cosas en la aplicación).
 
 
 ---
