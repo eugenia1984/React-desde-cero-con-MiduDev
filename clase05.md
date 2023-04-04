@@ -77,7 +77,6 @@ Funcionalmente no tengo en ningún lado de la app para aplicar el filtro, peor a
 
 Como para le precio utilizo un rango tengo que mostrar de donde hasta donde va el rango, para loq ue utilizo otr estado con `minPrice`.
 
-
 ### Prop Drilling
 
 Como un **taladro**, haces un agujero, pasas hacia abajo las props para que funcione algo.
@@ -114,8 +113,31 @@ Para manejar el estado de una forma diferente.
 
 ## :book: useId
 
-Es un hook lanzado en React versión 18, una identificación única en toda la aplicación. 
+Es un hook lanzado en React versión 18, una identificación única en toda la aplicación.
 
-Genera un **identificador único**, que **siempre** va a ser el **mismo**.                                                                                                                  
+Genera un **identificador único**, que **siempre** va a ser el **mismo**.
+
+Necesitamos dos: una para el **minPriceFilterId** y otra para el **categoryFilterId**. Y la aplicamos:
+
+```JSX
+<div>
+  <label htlmFor={minPriceFilterId}>Minimum price :</label>
+  <input
+    type="range"
+    id={minPriceFilterId}
+    min="0"
+    max="1400"
+    onChange={handleChangeMinPrice}
+  ></input>
+  <span>${minPrice}</span>
+</div>
+```
+
+Lo mismo con la categoria.
+
+-> Mantiene el orden de llamada dentro del componente.
+
+-> No se puede usar como index para una key en algo que se esta iterando. Porque estas todo el tiempo creando un nuevo id, y se puede entender que te estas refiriendo la mismo elemento. En el map siempre hay que usar **un identificador unico para ese elemento**.
+
 
 ---
