@@ -52,7 +52,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [**5to proyecto: Prueba tecnica para Juniors con formularios - aplicación para buscar películas utilizando una API**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas) <- aca podes ver el codigo
 
-<img src="https://user-images.githubusercontent.com/72580574/229593516-e93306b1-7dde-4357-84c6-a71f8f427409.png" alt="app to search movies" width=300 style="margin-left: 20px">
+<img src="https://user-images.githubusercontent.com/72580574/229593516-e93306b1-7dde-4357-84c6-a71f8f427409.png" alt="app to search movies" width=350 style="margin-left: 20px">
 
 :tv: -> Para ver el deploy [https://movie-s-search.netlify.app/](https://movie-s-search.netlify.app/)
 
@@ -62,8 +62,11 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
+<img src="https://user-images.githubusercontent.com/72580574/229947015-6f41ab4f-5f73-4852-aea0-baee7712797d.png" alt="app ecommerce" width=340 style="margin-left: 20px">
+
 -Temas: useContext, useReducer, useId
 
+- Clase 6
 
 **7mo proyecto: Creación de un React Router desde cero**
 
