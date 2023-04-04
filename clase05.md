@@ -140,7 +140,36 @@ Son tres pasos:
 
 2. Proveer el Context, decirle que parte de nuestra aplicación puede acceder a este contexto
 
-3. Consumir el contexto
+3. Consumir el contexto, desde filters
+
+
+-> **PASO 1**: Para **crear el contexto**...
+
+... Creo una carpeta **context** y dentro el contexto: **filters.js**
+
+... importo: `import { createContext } from "react";` 
+
+... exportamos una contaste que va a crear el contexto: `export const FiltersContext = createContext()`
+
+-> **PASO 2**: **proveer el contexto** para lo cual debemos...
+
+... crear el **Provider**
+
+```JSX
+export function FiltersProvider({children}) {
+  return (
+    <FiltersContext.Provider value={{
+      category: "all",
+      minPrice: 0
+    }}>
+      {children}
+    </FiltersContext.Provider>
+  )
+}
+```
+
+Luego va a ser un estado generl para toda mi aplicación, peor ahora empezamos con un objeto que tiene mi valor inicial para category u minPrice.
+
 
 ---
 
