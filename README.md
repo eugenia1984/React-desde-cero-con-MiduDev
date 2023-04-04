@@ -60,7 +60,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 5**:
 
-[**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
+[**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart) <- ca podes ver el codigo
 
 <img src="https://user-images.githubusercontent.com/72580574/229947015-6f41ab4f-5f73-4852-aea0-baee7712797d.png" alt="app ecommerce" width=450 style="margin-left: 20px">
 
