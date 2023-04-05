@@ -131,7 +131,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - <img src="https://img.icons8.com/officel/30/null/react.png"/> **React**
 
-- <img src="https://vitejs.dev/logo-with-shadow.png" />[**Vite**](https://vitejs.dev/)
+- <img src="https://vitejs.dev/logo-with-shadow.png" width=150 />[**Vite**](https://vitejs.dev/)
 
 - [**playwright**](https://playwright.dev/)
 
