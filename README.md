@@ -65,6 +65,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/230175318-0de80eb2-ff9d-43de-bd55-fdf55e6664aa.png" alt="app ecommerce" width=450 style="margin-left: 20px">
 
+:tv: -> Para ver el deploy [https://euge-e-commerce.netlify.app/](https://euge-e-commerce.netlify.app/)
+
 -Temas: useContext, useReducer, useId
 
 - Clase 6
