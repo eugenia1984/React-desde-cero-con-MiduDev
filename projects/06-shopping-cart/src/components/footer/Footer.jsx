@@ -8,7 +8,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>Filters: {IS_DEVELOPMENT && JSON.stringify(filters, null, 2)}</p>
       <h4>Prueba técnica de React ⚛️</h4>
       <h5>Shopping Cart con useContext & useReducer</h5>
     </footer>
