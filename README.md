@@ -123,24 +123,24 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 ## 🛠️ TECNOLOGÍAS 🛠️
 
-- <img src="https://img.icons8.com/fluency/30/null/html-5.png"/> **HTML5**
+- <img src="https://img.icons8.com/fluency/30/null/html-5.png" alt="icono de HTML"/> **HTML5**
 
-- <img src="https://img.icons8.com/fluency/30/null/css3.png"/> **CSS3**
+- <img src="https://img.icons8.com/fluency/30/null/css3.png" alt="icono de CSS"/> **CSS3**
 
-- <img src="https://img.icons8.com/color/30/null/javascript--v1.png"/> **JavaScript**
+- <img src="https://img.icons8.com/color/30/null/javascript--v1.png" alt="icono de JavaSCript"/> **JavaScript**
 
-- <img src="https://img.icons8.com/officel/30/null/react.png"/> **React**
+- <img src="https://img.icons8.com/officel/30/null/react.png" alt="icono de React"/> **React**
 
-- <img src="https://vitejs.dev/logo-with-shadow.png" width=50 />[**Vite**](https://vitejs.dev/)
+- <img src="https://vitejs.dev/logo-with-shadow.png" width=32 alt="icono de vite"/>[**Vite**](https://vitejs.dev/)
 
 - [**playwright**](https://playwright.dev/)
 
 #### Recursos:
 
-- [![image](https://user-images.githubusercontent.com/72580574/230207960-b1b33433-ffaf-446c-b6a8-ecd4e34b4b24.png)
+- [<img src="https://user-images.githubusercontent.com/72580574/230207960-b1b33433-ffaf-446c-b6a8-ecd4e34b4b24.png" width=32 alt="icono de hero icons"/>
  **Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
 
-- [![image](https://user-images.githubusercontent.com/72580574/230208065-b1ec36a4-7fd5-4df3-9a6c-dc5636a2182b.png)
+- [<img src="https://user-images.githubusercontent.com/72580574/230208065-b1ec36a4-7fd5-4df3-9a6c-dc5636a2182b.png" width=32 alt="icono de unavatar.io"/>
  **unavatar.io**](https://unavatar.io/)
 
 - [**Water.css**](https://watercss.kognise.dev/), framework class less.
