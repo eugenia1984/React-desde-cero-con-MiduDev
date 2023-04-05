@@ -358,4 +358,7 @@ export const useCart = () => {
 
 -> Es de buena práctica chequear que el cart no sea **undefined**, porque si lo es significa que se está usando en un lugar que no se puede (en un lugar que no está el CartProvider).
 
+
+![image](https://user-images.githubusercontent.com/72580574/230093946-d3b2f199-b46b-4b23-bb42-9d7a3348d72d.png)
+
 ---
