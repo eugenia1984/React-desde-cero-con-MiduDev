@@ -26,7 +26,7 @@ const Cart = () => {
   const { cart, clearCart, addToCart } = useCart();
 
   return (
-    <>
+    <section className="cart-container">
       <label className="cart-button" htmlFor={cartCheckboxId}>
         <CartIcon />
       </label>
@@ -48,7 +48,7 @@ const Cart = () => {
           <ClearCartIcon />
         </button>
       </aside>
-    </>
+    </section>
   );
 };
 

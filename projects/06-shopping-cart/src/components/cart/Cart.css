@@ -1,3 +1,17 @@
+.cart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+  text-align: center;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .cart {
   background: #000;
   display: none;
@@ -19,6 +33,7 @@
 }
 
 .cart footer {
+  margin-top: 8px;
   display: flex;
   gap: 8px;
   justify-content: center;
@@ -38,10 +53,7 @@
   height: 32px;
   justify-content: center;
   padding: 4px;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   width: 32px;
   z-index: 9999;
 }
@@ -51,6 +63,7 @@
 }
 
 .cart-button ~ input:checked ~ .cart {
-  height: 100%;
+  height: 90%;
   display: block;
+  padding-top: 10%;
 }
