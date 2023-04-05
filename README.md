@@ -162,15 +162,15 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 4**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md), hacemos una **prueba tecnica para Juniors, con formularios - aplicación para buscar películas utilizando una API**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce. :star: [**5to proyecto - Buscados de peliculas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas)
 
-- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md), viendo : ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
+- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md) -> ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
-- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md), viendo: ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
+- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
 
-- **Clase 7**, viendo: ⭐ React + **TypeScript** (Día 01): props y state :star: **7mo proyecto**: Creación de un React Router desde cero
+- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state :star: **7mo proyecto**: Creación de un React Router desde cero
 
-- **clase 8**, viendo: React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
+- **clase 8** -> React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
 
-- **Clase 9**, viendo: React Redux Toolkit + Rome Tools :star: **9no proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
+- **Clase 9** -> React Redux Toolkit + Rome Tools :star: **9no proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
 
 ---
 
