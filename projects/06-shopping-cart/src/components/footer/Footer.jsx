@@ -4,7 +4,7 @@ import "./Footer.css";
 import { useFilters } from "../../hooks/useFilters";
 
 const Footer = () => {
-  const {filters} = useFilters()
+  const { filters } = useFilters();
 
   return (
     <footer className="footer">

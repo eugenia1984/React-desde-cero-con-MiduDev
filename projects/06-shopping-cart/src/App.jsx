@@ -4,12 +4,12 @@ import { products as initialProducts } from "./mocks/products.json";
 import Header from "./components/header/Header";
 import Products from "./components/products/Products";
 import Footer from "./components/footer/Footer";
-import "./App.css";
 import Cart from "./components/cart/Cart";
 import { CartProvider } from "./context/cart";
+import "./App.css";
 
 function App() {
-  const { filters, filterProducts } = useFilters();
+  const { filterProducts } = useFilters();
 
   const filteredProducts = filterProducts(initialProducts);
 

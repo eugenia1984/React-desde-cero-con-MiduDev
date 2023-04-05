@@ -105,7 +105,6 @@ EL **filtrado** lo tenemos en `<App/>`, pero se lo pasamos coo **prop** a `<Head
 
 Te permite tener **un nuevo contexto** en React.
 
-
 Para manejar el estado de una forma diferente.
 
 ```JSX
@@ -124,11 +123,9 @@ function App() {
 }
 ```
 
-Como tenemos ahora la App es responsable de ir orquestando y psando los filtros a los componentes. Vamos a evitar el **drop drilling** creando un **contexto**, es **State** va a estar el el **FiltersContext** y cada componente va a leer de ahi lo que necesite, sin tneer que esperar que la App le vaya pasando por props todo. 
+Como tenemos ahora la App es responsable de ir orquestando y psando los filtros a los componentes. Vamos a evitar el **drop drilling** creando un **contexto**, es **State** va a estar el el **FiltersContext** y cada componente va a leer de ahi lo que necesite, sin tneer que esperar que la App le vaya pasando por props todo.
 
 **Desacoplamos la lógica de los filtros en una aprte separada** y **cualquiera que lo necesite lo leer de ahi**.
-
-
 
 ![image](https://user-images.githubusercontent.com/72580574/229920712-d331a873-04d7-469a-bb28-a875577d4bed.png)
 
@@ -142,12 +139,11 @@ Son tres pasos:
 
 3. Consumir el contexto, desde filters
 
-
 -> **PASO 1**: Para **crear el contexto**...
 
 ... Creo una carpeta **context** y dentro el contexto: **filters.jsx**
 
-... importo: `import { createContext } from "react";` 
+... importo: `import { createContext } from "react";`
 
 ... exportamos una contaste que va a crear el contexto: `export const FiltersContext = createContext()`
 
@@ -170,7 +166,6 @@ export function FiltersProvider({children}) {
 
 Luego va a ser un estado general para toda mi aplicación, peor ahora empezamos con un objeto que tiene mi valor inicial para category u minPrice.
 
-
 Vuelvo al punto de entrada: **main.js** y envuelvo **App** con el **FiltersProviders**:
 
 ```JSX
@@ -185,14 +180,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 ![image](https://user-images.githubusercontent.com/72580574/229934299-2aa8d399-fb34-45cb-ba3f-1e0aadfac659.png)
 
-
 Vamos a evitar el prorp drilling:
 App.js
+
 ```JSX
 function App() {
   const [products] = useState(initialProducts);
   const { filters, filterProducts, setFilters} = useFilters()
-  
+
   const filteredProducts = filterProducts(products);
 
   return (
@@ -206,7 +201,6 @@ function App() {
 ```
 
 Saco tanto de la desestructuración de `useFilters()`(a **setFilters**) como del compoennte `<Header>`(a **changeFilters**), también lo saco desde HEader que se lo pasaba al compoente hijo `Filter` y en este uso: `const { setFilters } = useFilters();` para setear los filtros usando del context el **Estado de los filtros**.
-
 
 Igual todavía tnemos que arreglar esto (**que mucha gente lo hace mal**):
 
@@ -228,18 +222,13 @@ Dejo de usar `const [minPrice, setMinPrice] = useState(0);` y uso `const {filter
 
 -> **la fuente de la verdad siempre es una sola**
 
-
 A los componentes hijos no debemos pasarle las cosas que ahora tenemos en el context.
 
 -> Puede haber **contextos estáticos** como e caso de crear un contexto para el **theme**(los colores de mi app), para **inyectar configuración**, **tokens**, **traducciones**. No es sólo para hacer **Estados globales**.
 
 -> **EL CONTEXTO ES UNA FORMA DE INYECCIÓN DE DEPENDENCIAS**. Use contaxt como estado global está pensado para **contextos pequeños** que **cambien con poca frecuencia**, por ejemplo para ver **si el usuario esta con sesión iniciada o no**(cambia muy pocas veces, no esta todo el tiempo logueandose y desloguendose, y además al estar loguedo si cambian muchas cosas en la aplicación).
 
-
 ---
-
-## :book: useReducer
-
 ---
 
 ## :book: useId
@@ -270,10 +259,7 @@ Lo mismo con la categoria.
 
 ![image](https://user-images.githubusercontent.com/72580574/229823311-faf54be0-6648-4062-a602-749d44d5eb26.png)
 
-
-
 -> No se puede usar como index para una key en algo que se esta iterando. Porque estas todo el tiempo creando un nuevo id, y se puede entender que te estas refiriendo la mismo elemento. En el map siempre hay que usar **un identificador unico para ese elemento**.
-
 
 ---
 
@@ -346,24 +332,22 @@ import { useContext } from "react"
 import { CartContext } from "../context/cart"
 
 export const useCart = () => {
-  const cart = useContext(CartContext)
+  const context = useContext(CartContext)
 
-  if(cart === undefined) {
+  if(context === undefined) {
     throw new Error("useCart must be used within a CartProvider")
   }
 
-  return cart
+  return context
 }
 ```
 
 -> Es de buena práctica chequear que el cart no sea **undefined**, porque si lo es significa que se está usando en un lugar que no se puede (en un lugar que no está el CartProvider). -> Hay que **envolver la parte de la aplicación que va a tener acceso**.
 
-
 ![image](https://user-images.githubusercontent.com/72580574/230093946-d3b2f199-b46b-4b23-bb42-9d7a3348d72d.png)
 
-
-
 En este caso no lo hacemos en el **main.jsx**, a veces no hace falta envolver toda la aplicación, en este caso lo hacemos en **App.jsx**:
+
 ```JSX
 function App() {
   const { filters, filterProducts } = useFilters();
@@ -383,6 +367,22 @@ function App() {
 
 -> Es importante **usar los providers solo en los sitios que tiene sentido**, cuanto más pequeño el scoope, mejor.
 
+---
+---
+
+## :book: useReducer
+
+- Se puede mezclar los **reducers** con el **context** para hacer algo similar a **Redux**.
+
+- ¿Qué es el **useRecuder**? Es un **hook** que nos permite manejar el estado de una manera escalable, porque se basa en que recibe en una función el **estado actual** y la **acción que tiene que hacer** y **devuelve** el **nuevo estado**.
+
+Se extrae la lógica de actualizar el estado en una función totalmente separada, se puede uasr fuera de React, como en Solid o Svelt. 
+
+Se puede testear la lógica de la actualización del estado ya por separado.
+
+Con el **useState** la lógica dle estado y de la actualización del estado están dentro del componente y es más difícil de testear.
+
+Si vemos que tenemos muchos useState juntos, tenemos fragmentado el estado, cuando en realidad queremos a través de una acción actualizar parte de ese estado.  Se puede tener un **Reducer** y dentro dle mismo cambiar el estado que se necesite.
 
 
 ---
