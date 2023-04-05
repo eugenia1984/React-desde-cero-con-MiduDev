@@ -276,3 +276,7 @@ Lo mismo con la categoria.
 
 
 ---
+
+Pasamos a la segunda parte de la prueba técnica: el **carrito de compras**
+
+---
