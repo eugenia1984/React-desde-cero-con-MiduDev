@@ -279,4 +279,64 @@ Lo mismo con la categoria.
 
 Pasamos a la segunda parte de la prueba técnica: el **carrito de compras**
 
+1. Creamos el coponentes`<Cart />`
+
+2. Hacemos un **context** para el carrito.
+
+La forma más sencilla:
+
+```JSX
+import { createContext, useState } from "react";
+
+export const CartContext = createContext();
+
+export function CartProvider({ children }) {
+  const [Cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart([...Cart, product])
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  return (
+    <CartContext.Provider value={(Cart, addToCart, clearCart)}>
+      {children}
+    </CartContext.Provider>
+  );
+}
+```
+
+Mejoramos el agregar al carrito, fijandonos antes de que no exista ya para no repetir:
+
+```JSX
+const addToCart = (product) => {
+  // checked if the product is already in the cart
+  const productInCartIndex = cart.findIndexitem(
+    (item) => item.id === product.id
+  );
+
+  if(productInCartIndex >= 0) {
+    const newCart = structuredClone(cart)
+    newCart[productInCartIndex].quantity += 1
+    setCart(newCart)
+  }
+
+  // if product is not in cart
+    setCart(preState => {[
+      ...prevState,
+      {
+        ...product,
+        quantity: 1
+      }
+    ]})
+};
+```
+
+Y usamos el **StructureClone** que hace copias profundas de los arrays y los objetos. Es decir creamos un carrito nuevo, asi no mutamos el estado. Y modificamos la copia aumentandole la cantidad. -> esto es u **hack** pero hay que tener cuidado porque si el array que intentamos clonar es muy grande, el structureClone va a ser lento.
+
+-> Vamos a ver otras dos formas, que pueden mejorar el codigo. Otra forma: **map** y **slice**. No se puede usar el **Spread operator** porque hace una copia superficial, y puede traer problemas.
+
 ---
