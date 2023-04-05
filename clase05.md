@@ -386,3 +386,11 @@ Si vemos que tenemos muchos useState juntos, tenemos fragmentado el estado, cuan
 
 
 ---
+---
+
+## Así quedó:
+
+<img src="https://user-images.githubusercontent.com/72580574/230175318-0de80eb2-ff9d-43de-bd55-fdf55e6664aa.png" width=500 alt="ecommerce app" >
+
+
+---
