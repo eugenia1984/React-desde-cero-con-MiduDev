@@ -26,6 +26,6 @@ Hacer uso del useContext para evitar pasar props innecesarias
 
 ## Así quedo
 
-<img src="https://user-images.githubusercontent.com/72580574/229947015-6f41ab4f-5f73-4852-aea0-baee7712797d.png" width=450 alt="app ecommerce" >
+<img src="https://user-images.githubusercontent.com/72580574/230084331-cd33d291-dfa8-4f7f-ae0b-0ea2cb65af66.png" width=450 alt="app ecommerce" >
 
 ---
