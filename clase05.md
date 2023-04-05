@@ -12,7 +12,7 @@
 
 -> Esto para los **componentes funcionales**
 
--> Antes se utilizaban los **componentes de clases**, en ellos el ciclo de vida era màs largo.
+-> Antes se utilizaban los **componentes de clases**, en ellos el ciclo de vida era más largo.
 
 ---
 
@@ -40,7 +40,7 @@ Hacer uso del useContext para evitar pasar props innecesarias
 
 - Sincroniza los cambios del carrito con la lista de productos.
 
-- Guarda en un localStorage el carrtio para que se recupere al recargar la página.
+- Guarda en un localStorage el carrito para que se recupere al recargar la página.
 
 ---
 
