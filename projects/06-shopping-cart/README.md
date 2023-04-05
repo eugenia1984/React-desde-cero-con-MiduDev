@@ -20,7 +20,7 @@ Hacer uso del useContext para evitar pasar props innecesarias
 
 - Sincroniza los cambios del carrito con la lista de productos.
 
-- Guarda en un localStorage el carrtio para que se recupere al recargar la página.
+- Guarda en un localStorage el carrito para que se recupere al recargar la página.
 
 ---
 
