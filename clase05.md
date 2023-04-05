@@ -339,4 +339,23 @@ Y usamos el **StructureClone** que hace copias profundas de los arrays y los obj
 
 -> Vamos a ver otras dos formas, que pueden mejorar el codigo. Otra forma: **map** y **slice**. No se puede usar el **Spread operator** porque hace una copia superficial, y puede traer problemas.
 
+3. creamos el custom hook **useCart** para poder leer el context creado.
+
+```JSX
+import { useContext } from "react"
+import { CartContext } from "../context/cart"
+
+export const useCart = () => {
+  const cart = useContext(CartContext)
+
+  if(cart === undefined) {
+    throw new Error("useCart must be used within a CartProvider")
+  }
+
+  return cart
+}
+```
+
+-> Es de buena práctica chequear que el cart no sea **undefined**, porque si lo es significa que se está usando en un lugar que no se puede (en un lugar que no está el CartProvider).
+
 ---
