@@ -62,7 +62,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [**6to proyecto: Prueba técnica para Juniors - Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart) <- acá podes ver el codigo
 
-<img src="https://user-images.githubusercontent.com/72580574/230084331-cd33d291-dfa8-4f7f-ae0b-0ea2cb65af66.png" alt="app ecommerce" width=450 style="margin-left: 20px">
+
+<img src="https://user-images.githubusercontent.com/72580574/230175318-0de80eb2-ff9d-43de-bd55-fdf55e6664aa.png" alt="app ecommerce" width=450 style="margin-left: 20px">
 
 -Temas: useContext, useReducer, useId
 
