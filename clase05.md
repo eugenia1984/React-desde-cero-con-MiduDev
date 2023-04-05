@@ -356,9 +356,33 @@ export const useCart = () => {
 }
 ```
 
--> Es de buena práctica chequear que el cart no sea **undefined**, porque si lo es significa que se está usando en un lugar que no se puede (en un lugar que no está el CartProvider).
+-> Es de buena práctica chequear que el cart no sea **undefined**, porque si lo es significa que se está usando en un lugar que no se puede (en un lugar que no está el CartProvider). -> Hay que **envolver la parte de la aplicación que va a tener acceso**.
 
 
 ![image](https://user-images.githubusercontent.com/72580574/230093946-d3b2f199-b46b-4b23-bb42-9d7a3348d72d.png)
+
+
+
+En este caso no lo hacemos en el **main.jsx**, a veces no hace falta envolver toda la aplicación, en este caso lo hacemos en **App.jsx**:
+```JSX
+function App() {
+  const { filters, filterProducts } = useFilters();
+
+  const filteredProducts = filterProducts(initialProducts);
+
+  return (
+    <CartProvider>
+      <Header />
+      <Cart />
+      <Products products={filteredProducts} />
+      <Footer />
+    </CartProvider>
+  );
+}
+```
+
+-> Es importante **usar los providers solo en los sitios que tiene sentido**, cuanto más pequeño el scoope, mejor.
+
+
 
 ---
