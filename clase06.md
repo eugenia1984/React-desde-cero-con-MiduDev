@@ -2,7 +2,7 @@
 
 ---
 
-- **7mo proyecto: Creación de un React Router desde cero**
+**7mo proyecto: Creación de un React Router desde cero**
 
 - 1 - Crea una forma de hacer SPA (Single Page Aplications)
 
