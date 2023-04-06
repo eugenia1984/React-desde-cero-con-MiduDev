@@ -71,7 +71,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - Clase 6
 
-**7mo proyecto: Creación de un React Router desde cero**
+[**7mo proyecto: Creación de un React Router desde cero**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router) <- acá podes ver el codigo
 
 **8vo proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
