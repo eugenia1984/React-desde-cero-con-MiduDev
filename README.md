@@ -145,10 +145,14 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Water.css**](https://watercss.kognise.dev/), framework class less.
 
+- [**SimpleCSS**](https://simplecss.org/), framework class less.
+
 - [<img src="https://user-images.githubusercontent.com/72580574/230208215-b8c9090f-8b7d-4888-8aaa-57d228c2aa11.png" width=32 alt="icono de JSON formatter extension de Chrome"/>
 **JSON Formatter**](https://chrome.google.com/webstore/detail/json-formatter-viewer-and/infnlhnhibphpaljmnnadaldibggkokb): extensión de Chrome, para ver más claros los JSON.
 
 - [just-debouce-it](https://www.npmjs.com/package/just-debounce-it?activeTab=readme) para hacer un debounce.
+
+
 
 ---
 
