@@ -75,6 +75,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 **8vo proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
+**9no proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
+
 ---
 
 ## :book: TEMAS:
@@ -121,27 +123,30 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 ## 🛠️ TECNOLOGÍAS 🛠️
 
-- <img src="https://img.icons8.com/fluency/30/null/html-5.png"/> **HTML5**
+- <img src="https://img.icons8.com/fluency/30/null/html-5.png" alt="icono de HTML"/> **HTML5**
 
-- <img src="https://img.icons8.com/fluency/30/null/css3.png"/> **CSS3**
+- <img src="https://img.icons8.com/fluency/30/null/css3.png" alt="icono de CSS"/> **CSS3**
 
-- <img src="https://img.icons8.com/color/30/null/javascript--v1.png"/> **JavaScript**
+- <img src="https://img.icons8.com/color/30/null/javascript--v1.png" alt="icono de JavaSCript"/> **JavaScript**
 
-- <img src="https://img.icons8.com/officel/30/null/react.png"/> **React**
+- <img src="https://img.icons8.com/officel/30/null/react.png" alt="icono de React"/> **React**
 
-- [**Vite**](https://vitejs.dev/)
+- <img src="https://vitejs.dev/logo-with-shadow.png" width=32 alt="icono de vite"/>[**Vite**](https://vitejs.dev/)
 
 - [**playwright**](https://playwright.dev/)
 
 #### Recursos:
 
-- [**Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
+- [<img src="https://user-images.githubusercontent.com/72580574/230207960-b1b33433-ffaf-446c-b6a8-ecd4e34b4b24.png" width=80 alt="icono de hero icons"/>
+ **Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
 
-- [**unavatar.io**](https://unavatar.io/)
+- [<img src="https://user-images.githubusercontent.com/72580574/230208065-b1ec36a4-7fd5-4df3-9a6c-dc5636a2182b.png" width=32 alt="icono de unavatar.io"/>
+ **unavatar.io**](https://unavatar.io/)
 
 - [**Water.css**](https://watercss.kognise.dev/), framework class less.
 
-- JSON Formatter: extensión de Chrome, para ver más claros los JSON.
+- [<img src="https://user-images.githubusercontent.com/72580574/230208215-b8c9090f-8b7d-4888-8aaa-57d228c2aa11.png" width=32 alt="icono de JSON formatter extension de Chrome"/>
+**JSON Formatter**](https://chrome.google.com/webstore/detail/json-formatter-viewer-and/infnlhnhibphpaljmnnadaldibggkokb): extensión de Chrome, para ver más claros los JSON.
 
 - [just-debouce-it](https://www.npmjs.com/package/just-debounce-it?activeTab=readme) para hacer un debounce.
 
@@ -157,11 +162,15 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 4**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md), hacemos una **prueba tecnica para Juniors, con formularios - aplicación para buscar películas utilizando una API**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce. :star: [**5to proyecto - Buscados de peliculas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas)
 
-- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md), viendo : ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
+- [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md) -> ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
-- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md), viendo: ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
+- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
 
-- **Clase 7**, viendo: ⭐ React + **TypeScript** (Día 01): props y state
+- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state :star: **7mo proyecto**: Creación de un React Router desde cero
+
+- **clase 8** -> React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
+
+- **Clase 9** -> React Redux Toolkit + Rome Tools :star: **9no proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
 
 ---
 
