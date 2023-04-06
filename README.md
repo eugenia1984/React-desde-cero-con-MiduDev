@@ -170,7 +170,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
 
-- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state :star: **7mo proyecto**: Creación de un React Router desde cero
+- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state :star: **7mo proyecto**: Creación de un React Router desde cero: window.location.pathname, window.history.pushState.
 
 - **clase 8** -> React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
 

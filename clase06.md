@@ -4,7 +4,7 @@
 
 **7mo proyecto: Creación de un React Router desde cero**
 
-- 1 - Crea una forma de hacer SPA (Single Page Aplications)
+- 1 - Crea una forma de hacer SPA
 
 - 2 - Poder navegar entre páginas con el botón de atrás
 
@@ -26,7 +26,7 @@
 
 ---
 
-## SPA(Single Page APplication)
+## SPA(Single Page Application)
 
 La forma más sencilla es utilizando **window.location.pathname**, creo dos componentes para cada una de las páginas y las renderizo acorde a lo que muestro en el path de la URL.
 
@@ -45,7 +45,7 @@ function App() {
 }
 ```
 
-## :star: 1 - Crea una forma de hacer SPA (Single Page Aplications)
+## :star: 1 - Crea una forma de hacer SPA (Single Page Applications)
 
 - Ahora si lo transformamos en **SPA**:
 
