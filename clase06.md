@@ -50,6 +50,7 @@ function App() {
 - Ahora si lo transformamos en **SPA**:
 
 App.jsx:
+
 ```JSX
 const NAVIGATION_EVENT = 'pushState'
 
@@ -79,6 +80,7 @@ function App() {
 Uso el **navigate** en las páginas:
 
 HomePage.jsx
+
 ```JSX
 import { navigate } from "../App";
 
@@ -128,6 +130,39 @@ export const EVENTS = {
 ---
 
 ## :star: 3 - Crear componente `<Link />` para hacerlo declarativo
+
+- Cuando hay un botón es **un problema de accesibilidad**, al hacerle click no tengo opción de abrir una nueva pestaña y otras cosas. **NO HAY QUE USAR UN BOTON PARA HACER NAVEGACIONES HAY QUE USAR ANCHOR**.
+
+-> si hay que **ir a un sitio** si o si debe ser un `<a>`, visualmente se puede hacer que parezca un `**botón**. Un anchor es **navegar a un sitio**.
+
+-> Si se va a **hacer algo**(como abrir un modal, dar me gusta) ahi si utilizo un `<button>`. Un botón es **hacer algo**
+
+- **Link.jsx**:
+
+```JSX
+import { navigate } from "../../utils/navigation";
+
+const Link = ({ target, to, ...props }) => {
+  const handleClick = (event) => {
+    const isMainEvent = event.button === 0 // primary click
+    const isModifiedEvent = event.metaKey || event.altKey ||event.ctrlKey || event.shiftKey
+    const isManageableEvent = target === undefined || target === "_self"
+
+    if(isMainEvent && isManageableEvent && !isModifiedEvent) {
+      event.preventDefault();
+      navigate(to); // navigation with SPA
+    }
+  };
+
+  return <a onClick={handleClick} href={to} target={target} {...props} />;
+};
+
+export default Link;
+```
+
+- `event.button === 0 ` es el boton principal, si uno es diestro es cuando se hace click derecho del mouse y si uno es zurdo y lo cambia en la configuración, es al hacer click en el boton izquierdo del mouse.
+
+-> De este modo si hacemos alt+click, crtl+click, shift+key se nos va a abrir la pagina en una nueva pestaña o se abrira una nueva ventana.
 
 ---
 
