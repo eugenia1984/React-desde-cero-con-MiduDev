@@ -152,7 +152,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [just-debouce-it](https://www.npmjs.com/package/just-debounce-it?activeTab=readme) para hacer un debounce.
 
-
+- [**path-to-regexp**](https://www.npmjs.com/package/path-to-regexp)
 
 ---
 
@@ -168,9 +168,9 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md) -> ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
-- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ **React Router** + Lazy **Loading** :star: Creación de un React Router desde cero
+- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState. Dependencia: path-to-regexp.
 
-- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state :star: **7mo proyecto**: Creación de un React Router desde cero: window.location.pathname, window.history.pushState.
+- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state 
 
 - **clase 8** -> React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
 

@@ -309,10 +309,12 @@ Y en `<App/>` por **default** seteo la pagina de error:
 ```JSX
  <Router routes={routes}  defaultComponent={Page404}/>
  ```
- 
+
 ---
 
 ## :star: 6 - Soportar rutas con parámetros
+
+- Vamos a necesitar instalar la dependencia : **path-to-regexp**
 
 ---
 
