@@ -1,5 +1,4 @@
 import Link from "../compnents/link/Link";
-import { navigate } from "../utils/navigation";
 
 export function AboutPage() {
   return (
@@ -12,7 +11,6 @@ export function AboutPage() {
         />
         <p>Hi, I'm María Eugenia and I'm creating a React Router clone.</p>
       </div>
-      {/* <button onClick={() => navigate("/")}>Home</button> */}
       <Link to="/">Home</Link>
     </>
   );

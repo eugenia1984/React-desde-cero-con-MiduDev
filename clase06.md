@@ -162,11 +162,110 @@ export default Link;
 
 - `event.button === 0 ` es el boton principal, si uno es diestro es cuando se hace click derecho del mouse y si uno es zurdo y lo cambia en la configuración, es al hacer click en el boton izquierdo del mouse.
 
--> De este modo si hacemos alt+click, crtl+click, shift+key se nos va a abrir la pagina en una nueva pestaña o se abrira una nueva ventana.
+-> De este modo si hacemos alt+click, ctrl+click, shift+key se nos va a abrir la pagina en una nueva pestaña o se abrira una nueva ventana.
+
+-> Al hacer en **onClick** ahi solo se escucha el boton principal del mouse.
 
 ---
 
 ## :star: 4 - Crear componente `<Router />` para hacerlo más declarativo
+
+- Todavía las rutas las manejamos con renderizado condicional:
+
+```JSX
+{currentPath === "/" && <HomePage />}
+{currentPath === "/about" && <AboutPage />}
+```
+
+- Nos creamos un array de objetos, donde van a estar las rutas:
+
+```JSX
+const routes = [
+  {
+    path: "/",
+    Component: HomePage
+  },
+  {
+    path: "/about",
+    Component: AboutPage
+  }
+]
+```
+
+Y toda la lógica para las rutas que teniamos dentro de App va a ir dentro del nuevo componente `<Router>`, que va a recibir como parametros:
+`{routes = [], defaultComponent: DefaultComponent = () => null}`, las  **routes** es este nuevo array con las rutas.
+
+Y para saber qué pagina debe renderizar:
+
+```JSX
+const Page = routes.find(({path}) => path === currenPath)?.Component
+  return Page? <Page />: < DefaultComponent/>
+```
+
+- App.js:
+
+```JSX
+function App() {
+
+  return (
+    <main>
+      <Router routes={routes} />
+    </main>
+  );
+}
+```
+
+-> Me creo la carpeta **router**:
+
+- con **routes.js** que tiene el array de las rutas:
+
+```JavaScript
+import { AboutPage } from "../pages/AboutPage";
+import { HomePage } from "../pages/HomePage";
+
+export const routes = [
+  {
+    path: "/",
+    Component: HomePage
+  },
+  {
+    path: "/about",
+    Component: AboutPage
+  }
+]
+```
+
+- **Router.jsx** y el compoennte:
+
+```JSX
+import { useState, useEffect } from "react";
+import { EVENTS } from "../utils/const";
+
+const Router = ({routes = [], defaultComponent: DefaultComponent = () => null}) => {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const onLocationChange = () => {
+      setCurrentPath(window.location.pathname)
+    }
+    window.addEventListener(EVENTS.PUSHSTATE, onLocationChange)
+    window.addEventListener(EVENTS.POPSTATE, onLocationChange)
+
+    return () => {
+      window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange)
+      window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
+    }
+  }, [])
+
+  const Page = routes.find(({path}) => path === currentPath)?.Component
+
+  return Page? <Page />: < DefaultComponent/>
+} 
+
+export default Router;
+```
+
+Para poder renderizarlo en **App.jsx**
 
 ---
 
