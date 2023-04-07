@@ -1,8 +1,8 @@
-export const NAVIGATION_EVENT = 'pushState'
+import { EVENTS } from "./const"
 
 export function navigate(href) {
   window.history.pushState({}, '', href)
-  const navigationEvent = new Event(NAVIGATION_EVENT)
+  const navigationEvent = new Event(EVENTS.PUSHSTATE)
   window.dispatchEvent(navigationEvent)
 
 }

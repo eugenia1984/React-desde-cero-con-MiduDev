@@ -97,6 +97,33 @@ export function HomePage() {
 
 ## :star: 2 - Poder navegar entre páginas con el botón de atrás
 
+- Todavía no funciona esto, lo que pasa es que en el **useEffect** estamso escuchando la nabegación cuando vamos **hacia adelante**, pero **no escuchamos la navegación cuando vamos hacia atrás**
+
+- **App.js**:
+
+```JSX
+useEffect(() => {
+  const onLocationChange = () => {
+    setCurrentPath(window.location.pathname)
+  }
+  window.addEventListener(EVENTS.PUSHSTATE, onLocationChange)
+  window.addEventListener(EVENTS.POPSTATE, onLocationChange)
+
+  return () => {
+    window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange)
+    window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
+  }
+}, [])
+```
+
+- **const.js**:
+
+```JSX
+export const EVENTS = {
+  PUSHSTATE: "pushstate",
+  POPSTATE: "popstate"
+}
+```
 
 ---
 

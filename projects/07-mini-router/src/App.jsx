@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
+import { EVENTS } from "./utils/const";
 import "./App.css";
-import { NAVIGATION_EVENT } from "./utils/navigation";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -11,10 +11,12 @@ function App() {
     const onLocationChange = () => {
       setCurrentPath(window.location.pathname)
     }
-    window.addEventListener(NAVIGATION_EVENT, onLocationChange)
+    window.addEventListener(EVENTS.PUSHSTATE, onLocationChange)
+    window.addEventListener(EVENTS.POPSTATE, onLocationChange)
 
     return () => {
-      window.removeEventListener(NAVIGATION_EVENT, onLocationChange)
+      window.removeEventListener(EVENTS.PUSHSTATE, onLocationChange)
+      window.removeEventListener(EVENTS.POPSTATE, onLocationChange)
     }
   }, [])
 
