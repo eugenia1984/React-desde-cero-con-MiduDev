@@ -2,15 +2,7 @@ import { useEffect, useState } from "react";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import "./App.css";
-
-const NAVIGATION_EVENT = 'pushState'
-
-export function navigate(href) {
-  window.history.pushState({}, '', href)
-  const navigationEvent = new Event(NAVIGATION_EVENT)
-  window.dispatchEvent(navigationEvent)
-
-}
+import { NAVIGATION_EVENT } from "./utils/navigation";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -19,7 +11,6 @@ function App() {
     const onLocationChange = () => {
       setCurrentPath(window.location.pathname)
     }
-
     window.addEventListener(NAVIGATION_EVENT, onLocationChange)
 
     return () => {

@@ -1,4 +1,5 @@
-import { navigate } from "../App";
+import { navigate } from "../utils/navigation";
+
 
 export function AboutPage() {
   return (
