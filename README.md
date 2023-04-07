@@ -152,7 +152,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [just-debouce-it](https://www.npmjs.com/package/just-debounce-it?activeTab=readme) para hacer un debounce.
 
-- [**path-to-regexp**](https://www.npmjs.com/package/path-to-regexp)
+- [**path-to-regexp**](https://www.npmjs.com/package/path-to-regexp),para poder hacer rutas dinamicas(/:id, por ejemplo) en el proyecto 7 donde creo el mini-router.
 
 ---
 

@@ -314,7 +314,9 @@ Y en `<App/>` por **default** seteo la pagina de error:
 
 ## :star: 6 - Soportar rutas con parámetros
 
-- Vamos a necesitar instalar la dependencia : **path-to-regexp**
+- Vamos a necesitar instalar la dependencia : **path-to-regexp**, para las **rutas dinámicas**
+
+` npm install path-to-regexp -E`
 
 ---
 

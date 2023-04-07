@@ -1,5 +1,4 @@
-import Router from "./router/Router";
-import { routes } from "./router/routes";
+import Router, { routes } from "./router/Router";
 import "./App.css";
 import Page404 from "./pages/Page404";
 
