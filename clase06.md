@@ -217,7 +217,7 @@ function App() {
 
 -> Me creo la carpeta **router**:
 
-- con **routes.js** que tiene el array de las rutas:
+- con **routes.js** que tiene el array de las rutas, asi cada vez que quiera crear una nueva ruta, simplemente la declaro en este array:
 
 ```JavaScript
 import { AboutPage } from "../pages/AboutPage";
@@ -269,8 +269,47 @@ Para poder renderizarlo en **App.jsx**
 
 ---
 
+### Para que al cargar la pagina siempre este arriba de todo:
+
+
+```JSX
+window.scrollTo(0,0)
+```
+
+---
+
 ## :star: 5 - Soportar ruta por defecto (404)
 
+
+- Creo el componente `Page404`:
+
+```JSX
+import Link from "../compnents/link/Link";
+
+const Page404 = () => {
+  return (
+    <>
+      <section>
+        <h1>This is not fine</h1>
+        <img
+          src="https://www.antevenio.com/wp-content/uploads/2017/08/15-ejemplos-de-paginas-404-que-generan-engagement-1.jpg"
+          alt="page not found"
+        />
+      </section>
+      <Link to="/">Go to Home</Link>
+    </>
+  );
+};
+
+export default Page404;
+```
+
+Y en `<App/>` por **default** seteo la pagina de error:
+
+```JSX
+ <Router routes={routes}  defaultComponent={Page404}/>
+ ```
+ 
 ---
 
 ## :star: 6 - Soportar rutas con parámetros
