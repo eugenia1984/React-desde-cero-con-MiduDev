@@ -1,0 +1,25 @@
+.btnContainer {
+  padding: 1rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.anchorButton {
+  text-decoration: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 1px solid #ffb300;
+  padding: 12px 24px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.anchorButton:hover {
+  color: black;
+  background-color: #ffb300;
+}

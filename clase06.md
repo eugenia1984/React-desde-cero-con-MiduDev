@@ -314,7 +314,7 @@ Y en `<App/>` por **default** seteo la pagina de error:
 
 ## :star: 6 - Soportar rutas con parámetros
 
-- Vamos a necesitar instalar la dependencia : **path-to-regexp**, para las **rutas dinámicas**
+- Vamos a necesitar instalar la dependencia : **path-to-regexp**, para las **rutas dinámicas** (lo usa Express y muchas bibliotecas más)
 
 ` npm install path-to-regexp -E`
 
@@ -322,10 +322,24 @@ Y en `<App/>` por **default** seteo la pagina de error:
 
 ## :star: 7 - Componente `<Route />` para hacerlo declarativo
 
+- Creamos el componente `<Route />`:
+
+```JSX
+const Route = ({path, Component}) => {
+  return null;
+};
+
+export default Route;
+```
+
+pero en realidad toda la lógica la tiene el componente `<Routes/>` usando **Cildren** que voy a tener ahi el **path** y el **Component**
+
+
 ---
 
 ## :star: 8 - Lazy Loading de rutas
 
+- importamos `{lazy}` de `"react"` para **importar** de forma **dinámica** los componentes, es decir que hata que no los necesitamos no los renderiza. Y también debemos envolverlo en `<Suspense/>` con el **fallback** que le indica que va a renderizar en las partes de la UI que al tener **azy** todavía no se renderizan.
 ---
 
 ## :star: 9 - Testing
