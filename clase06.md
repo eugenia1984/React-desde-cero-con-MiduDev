@@ -474,7 +474,7 @@ it('should render the component of the first route that matches', () => {
  ![image](https://user-images.githubusercontent.com/72580574/230737901-8189afb7-93d8-4050-ac63-8fe93d4c21f2.png)
 
   
-  ![image](https://user-images.githubusercontent.com/72580574/230737912-d924f00f-145f-4591-85d2-5c5fb4efb530.png)
+![image](https://user-images.githubusercontent.com/72580574/230738046-e5ff5306-b488-4122-90a5-a65611ed26a6.png)
 
   ![image](https://user-images.githubusercontent.com/72580574/230738003-34e535e0-3e9b-4930-8c85-075b61e28600.png)
 
