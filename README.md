@@ -173,6 +173,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**testing-library-react**](https://testing-library.com/docs/react-testing-library/intro/#:~:text=The%20React%20Testing%20Library%20is,that%20encourages%20better%20testing%20practices.)
 
+- [**SWC**](https://swc.rs/), similar a Babel.
+
 ---
 
 ## :tv: CLASES:
