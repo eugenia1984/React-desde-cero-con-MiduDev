@@ -433,15 +433,53 @@ describe('Router', () => {
 })
 ```
   
+-> Hay uan extension de VSC: **vitest** de **Zixuan Chen** que es parecido a un debugger, pero del test.
+  
+-> Me armo en utils :
+  
+```JSX
+export const getCurrentPath = () => window.location.pathname
+```
+  
+Para mockear el enrutado:
+  
+```JSX
+  vi.mock('./utils.js', () => ({
+  getCurrentPath: vi.fn()
+}))
+``` 
+  
+Y mockeamos:
+  
+```JSX
+it('should render the component of the first route that matches', () => {
+   getCurrentPath.mockReturnValue('/about')
+   const routes = [
+     {
+       path: '/',
+       Component: () => <h1>Home</h1>
+     },
+     {
+       path: '/about',
+       Component: () => <h1>About</h1>
+     }
+   ]
+
+   render(<Router routes={routes} />)
+   expect(screen.getByText('About')).toBeTruthy()
+ ```
+  
+  
+  
 ---
 
 ## :star: 10 - Publicar el paquete en NPM
 
 ---
   
-  ##:star: Así quedó:
+## :star: Así quedó:
   
-  - Home page:
+- Home page:
 
 <img src="https://user-images.githubusercontent.com/72580574/230736863-de83c25c-7df6-40a0-beae-6875b5d812b9.png" alt="home page" width=450 style="margin-left: 20px">
 
@@ -453,4 +491,4 @@ describe('Router', () => {
 
 <img src="https://user-images.githubusercontent.com/72580574/230736915-dca93c1d-2089-4846-85b2-c1936eb48e65.png" alt="not founf page" width=450 style="margin-left: 20px">
   
-  ---
+---
