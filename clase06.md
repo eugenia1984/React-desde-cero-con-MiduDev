@@ -493,6 +493,8 @@ Pra prepararlo y lueg poder desplegarlo.
   
 - Instalamos **SWC**, para compilar los ficheros,  alternativa a Babel: `npm install @swc/cli @swc/core -D`
   
+  - `npx swc ./src/conponents/router/Router.jsx`
+  
   
 ---
   
