@@ -126,7 +126,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Testing**: con **React Testing Library**, **Testing End to End** con **PlayWright**. Un pequeño ejercicio con **TDD**.
 
-- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**? Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaciones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con REact?
+- **Mejoras de rendimiento**: ¿cómo se puede hacer **lazy loading**? Imports dinámicos. ¿Cómo mejorar el rendimiento de las aplicaciones en React? ¿Qué tener en cuenta? ¿Cómo encontrar errores en las aplicaciones que hacen que vaya lento con React?
 
 - **React Query** ¿Cómo utilizar esta dependencia para eliminar un montón de código que se utilizó en proyectos anerires?
 
@@ -167,6 +167,12 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**path-to-regexp**](https://www.npmjs.com/package/path-to-regexp),para poder hacer rutas dinamicas(/:id, por ejemplo) en el proyecto 7 donde creo el mini-router, lo usa **express** y muchas librerías más.
 
+- [**vitest**](https://vitest.dev/), para hacer test.
+
+- [**happy-dom**](https://www.npmjs.com/package/happy-dom), para simular un navegador y poder hacer test.
+
+- [**testing-library-react**](https://testing-library.com/docs/react-testing-library/intro/#:~:text=The%20React%20Testing%20Library%20is,that%20encourages%20better%20testing%20practices.)
+
 ---
 
 ## :tv: CLASES:
@@ -181,7 +187,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md) -> ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
-- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState, Children, `{lazy}`, `<Suspense/>`. Dependencia: path-to-regexp.
+- [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState, Children, `{lazy}`, `<Suspense/>`. Dependencia: path-to-regexp. Vitest, para testear. Happy-dom, para testear. React Testing Library, para testear.
 
 - **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state 
 
