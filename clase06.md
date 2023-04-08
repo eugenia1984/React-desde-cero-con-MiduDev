@@ -483,6 +483,17 @@ it('should render the component of the first route that matches', () => {
 
 ## :star: 10 - Publicar el paquete en NPM
 
+- En **package.json** agrego un **Script**:
+  
+```
+"prepare": "npm run test && swc ./src/*.jsx -d lib && rm lib/App.js lib/main.js lib/Router.test.js && cp src/*.js lib",
+```
+
+Pra prepararlo y lueg poder desplegarlo.
+  
+- Instalamos **SWC**, para compilar los ficheros,  alternativa a Babel: `npm install @swc/cli @swc/core -D`
+  
+  
 ---
   
 ## :star: Así quedó:
