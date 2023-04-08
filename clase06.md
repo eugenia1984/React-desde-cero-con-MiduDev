@@ -433,7 +433,7 @@ describe('Router', () => {
 })
 ```
   
--> Hay uan extension de VSC: **vitest** de **Zixuan Chen** que es parecido a un debugger, pero del test.
+-> Hay una extension de VSC: **vitest** de **Zixuan Chen** que es parecido a un debugger, pero del test.
   
 -> Me armo en utils :
   
