@@ -471,12 +471,12 @@ it('should render the component of the first route that matches', () => {
   
 - Para testear, por consola: `npm run test:ui`:
   
- ![image](https://user-images.githubusercontent.com/72580574/230737901-8189afb7-93d8-4050-ac63-8fe93d4c21f2.png)
+![image](https://user-images.githubusercontent.com/72580574/230737901-8189afb7-93d8-4050-ac63-8fe93d4c21f2.png)
 
   
 ![image](https://user-images.githubusercontent.com/72580574/230738046-e5ff5306-b488-4122-90a5-a65611ed26a6.png)
 
-  ![image](https://user-images.githubusercontent.com/72580574/230738003-34e535e0-3e9b-4930-8c85-075b61e28600.png)
+![image](https://user-images.githubusercontent.com/72580574/230738003-34e535e0-3e9b-4930-8c85-075b61e28600.png)
 
   
 ---
@@ -493,9 +493,63 @@ Pra prepararlo y lueg poder desplegarlo.
   
 - Instalamos **SWC**, para compilar los ficheros,  alternativa a Babel: `npm install @swc/cli @swc/core -D`
   
-  - `npx swc ./src/conponents/router/Router.jsx`
+- En la raiz del proyecto creo el archivo **.swcrc**:
+
+```
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "parser": {
+      "syntax": "ecmascript",
+      "jsx": true,
+      "dynamicImport": false,
+      "privateMethod": false,
+      "functionBind": false,
+      "exportDefaultFrom": false,
+      "exportNamespaceFrom": false,
+      "decorators": false,
+      "decoratorsBeforeExport": false,
+      "topLevelAwait": false,
+      "importMeta": false
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
+    "target": "es2020",
+    "loose": true,
+    "externalHelpers": false,
+    // Requires v1.2.50 or upper and requires target to be es2016 or upper.
+    "keepClassNames": false
+  },
+  "minify": true
+}
+```
   
-  
+- Asi nos lee bien el JSX con true y el target es2020
+
+- Por consola: 
+`npx swc ./src/components/router/Router.jsx ./src/components/route/Route.jsx ./src/components/link/link.jsx` y asi minifico los tres
+
+```
+Successfully compiled 3 files with swc.
+import{jsx as _jsx}from"react/jsx-runtime";import{EVENTS}from"../../utils/consts.js";import{useState,useEffect,Children}from"react";import{match}from"path-to-regexp";import{getCurrentPath}from"../../utils/utils.js";export function Router({children,routes=[],defaultComponent:DefaultComponent=()=>_jsx("h1",{children:"404"})}){const[currentPath,setCurrentPath]=useState(getCurrentPath());useEffect(()=>{const onLocationChange=()=>{setCurrentPath(getCurrentPath())};window.addEventListener(EVENTS.PUSHSTATE,onLocationChange);window.addEventListener(EVENTS.POPSTATE,onLocationChange);return()=>{window.removeEventListener(EVENTS.PUSHSTATE,onLocationChange);window.removeEventListener(EVENTS.POPSTATE,onLocationChange)}},[]);let routeParams={};const routesFromChildren=Children.map(children,({props,type})=>{const{name}=type;const isRoute=name==="Route";return isRoute?props:null});const routesToUse=routes.concat(routesFromChildren).filter(Boolean);const Page=routesToUse.find(({path})=>{if(path===currentPath)return true;const matcherUrl=match(path,{decode:decodeURIComponent});const matched=matcherUrl(currentPath);if(!matched)return false;routeParams=matched.params;return true})?.Component;return Page?_jsx(Page,{routeParams:routeParams}):_jsx(DefaultComponent,{routeParams:routeParams})}
+export function Route({path,Component}){return null}
+
+import{jsx as _jsx}from"react/jsx-runtime";import{BUTTONS,EVENTS}from"../../utils/consts.js";import"./Link.css";export function navigate(href){window.history.pushState({},"",href);const navigationEvent=new Event(EVENTS.PUSHSTATE);window.dispatchEvent(navigationEvent)}export function Link({target,to,...props}){const handleClick=event=>{const isMainEvent=event.button===BUTTONS.primary;const isModifiedEvent=event.metaKey||event.altKey||event.ctrlKey||event.shiftKey;const isManageableEvent=target===undefined||target==="_self";if(isMainEvent&&isManageableEvent&&!isModifiedEvent){event.preventDefault();navigate(to);window.scrollTo(0,0)}};return _jsx("div",{className:"btnContainer",children:_jsx("a",{onClick:handleClick,href:to,target:target,...props,className:"anchorButton"})})}
+```
+
+- Pero en realidad quiero: **renderizar todos los JSX que hay en src** y los quiero enviar a un directorio, entonces por consola:
+
+`npx swc src --only **/*.js`
+
+`npx swc src/*.jsx -d lib`
+
+Y se crea un fichero lib con los archivos minificados. PEro hay algunos que quiero ignorar:
+
+``npx swc src/*.jsx -d lib --ignore Router.test.jsx App.jsx main.jsx``
+
 ---
   
 ## :star: Así quedó:
