@@ -72,4 +72,3 @@ describe('Router', () => {
     expect(aboutTitle).toBeTruthy()
   })
 })
-Footer

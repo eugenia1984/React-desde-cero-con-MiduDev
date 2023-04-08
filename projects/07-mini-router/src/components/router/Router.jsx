@@ -38,17 +38,15 @@ export function Router({
   const Page = routesToUse.find(({ path }) => {
     if (path === currentPath) return true;
 
-    // hemos usado path-to-regexp
-    // para poder detectar rutas dinámicas como por ejemplo
-    // /search/:query <- :query es una ruta dinámica
+    // Using usado path-to-regexp to detect dinamics routes
+    // eg: /search/:query <- :query is a dynamic route
     const matcherUrl = match(path, { decode: decodeURIComponent });
     const matched = matcherUrl(currentPath);
     if (!matched) return false;
 
-    // guardar los parámetros de la url que eran dinámicos
-    // y que hemos extraído con path-to-regexp
-    // por ejemplo, si la ruta es /search/:query
-    // y la url es /search/javascript
+    // Store the params or de dynamic URL that we extract with path-to-regexp
+    // eg: if the route is   /search/:query
+    // and the url is: /search/javascript
     // matched.params.query === 'javascript'
     routeParams = matched.params;
     return true;
