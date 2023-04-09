@@ -69,7 +69,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 -Temas: useContext, useReducer, useId
 
-- Clase 6
+- **Clase 6**:
 
 [**7mo proyecto: Creación de un React Router desde cero**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router) <- acá podes ver el codigo
 
@@ -85,6 +85,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/230736915-dca93c1d-2089-4846-85b2-c1936eb48e65.png" alt="not founf page" width=450 style="margin-left: 20px">
 
+- **Clase 7**:
 
 **8vo proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
@@ -191,7 +192,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState, Children, `{lazy}`, `<Suspense/>`. Dependencia: path-to-regexp. Vitest, para testear. Happy-dom, para testear. React Testing Library, para testear.
 
-- **Clase 7** ->⭐ React + **TypeScript** (Día 01): props y state 
+- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state 
 
 - **clase 8** -> React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
 
