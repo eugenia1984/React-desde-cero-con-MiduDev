@@ -62,7 +62,6 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [**6to proyecto: Prueba técnica para Juniors - Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart) <- acá podes ver el codigo
 
-
 <img src="https://user-images.githubusercontent.com/72580574/230175318-0de80eb2-ff9d-43de-bd55-fdf55e6664aa.png" alt="app ecommerce" width=450 style="margin-left: 20px">
 
 :tv: -> Para ver el deploy [https://euge-e-commerce.netlify.app/](https://euge-e-commerce.netlify.app/)
@@ -87,9 +86,11 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 7**:
 
-**8vo proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
+**8vo proyecto: TODO APP**
 
-**9no proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
+**9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
+
+**10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
 
 ---
 
@@ -152,17 +153,17 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 #### Recursos:
 
 - [<img src="https://user-images.githubusercontent.com/72580574/230207960-b1b33433-ffaf-446c-b6a8-ecd4e34b4b24.png" width=80 alt="icono de hero icons"/>
- **Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
+  **Hero Icons**](https://heroicons.com/) para íconos svg y JSX.
 
 - [<img src="https://user-images.githubusercontent.com/72580574/230208065-b1ec36a4-7fd5-4df3-9a6c-dc5636a2182b.png" width=32 alt="icono de unavatar.io"/>
- **unavatar.io**](https://unavatar.io/)
+  **unavatar.io**](https://unavatar.io/)
 
 - [**Water.css**](https://watercss.kognise.dev/), framework class less.
 
 - [**SimpleCSS**](https://simplecss.org/), framework class less.
 
 - [<img src="https://user-images.githubusercontent.com/72580574/230208215-b8c9090f-8b7d-4888-8aaa-57d228c2aa11.png" width=32 alt="icono de JSON formatter extension de Chrome"/>
-**JSON Formatter**](https://chrome.google.com/webstore/detail/json-formatter-viewer-and/infnlhnhibphpaljmnnadaldibggkokb): extensión de Chrome, para ver más claros los JSON.
+  **JSON Formatter**](https://chrome.google.com/webstore/detail/json-formatter-viewer-and/infnlhnhibphpaljmnnadaldibggkokb): extensión de Chrome, para ver más claros los JSON.
 
 - [just-debouce-it](https://www.npmjs.com/package/just-debounce-it?activeTab=readme) para hacer un debounce.
 
@@ -175,6 +176,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 - [**testing-library-react**](https://testing-library.com/docs/react-testing-library/intro/#:~:text=The%20React%20Testing%20Library%20is,that%20encourages%20better%20testing%20practices.)
 
 - [**SWC**](https://swc.rs/), similar a Babel.
+
+- [**jsonbin**](https://jsonbin.io/)
 
 ---
 
@@ -192,11 +195,11 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState, Children, `{lazy}`, `<Suspense/>`. Dependencia: path-to-regexp. Vitest, para testear. Happy-dom, para testear. React Testing Library, para testear.
 
-- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state 
+- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: **8vo proyecto** TODO APP
 
-- **clase 8** -> React + TypeScript + ChatGPT :star: **8vo proyecto**:  Crear un Google Translate con ChatGPT y TypeScript
+- **clase 8** -> React + TypeScript + ChatGPT :star: **9no proyecto**: Crear un Google Translate con ChatGPT y TypeScript
 
-- **Clase 9** -> React Redux Toolkit + Rome Tools :star: **9no proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
+- **Clase 9** -> React Redux Toolkit + Rome Tools :star: **10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
 
 ---
 
