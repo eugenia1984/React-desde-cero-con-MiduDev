@@ -554,6 +554,21 @@ Y se crea un fichero lib con los archivos minificados. PEro hay algunos que quie
   
 - Falta crear un **npm login**
   
+En el package.json a REact lo pasamos como **peerDependencies**, es decir que donde se instale ya v aa tener React
+  
+En la raiz del proyecto deberia crear el archivo **.npmignore**:
+  
+```
+src
+public
+index.html
+pnpm-lock.yaml
+vite.config.js
+.swcrc
+ ```
+  
+Asi solo publica **lib** al hacer: `npm publish` y asi queda publicado el mini router.
+  
 ---
   
 ## :star: Así quedó:
