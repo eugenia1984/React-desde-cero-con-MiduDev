@@ -550,6 +550,10 @@ Y se crea un fichero lib con los archivos minificados. PEro hay algunos que quie
 
 ``npx swc src/*.jsx -d lib --ignore Router.test.jsx App.jsx main.jsx``
 
+`npm run prepare`
+  
+- Falta crear un **npm login**
+  
 ---
   
 ## :star: Así quedó:
