@@ -347,6 +347,15 @@ filterSelected: typeof TODO_FILTERS,
 
 Solo teniamos las keys, no sus valores
 
+**Object.entries(FILTERS_BUTTONS)** para transformar en array
+
+```TSX
+const [filterSelected, setFilterSelected] = useState<FilterValue>(TODO_FILTERS.ALL)
+```
+
+- Si no aclaro `<FilterValue>` toma que el valor siempre es 'all' y luego no le puedo setear el nuevo valor. Siempre acalro entre `<>` el **Estado generico**.
+
+
 ---
 
 ## PASO 8 - Mostrar número de TODOs pendientes (Footer)
