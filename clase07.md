@@ -52,7 +52,7 @@ Ahora ejecutar, para entrar al proyecto, instalar las dependencias y verlo en el
 
 ```
 cd 08-todo-app
-npm install   
+npm install
 npm run dev
 ```
 
@@ -94,16 +94,15 @@ npm run dev
 },
 ```
 
-Y hay que agregar en *rules** para que no me pida que tenga que importar React de "react" es cada JSX:
+Y hay que agregar en \*rules\*\* para que no me pida que tenga que importar React de "react" es cada JSX:
 
 ```
 rules: {
-  "react/react-in-jsx-sxope": "off" 
+  "react/react-in-jsx-sxope": "off"
 }
 ```
 
 - Recordar siempre tener instalada la extension **EsLint** en el VSC.
-
 
 ---
 
@@ -111,8 +110,7 @@ rules: {
 
 `npm install todomvc-app-css -E` para instalarlos como un paquete de npm
 
-Y luego para tenerlos: `<link rel="stylesheet" href="node_modules/todomvc-app-css/index-css">`
----
+## Y luego para tenerlos: `<link rel="stylesheet" href="node_modules/todomvc-app-css/index-css">`
 
 ## :star: TypeScript
 
@@ -127,7 +125,6 @@ const App = (): JSX.Element => {
 
 export default App;
 ```
-
 
 -> Decir que es un componente funcional:
 
@@ -204,13 +201,35 @@ export const Todos: React.FC<Props> = ({ todos}) => {
 };
 ```
 
--  [**Repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react) repositorio con trucos, tectnicas basicas y avanzadas, lo unico malo es que hay cosas que  no estan muy actualizadas al dia de hoy. Al dia de hoy si se puede utilizar ``React.FC<>`` porque en la version 18 de React solucionaron el tema de los childrens.
+- Las **interfaces** tambien pueden **Extender**, en vez de desestruturar con ... como hacemos con JavaScript, aca extendemos:
+
+```TSX
+interface Props extends TodoType {
+  onRemoveTodo: (id: string) => void
+}
+```
+
+- [**Repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react) repositorio con trucos, tectnicas basicas y avanzadas, lo unico malo es que hay cosas que no estan muy actualizadas al dia de hoy. Al dia de hoy si se puede utilizar `React.FC<>` porque en la version 18 de React solucionaron el tema de los childrens.
 
 - Para reutilizar la interface, creamos **types.d.ts** (d por declaraciones) y lo pasamos ahi y lo vamos a importar en Todos.tsx para utilizarlos: `import { type ListOfTodos } from "../types";`
 
+- Creamos los componentes: `<Todo/>` y `<Todos />`
+
 ---
 
-## PASO 5:  Poder borrar un TODO
+## PASO 5: Poder borrar un TODO
+
+
+- Creamos la funciçon que filtre todos los todo que sean disitntos la id que quiero borrar y luego seteo el nuevo estado con este nuevo array de Todos.
+
+```TSX
+const handleRemove = (id: string): void => {
+  const newTodos = todos.filter(todo => todo.id !== id)
+  setTodos(newTodos)
+}
+```
+
+- Falta que persista, pero al menos hahora la hacerle click en el boton de la Todo se elimina.
 
 ---
 
@@ -218,35 +237,30 @@ export const Todos: React.FC<Props> = ({ todos}) => {
 
 ---
 
-## PASO 7:  Añadir forma de borrar todos los TODOs completados
+## PASO 7: Añadir forma de borrar todos los TODOs completados
 
 ---
 
-## PASO 8:  Crear Header con input (Header)
+## PASO 8: Crear Header con input (Header)
 
 ---
 
-## PASO 9:  Crear un TODO (Header)
-
+## PASO 9: Crear un TODO (Header)
 
 ---
 
 ## PASO 10: Poder editar el texto de un TODO (Doble click)
 
+---
+
+## PASO 11: Añadir animaciones con AutoAnimate
 
 ---
 
-## PASO 11:  Añadir animaciones con AutoAnimate
-
-
----
-
-## PASO 12:  Pasar a Reducer
-
+## PASO 12: Pasar a Reducer
 
 ---
 
-## PASO 13:  Sincronizar con el BackEnd
-
+## PASO 13: Sincronizar con el BackEnd
 
 ---
