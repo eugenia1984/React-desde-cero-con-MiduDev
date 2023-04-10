@@ -219,7 +219,6 @@ interface Props extends TodoType {
 
 ## PASO 5: Poder borrar un TODO
 
-
 - Creamos la funciçon que filtre todos los todo que sean disitntos la id que quiero borrar y luego seteo el nuevo estado con este nuevo array de Todos.
 
 ```TSX
@@ -233,7 +232,72 @@ const handleRemove = (id: string): void => {
 
 ---
 
+- Si justo pasa que el id pasa de ser **string** a **number**, tendria que cambiarloe n todos slo lados de la app, entonces eso es mejor manejarlo siempre en **types.d.ts**:
+
+```TypeScript
+export interface Todo {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+// esto seria por la negacion, diciendo que me omite
+export type TodoId = Omit<Todo, 'completed' | 'title'> 
+// esto seria por el lado de que elijo
+export type TodoTitle = Pick<Todo, 'title'>
+export type TodoCompleted = Pick<Todo, 'completed'>
+
+export type ListOfTodos = Todo[];
+```
+
+Y ahora el **id** es un **number**
+
+Tengo que cambiar en el mock que el id sea number.
+
+---
+
 ## PASO 6: Marcar TODO como completado
+
+- Creo la función para modificar el estado a completado:
+
+```TSX
+onst handleCompleted = ({ id, completed }: Pick<TodoType, 'id' | 'completed'>): void => {
+  const newTodos = todos.map(todo => {
+    if (todo.id === id) {
+      return {
+        ...todo,
+        completed
+      }
+    }
+    return todo
+  })
+  setTodos(newTodos)
+}
+```
+
+Y le paso como **props** al componente `<Todos/>`: **onToggleCompleteTodo={handleCompleted}**
+
+Y en el `<input/>` del `<Todo/>` agrego **onChange={ handleChangeCheckbox }**:
+
+```TSX
+<input
+  className='toggle'
+  type='checkbox'
+  checked={ completed }
+  onChange={ handleChangeCheckbox }
+/>
+```
+
+Creando anteriormente la función:
+
+```TSX
+const handleChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>): void => {
+  onToggleCompleteTodo({
+    id,
+    completed: event.target.checked
+  })
+}
+```
 
 ---
 
