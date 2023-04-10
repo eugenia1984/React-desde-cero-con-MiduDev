@@ -360,10 +360,31 @@ const [filterSelected, setFilterSelected] = useState<FilterValue>(TODO_FILTERS.A
 
 ## PASO 8 - Mostrar número de TODOs pendientes (Footer)
 
+
+```TSX
+<strong>{ activeCount }</strong> pending task
+```
+
+Y desde App.tsx recibe:
+```TSX
+const activeCount = todos.filter(todo => !todo.completed).length
+```
+
 ---
 
 ## PASO 9: Añadir forma de borrar todos los TODOs completados
 
+En el Footer, si tengo alguno ya completado me aparece la opción de **borrar completados**.
+
+
+Y para poder eliminarlos:
+
+```TSX
+const handleRemoveAllCompleted = (): void => {
+  const newTodos = todos.filter(todo => !todo.completed)
+  setTodos(newTodos)
+}
+```
 ---
 
 ## PASO 10: Crear Header con input (Header)
