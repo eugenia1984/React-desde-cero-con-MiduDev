@@ -14,13 +14,17 @@
 
 - 2 - Añadir linter para TypeScript + React
 
-- Añadir estilos del ToDoMVC
+- 3- Añadir estilos del ToDoMVC
 
-- Listar todos los TODOs
+- 4- Listar todos los TODOs
 
-- Poder borrar un TODO
+- 5 - Poder borrar un TODO
 
-- Marcar TODO como completado
+- 6 - Marcar TODO como completado
+
+- 7 - Añadir una forma de filtrar TODOs(Footer)
+
+- 8 - Mostrar número de TODOs pendientes(Footer)
 
 - Añadir forma de borrar todos los TODOs completados
 
@@ -140,7 +144,7 @@ export default App;
 
 ## PASO 4: Listar todos los TODOs
 
-- En App.jsx creamos la constante **mockTodos** con un **array** de **object**, donde cada uno es una tas, tienen de **key**: id, rirle, completed
+- En App.jsx creamos la constante **mockTodos** con un **array** de **object**, donde cada uno es una tas, tienen de **key**: id, tirle, completed
 
 - Creamso el estado: `const [todos, setTodos] = useState(mockTodos)` y vemos que ya TS me infiere los tipos:
 
@@ -301,15 +305,39 @@ const handleChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>): void 
 
 ---
 
-## PASO 7: Añadir forma de borrar todos los TODOs completados
+## PASO 7: Añadir una forma de filtrar TODOs (Footer)
+
+- Hay que crear el componente `<Footer />` y el componente `<Filters />`
+
+--- 
+
+## as const (solo lectura)
+
+```TypeScript
+export const TODO_FILTERS = {
+  ALL: 'all',
+  ACTIVE: 'active',
+  COMPLETED: 'completed'
+} as const
+```
+
+Para tener los estados  en constantes, al poner **as const** en TypeScript indicamos que son **de solo lectura**, asi no se le reasigna valor
 
 ---
 
-## PASO 8: Crear Header con input (Header)
+## PASO 8 - Mostrar número de TODOs pendientes (Footer)
 
 ---
 
-## PASO 9: Crear un TODO (Header)
+## PASO 9: Añadir forma de borrar todos los TODOs completados
+
+---
+
+## PASO 10: Crear Header con input (Header)
+
+---
+
+## PASO 11: Crear un TODO (Header)
 
 ---
 

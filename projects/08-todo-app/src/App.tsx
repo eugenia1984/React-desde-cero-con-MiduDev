@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Todos } from './components/Todos'
-import { type Todo as TodoType, type TodoId } from './types'
+import { type Todo as TodoType, type TodoId } from './types/types'
 
 const mockTodos = [
   {
@@ -46,7 +46,7 @@ const App = (): JSX.Element => {
       <h1>ToDo App</h1>
       <Todos
         todos={ todos }
-        onToggleCompleteTodo={handleCompleted}
+        onToggleCompleteTodo={ handleCompleted }
         onRemoveTodo={ handleRemove } />
     </div>
   );

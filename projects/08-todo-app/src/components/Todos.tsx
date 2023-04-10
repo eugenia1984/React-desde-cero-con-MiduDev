@@ -1,4 +1,4 @@
-import { type Todo as TodoType, type TodoId, type ListOfTodos } from '../types'
+import { type Todo as TodoType, type TodoId, type ListOfTodos } from '../types/types'
 import { Todo } from './Todo'
 
 interface Props {
