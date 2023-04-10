@@ -118,7 +118,7 @@ Y luego para tenerlos: `<link rel="stylesheet" href="node_modules/todomvc-app-cs
 
 - Debemos aclarar que tipo de dato tendremos en el **return**, hay dos opciones:
 
-- Decir que es un elemento JSX:
+-> Decir que es un elemento JSX:
 
 ```JSX
 const App = (): JSX.Element => {
@@ -129,7 +129,7 @@ export default App;
 ```
 
 
-- Decir que es un componente funcional:
+-> Decir que es un componente funcional:
 
 ```JSX
 const App = (): React.FC => {
@@ -142,6 +142,71 @@ export default App;
 ---
 
 ## PASO 4: Listar todos los TODOs
+
+- En App.jsx creamos la constante **mockTodos** con un **array** de **object**, donde cada uno es una tas, tienen de **key**: id, rirle, completed
+
+- Creamso el estado: `const [todos, setTodos] = useState(mockTodos)` y vemos que ya TS me infiere los tipos:
+
+```TSX
+const todos = {
+  id: string,
+  title: string,
+  completed: boolean
+}
+```
+
+-> Recordar ahora cada archivo creado es con extension **.tsx** y no **.jsx**, porque usamos **TS**.
+
+- Hay que validar las porpTypes, pero como usamos TS, en el **.eslintrc.cjs** agrego en rules: `'react/props-types': 'off'`. Las propTypes solo funcionan en desarrollo, no en producción, no es recomndable usarlas.
+
+- Lo que si hayque hacer es **tipar** la **prop**;
+
+```TSX
+type Todo = {
+  id: string;
+  title: string;
+  completed: boolean;
+};
+```
+
+-> Pero el Linter nos avisa: **Use an `inteface` instead of a `type`**
+
+### type vs interface
+
+- Type es para un tipo
+
+- Interface me permite extender, es un contrato de un objeto.
+
+```TSX
+type TodoTitle = string
+
+interface Todo {
+  id: string
+  title: TodoTitle
+  completed: boolean
+}
+
+type ListOfTodos = Todo[] // o tambien type ListOfTodos = Array<Todo>
+```
+
+- Dclaro las props en una **interface** y se la paso al componente, con los `<>` le estamos pasando parametros utilizando un generic peor aclarando que van a ver dle tipo de interface **Props**:
+
+```JSX
+
+interface Props {
+  todos: ListOfTodos
+}
+
+export const Todos: React.FC<Props> = ({ todos}) => {
+  return (
+   // aca mi componente
+  );
+};
+```
+
+-  [**Repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react) repositorio con trucos, tectnicas basicas y avanzadas, lo unico malo es que hay cosas que  no estan muy actualizadas al dia de hoy. Al dia de hoy si se puede utilizar ``React.FC<>`` porque en la version 18 de React solucionaron el tema de los childrens.
+
+- Para reutilizar la interface, creamos **types.d.ts** (d por declaraciones) y lo pasamos ahi y lo vamos a importar en Todos.tsx para utilizarlos: `import { type ListOfTodos } from "../types";`
 
 ---
 

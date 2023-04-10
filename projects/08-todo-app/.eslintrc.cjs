@@ -12,6 +12,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "react/react-in-jsx-sxope": "off" 
+    "react/props-types": "off",
+    "react/react-in-jsx-sxope": "off",
   },
 };

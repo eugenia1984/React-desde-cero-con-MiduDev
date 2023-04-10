@@ -86,7 +86,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 7**:
 
-**8vo proyecto: TODO APP**
+[**8vo proyecto: TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) <- acá podes ver el codigo
 
 **9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
@@ -180,6 +180,9 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 - [**jsonbin**](https://jsonbin.io/)
 
 - [**todomvc-app-css**](https://www.npmjs.com/package/todomvc-app-css)
+
+ [**Repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react)
+
 ---
 
 ## :tv: CLASES:
@@ -196,7 +199,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState, Children, `{lazy}`, `<Suspense/>`. Dependencia: path-to-regexp. Vitest, para testear. Happy-dom, para testear. React Testing Library, para testear.
 
-- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: **8vo proyecto** TODO APP
+- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: [**8vo proyecto**: **TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) 
 
 - **clase 8** -> React + TypeScript + ChatGPT :star: **9no proyecto**: Crear un Google Translate con ChatGPT y TypeScript
 
