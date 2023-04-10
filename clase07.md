@@ -321,7 +321,31 @@ export const TODO_FILTERS = {
 } as const
 ```
 
-Para tener los estados  en constantes, al poner **as const** en TypeScript indicamos que son **de solo lectura**, asi no se le reasigna valor
+Para tener los estados  en constantes, al poner **as const** en TypeScript indicamos que son **de solo lectura**, asi no se le reasigna valor.
+
+Y creamos los botones con un **diccionario**:
+
+```TypeScript
+export const TODO_FILTERS = {
+  ALL: 'all',
+  ACTIVE: 'active',
+  COMPLETED: 'completed'
+} as const
+```
+
+Y las usamos como props en el componente `<Filter/>`:
+
+```TSX
+filterSelected: typeof TODO_FILTERS[keyof typeof TODO_FILTERS],
+```
+
+Le digo que me agarre las key de TODO_FILTERS y que el valor de cada key sean para el typeof de filtersSelected, asi si a futuro agrego una nueva ahi la veo tambien. Y de esta forma llegamos a los **values**, porque si usabamos 
+
+```TSX
+filterSelected: typeof TODO_FILTERS,
+```
+
+Solo teniamos las keys, no sus valores
 
 ---
 

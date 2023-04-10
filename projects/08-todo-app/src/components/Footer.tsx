@@ -1,3 +1,7 @@
+interface Props {
+
+}
+
 export const Footer: React.FC<Props> = ({
   activeCount,
   todos,
