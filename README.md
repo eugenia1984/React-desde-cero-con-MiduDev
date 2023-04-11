@@ -184,7 +184,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**todomvc-app-css**](https://www.npmjs.com/package/todomvc-app-css)
 
- [**Repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react)
+- [**repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react)
 
 ---
 
