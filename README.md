@@ -90,6 +90,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/231167050-66349305-c37c-402f-bedc-57f67a82c8f3.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
 
+- **Clase 8**:
+
 **9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
 **10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**

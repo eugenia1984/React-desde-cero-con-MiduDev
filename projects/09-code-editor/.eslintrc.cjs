@@ -13,6 +13,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'react/eact-in-jsx-scope': 'off'
+    'react/eact-in-jsx-scope': 'off',
+    'react/prop-types': 'off'
   }
 }
