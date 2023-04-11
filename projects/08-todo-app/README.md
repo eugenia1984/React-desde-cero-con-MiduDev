@@ -18,9 +18,9 @@
 
 - -> Añadir forma de borrar todos los TODOs completados
 
-- Crear Header con input (Header)
+- -> Crear Header con input (Header)
 
-- Crear un TODO (Header)
+- -> Crear un TODO (Header)
 
 - Poder editar el texto de un TODO (Doble click)
 

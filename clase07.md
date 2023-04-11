@@ -389,9 +389,33 @@ const handleRemoveAllCompleted = (): void => {
 
 ## PASO 10: Crear Header con input (Header)
 
+
+Para el input creo un nuevo componente:
+
+```TSX
+<CreateTodo saveTodo={onAddTodo}/>
+```
+
+**onAddTodo** es una funcion: `onAddTodo: ({title}: TodoTitle) => void`
+
+
+Y dentro del componente tengo un `<form/>` con un `<input/>` que al hacer el **submit**:
+
+```TSX
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  event.preventDefault()
+  saveTodo({title: inputValue})
+  setInputValue('')
+}
+```
+
+- En TS hay que aclarar aclarar bien que tipo de **FormEvent** es, por eso entre los `<>` tengo `HTMLFormElement`.
+
 ---
 
 ## PASO 11: Crear un TODO (Header)
+
+- Es el paso que ya se hizo para el input, le agrego el titulo solamente.
 
 ---
 
