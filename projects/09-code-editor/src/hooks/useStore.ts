@@ -1,5 +1,5 @@
 import { useReducer } from 'react'
-import { type Action, type State } from "../types/types"
+import { Language, FromLanguage, type Action, type State } from "../types/types"
 
 // Step 1 - create a initialState
 const initialState: State = {
@@ -68,11 +68,11 @@ export function useStore() {
     dispatch({ type: 'INTERCHANGE_LANGUAGES' })
   }
 
-  const setFromLanguage = (payload: string) => {
+  const setFromLanguage = (payload: FromLanguage ) => {
     dispatch({ type: 'SET_FROM_LANGUAGE', payload })
   }
 
-  const setToLanguage = (payload: string) => {
+  const setToLanguage = (payload: Language) => {
     dispatch({ type: 'SET_TO_LANGUAGE', payload })
   }
 

@@ -87,4 +87,22 @@ Y asi con cada una de las acciones que tengo, asi no retorno dispatch.
 ![image](https://user-images.githubusercontent.com/72580574/231214895-f7ef09a3-0cbf-43e3-9ba4-766a1eb044c6.png)
 
 
+Necesitamos ajustar que el payload no sea solo **String** porque sino en vez de pasarle 'es' le paso cualquier caracter y me lo toma, pero yo necesito ciertos caracteres para cada lenguaje.
+
+Me creo **constants.ts**:
+
+```TypeScript
+export const SUPPORTED_LANGUAGES = {
+  en: 'English',
+  es: 'Spanish',
+  de: 'Deutsch'
+}
+
+export const AUTO_LANGUAGE = 'auto'
+```
+
+Y esto lo aplico en **types.d.ts**: `export type Language = keyof typeof SUPPORTED_LANGUAGES` , `export type AutoLanguage = typeof AUTO_LANGUAGE` y `export type FromLanguage = Language | AutoLanguage // because we have the option to detect language`.
+
+De este modo vamos a tipar el tipo string de lenguaje, y asi ajustamos los lenguajes.
+
 ---
