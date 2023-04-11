@@ -90,7 +90,6 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/231167050-66349305-c37c-402f-bedc-57f67a82c8f3.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
 
-
 **9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
 **10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
@@ -186,33 +185,27 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react)
 
+- [**React Bootstrap**](https://react-bootstrap.github.io/)
+
 ---
 
 ## :tv: CLASES:
 
 - [**Clase 1**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase01.md) -> ⭐ ¿Qué conocimientos hay que tener? ⭐ ¿Qué se debe tener ya instalado? ⭐ ¿Qué es Reactjs? ⭐ Webs para despejar dudas ⭐ Un poco de historia ⭐ ¿Por qué aprender React ? ⭐ Ejercicio práctico (de JS Vanilla a React) ⭐ JSX ⭐ ¿Cómo crear proyectos ? ⭐ [**1er proyecto**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/01-twitter-followers), hacemos la primer práctica con React, donde creamos parte de **la interfaz de Twitter donde vemos los usuarios y se siguen o dejan de seguir**, temas que se ver: props, desestructuración, hook useState (es estado, cómo actualizarlo), renderizado condicional(con ternario), imperativo vs declarativo, programación funcional, virtual DOM, renderización de listas.
 
-
 - [**Clase 2**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase02.md) -> ⭐ [**2do proyecto: de Tic-Tac-Toe (Tres en línea)**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/02-tic-tac-toe), viendo: crear un proyecto con **vite**, ¿cómo incializar el localStorage?, ¿cómo utilizar el localStorage para inicializar un estado?, ¿cómo inicializar un estado?, ¿cómo utilizar los eventos onClick? ⭐ Hook useEffect ⭐ [**3er proyecto: Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/projects/03-mouse-follower), para utilizar el hook useEffect ⭐ React Developer Tools
-
 
 - [**Clase 3**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase03.md), viendo: ⭐ Prueba técnica de React para Juniors con **Fetching de datos**, **Testing** con **playwright**, Manejo de estados y **Custom Hooks**. :star: [**4to proyecto: Hacer un fetchig para obtener una frase y una imagen**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/04-react-prueba-tecnica) durante la Prueba técnica con Promesas, fetching y testing E2E
 
-
 - [**Clase 4**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase04.md), hacemos una **prueba tecnica para Juniors, con formularios - aplicación para buscar películas utilizando una API**, viendo: ⭐ **React Hooks**: useRef, useMemo, useCallback, como manejar formularios (manera controlada y no controlada) y hacer debounce. :star: [**5to proyecto - Buscados de peliculas**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/05-react-buscador-peliculas)
-
 
 - [**Clase 5**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase05.md) -> ⭐ **React Hooks**: useContext, useReducer, useId :star: [**6to proyecto: Creación de un ecommerce con carrito de compras**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/06-shopping-cart)
 
-
 - [**Clase 6**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase06.md) -> ⭐ Lazy **Loading** :star: [**7mo proyecto**: Creación de un React Router desde cero](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/07-mini-router): window.location.pathname, window.history.pushState, Children, `{lazy}`, `<Suspense/>`. Dependencia: path-to-regexp. Vitest, para testear. Happy-dom, para testear. React Testing Library, para testear.
 
+- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: [**8vo proyecto**: **TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) :star: **TS**: `JSX.Element` vs `React.FC`, interface de Props(que pueden a su vez **extender**) para tener `React.FC<Props>`, **type** vs **interface**, type con **Omit** ó **Pick**, **as const**(solo lectura), Object.entries() para transformar a array, `crypto.randomUUID()` para crear un id unico.
 
-- [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: [**8vo proyecto**: **TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) :star: **TS**: `JSX.Element` vs `React.FC`, interface de Props(que pueden a su vez **extender**) para tener `React.FC<Props>`,  **type** vs **interface**, type con **Omit** ó **Pick**, **as const**(solo lectura), Object.entries() para transformar a array, ``crypto.randomUUID()`` para crear un id unico.
-
-
-- [**clase 8**]((https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md)) -> React + TypeScript + ChatGPT :star: **9no proyecto**: Crear un Google Translate con ChatGPT y TypeScript
-
+- [**clase 8**](<(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md)>) -> React + TypeScript + ChatGPT :star: **9no proyecto**: Crear un Google Translate con ChatGPT y TypeScript
 
 - **Clase 9** -> React Redux Toolkit + Rome Tools :star: **10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
 
