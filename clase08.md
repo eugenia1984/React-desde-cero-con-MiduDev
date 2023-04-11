@@ -82,4 +82,9 @@ export type Action =
 
 Y asi con cada una de las acciones que tengo, asi no retorno dispatch.
 
+- Y ahora App directamente uso el setFromLanguage y paso 'es', queda mas legible el componente, y abstraigo toda la logica dle reducer.
+
+![image](https://user-images.githubusercontent.com/72580574/231214895-f7ef09a3-0cbf-43e3-9ba4-766a1eb044c6.png)
+
+
 ---
