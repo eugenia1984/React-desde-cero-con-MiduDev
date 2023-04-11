@@ -31,3 +31,10 @@
 - Sincronizar con el BackEnd
 
 ---
+
+
+## Así quedo:
+
+<img src="https://user-images.githubusercontent.com/72580574/231167050-66349305-c37c-402f-bedc-57f67a82c8f3.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
+
+---
