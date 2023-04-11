@@ -59,6 +59,21 @@ export type Action =
   | { type: 'SET_RESULT', payload: string }
 ```
 
+- Hago una prueba con un boton para apsar el lenguaje a español:
+
+![image](https://user-images.githubusercontent.com/72580574/231209383-29a619cd-b067-4aac-a84b-7066353d0ffd.png)
+
+
+- Empieza en **auto**:
+
+![image](https://user-images.githubusercontent.com/72580574/231209537-d5aeea10-b100-4a4d-8259-a44bdddc4d43.png)
+
+
+- Y pasa a **es** de español:
+
+![image](https://user-images.githubusercontent.com/72580574/231209709-4c46e266-4ef9-4beb-914e-d6d09e0fa083.png)
+
+
 
 
 ---
