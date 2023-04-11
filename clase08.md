@@ -74,6 +74,12 @@ export type Action =
 ![image](https://user-images.githubusercontent.com/72580574/231209709-4c46e266-4ef9-4beb-914e-d6d09e0fa083.png)
 
 
+- Para que App no quede tan cargada hacemos un custom hook: **hooks** /**useStore.ts**
 
+-> SUPER IMPORTANTE: **que no esten los dispatch** por la aplicación, por eso armo:
+
+`const interchangeLanguages = () => dispatch({ type: 'INTERCHANGE_LANGUAGES' })` y lo retorno
+
+Y asi con cada una de las acciones que tengo, asi no retorno dispatch.
 
 ---
