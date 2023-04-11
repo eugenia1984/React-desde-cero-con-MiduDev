@@ -88,6 +88,9 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [**8vo proyecto: TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) <- acá podes ver el codigo
 
+<img src="https://user-images.githubusercontent.com/72580574/231167050-66349305-c37c-402f-bedc-57f67a82c8f3.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
+
+
 **9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
 
 **10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
@@ -181,7 +184,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**todomvc-app-css**](https://www.npmjs.com/package/todomvc-app-css)
 
- [**Repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react)
+- [**repositorio: typescript-cheatsheets/react**](https://github.com/typescript-cheatsheets/react)
 
 ---
 
