@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Stack, Row, Col, Button, Form } from 'react-bootstrap'
+import { Container, Stack, Row, Col, Button} from 'react-bootstrap'
 
 import './App.css'
 import { ArrowIcon } from './components/Icons'
@@ -8,6 +8,8 @@ import { AUTO_LANGUAGE } from './constants'
 import { useStore } from './hooks/useStore'
 import { SectionType } from './types.d'
 import { TextArea } from './components/TextArea'
+import { useEffect } from 'react'
+import { translate } from './services/translate'
 
 function App() {
   const {
@@ -23,6 +25,17 @@ function App() {
     setResult
   } = useStore()
 
+  useEffect(() => {
+    if (fromText === '') return
+
+    translate({ fromLanguage, toLanguage, text: fromText })
+      .then(result => {
+        if (result == null) return
+        setResult(result)
+      })
+      .catch(() => setResult('Error'))
+  }, [fromText, fromLanguage, toLanguage])
+
   return (
     <Container fluid>
       <Row>
@@ -37,7 +50,7 @@ function App() {
               onChange={ setFromLanguage }
             />
             <TextArea
-              loading={loading}
+              loading={ loading }
               type={ SectionType.From }
               value={ fromText }
               onChange={ setFromText }

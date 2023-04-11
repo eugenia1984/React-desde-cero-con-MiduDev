@@ -115,3 +115,11 @@ En realidad esto debería manejarlo el BackEnd, pero... como nos enfocamos en Re
 - Creamos **Services** / **translate.ts** y el archivo **.env** para poner la API key desde [https://platform.openai.com/](https://platform.openai.com/)
 
 ---
+
+`if (result == null) return` -> En TS es mejor aca tener `==` por el **undefined**, asi me aseguro que ni es **null** ni es **undefined**. Es para simplificarnos y no tener que poner: `if (result === null || result === undefined) return`
+
+---
+
+## custom hook con debounce para que la busqueda de la traducción se realice al terminar de escribir
+
+---
