@@ -22,10 +22,15 @@ Y necesitamos agregar en **.eslintrc.cjs** en `parserOptions` agregar: ` proyect
 
 También debemo importar los estilos en el proyecto, en **App.tsx**: `import 'bootstrap/dist/css/bootstrap.min.css';`
 
-- 3 - Empezamos con el proyecto, creando el **initialState** y vamos a utilizar un **Reducer** que recibe dos parámetros...
+- 3 - Empezamos con el proyecto, creando el **initialState** y vamos a utilizar un **hook useReducer** que recibe dos parámetros...
 
 ... **state**
 
-... **action**
+... **action** -> **reducer**, cada vez que se llama a la acción, se despacha. El Reducer lo recibe y genera un nuevo state.
+
+![image](https://user-images.githubusercontent.com/72580574/231193699-1bd15ea9-4696-4b9c-9060-be8bc9ac896e.png)
+
+Un ejemplo de dispatch es: ++setLanguage**, para que actualice el lenguaje.
+
 
 ---
