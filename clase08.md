@@ -32,5 +32,8 @@ También debemo importar los estilos en el proyecto, en **App.tsx**: `import 'bo
 
 Un ejemplo de dispatch es: ++setLanguage**, para que actualice el lenguaje.
 
+![image](https://user-images.githubusercontent.com/72580574/231193958-e798f5c4-8864-4106-90ef-4e9c273714c3.png)
+
+
 
 ---
