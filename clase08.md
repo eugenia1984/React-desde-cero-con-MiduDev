@@ -140,4 +140,7 @@ useDebounce<string>('Hello', 300)
 ![image](https://user-images.githubusercontent.com/72580574/231317921-870ad108-ad5d-498c-ad40-e55ed4f3d1cb.png)
 
 
+![image](https://user-images.githubusercontent.com/72580574/231318234-0857d67b-78d8-447e-8225-d6cc3dc676b3.png)
+
+
 ---
