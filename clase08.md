@@ -136,4 +136,9 @@ export function useDebounce<T> (value: T, delay = 500) {
 
 useDebounce<string>('Hello', 300)
 ```
+
+![image](https://user-images.githubusercontent.com/72580574/231317644-1be53c00-9541-428d-b322-4b738b8809b7.png)
+
+
+
 ---
