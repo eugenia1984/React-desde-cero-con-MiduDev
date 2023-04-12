@@ -122,4 +122,18 @@ En realidad esto debería manejarlo el BackEnd, pero... como nos enfocamos en Re
 
 ## custom hook con debounce para que la busqueda de la traducción se realice al terminar de escribir
 
+
+debounce -> un valor que espera cierto tiempo antes de ser cambiado.
+
+Asi no estamos haciendo el llamdo a la APi por cada letra que ingresa el usuario.
+
+-> Usando **generics**:
+
+```TypeScript
+export function useDebounce<T> (value: T, delay = 500) {
+  const [debouncedValue, setDebounceValue] = useState(value)
+}
+
+useDebounce<string>('Hello', 300)
+```
 ---
