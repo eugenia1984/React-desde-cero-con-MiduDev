@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Stack, Row, Col, Button} from 'react-bootstrap'
-
+import { Container, Stack, Row, Col, Button } from 'react-bootstrap'
 import './App.css'
 import { ArrowIcon } from './components/Icons'
 import { LanguageSelector } from './components/LanguageSelector'
@@ -10,6 +9,8 @@ import { SectionType } from './types.d'
 import { TextArea } from './components/TextArea'
 import { useEffect } from 'react'
 import { translate } from './services/translate'
+import { useDebounce } from './hooks/useDebounce'
+
 
 function App() {
   const {
@@ -25,16 +26,18 @@ function App() {
     setResult
   } = useStore()
 
-  useEffect(() => {
-    if (fromText === '') return
+  const debounceFromText = useDebounce(fromText, 450)
 
-    translate({ fromLanguage, toLanguage, text: fromText })
+  useEffect(() => {
+    if (debounceFromText === '') return
+
+    translate({ fromLanguage, toLanguage, text: debounceFromText })
       .then(result => {
         if (result == null) return
         setResult(result)
       })
       .catch(() => setResult('Error'))
-  }, [fromText, fromLanguage, toLanguage])
+  }, [debounceFromText, fromLanguage, toLanguage])
 
   return (
     <Container fluid>
