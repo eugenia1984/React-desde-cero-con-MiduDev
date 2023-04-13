@@ -96,12 +96,13 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/231868081-fa3b933d-713d-4201-9f59-0b5e612a4ec4.png" alt="google translator with react and typescript" width=450 style="margin-left: 20px">
 
-
 Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y componentes), **openai** (traducciones), un **custom hook** para hacer un **debounce** ( por el llamado a la API de la traducción por cada letra que va introduciendo), para testing: **vitest**, **happy-dom** y **testing-library**.
 
 - **Clase 9**:
 
 **10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
+
+-Temas: Rome(para no usar ESLint). [**Tremor**](https://www.tremor.so/).
 
 ---
 
@@ -198,6 +199,10 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - **openai**, en el proyecto del traductor.
 
+- [**Rome**](https://rome.tools/)
+
+- [**Tremor**](https://www.tremor.so/) 
+
 ---
 
 ## :tv: CLASES:
@@ -218,7 +223,7 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**clase 8**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md) -> React + TypeScript + ChatGPT :star: [**9no proyecto: Crear un Google Translate con ChatGPT y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/09-code-editor). **Web Speech API** para que al hacer click en el icono del megafono se escuche el texto del recuadro. **Bootstrap** y **React Bootstrap**, para hacer más rápido los estilos. **openai** para las traducciones. Un **custom hook** para hacer un **debounce** asi no hace el llamado a la API de la traducción por cada letra que va introduciendo. Para testing: **vitest**, **happy-dom** y **testing-library**
 
-- [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools :star: **10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
+- [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools :star: **10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript. [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards.
 
 ---
 

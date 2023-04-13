@@ -2,9 +2,51 @@
 
 ## Temas a ver: 
 
-- Redux
+- Redux y Redux ToolKit, para manejar el **Estado global**
 
-- Redux ToolKit
+- Sincronizar los datos con una base de datos
+
+- [**Rome**](https://rome.tools/)
+
+- [**Tremor**](https://www.tremor.so/), para tener componentes ya armados.
+
+- [HeroIcons](https://heroicons.com/) para los iconos
+
+---
+
+## Rome
+
+En reemplazo de ESLint.
+
+Es del creador de **Babel**, tenes: formateador, linter. 
+
+Para instalarlo: `npm add rome -D`, en package.json en las dependencias de desarrollo ya se ve.
+
+Para inicializarlo: `npx rome init` y veo que se creo el archivo **rome.json**. Agregamos **"formatter"** y en **"linter"** el *enabled* que quede en *true*.
+
+- Tener la extensión de VSC **rome** de Rome LSP VS Code Extension. Y si tenemos la de ESLint, hay que hacer disable(workspace), asi en este proyecto usamos rome. Lo mismo con la extensión Prettier.
+
+- Lo que no anda es el formateador, porque entra en conflicto con los settings que tengo ya definidos en mi VSC, entonces creo una carpeta **.vscode** con el archivo **Settings.json**
+
+---
+
+## TREMOR
+
+- Para instalarlo: `npm install @tremor/react` ò `npx add @tremor/react -E`
+
+- También utiliza **Tailwind**, por lo que debemos instalarlo: `npm add -D tailwindcss postcss autoprefixer` y al terminar: `npx tailwind init -p` para que cree el **tailwind.config.json**
+
+---
+
+## HEROICONS
+
+- Para instalar: `npm install @heroicons/react`.
+
+Son los mismos creadores de Tailwind.
+
+---
+
+- **REDUX** -> forma de **gestionar el estado**, se puede usar con y sin React. 
 
 ---
 
