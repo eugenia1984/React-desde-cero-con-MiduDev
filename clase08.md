@@ -144,3 +144,25 @@ useDebounce<string>('Hello', 300)
 
 
 ---
+
+## Web Speech API
+
+La misma que utiliza Google para cuando se hace click en el megafono se scucha en audio el texto.
+
+Es mi función **handleSpeak**.
+
+Lo que hay que ver es que por ejemplo yo tnego English como `'en'` y puede ser que la API lo tenga más específico, por ejemplo: `'en-US'` para el inglés de Estados Unidos. Es decir, el **lenguage tag** tiene `lenguaje-Región`
+
+---
+
+## :star: Test
+
+- Para corroborar que lo que se escriba se traduzca
+
+- Para esto usamos **vitest**: `npm install vitest -D`
+
+- Para simular el DOM:  `npm install happy-dom -D`
+
+- Para tener más utilidades en los componentes de React: `npm install @testing-library/react @testing-library/user-event -D`
+
+En el package.json en la dependencias de desarrollo las veo instaladas.

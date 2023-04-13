@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Stack, Row, Col, Button } from 'react-bootstrap'
 import './App.css'
-import { ArrowIcon } from './components/Icons'
+import { ArrowIcon, ClipboardIcon, SpeakerIcon } from './components/Icons'
 import { LanguageSelector } from './components/LanguageSelector'
-import { AUTO_LANGUAGE } from './constants'
+import { AUTO_LANGUAGE, VOICE_FOR_LANGUAGE } from './constants'
 import { useStore } from './hooks/useStore'
 import { SectionType } from './types.d'
 import { TextArea } from './components/TextArea'
@@ -38,6 +38,17 @@ function App() {
       })
       .catch(() => setResult('Error'))
   }, [debounceFromText, fromLanguage, toLanguage])
+
+  const handleClipboard = () => {
+    navigator.clipboard.writeText(result).catch(() => { })
+  }
+
+  const handleSpeak = () => {
+    const utterance = new SpeechSynthesisUtterance(result)
+    utterance.lang = VOICE_FOR_LANGUAGE[toLanguage]
+    utterance.rate = 0.9
+    speechSynthesis.speak(utterance)
+  }
 
   return (
     <Container fluid>
@@ -75,12 +86,28 @@ function App() {
               value={ toLanguage }
               onChange={ setToLanguage }
             />
-            <TextArea
-              loading={ loading }
-              type={ SectionType.To }
-              value={ result }
-              onChange={ setResult }
-            />
+            <div style={ { position: 'relative' } }>
+              <TextArea
+                loading={ loading }
+                type={ SectionType.To }
+                value={ result }
+                onChange={ setResult }
+              />
+              <div style={ { position: 'absolute', left: 0, bottom: 0, display: 'flex' } }>
+                <Button
+                  variant='Link'
+                  onClick={ handleClipboard }
+                >
+                  <ClipboardIcon />
+                </Button>
+                <Button
+                  variant='Link'
+                  onClick={ handleSpeak }
+                >
+                  <SpeakerIcon />
+                </Button>
+              </div>
+            </div>
           </Stack>
         </Col>
       </Row>

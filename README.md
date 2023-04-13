@@ -92,7 +92,9 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - **Clase 8**:
 
-**9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**
+[**9no proyecto: : Crear un Google Translate con ChatGPT y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/09-code-editor) <- acá podes ver el codigo
+
+Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y componentes), **openai** (traducciones), un **custom hook** para hacer un **debounce** ( por el llamado a la API de la traducción por cada letra que va introduciendo), para testing: **vitest**, **happy-dom** y **testing-library**.
 
 **10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
 
@@ -189,6 +191,8 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**React Bootstrap**](https://react-bootstrap.github.io/)
 
+- **openai**, en el proyecto del traductor.
+
 ---
 
 ## :tv: CLASES:
@@ -207,7 +211,7 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 - [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: [**8vo proyecto**: **TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) :star: **TS**: `JSX.Element` vs `React.FC`, interface de Props(que pueden a su vez **extender**) para tener `React.FC<Props>`, **type** vs **interface**, type con **Omit** ó **Pick**, **as const**(solo lectura), Object.entries() para transformar a array, `crypto.randomUUID()` para crear un id unico.
 
-- [**clase 8**](<(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md)>) -> React + TypeScript + ChatGPT :star: **9no proyecto**: Crear un Google Translate con ChatGPT y TypeScript
+- [**clase 8**](<(https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md)>) -> React + TypeScript + ChatGPT :star: [**9no proyecto: Crear un Google Translate con ChatGPT y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/09-code-editor). **Web Speech API** para que al hacer click en el icono del megafono se escuche el texto del recuadro. **Bootstrap** y **React Bootstrap**, para hacer más rápido los estilos. **openai** para las traducciones. Un **custom hook** para hacer un **debounce** asi no hace el llamado a la API de la traducción por cada letra que va introduciendo. Para testing: **vitest**, **happy-dom** y **testing-library**
 
 - **Clase 9** -> React Redux Toolkit + Rome Tools :star: **10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript
 
