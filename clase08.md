@@ -166,3 +166,27 @@ Lo que hay que ver es que por ejemplo yo tnego English como `'en'` y puede ser q
 - Para tener más utilidades en los componentes de React: `npm install @testing-library/react @testing-library/user-event -D`
 
 En el package.json en la dependencias de desarrollo las veo instaladas.
+
+- Y en la configuración de TS:
+
+```TypeScript
+/// <reference types="vitest" />
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  test:  {
+    environment: 'happy-dom'
+  }
+})
+```
+
+- Creo el test: **App.test.tsx**
+
+- En **package.json** en los `scripts` agrego: `"test": "vitest"`
+
+Y lo pruebo con `npm run test`
+
+---
