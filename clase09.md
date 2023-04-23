@@ -100,8 +100,53 @@ En el codigo copiado ya me trae un mockup, lo modifico para mostrar esos datos, 
 - Instalamos las dependencias. Usamos **Redux Toolkit**:
 
 ```
-npm install @reduxjs/toolkit
-npm install react-redux
+npm install @reduxjs/toolkit -E
+npm install react-redux -E
 ```
+
+Y mirando **dependencies** en **package.json** ya las veo isntaladas:
+
+```
+"dependencies": {
+  "@heroicons/react": "^2.0.17",
+  "@reduxjs/toolkit": "^1.9.5",
+  "@tremor/react": "2.1.0",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-redux": "^8.0.5"
+},
+```
+
+Si uso `-E` es para que no me baje las versiones `^`
+
+- Creamos una carpeta **store**, donde se va a guardar ese **estado global**. Adentro tengo: **index.ts**. Aca voy a tener el **estado**, las **acciones**, los **reducers**, etc.
+
+- Debemos envolver la aplicación con un **provider**:
+**main-tsx**:
+
+```TSX
+import { store } from './store'
+import { Provider } from 'react-redux'
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <Provider store={ store }>
+    <App />
+  </Provider>,
+)
+```
+
+Este **provider** nos permite, desde **cualquier parte de la aplicación**, poder leer la store y mandar acciones para generar nuevos estados.
+
+- La **STORE** es como una **caja** donde se van a guardar las cosas. Dentro de la caja, hay que ser organizado, por lo que se divide esta caja en **slice**
+
+```
+> store
+  > users
+    slice.ts
+  index.ts
+```
+
+-> Cuando se crea el **slice** voy a necesitar: **name**, **initialState** y **reducers**. El estado puede ser un objeto, un array o un string.
+
 
 ---

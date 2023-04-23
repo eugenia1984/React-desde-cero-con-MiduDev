@@ -10,39 +10,6 @@ import {
   Badge
 } from "@tremor/react";
 
-const users: {
-  id: string;
-  name: string;
-  email: string;
-  github: string
-
-}[] = [
-    {
-      id: "1",
-      name: "Yazman Rodriguez",
-      email: "yazmanito@gmail.com",
-      github: "yazmanito"
-    },
-    {
-      id: "2",
-      name: "John Doe",
-      email: "leo@gmail.com",
-      github: "leo"
-    },
-    {
-      id: "3",
-      name: "Hakon Dalbert",
-      email: "hakon-dalbert@gmail.com",
-      github: "hakon"
-    },
-    {
-      id: "4",
-      name: "Sol Costes",
-      email: "sol-costes@gmail.com",
-      github: "solcito"
-    }
-  ];
-
 export default function ListOfUsers() {
   return (
     <Card>
