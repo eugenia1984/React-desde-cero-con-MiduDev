@@ -36,6 +36,30 @@ Para inicializarlo: `npx rome init` y veo que se creo el archivo **rome.json**. 
 
 - También utiliza **Tailwind**, por lo que debemos instalarlo: `npm add -D tailwindcss postcss autoprefixer` y al terminar: `npx tailwind init -p` para que cree el **tailwind.config.json**
 
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Y en **index.css*:
+
+```CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
 ---
 
 ## HEROICONS
@@ -49,7 +73,35 @@ Son los mismos creadores de Tailwind.
 - **REDUX** -> forma de **gestionar el estado**, se puede usar con y sin React. 
 
 ---
+---
 
 ## ⭐ 10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript
+
+---
+
+1. Desde la web de **Tremor** en [**Blocks**](https://www.tremor.so/blocks/table) ya hay componentes armados, dentro de block entramos a **table** y copiamos el codigo de **Card + Table + BadgeDelta**.
+
+Y lo modificamos un poco, vamos a tener la tabla con:
+
+- id
+
+- name
+
+- email
+
+- actions: edit / delete
+
+En el codigo copiado ya me trae un mockup, lo modifico para mostrar esos datos, y también modifico la table, uso los íconos de Hero Icons par alas acciones.
+
+---
+
+2. Redux
+
+- Instalamos las dependencias. Usamos **Redux Toolkit**:
+
+```
+npm install @reduxjs/toolkit
+npm install react-redux
+```
 
 ---
