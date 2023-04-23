@@ -166,5 +166,170 @@ transforman el estado, del estado previo al estado nuevo, dependiendo de la acci
 
 
 
+**Los reducers, dentro del STORE, recuperan el STATE y con el DISPATCH que les llega van a modificarlo para tener el NUEVO ESTADO**.
+
+---
+
+- Ahora en el store:
+
+```TS
+import { configureStore } from '@reduxjs/toolkit'
+import usersReducers from './users/slice'
+
+export const store = configureStore({
+  reducer: {
+    users: usersReducers
+  }
+})
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+```
+
+Para que funcione con la parte de los usuarios.
+
+3. Vamos a leer la store, leer la información del slice.
+
+`const users = useSelector(state => state.users)` -> **state.users**, el **users** es el mismo nombre que puse en el **reducer**
+
+
+4. Creamos un **custom hook** para poder tipar a **useAppSelector** para que coincida con el estado.:
+
+```TypeScript
+import type { AppDispatch, RootState } from '../store';
+import { useDispatch, useSelector } from 'react-redux';
+import type { TypedUseSelectorHook } from 'react-redux';
+
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector 
+export const useAppDispatch: () => AppDispatch = useDispatch
+```
+
+-> Esto hay que hacerlo porque Redux no puede inferir los tipos de dato, se hace cuando se usa TS. Creamos nuestro propio useSelector para decirle cuál es el estado, asi cada vez que uso el useSelector no tengo que alcarar el tipo. Y ahora en **ListOfUsers.tsx**:
+
+```TSX
+import { useAppSelector } from "../hook/store";
+
+export default function ListOfUsers() {
+const users = useAppSelector(state => state.users)
+```
+
+OJO si se estaría usando JS en vez de TS, también se podría ahacer:
+
+```JSX
+export const useAppSelector = useSelector 
+export const useAppDispatch = useDispatch
+```
+
+Porque añade una capa de abstracción entre el **componente** y **React-Redux**, asi no estamos importando **React-redux** en toda la aplicación. Asi si el día de mañana se cambia Redux por otra cosa, se cambia solo ahi y listo, nos ahorramos de hacer el find and replace en todos los sitios.
+
+5. En **slice.ts** en la parte de *Reducred** voy a tener las funciones para hacer el CRUD, ejemplo para **delete**:
+
+```TSX
+export const usersSlice = createSlice({
+  name: 'users',
+  initialState,
+  reducers: {
+    deleteUserById: ( state, action: {type: string; payload: UserId}) => {
+      const id = action.payload
+      return state.filter((user) => user.id !== id)
+    }
+  }
+})
+```
+
+Pero para tipar mejor que el **id** es un **string**:
+
+```TSX
+type UserId = string;
+
+export interface User {
+  name: string,
+  email: string,
+  github: string
+}
+
+export interface UserWidthId extends User {
+  id: UserId
+}
+```
+
+Asì si el día de mañana lo cambio a number solo lo modifico en el UserId
+
+Pero en ve de **tipar el objeto**, Redux Toolkit tiene **PayloadAction**, se usa como un genérico, solo hay que pasarle el tipo que va a tener el payload:
+
+```TSX
+deleteUserById: ( state, action: PayloadAction<UserId>) => {
+  const id = action.payload
+  return state.filter((user) => user.id !== id)
+}
+```
+
+Y con el payload hay posibilidades de ver **metadatos** y el **error**
+
+-> para poder **utilizar el reducer** hay que **exportar la acción**:
+
+```TSX
+export const { deleteUserById } = usersSlice.actions
+```
+
+-> Ahora hacemos lo más típico, pero es mejor usar un custom hook.
+
+En ListOfUsers.tsx lo importamos: `import { deleteUserById } from "../store/users/slice";`.
+
+Primero recuperamos la forma de enviar acciones: `const dispatch = useAppDispatch();`, lo que nos va a permitir enviar acciones.
+
+Estamos en la parte del **EventHandler**, con el **dispatch** y la **action**(la ejecución de **deleteUserById**).
+
+El **EventHandlre**:
+
+```TSX
+const handleRemoveUser = (id: UserId) => {
+  dispatch(deleteUserById(id))
+}
+```
+
+Y lo invoco en el evnto onClick del botón de eliminar:
+```JSX
+ <button
+  onClick={ () => handleRemoveUser(item.id) }
+  type='button'
+>
+```
+
+Pero, como **no estamos persistiendo el estado** ahora podemos hacer click en el tacho de basura y se borra, pero si actualizamos la página volvemos a ver todos de nuevo.
+
+**En memoria estamos calculando el estado**, pero una vez que refrezcamos la página se pierde.
+
+- En **ListOfUsers.tsx**:
+
+Hasta seniors lo hacen asi:
+
+```TSX
+const dispatch = useAppDispatch()
+
+const handleRemoveUser = (id: UserId) => {
+  dispatch(deleteUserById(id))
+}
+```
+
+Pero... a nivel de compoenntes e ven las tripas de la aplicaicón, es mejor tener un **custom hook**, creamos el: **useUserActions.ts** dentro de **hooks**:
+
+```TypeScript
+import { UserId, deleteUserById } from "../store/users/slice"
+import { useAppDispatch } from "./store"
+
+export const useUsersActions = () => {
+  const dispatch = useAppDispatch()
+
+  const removeUser = (id: UserId) => {
+    dispatch(deleteUserById(id))
+  }
+
+  return {removeUser}
+}
+```
+
+Y en **ListOfUsers** : `const dispatch = useAppDispatch()`, asi lo usamos en el onClick
+
 
 ---
