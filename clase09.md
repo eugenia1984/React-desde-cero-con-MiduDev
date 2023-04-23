@@ -148,5 +148,23 @@ Este **provider** nos permite, desde **cualquier parte de la aplicación**, pode
 
 -> Cuando se crea el **slice** voy a necesitar: **name**, **initialState** y **reducers**. El estado puede ser un objeto, un array o un string.
 
+-> **Data flow**: es circular, esta la **vista**(**componente**), el cual envía una **Acción**, la cual cambia el **estado**y se vuelve a actualizar la **vista**.
+
+![image](https://user-images.githubusercontent.com/72580574/233863672-0bbd77c5-fb5a-4954-9172-981d340d0012.png)
+
+
+actions -> (reducers) -> state
+
+transforman el estado, del estado previo al estado nuevo, dependiendo de la acción
+
+![image](https://user-images.githubusercontent.com/72580574/233863939-b194bffd-6c96-40f0-ac87-194b89ddabe6.png)
+
+
+![image](https://user-images.githubusercontent.com/72580574/233863883-f200cf65-a611-4c48-a51a-7efc43b843a9.png)
+
+![image](https://user-images.githubusercontent.com/72580574/233863914-6e317160-d2c7-4b72-b636-d41077fbc06c.png)
+
+
+
 
 ---
