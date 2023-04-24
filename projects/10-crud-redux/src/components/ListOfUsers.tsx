@@ -10,7 +10,7 @@ import {
   Badge
 } from '@tremor/react'
 import { useAppDispatch, useAppSelector } from '../hooks/store';
-import { useUsersActions } from '../hooks/useusersActions';
+import { useUsersActions } from '../hooks/useUsersActions';
 
 
 
@@ -33,7 +33,7 @@ export default function ListOfUsers() {
 
         <TableBody>
           { users.map((item) => (
-            <TableRow key={ item.name }>
+            <TableRow key={ item.id }>
               <TableCell className="text-left">{ item.id }</TableCell>
               <TableCell className="text-left">{ item.name }</TableCell>
               <TableCell

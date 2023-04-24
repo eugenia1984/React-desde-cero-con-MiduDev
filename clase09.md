@@ -462,3 +462,57 @@ De este modo se puede...
 En nuestro caso queremos justo después.
 
 ---
+
+Volviendo a slice.ts voy a modificar para tener un DEFAULT_STATE que va a ser mi **initialValue** y mi **initialState** lo modifico para que ve en el **localStorage** si tnego "__redux__state__" entonces me va a mostrar ese (va a ser le caso en que por ejemplo elimine un usuario, asi este cambio persiste asi refresque la pagina) y de no tenerlo me muestra el DEFAULT_STATE
+
+---
+
+- Ahora vamos a **Crear** y a **editar** un usuario.
+
+OJO antes React recomendaba crer un objeto para ahi ir guardando el estado de cada input, pero ahora están recomendando más la **forma descontrolada**.
+
+---
+
+- **Redux** para gestionar estados globales. Redux utiliza de forma interna el context a la hora de poder acceder a las utilidades de Redux.
+
+- **Context** para tener accesible desde cualquier parte del arbol de elemntos de React, cierta información que también puede ser un estado.
+
+
+---
+
+## Middleware
+
+### Sincronizar la base de datos (de la forma que lo hacen Facebook(Meta) y Twitter)
+
+Lo vemos con el ejemplo del **like**. Hay dos estados...
+
+... el **estado visual del like** (el que se ve con el corazon como se va modificando el número)
+
+...el **estado de la base de datos**
+
+Es una actualización **optimista**, estamos siendo optimistas de que todo va a funcionar bien, visualmente hacemos un **rollback** si hay error. -> **OPTIMISTIC UI** EL USUARIO SIENTA QUE ESTA TODO BIEN, PERO SI FUNCIONA MAL LE DOY ROLLBACK.
+
+Si por algún motivo no se puede hacer el rollback, se le informa al usuario y listo.
+
+---
+
+## :star: Sonner
+
+Para las **notificaciones** usamos **sonner**
+
+1. Lo instalamos: `npm install sonner`
+
+2. En **App.tsx** importamos Toaster: `import { Toaster } from 'sonner'`
+
+3. Y lo usamos: `<Toaster richColors /> `
+
+---
+
+## Creamos un nuevo MIDDLEWARE
+
+
+Asi comprendemos bien los **middlewares**
+
+En **index.ts** ya tengo el middleware: **persistanceLocalStorageMiddleware** y ahora creo el **syncWithDatabase**, al que vamos a tipar.
+
+---

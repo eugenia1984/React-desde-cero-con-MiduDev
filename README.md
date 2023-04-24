@@ -212,6 +212,9 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**Tremor**](https://www.tremor.so/) 
 
+- [**Sonner**](https://sonner.emilkowal.ski/) para notificaciones.
+
+
 ---
 
 ## :tv: CLASES:
@@ -232,7 +235,7 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**clase 8**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md) -> React + TypeScript + ChatGPT :star: [**9no proyecto: Crear un Google Translate con ChatGPT y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/09-code-editor). **Web Speech API** para que al hacer click en el icono del megafono se escuche el texto del recuadro. **Bootstrap** y **React Bootstrap**, para hacer más rápido los estilos. **openai** para las traducciones. Un **custom hook** para hacer un **debounce** asi no hace el llamado a la API de la traducción por cada letra que va introduciendo. Para testing: **vitest**, **happy-dom** y **testing-library**
 
-- [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools :star: [**10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux). [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards. **React-Redux** y **Redux-Toolkit**. **Persistencia** con **middleware**
+- [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools :star: [**10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux). [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards. **React-Redux** y **Redux-Toolkit**. **Persistencia** con **middleware**. [**Sonner**](https://sonner.emilkowal.ski/) para las notificaciones.
 
 - [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> Prueba técnica de React con TypeScript
 

@@ -1,9 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, type Middleware } from '@reduxjs/toolkit'
 import usersReducers from './users/slice'
 
-const persistanceLocalStorageMiddleware  = (store) => (next) => (action) => {
+const persistanceLocalStorageMiddleware = store => next => action => {
   next(action)
-  localStorage.setItem("reduxState", JSON.stringify(store.getState()))
+  localStorage.setItem("__redux__state__", JSON.stringify(store.getState()))
+}
+
+const syncWithDatadabe: Middleware = store => next => action => {
+  console.log("Devuelve: ", {action, store: store.getState()})
+  next(action)
 }
 
 export const store = configureStore({

@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import ListOfUsers from './components/ListOfUsers'
 import './App.css'
+import ListOfUsers from './components/ListOfUsers'
+import { CreateNewUser } from './components/CreateNewUser'
+import { Toaster } from 'sonner'
 
 function App() {
 
@@ -9,6 +9,8 @@ function App() {
     <div>
       <h1>CRUD con REDUX</h1>
       <ListOfUsers />
+      <CreateNewUser />
+      <Toaster richColors />
     </div>
   )
 }
