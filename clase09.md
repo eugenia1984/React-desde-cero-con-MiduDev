@@ -515,4 +515,7 @@ Asi comprendemos bien los **middlewares**
 
 En **index.ts** ya tengo el middleware: **persistanceLocalStorageMiddleware** y ahora creo el **syncWithDatabase**, al que vamos a tipar.
 
+![image](https://user-images.githubusercontent.com/72580574/234114128-d8e76bdc-7570-4374-b616-81808cb527bb.png)
+
+
 ---
