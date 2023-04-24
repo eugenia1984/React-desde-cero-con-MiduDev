@@ -329,7 +329,136 @@ export const useUsersActions = () => {
 }
 ```
 
-Y en **ListOfUsers** : `const dispatch = useAppDispatch()`, asi lo usamos en el onClick
+Y en **ListOfUsers** : `const dispatch = useAppDispatch()`, asi lo usamos en el onClick: `onClick={ () => removeUser(item.id) }`. 
 
+Y de este modo no tenog que estar siempre importando el dispatch, UserId, deleteUserById y useAppDispatch.
+
+---
+
+## Screaming architecture
+
+:book: [Para leer](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html)
+
+Otra forma de ordenar:
+
+```
+> users
+  > components
+  > hooks
+  > store
+```
+
+Se pone el negocio por delante y adentro lo que utiliza.
+
+---
+
+## Persistencia
+
+***Middleware**, se ejecuta en mitad de algo, es similar a un proxy. En un momento en concreto tenemos el middleware entre el **dispatch** y el **store**, y entre el **Store** y la **UI**.
+
+Permite capturar, cada vez que se hace un dispatch, ver lo que esta haciendo, poder esperar a que se haga, y una vez que tenemos el **nuevo state**, hacer algo con eso.
+
+**middleware** -> función que recupera la **Store**, que retorna un método **next** (función para ir a la siguiente)que devuelve una función para tener el  **Action**. 
+
+Entonces hay una función, que devuelve una función, que devuelve una función, porque se le está inyectando en los pasos distinta información: la acción, el paso siguiente y el store.
+
+En **store/index.ts**:
+
+```TypeScript
+const persistanceLocalStorageMiddleware  = (store) => (next) => (action) => {
+  console.log(store.getState())
+  console.log(action)
+  next(action)
+  console.log(store.getState())
+}
+
+export const store = configureStore({
+  reducer: {
+    users: usersReducers
+  },
+  middleware: [persistanceLocalStorageMiddleware]
+})
+```
+
+Entonces al borrar, por consola veo:
+
+- El estado anterior son 4 usuarios:
+
+```
+[
+    {
+        "id": "1",
+        "name": "Yazman Rodriguez",
+        "email": "yazmanito@gmail.com",
+        "github": "yazmanito"
+    },
+    {
+        "id": "2",
+        "name": "John Doe",
+        "email": "leo@gmail.com",
+        "github": "leo"
+    },
+    {
+        "id": "3",
+        "name": "Hakon Dalbert",
+        "email": "hakon-dalbert@gmail.com",
+        "github": "hakon"
+    },
+    {
+        "id": "4",
+        "name": "Sol Costes",
+        "email": "sol-costes@gmail.com",
+        "github": "solcito"
+    }
+]
+```
+
+-> Aca podemos hacer cosas justo ANTES de que se actualice el estado.
+
+- Ha recibido la acción(**Action**) de borrar el usuario con el **payload** de **4**:
+```
+{
+    "type": "users/deleteUserById",
+    "payload": "4"
+}
+```
+
+- Una vez que se elimino al user con id **4**, se recupera el nuevo estado con 3 users.
+
+```
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Yazman Rodriguez",
+            "email": "yazmanito@gmail.com",
+            "github": "yazmanito"
+        },
+        {
+            "id": "2",
+            "name": "John Doe",
+            "email": "leo@gmail.com",
+            "github": "leo"
+        },
+        {
+            "id": "3",
+            "name": "Hakon Dalbert",
+            "email": "hakon-dalbert@gmail.com",
+            "github": "hakon"
+        }
+    ]
+}
+```
+
+-> Aca se pueden hacer cosas justo DESPUÉS de que se actualiza el estado
+
+De este modo se puede...
+
+... validar datos
+
+... enviar una petisión asíncrona
+
+
+En nuestro caso queremos justo después.
 
 ---

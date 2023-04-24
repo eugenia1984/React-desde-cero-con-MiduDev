@@ -1,5 +1,5 @@
-import { UserId, deleteUserById } from "../store/users/slice"
-import { useAppDispatch } from "./store"
+import { UserId, deleteUserById } from '../store/users/slice'
+import { useAppDispatch } from './store'
 
 export const useUsersActions = () => {
   const dispatch = useAppDispatch()
@@ -8,5 +8,5 @@ export const useUsersActions = () => {
     dispatch(deleteUserById(id))
   }
 
-  return {removeUser}
+  return { removeUser }
 }
