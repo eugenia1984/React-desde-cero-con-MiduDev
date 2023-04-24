@@ -515,4 +515,6 @@ Asi comprendemos bien los **middlewares**
 
 En **index.ts** ya tengo el middleware: **persistanceLocalStorageMiddleware** y ahora creo el **syncWithDatabase**, al que vamos a tipar.
 
+
+
 ---
