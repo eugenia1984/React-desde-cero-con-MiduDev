@@ -513,13 +513,15 @@ Para las **notificaciones** usamos **sonner**
 
 Asi comprendemos bien los **middlewares**
 
-En **index.ts** ya tengo el middleware: **persistanceLocalStorageMiddleware** y ahora creo el **syncWithDatabase**, al que vamos a tipar.
+En **index.ts** ya tengo el middleware: **persistanceLocalStorageMiddleware** y ahora creo el **syncWithDatabaseMiddleware**, al que vamos a tipar.
 
 ![image](https://user-images.githubusercontent.com/72580574/234114128-d8e76bdc-7570-4374-b616-81808cb527bb.png)
 
 Y hasta que el **middleware** no le diga la **Action** se queda ahi, cunaod tiene la **action** hace **next** y pasa a **Store**.
 
 Y una vez que llamamos a **next(action)** vamos a tener el **middleware** justo entre STORE y UI
+
+De la **Action** tenemos el **type** y le **payload**
 
 ---
 
