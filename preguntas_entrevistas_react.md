@@ -252,20 +252,20 @@ Too many re-renders. React limits the number of renders to prevent an infinite l
 
 ---
 
-## :star: Principiante
+# :star: PRINCIPIANTE
 
-### 1 - ¿Qué es React?
+## 1 - ¿QUÉ ES REACT?
          
-React es una biblioteca de JavaScript de código abierto para construir interfaces de usuario. Está basada en la componetización de la UI: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
+React es una **biblioteca de JavaScript** de **código abierto** para construir **interfaces de usuario**. Está basada en la **componetización de la UI**: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
 
 Esto hace que React sea una herramienta muy útil para construir interfaces complejas, ya que permite dividir la interfaz en piezas más pequeñas y reutilizables.
 
-Fue creada en 2011 por Jordan Walke, un ingeniero de software que trabajaba en Facebook y que quería simplificar la forma de crear interfaces de usuario complejas.
+Fue creada en 2011 por **Jordan Walke**, un ingeniero de software que trabajaba en Facebook y que quería simplificar la forma de crear interfaces de usuario complejas.
 
 Es una biblioteca muy popular y es usada por muchas empresas como Facebook, Netflix, Airbnb, Twitter, Instagram, etc.
 
                  
-### 2 - ¿Cuáles son las características principales de React?
+## 2 - ¿CUÁLES SON LAS CARACTERÍSTICAS PRINCIPALES DE REACT?
 
 Las características principales de React son:
 
@@ -281,7 +281,7 @@ Las características principales de React son:
 
 
 
-### 3 - ¿Qué significa exactamente que sea declarativo?
+## 3 - ¿QUÉ SIGNIFICA EXACTAMENTE QUE SEA DECLARATIVO?
 
 No le decimos cómo debe renderizar la interfaz a base de instrucciones. Le decimos qué debe renderizar y React se encarga de renderizarlo.
 
@@ -298,14 +298,14 @@ const element = document.createElement('h1')
 element.innerHTML = 'Hello, world'
 ```
 
-### 4 - ¿Qué es un componente?
+## 4 - ¿QUÉ ES UN COMPONENTE?
 
 Un componente es una pieza de código que renderiza una parte de la interfaz. Los componentes pueden ser parametrizados, reutilizados y pueden contener su propio estado.
 
 En React los componentes se crean usando funciones o clases.
 
 
-### 5 - ¿Qué es JSX?
+## 5 - ¿QUÉ ES JSX?
 
 React usa JSX para declarar qué debe renderizar. JSX es una extensión de JavaScript que permite escribir un código más cercano visualmente a HTML, que mejora la legibilidad del código y hace que sea más fácil de entender.
 
@@ -334,7 +334,7 @@ function Hello () {
 Ambos códigos son equivalentes.
 
 
-### 6 - ¿Cómo se transforma el JSX?
+## 6 - ¿CÓMO SE TRANSFORMA EL JSX?
 
 El JSX se transforma en código JavaScript compatible en el navegador usando un transpilador o compilador. El más famoso es a día de hoy Babel, que utiliza una serie de plugins para ser compatible con la transformación, pero existen otros como SWC.
 
@@ -344,7 +344,7 @@ Hay casos especiales en los que un transpilador no es necesario. Por ejemplo, De
 
 
 
-### 7 - ¿Cuál es la diferencia entre componente y elemento en React?
+## 7 - ¿CUÁL ES LA DIFERENCIA ENTRE COMPONENTE Y ELEMENTO EN REACT?
 
 Un componente es una función o clase que recibe props y devuelve un elemento. Un elemento es un objeto que representa un nodo del DOM o una instancia de un componente de React.
 
@@ -374,7 +374,7 @@ Un componente es una función o clase que recibe props y devuelve un elemento. U
 ```
 
 
-### 8 - ¿Cómo crear un componente en React?
+## 8 - ¿CÓMO CREAR UN COMPONENTE EN REACT?
 
 Los componentes en React son funciones o clases que devuelven un elemento de React. Hoy en día lo más recomendado es usar funciones:
 
@@ -400,7 +400,7 @@ Lo importante es que el nombre de la función o clase empiece con una letra may�
 
 
 
-### 9 - ¿Qué son las props en React?
+## 9 - ¿QUÉ SON LAS PROPS EN REACT?
 
 Las props son las propiedades de un componente. Son datos que se pasan de un componente a otro. Por ejemplo, si tienes un componente Button que muestra un botón, puedes pasarle una prop text para que el botón muestre ese texto:
 
@@ -425,7 +425,7 @@ Las props son una forma de parametrizar nuestros componentes igual que hacemos c
 
 
 
-### 10 - ¿Qué es y para qué sirve la prop children en React?
+## 10 - ¿QUÉ ES Y PARA QUÉ SIRVE LA PROP CHILDREN EN REACT?
 
 La prop children es una prop especial que se pasa a los componentes. Es un objeto que contiene los elementos que envuelve un componente.
 
@@ -456,7 +456,7 @@ Conocer y saber usar la prop children es muy importante para crear componentes r
 
 
 
-### 11 - ¿Qué diferencia hay entre props y state?
+## 11 - ¿QUÉ DIFERENCIA HAY ENTRE PROPS Y STATE?
 
 Las props son un objeto que se pasan como argumentos de un componente padre a un componente hijo. Son inmutables y no se pueden modificar desde el componente hijo.
 
@@ -466,7 +466,7 @@ Así que mientras tanto props como state afectan al renderizado del componente, 
 
 
 
-### 12 - ¿Se puede inicializar un estado con el valor de una prop? ¿Qué pasa si lo haces y qué hay que tener en cuenta?
+## 12 - ¿SE PUEDE INICIALIZAR UN ESTADO CON EL VALOR DE UNA PROP? ¿QUÉ PASA SI LO HACES Y QUÉ HAY QUE TENER EN CUENTA?
 
 Sí, se puede inicializar el estado con el valor de una prop. Pero hay que tener en cuenta que, si la prop cambia, el estado no se actualizará automáticamente. Esto es porque el estado se inicializa una vez, cuando el componente se monta por primera vez.
 
@@ -518,7 +518,7 @@ Es un error muy común pensar que la prop actualizará el estado, así que tenlo
 
 
 
-### 13 - ¿Qué es el renderizado condicional en React?
+## 13 - ¿QUÉ ES EL RENDRIZADO CONDICIONALEN REACT?
 
 El renderizado condicional es la forma de mostrar un componente u otro dependiendo de una condición.
 
@@ -548,7 +548,7 @@ Es preferible utilizar el operador ternario. Kent C. Dodds tiene un artículo in
 
 
 
-### 14 - ¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
+## 14 - ¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
 
 Para aplicar clases CSS a un componente en React usamos la prop className:
 
