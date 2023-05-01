@@ -525,8 +525,103 @@ Y una vez que llamamos a **next(action)** vamos a tener el **middleware** justo 
 ![image](https://user-images.githubusercontent.com/72580574/235492306-448210af-cbc8-4427-8b4e-d72d72523247.png)
 
 
+De la **Action** tenemos el **type** y el **payload**
 
-De la **Action** tenemos el **type** y le **payload**
+- Al hacer click en el tacho de ELIMINAR, visualemtne desaparece, pero tarda unos segundos, esta en PENDING. -> La UI se actualiza de manera **optimista** y en la UI se demora un poco más.
+
+Ahora imaginamos el caso de que no fue existoso y queremos ahcer un **roll back**. Entonces en `users>slice.ts`:
+
+```TSX
+rollbackUser: (state, action: PayloadAction<UserWidthId>) => {
+  const isUserAlreadyDefined = state.find(user => user.id === action.payload.id)
+  if(!isUserAlreadyDefined) {
+    return [...state, action.payload]
+  }
+}
+```
+
+```TSX
+const syncWithDatabaseMiddleware: Middleware = store => next => action => {
+  const { type, payload } = action
+  const previousState = store.getState()
+  
+  next(action)
+
+  if (type === 'users/deleteUserById') {
+    const userIdToRemove = payload
+    const userToRemove = previousState.users.find(user => user.id === payload)
+    fetch(`https://jsonplaceholder.typicode.com/users/${ payload }`, {
+      method: 'DELETE'
+    })
+      .then(res => {
+        if (res.ok) toast.success(`User ${ payload } deleted`)
+        throw new Error('Error deleting user')
+      })
+      .catch((err) => {
+        toast.error(`Error deleting user ${userIdToRemove}`)
+        if(userToRemove) store.dispatch(rollbackUser(userToRemove))
+      })
+  }
+}
+```
+
+Asi puedo dar click para eliminar, y si hay un error me sale el cartel que me avisa y me lo vuelve a poner en la UI.
 
 ---
 
+
+- Una de las ventajas de  **react toolkit** es que no necesitas **crear un nuevo estado** sino que podés **modificar el estado original**. **SE PUEDE MUTAR EL ESTADO CON REDUX TOOLKIT**
+
+Así en **slice.ts** en vez de:
+
+```TSX
+addNewUser: (state, action: PayloadAction<User>) => {
+  const id = crypto.randomUUID()
+  return [...state, { id, ...action.payload }]
+},
+```
+
+Puedo hacer:
+
+```JSX
+addNewUser: (state, action: PayloadAction<User>) => {
+  const id = crypto.randomUUID()
+  state.push({ id, ...action.payload })
+},
+```
+
+Lo mismo en **rollbackUser**.
+
+No hay necesidad de estar devolviendo y generando un nuevo estado.
+
+- Por dentro React Toolkit utiliza **inmmer**, pero... viene con un coste, porque ocupa 5KB más, por eso Redux Toolkit ocupa bastante. Impacta en el rendimiento.
+
+Otras alternativas a **inmmer** son...
+
+... INMUTABLEjs
+
+...BUNDLEPHOBIA
+
+---
+
+## extrareducer
+
+Es una forma de incrementar los reducers ya credos en el slice.
+
+Es una forma de poder responder a acciones externas al propio reducer.
+
+Si recibo una action que no la tengo en mi slice, hago algo.
+
+Pero... en realidad hay que evitarlo lo más posible.
+
+Se podría usar en un caso por defecto, tenes un reducer que no responde a ninguna acción.
+
+---
+
+## Extras para seguir practicando
+
+- Poder **editar** el usuario
+
+- Cuando se crea el usuario hacer la **llamada a la API**
+
+---
