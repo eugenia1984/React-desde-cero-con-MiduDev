@@ -625,3 +625,10 @@ Se podría usar en un caso por defecto, tenes un reducer que no responde a ningu
 - Cuando se crea el usuario hacer la **llamada a la API**
 
 ---
+
+## Asi va quedando
+
+![image](https://user-images.githubusercontent.com/72580574/235498327-52aa2f78-8b15-4772-bc0d-555c2da153ff.png)
+
+
+---
