@@ -76,7 +76,7 @@ rules: {
 
 ---
 
-##:stars: 1 - Fetch 100 rows of data using the API.
+## :stars: 1 - Fetch 100 rows of data using the API.
 
 Veo que en la primer busqueda no me trae los 100, por defecto: ```https://randomuser.me/api``` trae solo uno, pero viendo la documentación:
 
@@ -114,10 +114,36 @@ Y para no solo verlo en el console.log, en el return:
 
 ![image](https://user-images.githubusercontent.com/72580574/235514486-18c4d72a-3caf-4196-a35c-d6432ae510de.png)
 
+Me copio todos los tipos y los guardo en **types.d.ts**
+
+También por si necesito me creo una carpeta `API` y el archivo **results-mock.json** para tener el ejemplo dle JSON, asi se que datos necesito luego ir mostrando.
+
+- Paso todos los users a un componente `<UsersList>`
 
 ---
 
 ## :stars: 2 - Display the data in a table format, similar to the example.
+
+Para poder mostrarlos voy a tener el componente `UsersList` y al necesitar una tabla tendre:
+
+- `<table></table>` y dentro: `thead` para la cabecera (`th` para el table header) y `tbody` para el body. Y adentro: `tr` para las rows y `td` de table data para las cell.
+
+- Como usamos TS **tipamos**:
+
+
+```TSX
+import { type Result } from '../types.d'
+
+interface Props {
+  users: Result[]
+}
+
+function UsersList({ users }: Props) {..}
+```
+
+-> Para la **key** usar el **id**.value, no usar **ndex** ni generar ids.
+
+-> Completamos los datos de las table row que necesitamos mostrar y lo renderizamos en App.jsx
 
 ---
 
