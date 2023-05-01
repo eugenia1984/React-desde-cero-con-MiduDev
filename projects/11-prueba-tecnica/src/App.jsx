@@ -14,11 +14,10 @@ function App() {
       })
   }, [])
 
-  console.log("USERS", users)
-
   return (
     <>
       <h1>Technical Test</h1>
+      {JSON.stringify(users)}
     </>
   )
 }

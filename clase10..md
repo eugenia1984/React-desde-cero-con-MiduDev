@@ -87,6 +87,29 @@ Random User Generator allows you to fetch up to 5,000 generated users in one req
 
 - Para hacer el **fetch** tenemos que tener un **useEffect** y los datos los guardo en un **estado**
 
+```TSX
+const [users, setUsers] = useState([])
+useEffect(() => {
+  fetch('https://randomuser.me/api/?results=100')
+    .then(async res => await res.json())
+    .then(res => {
+        setUsers(res.results) 
+    })
+    .catch(err => {
+      console.warn(`Error: ${err}`)
+    })
+}, [])
+```
+
+-> **Siempre tener el dependency array** en el **useEffect**
+
+Y para no solo verlo en el console.log, en el return: 
+```TSX
+{JSON.stringify(users)}
+```
+
+-> Error muy común que hace perder tiempo no empezar **a tipar a lo loco**, utilizar [**https://quicktype.io/**](https://quicktype.io/)
+
 
 ---
 

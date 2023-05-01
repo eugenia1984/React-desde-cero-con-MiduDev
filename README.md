@@ -226,7 +226,9 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**Sonner**](https://sonner.emilkowal.ski/) para notificaciones.
 
-- [**API randomuser**](https://randomuser.me/)
+- [**API randomuser**](https://randomuser.me/) para una prueba técnica
+
+- [**https://quicktype.io/**](https://quicktype.io/) para hacer el tipado de TS a partir de un JSON
 
 ---
 
@@ -250,7 +252,7 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools ⭐ [**10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux). [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards. **React-Redux** y **Redux-Toolkit**. **Persistencia** con **middleware**. [**Sonner**](https://sonner.emilkowal.ski/) para las notificaciones.
 
-- [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> ⭐ **11ro Proyecto: Prueba Técnica con TypeScript y React**. Utilizando la API [https://randomuser.me/](https://randomuser.me/)
+- [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> ⭐ **11ro Proyecto: Prueba Técnica con TypeScript y React**. Utilizando la API [https://randomuser.me/](https://randomuser.me/) y [**https://quicktype.io/**](https://quicktype.io/) para tipar con TS a partir del JSON
 
 
 - **Clase 11**
