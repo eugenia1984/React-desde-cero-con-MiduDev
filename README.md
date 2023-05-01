@@ -116,7 +116,9 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 **11ro Proyecto: Prueba Técnica con TypeScript y React**
 
-<img src="https://user-images.githubusercontent.com/72580574/235551248-5e5249a0-8053-444d-80c6-2d1c85269e5b.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
+<img src="https://user-images.githubusercontent.com/72580574/235551248-5e5249a0-8053-444d-80c6-2d1c85269e5b.png" alt="todo list with typescript" width=550 style="margin-left: 20px">
+
+---
 
 - **Clase 11**:
 
