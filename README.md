@@ -103,7 +103,7 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - **Clase 9**:
 
-**10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
+[**10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux) <- acá podes ver el codigo
 
 <img src="https://user-images.githubusercontent.com/72580574/235498441-adf9afcb-15df-4d35-8fd4-826b21552065.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
 
