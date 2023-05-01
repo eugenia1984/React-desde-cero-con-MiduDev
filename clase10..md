@@ -6,7 +6,7 @@ Es una prueba técnica real que toman en una empresa en al cual pagar EUR 50.000
 
 ---
 
-## PRUEBA TÉCNICA - CONSIGNA
+# :stars:PRUEBA TÉCNICA - CONSIGNA
 
 The objective of this technical test is to create a similar application to the one provided in this link: https://xxxxxx. To achive this, you must use the APi provided by [**https://randomuser.me/**](https://randomuser.me/).
 
@@ -38,12 +38,13 @@ Here are the steps to follow:
 
 
 ---
+---
 
-## PASOS:
+# :stars:PASOS:
 
 ---
 
-- Primero **creo el proyecto con VITE**:
+## Primero creo el proyecto con VITE:
 
 `npm create vite@latest 11-prueba-tecnica` > `y` > 
 `React` > `TypeScript + SWC` 
@@ -75,7 +76,7 @@ rules: {
 
 ---
 
-1. Fetch 100 rows of data using the API.
+##:stars: 1 - Fetch 100 rows of data using the API.
 
 Veo que en la primer busqueda no me trae los 100, por defecto: ```https://randomuser.me/api``` trae solo uno, pero viendo la documentación:
 
@@ -111,44 +112,56 @@ Y para no solo verlo en el console.log, en el return:
 -> Error muy común que hace perder tiempo no empezar **a tipar a lo loco**, utilizar [**https://quicktype.io/**](https://quicktype.io/)
 
 
----
+![image](https://user-images.githubusercontent.com/72580574/235514486-18c4d72a-3caf-4196-a35c-d6432ae510de.png)
 
-2. Display the data in a table format, similar to the example.
-
----
-
-3. Provide the option to color rows as shown un the example.
 
 ---
 
-4. Allow the data to be sorted by country as demostrated in the example.
+## :stars: 2 - Display the data in a table format, similar to the example.
 
 ---
 
-5. Enable the ability to delete a row as shown in the example.
+
+## :stars: 3 - Provide the option to color rows as shown un the example.
 
 ---
 
-6. Implement a feature that allows the user to restore the initial state, meaning that all deleted rows will be recovered.
+
+## :stars:  4 -  Allow the data to be sorted by country as demostrated in the example.
 
 ---
 
-7. Handle any potential errors that may occur.
+
+## :stars: 5 - Enable the ability to delete a row as shown in the example.
 
 ---
 
-8. Implement a feature that allows the user to filter the data by country.
+
+## :stars: 6 - Implement a feature that allows the user to restore the initial state, meaning that all deleted rows will be recovered.
 
 ---
 
-9. Avoid sorting users again the data when the user is changing filter by country.
+
+## :stars: 7 - Handle any potential errors that may occur.
 
 ---
 
-10. Sort by clicking on the column header
+
+## :stars: 8 - Implement a feature that allows the user to filter the data by country.
 
 ---
 
-11. Provide a README.md file with the instructions on ow to run the application
+
+## :stars: 9 - Avoid sorting users again the data when the user is changing filter by country.
+
+---
+
+
+## :stars: 10 - Sort by clicking on the column header
+
+---
+
+
+## :stars: 11 - Provide a README.md file with the instructions on ow to run the application
 
 ---
