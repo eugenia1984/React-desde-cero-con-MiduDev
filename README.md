@@ -116,6 +116,8 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 **11ro Proyecto: Prueba Técnica con TypeScript y React**
 
+<img src="https://user-images.githubusercontent.com/72580574/235551248-5e5249a0-8053-444d-80c6-2d1c85269e5b.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
+
 - **Clase 11**:
 
 **12do Proyecto: Sistema de comentarios con React Query**: React Query + Paginación + Infinite Scroll
@@ -255,13 +257,9 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 - [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> ⭐ **11ro Proyecto: Prueba Técnica con TypeScript y React**. Utilizando la API [https://randomuser.me/](https://randomuser.me/) y [**https://quicktype.io/**](https://quicktype.io/) para tipar con TS a partir del JSON
 
 
-- **Clase 11**
+- **Clase 11** -> ⭐ **12do Proyecto: Sistema de comentarios con React Query**:  React Query + Paginación + Infinite Scroll
 
-**12do Proyecto: Sistema de comentarios con React Query**:  React Query + Paginación + Infinite Scroll
-
-- **Clase 12**
-
-**13ro Proyecto:  JavaScript Quiz con Zustand y TypeScript**
+- **Clase 12** -> ⭐ **13ro Proyecto:  JavaScript Quiz con Zustand y TypeScript**
 
 ---
 
