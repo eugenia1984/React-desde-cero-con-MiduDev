@@ -521,6 +521,9 @@ Y hasta que el **middleware** no le diga la **Action** se queda ahi, cunaod tien
 
 Y una vez que llamamos a **next(action)** vamos a tener el **middleware** justo entre STORE y UI
 
+![image](https://user-images.githubusercontent.com/72580574/235492306-448210af-cbc8-4427-8b4e-d72d72523247.png)
+
+
 De la **Action** tenemos el **type** y le **payload**
 
 ---
