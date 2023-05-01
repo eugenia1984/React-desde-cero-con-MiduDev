@@ -8,7 +8,7 @@ Es una prueba técnica real que toman en una empresa en al cual pagar EUR 50.000
 
 ## PRUEBA TÉCNICA - CONSIGNA
 
-The objective of this technical test is to create a similar application to the one provided in this link: https://xxxxxx. To achive this, you must use the APi provided by https://rendomuser.me/.
+The objective of this technical test is to create a similar application to the one provided in this link: https://xxxxxx. To achive this, you must use the APi provided by [**https://randomuser.me/**](https://randomuser.me/).
 
 
 Here are the steps to follow:
@@ -41,7 +41,52 @@ Here are the steps to follow:
 
 ## PASOS:
 
+---
+
+- Primero **creo el proyecto con VITE**:
+
+`npm create vite@latest 11-prueba-tecnica` > `y` > 
+`React` > `TypeScript + SWC` 
+
+Entro al proyecto: `cd 11-prueba-tecnica`. Instalo: `npm install` y lo corro: `npm run dev`
+
+Agrego ESLint: `npm init @eslint/config`: `y` > `To check syntax, find problems, and enforce code style` > `JavaScript modules (import/export)` > ` React` > ` Does your project use TypeScript?: Yes` > `Browser` > `Use a popular style guide` > ` Standard: https://github.com/standard/eslint-config-standard-with-typescript` > `JavaScript`
+
+```
+Checking peerDependencies of eslint-config-standard-with-typescript@latest
+The config that you've selected requires the following dependencies:
+
+eslint-plugin-react@latest eslint-config-standard-with-typescript@latest @typescript-eslint/eslint-plugin@^5.43.0 eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 eslint-plugin-promise@^6.0.0 typescript@*
+? Would you like to install them now?
+```
+
+> `Yes` > `npm`
+
+Y veo que tengo el archivo **.eslintrc.cjs**, y para que funcione linter en **parserOptions** agrego: `proyect: './tsconfig.json'` (esto se hace por usar TS).
+
+Y saco algunas reglas del ESLint:
+
+```
+rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/react-in-jsx-scope': 'off'
+}
+```
+
+---
+
 1. Fetch 100 rows of data using the API.
+
+Veo que en la primer busqueda no me trae los 100, por defecto: ```https://randomuser.me/api``` trae solo uno, pero viendo la documentación:
+
+### Requesting Multiple Users
+
+Random User Generator allows you to fetch up to 5,000 generated users in one request using the results parameter.
+
+``https://randomuser.me/api/?results=100``
+
+- Para hacer el **fetch** tenemos que tener un **useEffect** y los datos los guardo en un **estado**
+
 
 ---
 

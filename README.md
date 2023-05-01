@@ -226,6 +226,7 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**Sonner**](https://sonner.emilkowal.ski/) para notificaciones.
 
+- [**API randomuser**](https://randomuser.me/)
 
 ---
 
@@ -245,11 +246,11 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**Clase 7**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase07.md) ->⭐ React + **TypeScript** (Día 01): props y state :star: [**8vo proyecto**: **TODO APP**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/08-todo-app) :star: **TS**: `JSX.Element` vs `React.FC`, interface de Props(que pueden a su vez **extender**) para tener `React.FC<Props>`, **type** vs **interface**, type con **Omit** ó **Pick**, **as const**(solo lectura), Object.entries() para transformar a array, `crypto.randomUUID()` para crear un id unico.
 
-- [**clase 8**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md) -> React + TypeScript + ChatGPT :star: [**9no proyecto: Crear un Google Translate con ChatGPT y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/09-code-editor). **Web Speech API** para que al hacer click en el icono del megafono se escuche el texto del recuadro. **Bootstrap** y **React Bootstrap**, para hacer más rápido los estilos. **openai** para las traducciones. Un **custom hook** para hacer un **debounce** asi no hace el llamado a la API de la traducción por cada letra que va introduciendo. Para testing: **vitest**, **happy-dom** y **testing-library**
+- [**clase 8**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase08.md) -> React + TypeScript + ChatGPT ⭐ [**9no proyecto: Crear un Google Translate con ChatGPT y TypeScript**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/09-code-editor). **Web Speech API** para que al hacer click en el icono del megafono se escuche el texto del recuadro. **Bootstrap** y **React Bootstrap**, para hacer más rápido los estilos. **openai** para las traducciones. Un **custom hook** para hacer un **debounce** asi no hace el llamado a la API de la traducción por cada letra que va introduciendo. Para testing: **vitest**, **happy-dom** y **testing-library**
 
-- [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools :star: [**10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux). [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards. **React-Redux** y **Redux-Toolkit**. **Persistencia** con **middleware**. [**Sonner**](https://sonner.emilkowal.ski/) para las notificaciones.
+- [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools ⭐ [**10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux). [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards. **React-Redux** y **Redux-Toolkit**. **Persistencia** con **middleware**. [**Sonner**](https://sonner.emilkowal.ski/) para las notificaciones.
 
-- [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> :star: **11ro Proyecto: Prueba Técnica con TypeScript y React**
+- [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> ⭐ **11ro Proyecto: Prueba Técnica con TypeScript y React**. Utilizando la API [https://randomuser.me/](https://randomuser.me/)
 
 
 - **Clase 11**
