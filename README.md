@@ -98,15 +98,21 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 <img src="https://user-images.githubusercontent.com/72580574/231868081-fa3b933d-713d-4201-9f59-0b5e612a4ec4.png" alt="google translator with react and typescript" width=450 style="margin-left: 20px">
 
+
 Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y componentes), **openai** (traducciones), un **custom hook** para hacer un **debounce** ( por el llamado a la API de la traducción por cada letra que va introduciendo), para testing: **vitest**, **happy-dom** y **testing-library**.
 
 - **Clase 9**:
 
 **10mo proyecto: Crear un CRUD con Redux Toolkit y TypeScript**
 
+<img src="https://user-images.githubusercontent.com/72580574/235498441-adf9afcb-15df-4d35-8fd4-826b21552065.png" alt="todo list with typescript" width=450 style="margin-left: 20px">
+
+
 -Temas: Rome(para no usar ESLint). [**Tremor**](https://www.tremor.so/).
 
 ---
+
+- **Clase 10**:
 
 **11ro Proyecto: Prueba Técnica con TypeScript y React**
 
