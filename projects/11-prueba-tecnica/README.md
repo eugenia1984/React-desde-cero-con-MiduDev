@@ -25,4 +25,4 @@ Here are the steps to follow:
 
 10. Sort by clicking on the column header
 
-11. Provide a README.md file with the instructions on ow to run the application
+11. Provide a README.md file with the instructions on how to run the application

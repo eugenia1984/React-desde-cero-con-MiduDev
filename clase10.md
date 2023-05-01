@@ -231,34 +231,145 @@ Aclaramos que el **toSorted** es una **función**
 
 ## :stars: 5 - Enable the ability to delete a row as shown in the example.
 
----
+- Primer intento:
 
+```JSX
+const handleDelete = (index: number) => {
+  const filteredUsers = users.filter((user, userIndex) => userIndex !== index)
+  setUsers(filteredUsers)
+}
+```
+
+Pero nos va a traer problemas. Porque al tener la **key** con el **index** si por ejemplo borro el index=2, entonces el que es index=3 pasa a ser el 2, se me van a cambiar las keys. Y **las keys son inmutalbes** sino React no uede identificar al usuario. -> Cambio que me va a dar la **key**: `  <tr key={ user.login.uuid } style={ { backgroundColor: color } }>` otra cosa que se podría utilizar es el `email`, se supone que es uno por persona(único). Y ajusto la función para borrar:
+
+```TSX
+const handleDelete = (email: string) => {
+  const filteredUsers = users.filter((user) => user.email !== email)
+  setUsers(filteredUsers)
+}
+```
+
+
+Pasamos a **handleDelete** como props y se lo agregamos al boton de action Delete.
+
+Actualizo la popr de `UsersList`: `deleteUser: (email: string) => void`
+
+Y ajusto: `<td><button onClick={ () => { deleteUser(user.email) } }>Delete</button></td>`
+
+---
 
 ## :stars: 6 - Implement a feature that allows the user to restore the initial state, meaning that all deleted rows will be recovered.
 
----
 
+- Un **error** muy comun es crear otro estado: `const [originalUsers, setOriginalUsers] = useStte<User[]>([])` y en el ftch debería setearlo.
+
+- Otro **error** es ``let originalUsers: Users[] = []`` y en el fetch lo seteo. Solo funciona porque este componente es Singleton, lo tenes en una única isntancia, si lo tuvieras en otro lado no funcionaría, se comparte el valor y hay inconveneintes.
+
+- ¿Cuál es el mejor modo? Usando **useRef**: `const originalUsers = useRef<User[]>([])`
+
+**useRef** -> para guardar un valor que queremos que **se comparta entre renderizados** pero que al cambiar **no vuelva a renderizar el componente**. Es decir es similar al useSate con dos diferencias...
+
+... cada vez que cambia el ref no vuelve a renderizarse el componente
+
+... para acceder al valor de una referencia y cambiarla hay que usar el `.current`
+
+Nos permite guardar valores que se preserven entre renderizados.
+
+El useRef se puede utilizar para guardar un elemento del DOm, peor no es solo para eso.
+
+---
 
 ## :stars: 7 - Handle any potential errors that may occur.
 
----
+Ya lo vamos haciendo en cada punto que vamos resolviendo
 
+---
 
 ## :stars: 8 - Implement a feature that allows the user to filter the data by country.
 
----
+- Hay que agregar un `input` para poder **filtrar por pais**:
 
+```TSX
+<input 
+  placeholder='Filter by country'
+  onChange={(e) => {
+    setFilterCountry(e.target.value)
+  }}
+/>
+```
+
+- Voy a tener el estado `filterCountry`
+
+- Lo que podemos hacer es primeros filtrarlos y lueog ordenarlos, si es que primero los filtro, por eso voy a tener **filteredUsers**
+
+```TSX
+const filteredUsers = typeof filterCountry === 'string' && filterCountry.length > 0
+  ? users.filter(user => {
+    return user.location.country.toLowerCase().includes(filterCountry.toLowerCase())
+  })
+  : users
+```
+
+Usamos **toLowerCase** para que no sea **case sensitie**
+
+Entonces si tengo filtrados por pais los ordeno:
+
+```JSX
+const sortedUsers = sortByCountry
+  ? filteredUsers.toSorted((a, b) => {
+    return a.location.country.localeCompare(b.location.country)
+  })
+  : filteredUsers
+```
+
+-> Es un plus si lo hacemos en este orden
+
+-> Un **error** es meter el filteredUsers en un estado, ya que es un **Valor derivado** teniendo el estado se puede hacer el filtro.
+
+Pero todavía s epuede mejorar con el próximo punto.
+
+---
 
 ## :stars: 9 - Avoid sorting users again the data when the user is changing filter by country.
 
----
+- Hay que usar el **useMemo**, asi no se vuelve a ordenar cuando hago lo del colorear o que se vuelva a ordenar si no hay cambios.
 
+```TSX
+const sortedUsers = useMemo(() => {
+    return sortByCountry
+    ? users.toSorted((a, b) => {
+      return a.location.country.localeCompare(b.location.country)
+    })
+    : users
+
+}, [filteredUsers, sortByCountry]) // filteredUsers pasa a ser users cuando uso useMemo en filteredUsers
+```
+
+Asi guardo el valor de **sortedUers** y solo la vuelvo a renderizar si cambia el valor de **filterdUsers** o de **sortByCountry**
+
+Pero aca **tenemos un problema**: el filteredUsers **siempre cambia**, en cada re renderizado se calcula de nuevo.
+
+Ya lo arreglamso en el colorear y en el ordenar, ahora falta solucionarlo en el input. -> El **filterdUsers** también necesita un **useMemo**:
+
+```TSX
+const filteredUsers = useMemo(() => {
+  return typeof filterCountry === 'string' && filterCountry.length > 0
+    ? filteredUsers.filter(user => {
+      return user.location.country.toLowerCase().includes(filterCountry.toLowerCase())
+    })
+    : filteredUsers
+}, [filteredUsers, filterCountry])
+```
+
+
+---
 
 ## :stars: 10 - Sort by clicking on the column header
 
+
 ---
 
+## :stars: 11 - Provide a README.md file with the instructions on how to run the application
 
-## :stars: 11 - Provide a README.md file with the instructions on ow to run the application
 
 ---
