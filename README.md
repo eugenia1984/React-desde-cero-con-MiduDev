@@ -18,29 +18,29 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
 
-<img src="https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png" width=300 >
+<img src="https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png" width=400 >
 
-<img src="https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png" width=250 >
+<img src="https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png" width=400 >
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
 [**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers) <- acá podes ver el codigo
 
-<img src="https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png" width=250 >
+<img src="https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png" width=300 >
 
 
 - **Clase 2**:
 
 [**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe) <- acá podes ver el codigo
 
-<img src="https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png" width=250 >
+<img src="https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png" width=300 >
 
 
 :computer: -> [Lo podes ver desplegado aca](https://tic-tac-toe-mec.netlify.app/)
 
 [**3er proyecto : Mouse follower**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/03-mouse-follower) <- acá podes ver el codigo
 
-<img src="https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png" alt="tic tac toe" width=200><img src="https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png" alt="tic tac toe" width=200 style="margin-left: 20px"><img src="https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png" alt="tic tac toe" width=200 style="margin-left: 20px">
+<img src="https://user-images.githubusercontent.com/72580574/222923883-f622cc04-c037-4c2d-8c86-b622655d3d70.png" alt="tic tac toe" width=200><img src="https://user-images.githubusercontent.com/72580574/222923888-303d3e1a-f9e9-4cc2-a401-574a1f3fac6e.png" alt="tic tac toe" width=200 style="margin-left: 50px"><img src="https://user-images.githubusercontent.com/72580574/222923892-dad92f5a-a3f4-41c2-9036-09687a60a305.png" alt="tic tac toe" width=200 style="margin-left: 50px">
 
 - **Clase 3**:
 
