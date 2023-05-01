@@ -26,3 +26,9 @@ Here are the steps to follow:
 10. Sort by clicking on the column header
 
 11. Provide a README.md file with the instructions on how to run the application
+
+---
+
+## Así quedó:
+
+![image](https://user-images.githubusercontent.com/72580574/235551193-4ec3ca5b-0e61-4ca4-930a-92ccf39c307e.png)
