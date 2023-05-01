@@ -18,21 +18,23 @@ En la carpeta **proyect** encontrarás los **proyectos** realizados.
 
 [Ejercicio de botón "Me gusta" con JavaScript Vanilla](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/01_ejercicio_con_vanilla_js).
 
-![image](https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png)
+<img src="https://user-images.githubusercontent.com/72580574/212562447-4398644a-d591-4c26-b50e-ba5de4b18aa2.png" width=300 >
 
-![image](https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png)
+<img src="https://user-images.githubusercontent.com/72580574/212562457-c7e28479-9090-4fb5-8678-ab4be38ddd30.png" width=250 >
 
 -> Dentro de la carpeta [**projects**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects) van a estar todos los proyectos de **React**, creados con **vite**
 
 [**1er proyecto : componente de Twitter**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/01-twitter-followers) <- acá podes ver el codigo
 
-![image](https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png)
+<img src="https://user-images.githubusercontent.com/72580574/212923826-f49b5e83-3ffa-4518-839a-993d359f7d5f.png" width=250 >
+
 
 - **Clase 2**:
 
 [**2do proyecto: Tic-Tac-Toe**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/02-tic-tac-toe) <- acá podes ver el codigo
 
-![image](https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png)
+<img src="https://user-images.githubusercontent.com/72580574/221441986-d0b93b7e-1e53-495a-8d20-89c3f248553e.png" width=250 >
+
 
 :computer: -> [Lo podes ver desplegado aca](https://tic-tac-toe-mec.netlify.app/)
 
