@@ -116,9 +116,13 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 **11ro Proyecto: Prueba Técnica con TypeScript y React**
 
-**12do Proyecto: Prueba Técnica con TypeScript y React con React Query**
+- **Clase 11**:
 
-**13ro Proyecto: Sistema de comentarios con React Query**
+**12do Proyecto: Sistema de comentarios con React Query**: React Query + Paginación + Infinite Scroll
+
+- **Clase 12**:
+
+**3ro Proyecto:  JavaScript Quiz con Zustand y TypeScript**
 
 ---
 
@@ -245,8 +249,16 @@ Temas: **Web Speech API**. **Bootstrap** y **React Bootstrap** (estilos y compon
 
 - [**Clase 9**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase09.md) -> React Redux Toolkit + Rome Tools :star: [**10mo proyecto**: Crear un CRUD con Redux Toolkit y TypeScript](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/tree/main/projects/10-crud-redux). [**Rome**](https://rome.tools/), en reemplazo de ESLint. [**Tremor**](https://www.tremor.so/) para tener componentes ya armados, como : formularios, gráficas, dashboards. **React-Redux** y **Redux-Toolkit**. **Persistencia** con **middleware**. [**Sonner**](https://sonner.emilkowal.ski/) para las notificaciones.
 
-- [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> Prueba técnica de React con TypeScript
+- [**Clase 10**](https://github.com/eugenia1984/React-desde-cero-con-MiduDev/blob/main/clase10.md) -> :star: **11ro Proyecto: Prueba Técnica con TypeScript y React**
 
+
+- **Clase 11**
+
+**12do Proyecto: Sistema de comentarios con React Query**:  React Query + Paginación + Infinite Scroll
+
+- **Clase 12**
+
+**13ro Proyecto:  JavaScript Quiz con Zustand y TypeScript**
 
 ---
 
