@@ -1,29 +1,28 @@
 import React from 'react'
-import { type User } from '../types.d'
+import { SortBy, type User } from '../types.d'
 
 interface Props {
   showColors: boolean,
   users: User[],
-  deleteUser: (email: string) => void
+  deleteUser: (email: string) => void,
+  changeSorting: (sort: SortBy) => void
 }
 
-function UsersList({ showColors, users, deleteUser }: Props) {
+function UsersList({ showColors, users, deleteUser, changeSorting }: Props) {
   return (
     <table width='100%'>
       <thead>
         <th>Avatar</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Country</th>
+        <th className='pointer' onClick={() => { changeSorting(SortBy.NAME)}}>First Name</th>
+        <th className='pointer' onClick={() => { changeSorting(SortBy.LAST)}}>Last Name</th>
+        <th className='pointer' onClick={() => { changeSorting(SortBy.COUNTRY)}}>Country</th>
         <th>Action</th>
       </thead>
-      <tbody>
+      <tbody className={showColors? 'table-showColors': ''}>
         {
           users.map((user, index) => {
-            const backgroundColor = index % 2 === 0 ? '#333' : '#555'
-            const color = showColors ? backgroundColor : 'transparent'
             return (
-              <tr key={ user.email } style={ { backgroundColor: color } }>
+              <tr key={ user.email } >
                 <td><img src={ user.picture.thumbnail } alt={ `${ user.name.first } ${ user.name.last }` } /></td>
                 <td>{ user.name.first }</td>
                 <td>{ user.name.last }</td>

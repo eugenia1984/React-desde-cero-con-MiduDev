@@ -366,6 +366,72 @@ const filteredUsers = useMemo(() => {
 
 ## :stars: 10 - Sort by clicking on the column header
 
+- Para refactorizar y como gestionamos el estado.
+
+- Usamos un **enum**:
+
+```
+export enum SortBy {
+  NONE = 'none',
+  NAME = 'name',
+  LAST = 'last',
+  COUNTRY = 'country',
+}
+```
+
+Para cambiar el **sortByCountry** por **sorting**: ` const [sorting, setSorting] = useState<SortBy>(SortBy.NONE)` y:
+
+```TSX
+const toggleSortByCountry = () => {
+  const newSortingValue = sorting === SortBy.NONE? SortBy.COUNTRY : SortBy.NONE
+  setSorting(newSortingValue)
+}
+```
+
+- Primer opcion:
+
+```TSX
+ const sortedUsers = useMemo(() => {
+    console.log('Calculate sortedUsers')
+
+    if(sorting === SortBy.NONE) return filteredUsers
+
+    let sortedFn = (a: User, b: User) => a.location.country.localeCompare(b.location.country)
+
+    if(sorting === SortBy.NAME) {
+      sortedFn = (a, b) => a.name.first.localeCompare(b.name.first)
+    }
+
+    if(sorting === SortBy.LAST) {
+      sortedFn = (a, b) => a.name.last.localeCompare(b.name.last)
+    }
+
+    return filteredUsers.toSorted(sortedFn)
+
+  }, [filteredUsers, sorting])
+  ```
+
+- otro modo:
+
+```TSX
+const sortedUsers = useMemo(() => {
+  console.log('Calculate sortedUsers')
+
+  if(sorting === SortBy.NONE) return filteredUsers
+
+  const compareProperties: Record<string, (user: User) => any> = {
+    [SortBy.COUNTRY]: user => user.location.country,
+    [SortBy.NAME]: user => user.name.first,
+    [SortBy.LAST]: user => user.name.last
+  }
+
+  return filteredUsers.toSorted((a,b) => {
+    const extractProperty = compareProperties[sorting]
+    return extractProperty(a).locaeCompare(extractProperty(b))
+  })
+
+}, [filteredUsers, sorting])
+```
 
 ---
 

@@ -6,7 +6,7 @@ import { SortBy, type User } from './types.d'
 function App() {
   const [users, setUsers] = useState<User[]>([])
   const [showColors, setShowColors] = useState(false)
-  const [sortByCountry, setSortByCountry] = useState(false)
+  const [sorting, setSorting] = useState<SortBy>(SortBy.NONE)
   const originalUsers = useRef<User[]>([])
   const [filterCountry, setFilterCountry] = useState<string | null>(null)
 
@@ -15,7 +15,8 @@ function App() {
   }
 
   const toggleSortByCountry = () => {
-    setSortByCountry(prevState => !prevState)
+    const newSortingValue = sorting === SortBy.NONE ? SortBy.COUNTRY : SortBy.NONE
+    setSorting(newSortingValue)
   }
 
   const handleReset = () => {
@@ -25,6 +26,10 @@ function App() {
   const handleDelete = (email: string) => {
     const filteredUsers = users.filter((user) => user.email !== email)
     setUsers(filteredUsers)
+  }
+
+  const handleChangeSort = (sort: SortBy) => {
+    setSorting(sort)
   }
 
   useEffect(() => {
@@ -48,21 +53,24 @@ function App() {
       : users
   }, [users, filterCountry])
 
-  // const sortedUsers = sortByCountry
-  //   ? filteredUsers.toSorted((a, b) => {
-  //     // return a.location.country > b.location.country ? 1: -1
-  //     return a.location.country.localeCompare(b.location.country)
-  //   })
-  //   : filteredUsers
   const sortedUsers = useMemo(() => {
     console.log('Calculate sortedUsers')
-    return sortByCountry
-      ? filteredUsers.toSorted((a, b) => {
-        return a.location.country.localeCompare(b.location.country)
-      })
-      : filteredUsers
 
-  }, [filteredUsers, sortByCountry])
+    if (sorting === SortBy.NONE) return filteredUsers
+
+    let sortedFn = (a: User, b: User) => a.location.country.localeCompare(b.location.country)
+
+    if (sorting === SortBy.NAME) {
+      sortedFn = (a, b) => a.name.first.localeCompare(b.name.first)
+    }
+
+    if (sorting === SortBy.LAST) {
+      sortedFn = (a, b) => a.name.last.localeCompare(b.name.last)
+    }
+
+    return filteredUsers.toSorted(sortedFn)
+
+  }, [filteredUsers, sorting])
 
   return (
     <div className="App">
@@ -70,7 +78,7 @@ function App() {
       <header>
         <button onClick={ togglecolors }>Color rows</button>
         <button onClick={ toggleSortByCountry }>
-          { sortByCountry ? 'Not sorted' : 'Sort by country' }
+          { sorting === SortBy.COUNTRY ? 'Not sorted' : 'Sort by country' }
         </button>
         <button onClick={ handleReset }>Reset deleted</button>
         <input
@@ -82,6 +90,7 @@ function App() {
       </header>
       <main>
         <UsersList
+          changeSorting={ handleChangeSort }
           showColors={ showColors }
           users={ sortedUsers }
           deleteUser={ handleDelete }
