@@ -1,13 +1,14 @@
 import React from 'react'
-import { type Result } from '../types.d'
+import { type User } from '../types.d'
 
 interface Props {
-  users: Result[]
+  showColors: boolean,
+  users: User[]
 }
 
-function UsersList({ users }: Props) {
+function UsersList({ showColors, users }: Props) {
   return (
-    <table>
+    <table width='100%'>
       <thead>
         <th>Avatar</th>
         <th>First Name</th>
@@ -17,9 +18,11 @@ function UsersList({ users }: Props) {
       </thead>
       <tbody>
         {
-          users.map(user => {
+          users.map((user, index) => {
+            const backgroundColor = index % 2 === 0 ? '#333' : '#555'
+            const color = showColors ? backgroundColor : 'transparent'
             return (
-              <tr key={ user.id.value }>
+              <tr key={ index } style={ { backgroundColor: color } }>
                 <td><img src={ user.picture.thumbnail } alt={ `${ user.name.first } ${ user.name.last }` } /></td>
                 <td>{ user.name.first }</td>
                 <td>{ user.name.last }</td>

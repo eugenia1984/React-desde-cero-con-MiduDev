@@ -141,7 +141,7 @@ interface Props {
 function UsersList({ users }: Props) {..}
 ```
 
--> Para la **key** usar el **id**.value, no usar **ndex** ni generar ids.
+-> Para la **key** usar el **id**.value, no usar **index**(porque después hay que eliminar) ni generar ids.
 
 -> Completamos los datos de las table row que necesitamos mostrar y lo renderizamos en App.jsx
 
@@ -150,10 +150,81 @@ function UsersList({ users }: Props) {..}
 
 ## :stars: 3 - Provide the option to color rows as shown un the example.
 
+- Necesito un state: `const [showColors, setShowColors] = useState(false)`
+
+- Y un modo de actualizar ese estado, con la función `toggleColors`:
+
+```TSX
+const togglecolors = () => {
+  setShowColors(!showColors)
+}
+```
+
+- Creo el `header` con los botones:
+
+```JSX
+<header>
+  <button onClick={togglecolors}>Color rows</button>
+</header>
+```
+
+- Y paso el estado como prop al componente `UsersList` y como necesito hacer el efecto cebra voy a utilizar el index, en el **user.map**: `const backgroundColor = index % 2 === 0 ? '#333' : '#555'` y `const color = showColors? backgroundColor: 'transparent'` y aplico el estilo: ` <tr key={ user.id.value } style={{backgroundColor: color}}>`
+
+-> **OJO parece que no nos funciona, porque primero hay keys en NULL** usando el **user.id.value** como key es que tengo null, para ahora solucionarlo momenaneamente usamos el **index**
+
 ---
 
 
 ## :stars:  4 -  Allow the data to be sorted by country as demostrated in the example.
+
+- Empiezo creando un estado booleano(después lo mejor): `const [ sortByCountry, setSortByCountry ] = useState(false)` y el botón: ` <button onClick={() => setSortByCountry(prevState => !prevState)}>Sort by country</button>`.
+
+-Primer idea:
+
+```TSX
+const sortedUsers = sortByCountry
+  ? users.sort((a, b) => { // ESTO ESTA MAL, MUTA EL ARRAY ORIGINAL
+    // return a.location.country > b.location.country ? 1: -1
+    return a.location.country.localeCompare(b.location.country)
+  })
+  : users //YA ESTA ORDENADO POR DEFFECTO
+```
+
+Con el **localeCompare** voy a tener en ceunta los asentos y demás, si lo dejo asi va a devolver en modo **ASC**(ascendente)
+
+Pero está mal -> Solo me funciona LA PRIMERA VEZ, cuando hago nuevamente click en el botón NO me los reordena.
+
+- ¿Qué tenemos mal? -> El **sort muta** el **array original**
+
+-> Algo rápido para salir del paso, ordeno una copia, no el array original:
+
+```TSX
+const sortedUsers = sortByCountry
+  ? [...users].sort((a, b) => {
+    // return a.location.country > b.location.country ? 1: -1
+    return a.location.country.localeCompare(b.location.country)
+  })
+  : users
+```
+
+Esta forma de solucionarlo sería un **7**.
+
+Si en vez de `[...users]` hacemos `structureClone(users)` aca estaríamos peor, seríamso un **5,5**, porque hacemos una copia profunda.
+
+
+Mucho mejor si utilizamos el nuevo método de JavaSCript **toSorted** (ya que al usar Babel va a tener compatibilidad con los navegadores viejos) y este sí sería un **10**, muestro que estoy al día con JavaScript. En este caso **Devuelvo un nuevo array**, no muto el original. Pero...tenemso un problema, `Property 'toSorted' does nos exist on type 'User[]'`, TS todavía no lo soporta, entonces en **types.d.ts**:
+
+```TypeScript
+declare global {
+  interface Array<T> {
+    toSorted(compareFn?: (a: T, b: T) => number): T[]
+  }
+}
+```
+
+Aclaramos que el **toSorted** es una **función**
+
+-> Otro error a evitar: crearnos un estado para cada cosa. NO tenemos UN SOLO ESTADO y luego hacemos los cálculos para ordenr o lo que necesitemos. Porque asi si el estado cambia nuestro sorted va a cambiar también.
 
 ---
 
