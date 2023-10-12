@@ -406,7 +406,9 @@ Lo importante es que **el nombre de la función o clase empiece con una letra ma
 
 ## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  9 - ¿QUÉ SON LAS PROPS EN REACT?
 
-Las props son las propiedades de un componente. Son datos que se pasan de un componente a otro. Por ejemplo, si tienes un componente Button que muestra un botón, puedes pasarle una prop text para que el botón muestre ese texto:
+Las props son **las propiedades de un componente**. Son **datos que se pasan de un componente a otro**. 
+
+Por ejemplo, si tienes un componente Button que muestra un botón, puedes pasarle una prop text para que el botón muestre ese texto:
 
 ```JSX
 function Button(props) {
@@ -427,11 +429,11 @@ Para usarlo, indicamos el nombre del componente y le pasamos las props que quere
 
 Las props son una forma de parametrizar nuestros componentes igual que hacemos con las funciones. Podemos pasarle cualquier tipo de dato a un componente, incluso otros componentes.
 
+---
 
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  10 - ¿QUÉ ES Y PARA QUÉ SIRVE LA PROP CHILDREN EN REACT?
 
-## 10 - ¿QUÉ ES Y PARA QUÉ SIRVE LA PROP CHILDREN EN REACT?
-
-La prop children es una prop especial que se pasa a los componentes. Es un objeto que contiene los elementos que envuelve un componente.
+La prop children es **una prop especial que se pasa a los componentes**. Es un **objeto** que contiene los **elementos que envuelve un componente**.
 
 Por ejemplo, si tenemos un componente Card que muestra una tarjeta con un título y un contenido, podemos usar la prop children para mostrar el contenido:
 
@@ -459,20 +461,21 @@ En este caso, la prop children contiene el elemento ```<p>Contenido de la tarjet
 Conocer y saber usar la prop children es muy importante para crear componentes reutilizables en React.
 
 
+---
 
-## 11 - ¿QUÉ DIFERENCIA HAY ENTRE PROPS Y STATE?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  11 - ¿QUÉ DIFERENCIA HAY ENTRE PROPS Y STATE?
 
-Las props son un objeto que se pasan como argumentos de un componente padre a un componente hijo. Son inmutables y no se pueden modificar desde el componente hijo.
+Las **props** son un **objeto que se pasan como argumentos de un componente padre a un componente hijo**. Son **inmutables** y **no se pueden modificar desde el componente hijo**.
 
-El state es un valor que se define dentro de un componente. Su valor es inmutable (no se puede modificar directamente) pero se puede establecer un valor nuevo del estado para que React vuelva a renderizar el componente.
+El **state** es un **valor que se define dentro de un componente**. Su valor es inmutable (no se puede modificar directamente) pero **se puede establecer un valor nuevo del estado para que React vuelva a renderizar el componente**.
 
 Así que mientras tanto props como state afectan al renderizado del componente, su gestión es diferente.
 
+---
 
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  12 - ¿SE PUEDE INICIALIZAR UN ESTADO CON EL VALOR DE UNA PROP? ¿QUÉ PASA SI LO HACES Y QUÉ HAY QUE TENER EN CUENTA?
 
-## 12 - ¿SE PUEDE INICIALIZAR UN ESTADO CON EL VALOR DE UNA PROP? ¿QUÉ PASA SI LO HACES Y QUÉ HAY QUE TENER EN CUENTA?
-
-Sí, se puede inicializar el estado con el valor de una prop. Pero hay que tener en cuenta que, si la prop cambia, el estado no se actualizará automáticamente. Esto es porque el estado se inicializa una vez, cuando el componente se monta por primera vez.
+Sí, **se puede inicializar el estado con el valor de una prop**. Pero hay que tener en cuenta que, **si la prop cambia**, **el estado no se actualizará automáticamente**. Esto es porque **el estado se inicializa una vez, cuando el componente se monta por primera vez**.
 
 Por ejemplo, con componentes funcionales:
 
@@ -497,11 +500,10 @@ const Count = ({ count }) => {
 
 En este caso, el componente Count inicializa su estado con el valor de la prop count. Pero si cambia el valor de la prop count, el estado no se actualizará automáticamente. Por lo que al hacer click, siempre veremos el número 0 en pantalla.
 
-Código de ejemplo
 
 En este ejemplo, lo mejor sería simplemente usar la prop count en el componente Count y así siempre se volvería a renderizar.
 
-Es una buena práctica evitar al máximo los estados de nuestros componentes y, siempre que se pueda, simplemente calcular el valor a mostrar a partir de las props.
+- Es una buena práctica evitar al máximo los estados de nuestros componentes y, siempre que se pueda, simplemente calcular el valor a mostrar a partir de las props.
 
 En el caso que necesites inicializar un estado con una prop, es una buena práctica es añadir el prefijo de initial a la prop para indicar que es el valor inicial del estado y que luego no lo usaremos más:
 
@@ -520,13 +522,13 @@ const Input = ({ initialValue }) => {
 
 Es un error muy común pensar que la prop actualizará el estado, así que tenlo en cuenta.
 
+---
 
+##  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 13 - ¿QUÉ ES EL RENDRIZADO CONDICIONALEN REACT?
 
-## 13 - ¿QUÉ ES EL RENDRIZADO CONDICIONALEN REACT?
+El renderizado condicional es la forma de **mostrar un componente u otro dependiendo de una condición**.
 
-El renderizado condicional es la forma de mostrar un componente u otro dependiendo de una condición.
-
-Para hacer renderizado condicional en React usamos el operador ternario:
+Para hacer renderizado condicional en React usamos el **operador ternario**:
 
 ```JSX
 function Button({ text }) {
@@ -550,11 +552,13 @@ Parece que tiene sentido... si el length es positivo (mayor a cero) pintamos el 
 
 Es preferible utilizar el operador ternario. Kent C. Dodds tiene un artículo interesante hablando del tema. Use ternaries rather than && in JSX
 
+-> Si a esto le ponian .length > 0 ahi no tenian ese problema
 
+---
 
-## 14 - ¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
+##   <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 14 - ¿Cómo puedes aplicar clases CSS a un componente en React y por qué no se puede usar class?
 
-Para aplicar clases CSS a un componente en React usamos la prop className:
+Para aplicar clases CSS a un componente en React usamos la **prop className**:
 
 ```JSX
 function Button({ text }) {
@@ -569,10 +573,13 @@ function Button({ text }) {
 La razón por la que se llama className es porque class es una palabra reservada en JavaScript. Por eso, en JSX, tenemos que usar className para aplicar clases CSS.
 
 
+---
 
-### 15 - ¿Cómo puedes aplicar estilos en línea a un componente en React?
+###  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 15 - ¿Cómo puedes aplicar estilos en línea a un componente en React?
 
-Para aplicar estilos CSS en línea a un componente en React usamos la prop style. La diferencia de cómo lo haríamos con HTML, es que en React los estilos se pasan como un objeto y no como una cadena de texto (esto puede verse más claro con los dobles corchetes, los primeros para indicar que es una expresión JavaScript, y los segundos para crear el objeto):
+Para aplicar estilos CSS en línea a un componente en React usamos la **prop style**. 
+
+La diferencia de cómo lo haríamos con HTML, es que en React **los estilos se pasan como un objeto** y no como una cadena de texto (esto puede verse más claro con los **dobles llaves**, los primeros para indicar que es una expresión JavaScript, y los segundos para crear el objeto):
 
 ```JSX
 function Button({ text }) {
@@ -587,10 +594,11 @@ function Button({ text }) {
 Fíjate que, además, los nombres de las propiedades CSS están en camelCase.
 
 
+---
 
-### 16 - ¿Cómo puedo aplicar estilos de forma condicional a un componente en React?
+###  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 16 - ¿Cómo puedo aplicar estilos de forma condicional a un componente en React?
 
-Puedes aplicar estilos de forma condicional a un componente en React usando la prop style y un operador ternario:
+Puedes aplicar estilos de forma condicional a un componente en React **usando la prop style y un operador ternario**:
 
 ```JSX
 function Button({ text, primary }) {
@@ -632,13 +640,13 @@ function Button({ text, primary }) {
 
 En este caso, si la prop primary es true, se añadirá la clase primary al botón. Si no, no se añadirá. En cambio la clase button siempre se añadirá.
 
+---
 
+###  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 17 - ¿Qué es el renderizado de listas en React?
 
-### 17 - ¿Qué es el renderizado de listas en React?
+El renderizado de listas es la forma de **iterar un array de elementos y renderizar elementos de React para cada uno de ellos**.
 
-El renderizado de listas es la forma de iterar un array de elementos y renderizar elementos de React para cada uno de ellos.
-
-Para hacer renderizado de listas en React usamos el método map de los arrays:
+Para hacer renderizado de listas en React usamos el **método map** de los arrays:
 
 ```JSX
 function List({ items }) {
@@ -654,13 +662,14 @@ function List({ items }) {
 
 En este caso, se renderiza una lista de elementos usando el componente List. El componente List recibe una prop items que es un array de objetos del tipo ``` [{id:1, name: "John", id:1, name: "Doe"}]```. El componente List renderiza un elemento li por cada elemento del array.
 
-El elemento li tiene una prop key que es un identificador único para cada elemento. Esto es necesario para que React pueda identificar cada elemento de la lista y actualizarlo de forma eficiente. Más adelante hay una explicación más detallada sobre esto.
+El elemento li tiene una **prop key que es un identificador único para cada elemento**. Esto es necesario para que React pueda identificar cada elemento de la lista y actualizarlo de forma eficiente. Más adelante hay una explicación más detallada sobre esto.
 
 
+---
 
-### 18 - ¿Cómo puedes escribir comentarios en React?
+###  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 18 - ¿Cómo puedes escribir comentarios en React?
 
-Si vas a escribir un comentario fuera del renderizado de un componente, puedes usar la sintaxis de comentarios de JavaScript sin problemas:
+Si vas a escribir un comentario **fuera del renderizado de un componente, puedes usar la sintaxis de comentarios de JavaScript** sin problemas:
 
 ```JSX
 function Button({ text }) {
@@ -676,7 +685,7 @@ function Button({ text }) {
 }
 ```
 
-Si vas a escribir un comentario dentro del renderizado de un componente, debes envolver el comentario en llaves y usar siempre la sintaxis de comentarios de bloque:
+Si vas a escribir un comentario **dentro del renderizado de un componente, debes envolver el comentario en llaves y usar siempre la sintaxis de comentarios de bloque**:
 
 ```JSX
 function Button({ text }) {
@@ -689,10 +698,11 @@ function Button({ text }) {
 }
 ```
 
+---
 
-### 19 - ¿Cómo añadir un evento a un componente en React?
+###  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  19 - ¿Cómo añadir un evento a un componente en React?
 
-Para añadir un evento a un componente en React usamos la sintaxis on y el nombre del evento nativo del navegador en camelCase:
+Para añadir un evento a un componente en React usamos **la sintaxis on y el nombre del evento nativo del navegador en camelCase**:
 
 ```JSX
 function Button({ text, onClick }) {
@@ -706,9 +716,9 @@ function Button({ text, onClick }) {
 
 En este caso, el componente Button recibe una prop onClick que es una función. Cuando el usuario hace clic en el botón, se ejecuta la función onClick.
 
+---
 
-
-### 20 - ¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?
+###  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 20 - ¿Cómo puedo pasar un parámetro a una función que maneja un evento en React?
 
 Para pasar un parámetro a una función que maneja un evento en React podemos usar una función anónima:
 
