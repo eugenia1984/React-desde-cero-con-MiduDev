@@ -6,9 +6,9 @@
 
 ---
 
-# Temas:
+# <img width="64" height="64" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/external-note-pad-user-interface-flatart-icons-flat-flatarticons.png" alt="external-note-pad-user-interface-flatart-icons-flat-flatarticons"/> Temas:
 
-## Principiante
+## <img width="40" height="40" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/40/external-note-pad-user-interface-flatart-icons-flat-flatarticons.png" alt="note pad"/> Principiante
 
 1. ¿Qué es React?
 
@@ -104,7 +104,7 @@
 
 -Encadenamiento opcional (Optional Chaining)
 
-## Intermedio
+##  <img width="40" height="40" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/40/external-note-pad-user-interface-flatart-icons-flat-flatarticons.png" alt="note pad"/> Intermedio
 
 36. ¿Cómo crear un hook personalizado (custom hook)?
 
@@ -199,7 +199,7 @@
 81. ¿Por qué puede ser mala idea pasar siempre todas las props de un objeto a un componente?
 
 
-## Experto
+## <img width="40" height="40" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/40/external-note-pad-user-interface-flatart-icons-flat-flatarticons.png" alt="note pad"/> Experto
 
 82. ¿Es React una biblioteca o un framework? ¿Por qué?
 
@@ -302,16 +302,19 @@ const element = document.createElement('h1')
 element.innerHTML = 'Hello, world'
 ```
 
-## 4 - ¿QUÉ ES UN COMPONENTE?
+---
 
-Un componente es una pieza de código que renderiza una parte de la interfaz. Los componentes pueden ser parametrizados, reutilizados y pueden contener su propio estado.
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  4 - ¿QUÉ ES UN COMPONENTE?
+
+Un componente es **una pieza de código que renderiza una parte de la interfaz**. Los componentes pueden ser parametrizados, reutilizados y pueden contener su propio estado.
 
 En React los componentes se crean usando funciones o clases.
 
+---
 
-## 5 - ¿QUÉ ES JSX?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 5 - ¿QUÉ ES JSX?
 
-React usa JSX para declarar qué debe renderizar. JSX es una extensión de JavaScript que permite escribir un código más cercano visualmente a HTML, que mejora la legibilidad del código y hace que sea más fácil de entender.
+React usa JSX para declarar qué debe renderizar. JSX es una **extensión de JavaScript que permite escribir un código más cercano visualmente a HTML, que mejora la legibilidad del código y hace que sea más fácil de entender**.
 
 Sin JSX, deberíamos usar React.createElement para crear los elementos de la interfaz manualmente de esta forma:
 
@@ -337,8 +340,9 @@ function Hello () {
 
 Ambos códigos son equivalentes.
 
+---
 
-## 6 - ¿CÓMO SE TRANSFORMA EL JSX?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>6 - ¿CÓMO SE TRANSFORMA EL JSX?
 
 El JSX se transforma en código JavaScript compatible en el navegador usando un transpilador o compilador. El más famoso es a día de hoy Babel, que utiliza una serie de plugins para ser compatible con la transformación, pero existen otros como SWC.
 
@@ -347,8 +351,9 @@ Puedes ver cómo se transforma el JSX en el playground de código de Babel.
 Hay casos especiales en los que un transpilador no es necesario. Por ejemplo, Deno tiene soporte nativo para la sintaxis JSX y no es necesario transformar el código para hacerlo compatible.
 
 
+---
 
-## 7 - ¿CUÁL ES LA DIFERENCIA ENTRE COMPONENTE Y ELEMENTO EN REACT?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  7 - ¿CUÁL ES LA DIFERENCIA ENTRE COMPONENTE Y ELEMENTO EN REACT?
 
 Un componente es una función o clase que recibe props y devuelve un elemento. Un elemento es un objeto que representa un nodo del DOM o una instancia de un componente de React.
 
