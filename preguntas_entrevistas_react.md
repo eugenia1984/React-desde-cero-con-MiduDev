@@ -6,9 +6,9 @@
 
 ---
 
-## Temas:
+# Temas:
 
-### Principiante
+## Principiante
 
 1. ¿Qué es React?
 
@@ -104,7 +104,7 @@
 
 -Encadenamiento opcional (Optional Chaining)
 
-### Intermedio
+## Intermedio
 
 36. ¿Cómo crear un hook personalizado (custom hook)?
 
@@ -198,7 +198,8 @@
 
 81. ¿Por qué puede ser mala idea pasar siempre todas las props de un objeto a un componente?
 
-### Experto
+
+## Experto
 
 82. ¿Es React una biblioteca o un framework? ¿Por qué?
 
@@ -251,37 +252,40 @@ Too many re-renders. React limits the number of renders to prevent an infinite l
 105. ¿Qué diferencia existe entre Shadow DOM y Virtual DOM?
 
 ---
+---
 
-# :star: PRINCIPIANTE
+# <img width="100" height="100" src="https://img.icons8.com/clouds/100/react.png" alt="react"/> PRINCIPIANTE
 
-## 1 - ¿QUÉ ES REACT?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 1 - ¿QUÉ ES REACT?
          
-React es una **biblioteca de JavaScript** de **código abierto** para construir **interfaces de usuario**. Está basada en la **componetización de la UI**: la interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
+React es una **biblioteca de JavaScript** de **código abierto** para construir **interfaces de usuario**. Está basada en la **componetización de la UI**: la **interfaz** se divide en **componentes independientes**, que contienen **su propio estado**. Cuando el **estado** de un componente **cambia**, React vuelve a **renderizar** la **interfaz**.
 
-Esto hace que React sea una herramienta muy útil para construir interfaces complejas, ya que permite dividir la interfaz en piezas más pequeñas y reutilizables.
+Esto hace que React sea una herramienta muy útil para construir interfaces complejas, ya que **permite dividir la interfaz en piezas más pequeñas y reutilizables**.
 
-Fue creada en 2011 por **Jordan Walke**, un ingeniero de software que trabajaba en Facebook y que quería simplificar la forma de crear interfaces de usuario complejas.
+Fue creada en **2011** por **Jordan Walke**, un ingeniero de software que trabajaba en **Facebook** y que quería simplificar la forma de crear interfaces de usuario complejas.
 
 Es una biblioteca muy popular y es usada por muchas empresas como Facebook, Netflix, Airbnb, Twitter, Instagram, etc.
 
-                 
-## 2 - ¿CUÁLES SON LAS CARACTERÍSTICAS PRINCIPALES DE REACT?
+---
+
+##  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/> 2 - ¿CUÁLES SON LAS CARACTERÍSTICAS PRINCIPALES DE REACT?
 
 Las características principales de React son:
 
-- **Componentes**: React está basado en la componetización de la UI. La interfaz se divide en componentes independientes, que contienen su propio estado. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz.
+- **Componentes**: React está basado en la **componetización de la UI**. La **interfaz** se divide en **componentes independientes**, que contienen su **propio estado**. Cuando el estado de un componente cambia, React vuelve a **renderizar la interfaz**.
 
-- **Virtual DOM**: React usa un DOM virtual para renderizar los componentes. El DOM virtual es una representación en memoria del DOM real. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz. En lugar de modificar el DOM real, React modifica el DOM virtual y, a continuación, compara el DOM virtual con el DOM real. De esta forma, React sabe qué cambios se deben aplicar al DOM real.
+- **Virtual DOM**: React usa un DOM virtual para renderizar los componentes. El DOM virtual es una **representación en memoria del DOM real**. Cuando el estado de un componente cambia, React vuelve a renderizar la interfaz. En lugar de modificar el DOM real, React modifica el DOM virtual y, a continuación, compara el DOM virtual con el DOM real. De esta forma, React sabe qué cambios se deben aplicar al DOM real.
 
-- **Declarativo**: React es declarativo, lo que significa que no se especifica cómo se debe realizar una tarea, sino qué se debe realizar. Esto hace que el código sea más fácil de entender y de mantener.
+- **Declarativo**: React es declarativo, lo que significa que **no se especifica cómo se debe realizar una tarea, sino qué se debe realizar**. Esto hace que el código sea más fácil de entender y de mantener.
 
-- **Unidireccional**: React es unidireccional, lo que significa que los datos fluyen en una sola dirección. Los datos fluyen de los componentes padres a los componentes hijos.
+- **Unidireccional**: React es unidireccional, lo que significa que **los datos fluyen en una sola dirección**. Los datos fluyen **de los componentes padres a los componentes hijos**.
 
 - **Universal**: React se puede ejecutar tanto en el cliente como en el servidor. Además, puedes usar React Native para crear aplicaciones nativas para Android e iOS.
 
 
+---
 
-## 3 - ¿QUÉ SIGNIFICA EXACTAMENTE QUE SEA DECLARATIVO?
+##  <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  3 - ¿QUÉ SIGNIFICA EXACTAMENTE QUE SEA DECLARATIVO?
 
 No le decimos cómo debe renderizar la interfaz a base de instrucciones. Le decimos qué debe renderizar y React se encarga de renderizarlo.
 
