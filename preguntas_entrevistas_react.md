@@ -80,29 +80,20 @@
 
 35. ¿Qué JavaScript necesito para aprender React?
 
+```
 -JavaScript que necesitas para aprender React
-
 -EcmaScript Modules o ESModules
-
 -Operador condicional (ternario)
-
 -Funciones flecha o Arrow Functions
-
 -Parámetros predeterminados (default values)
-
 -Template Literals
-
 -Propiedades abreviadas
-
 -La desestructuración
-
 -Métodos de Array
-
 -Sintaxis Spread
-
 -Operador Rest
-
 -Encadenamiento opcional (Optional Chaining)
+```
 
 ##  <img width="40" height="40" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/40/external-note-pad-user-interface-flatart-icons-flat-flatarticons.png" alt="note pad"/> Intermedio
 
@@ -344,18 +335,20 @@ Ambos códigos son equivalentes.
 
 ## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>6 - ¿CÓMO SE TRANSFORMA EL JSX?
 
-El JSX se transforma en código JavaScript compatible en el navegador usando un transpilador o compilador. El más famoso es a día de hoy Babel, que utiliza una serie de plugins para ser compatible con la transformación, pero existen otros como SWC.
+El **JSX se transforma en código JavaScript compatible en el navegador usando un transpilador o compilador**. El más famoso es a día de hoy **Babel**, que utiliza una serie de plugins para ser compatible con la transformación, pero existen otros como **SWC**.
 
 Puedes ver cómo se transforma el JSX en el playground de código de Babel.
 
-Hay casos especiales en los que un transpilador no es necesario. Por ejemplo, Deno tiene soporte nativo para la sintaxis JSX y no es necesario transformar el código para hacerlo compatible.
+Hay **casos especiales en los que un transpilador no es necesario**. Por ejemplo, **Deno** tiene soporte nativo para la sintaxis JSX y no es necesario transformar el código para hacerlo compatible.
 
 
 ---
 
 ## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  7 - ¿CUÁL ES LA DIFERENCIA ENTRE COMPONENTE Y ELEMENTO EN REACT?
 
-Un componente es una función o clase que recibe props y devuelve un elemento. Un elemento es un objeto que representa un nodo del DOM o una instancia de un componente de React.
+Un **componente** es **una función o clase que recibe props y devuelve un elemento**. 
+
+Un **elemento** es **un objeto que representa un nodo del DOM o una instancia de un componente de React**.
 
 ```JSX
 // Elemento que representa un nodo del DOM
@@ -382,10 +375,11 @@ Un componente es una función o clase que recibe props y devuelve un elemento. U
 }
 ```
 
+---
 
-## 8 - ¿CÓMO CREAR UN COMPONENTE EN REACT?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  8 - ¿CÓMO CREAR UN COMPONENTE EN REACT?
 
-Los componentes en React son funciones o clases que devuelven un elemento de React. Hoy en día lo más recomendado es usar funciones:
+Los componentes en React son **funciones o clases que devuelven un elemento de React**. Hoy en día lo más recomendado es usar funciones:
 
 ```JSX
 function HelloWorld() {
@@ -405,11 +399,12 @@ class HelloWorld extends Component {
 }
 ```
 
-Lo importante es que el nombre de la función o clase empiece con una letra mayúscula. Esto es necesario para que React pueda distinguir entre componentes y elementos HTML.
+Lo importante es que **el nombre de la función o clase empiece con una letra mayúscula**. Esto es necesario **para que React pueda distinguir entre componentes y elementos HTML**.
 
 
+---
 
-## 9 - ¿QUÉ SON LAS PROPS EN REACT?
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/react.png" alt="react"/>  9 - ¿QUÉ SON LAS PROPS EN REACT?
 
 Las props son las propiedades de un componente. Son datos que se pasan de un componente a otro. Por ejemplo, si tienes un componente Button que muestra un botón, puedes pasarle una prop text para que el botón muestre ese texto:
 
